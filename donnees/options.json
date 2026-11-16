@@ -1,0 +1,918 @@
+{
+ "version": 1,
+ "exclus": {
+  "liste.filtre": "choisi avec la liste déroulante « Filtre » de la barre",
+  "aide.visite_vue": "état interne : dit si la visite a déjà eu lieu (le bouton « Revoir la visite guidée » la relance)",
+  "options.avances": "case « Montrer les réglages avancés » en haut du panneau d'options"
+ },
+ "groupes": [
+  {
+   "id": "fenetre",
+   "elements": [
+    {
+     "chemin": "fenetre.theme",
+     "type": "choix",
+     "choix": [
+      "auto",
+      "horde",
+      "alliance",
+      "neutre"
+     ],
+     "texte_choix": "theme.%s",
+     "apres": "peindre"
+    },
+    {
+     "chemin": "fenetre.taille",
+     "type": "choix",
+     "choix": [
+      "grande",
+      "moyenne",
+      "compacte"
+     ],
+     "texte_choix": "taille.%s",
+     "apres": "taille"
+    },
+    {
+     "chemin": "fenetre.taille_texte",
+     "type": "choix",
+     "choix": [
+      "petite",
+      "normale",
+      "grande"
+     ],
+     "texte_choix": "taille_texte.%s",
+     "apres": "peindre"
+    },
+    {
+     "chemin": "fenetre.police",
+     "type": "choix",
+     "choix": [
+      "jeu",
+      "gothique",
+      "cinzel"
+     ],
+     "texte_choix": "police.%s",
+     "apres": "peindre",
+     "avance": true
+    },
+    {
+     "chemin": "fenetre.opacite",
+     "type": "choix",
+     "choix": [
+      100,
+      85,
+      70,
+      50
+     ],
+     "texte_choix": "opacite.%s",
+     "apres": "peindre"
+    },
+    {
+     "chemin": "fenetre.compact",
+     "type": "bool",
+     "apres": "mini"
+    },
+    {
+     "chemin": "fenetre.cats_repliee",
+     "type": "bool",
+     "apres": "disposer"
+    },
+    {
+     "chemin": "fenetre.fiche_repliee",
+     "type": "bool",
+     "apres": "disposer"
+    },
+    {
+     "chemin": "fenetre.annuler_max",
+     "type": "nombre",
+     "min": 1,
+     "max": 20,
+     "pas": 1,
+     "avance": true
+    },
+    {
+     "chemin": "fenetre.modules_replies",
+     "type": "bool"
+    },
+    {
+     "chemin": "fenetre.fermer_avec_echap",
+     "type": "bool",
+     "apres": "echap"
+    },
+    {
+     "chemin": "langue.choix",
+     "type": "choix",
+     "choix": [
+      "auto",
+      "frFR",
+      "enUS"
+     ],
+     "texte_choix": "optlangue.%s",
+     "apres": "langue"
+    },
+    {
+     "type": "action",
+     "action": "reinit_tailles",
+     "avance": true
+    }
+   ]
+  },
+  {
+   "id": "acces",
+   "elements": [
+    {
+     "chemin": "acces.bouton_minicarte",
+     "type": "bool",
+     "apres": "minicarte"
+    },
+    {
+     "chemin": "acces.bouton_menu_echap",
+     "type": "bool"
+    },
+    {
+     "chemin": "acces.angle_minicarte",
+     "type": "nombre",
+     "min": 0,
+     "max": 359,
+     "pas": 15,
+     "apres": "minicarte",
+     "avance": true
+    },
+    {
+     "chemin": "acces.compteur_minicarte",
+     "type": "bool"
+    },
+    {
+     "chemin": "acces.clic_droit",
+     "type": "choix",
+     "choix": [
+      "menu",
+      "recharger"
+     ],
+     "texte_choix": "clicdroit.%s",
+     "avance": true
+    },
+    {
+     "chemin": "acces.profils_minicarte",
+     "type": "bool",
+     "avance": true
+    }
+   ]
+  },
+  {
+   "id": "actions",
+   "elements": [
+    {
+     "chemin": "actions.resume_connexion",
+     "type": "bool"
+    },
+    {
+     "chemin": "actions.maj_clic",
+     "type": "bool"
+    },
+    {
+     "chemin": "actions.essai_message",
+     "type": "bool",
+     "avance": true
+    }
+   ]
+  },
+  {
+   "id": "commandes",
+   "elements": [
+    {
+     "chemin": "commandes.liste",
+     "type": "commandes",
+     "apres": "commandes"
+    },
+    {
+     "chemin": "commandes.sans_argument",
+     "type": "choix",
+     "choix": [
+      "ouvrir",
+      "aide",
+      "options"
+     ],
+     "texte_choix": "sous.%s.nom",
+     "avance": true
+    }
+   ]
+  },
+  {
+   "id": "tri",
+   "elements": [
+    {
+     "chemin": "liste.tri",
+     "type": "choix",
+     "choix": [
+      "nom",
+      "categorie",
+      "etat",
+      "memoire",
+      "utilite"
+     ],
+     "texte_choix": "tri.%s"
+    },
+    {
+     "chemin": "liste.tri_inverse",
+     "type": "bool",
+     "avance": true
+    },
+    {
+     "chemin": "liste.grouper_tous",
+     "type": "bool"
+    },
+    {
+     "chemin": "liste.groupes_replies",
+     "type": "bool"
+    },
+    {
+     "chemin": "liste.favoris_en_haut",
+     "type": "bool"
+    },
+    {
+     "chemin": "liste.nouveaux_en_haut",
+     "type": "bool",
+     "avance": true
+    },
+    {
+     "chemin": "liste.nouveau_sans_fiche",
+     "type": "bool",
+     "avance": true
+    }
+   ]
+  },
+  {
+   "id": "filtres",
+   "elements": [
+    {
+     "chemin": "liste.filtres_visibles.tous",
+     "type": "bool",
+     "avance": true
+    },
+    {
+     "chemin": "liste.filtres_visibles.actives",
+     "type": "bool",
+     "avance": true
+    },
+    {
+     "chemin": "liste.filtres_visibles.desactivees",
+     "type": "bool",
+     "avance": true
+    },
+    {
+     "chemin": "liste.filtres_visibles.perimes",
+     "type": "bool",
+     "avance": true
+    },
+    {
+     "chemin": "liste.filtres_visibles.doublons",
+     "type": "bool",
+     "avance": true
+    },
+    {
+     "chemin": "liste.filtres_visibles.sans_fiche",
+     "type": "bool",
+     "avance": true
+    },
+    {
+     "chemin": "liste.filtres_visibles.favoris",
+     "type": "bool",
+     "avance": true
+    },
+    {
+     "chemin": "liste.filtres_visibles.a_desinstaller",
+     "type": "bool",
+     "avance": true
+    },
+    {
+     "chemin": "liste.filtres_visibles.nouveaux",
+     "type": "bool",
+     "avance": true
+    },
+    {
+     "chemin": "liste.filtres_visibles.mis_a_jour",
+     "type": "bool",
+     "avance": true
+    },
+    {
+     "chemin": "liste.filtres_visibles.erreurs",
+     "type": "bool",
+     "avance": true
+    },
+    {
+     "chemin": "liste.filtres_visibles.essais",
+     "type": "bool",
+     "avance": true
+    },
+    {
+     "chemin": "liste.filtres_visibles.en_attente",
+     "type": "bool",
+     "avance": true
+    }
+   ]
+  },
+  {
+   "id": "recherche",
+   "elements": [
+    {
+     "chemin": "liste.recherche.nom",
+     "type": "bool",
+     "avance": true
+    },
+    {
+     "chemin": "liste.recherche.fiche",
+     "type": "bool",
+     "avance": true
+    },
+    {
+     "chemin": "liste.recherche.note",
+     "type": "bool",
+     "avance": true
+    },
+    {
+     "chemin": "liste.recherche.commandes",
+     "type": "bool",
+     "avance": true
+    },
+    {
+     "chemin": "liste.recherche.etiquettes",
+     "type": "bool",
+     "avance": true
+    },
+    {
+     "chemin": "liste.recherche.notes_toc",
+     "type": "bool",
+     "avance": true
+    },
+    {
+     "chemin": "liste.recherche.categorie",
+     "type": "bool",
+     "avance": true
+    },
+    {
+     "chemin": "liste.recherche.tolerance",
+     "type": "bool"
+    },
+    {
+     "chemin": "liste.recherche.distance",
+     "type": "nombre",
+     "min": 0,
+     "max": 3,
+     "pas": 1,
+     "avance": true
+    },
+    {
+     "chemin": "liste.recherche.longueur_min",
+     "type": "nombre",
+     "min": 2,
+     "max": 8,
+     "pas": 1,
+     "avance": true
+    },
+    {
+     "chemin": "liste.recherche.toutes_categories",
+     "type": "bool"
+    },
+    {
+     "chemin": "liste.recherche.pertinence",
+     "type": "bool",
+     "avance": true
+    },
+    {
+     "chemin": "liste.recherche.garder",
+     "type": "bool",
+     "avance": true
+    }
+   ]
+  },
+  {
+   "id": "colonnes",
+   "elements": [
+    {
+     "chemin": "liste.colonnes.icone",
+     "type": "bool"
+    },
+    {
+     "chemin": "liste.colonnes.etoile",
+     "type": "bool"
+    },
+    {
+     "chemin": "liste.colonnes.badges",
+     "type": "bool"
+    },
+    {
+     "chemin": "liste.colonnes.raison",
+     "type": "bool",
+     "avance": true
+    },
+    {
+     "chemin": "liste.colonnes.etat_charge",
+     "type": "bool",
+     "avance": true
+    },
+    {
+     "chemin": "liste.colonnes.memoire",
+     "type": "bool",
+     "avance": true
+    },
+    {
+     "chemin": "liste.badges_max",
+     "type": "nombre",
+     "min": 0,
+     "max": 6,
+     "pas": 1,
+     "avance": true
+    },
+    {
+     "chemin": "liste.etiquettes_max",
+     "type": "nombre",
+     "min": 1,
+     "max": 20,
+     "pas": 1,
+     "avance": true
+    }
+   ]
+  },
+  {
+   "id": "badges",
+   "elements": [
+    {
+     "chemin": "liste.badges.nouveau",
+     "type": "bool",
+     "avance": true
+    },
+    {
+     "chemin": "liste.badges.mis_a_jour",
+     "type": "bool",
+     "avance": true
+    },
+    {
+     "chemin": "liste.badges.erreur",
+     "type": "bool",
+     "avance": true
+    },
+    {
+     "chemin": "liste.badges.doublon",
+     "type": "bool",
+     "avance": true
+    },
+    {
+     "chemin": "liste.badges.inutile",
+     "type": "bool",
+     "avance": true
+    },
+    {
+     "chemin": "liste.badges.essai",
+     "type": "bool",
+     "avance": true
+    },
+    {
+     "chemin": "liste.badges.desinstaller",
+     "type": "bool",
+     "avance": true
+    },
+    {
+     "chemin": "liste.badges.verrou",
+     "type": "bool",
+     "avance": true
+    },
+    {
+     "type": "action",
+     "action": "tout_vu",
+     "avance": true
+    }
+   ]
+  },
+  {
+   "id": "fiche",
+   "elements": [
+    {
+     "chemin": "fiche.infobulle",
+     "type": "bool"
+    },
+    {
+     "chemin": "fiche.fond",
+     "type": "choix",
+     "choix": [
+      "jeu",
+      "uni"
+     ],
+     "texte_choix": "fond_fiche.%s",
+     "apres": "peindre"
+    },
+    {
+     "chemin": "fiche.parties.resume",
+     "type": "bool"
+    },
+    {
+     "chemin": "fiche.parties.commandes",
+     "type": "bool"
+    },
+    {
+     "chemin": "fiche.parties.remarques",
+     "type": "bool"
+    },
+    {
+     "chemin": "fiche.parties.note",
+     "type": "bool"
+    },
+    {
+     "chemin": "fiche.parties.technique",
+     "type": "bool",
+     "avance": true
+    },
+    {
+     "chemin": "fiche.parties.dependances",
+     "type": "bool",
+     "avance": true
+    },
+    {
+     "chemin": "fiche.parties.doublons",
+     "type": "bool",
+     "avance": true
+    },
+    {
+     "chemin": "fiche.parties.badges",
+     "type": "bool",
+     "avance": true
+    },
+    {
+     "chemin": "fiche.note_max",
+     "type": "nombre",
+     "min": 100,
+     "max": 5000,
+     "pas": 100,
+     "avance": true
+    },
+    {
+     "chemin": "fiche.texte_max",
+     "type": "nombre",
+     "min": 100,
+     "max": 5000,
+     "pas": 100,
+     "avance": true
+    }
+   ]
+  },
+  {
+   "id": "journal",
+   "elements": [
+    {
+     "chemin": "journal.actif",
+     "type": "bool",
+     "avance": true
+    },
+    {
+     "chemin": "journal.taille_max",
+     "type": "nombre",
+     "min": 50,
+     "max": 1000,
+     "pas": 50,
+     "avance": true
+    },
+    {
+     "chemin": "journal.niveau_min",
+     "type": "choix",
+     "choix": [
+      "debug",
+      "info",
+      "avertissement",
+      "erreur"
+     ],
+     "texte_choix": "niveau.%s",
+     "avance": true
+    },
+    {
+     "chemin": "journal.dedoublonner",
+     "type": "bool",
+     "avance": true
+    },
+    {
+     "chemin": "journal.capturer_erreurs",
+     "type": "bool",
+     "avance": true
+    },
+    {
+     "chemin": "journal.lignes_chat",
+     "type": "nombre",
+     "min": 1,
+     "max": 50,
+     "pas": 1,
+     "avance": true
+    },
+    {
+     "chemin": "personnages.memoriser",
+     "type": "bool",
+     "avance": true
+    },
+    {
+     "type": "action",
+     "action": "effacer_journal",
+     "avance": true
+    }
+   ]
+  },
+  {
+   "id": "erreurs",
+   "elements": [
+    {
+     "chemin": "erreurs.actif",
+     "type": "bool"
+    },
+    {
+     "chemin": "erreurs.annonce",
+     "type": "choix",
+     "choix": [
+      "fenetre",
+      "chat",
+      "rien"
+     ],
+     "texte_choix": "annonce.%s"
+    },
+    {
+     "chemin": "erreurs.annonce_delai",
+     "type": "nombre",
+     "min": 0,
+     "max": 120,
+     "pas": 5,
+     "avance": true
+    },
+    {
+     "chemin": "erreurs.masquer_fenetre_jeu",
+     "type": "bool"
+    },
+    {
+     "chemin": "erreurs.son",
+     "type": "bool"
+    },
+    {
+     "chemin": "erreurs.max",
+     "type": "nombre",
+     "min": 10,
+     "max": 500,
+     "pas": 10,
+     "avance": true
+    },
+    {
+     "chemin": "erreurs.taille_message",
+     "type": "nombre",
+     "min": 100,
+     "max": 2000,
+     "pas": 100,
+     "avance": true
+    },
+    {
+     "chemin": "erreurs.taille_pile",
+     "type": "nombre",
+     "min": 200,
+     "max": 6000,
+     "pas": 200,
+     "avance": true
+    },
+    {
+     "chemin": "erreurs.lignes_liste",
+     "type": "nombre",
+     "min": 5,
+     "max": 20,
+     "pas": 1,
+     "avance": true
+    },
+    {
+     "chemin": "erreurs.memoire_alerte",
+     "type": "bool"
+    },
+    {
+     "chemin": "erreurs.memoire_seuil_total",
+     "type": "nombre",
+     "min": 100,
+     "max": 4000,
+     "pas": 50,
+     "avance": true
+    },
+    {
+     "chemin": "erreurs.memoire_seuil_addon",
+     "type": "nombre",
+     "min": 10,
+     "max": 1000,
+     "pas": 10,
+     "avance": true
+    },
+    {
+     "chemin": "erreurs.memoire_intervalle",
+     "type": "nombre",
+     "min": 10,
+     "max": 600,
+     "pas": 10,
+     "avance": true
+    },
+    {
+     "chemin": "erreurs.memoire_rappel",
+     "type": "nombre",
+     "min": 60,
+     "max": 3600,
+     "pas": 60,
+     "avance": true
+    },
+    {
+     "chemin": "erreurs.memoire_lignes",
+     "type": "nombre",
+     "min": 3,
+     "max": 50,
+     "pas": 1,
+     "avance": true
+    },
+    {
+     "chemin": "erreurs.cpu_rappel",
+     "type": "bool",
+     "avance": true
+    },
+    {
+     "chemin": "erreurs.cpu_lignes",
+     "type": "nombre",
+     "min": 3,
+     "max": 50,
+     "pas": 1,
+     "avance": true
+    },
+    {
+     "type": "action",
+     "action": "ouvrir_erreurs"
+    },
+    {
+     "type": "action",
+     "action": "effacer_erreurs"
+    }
+   ]
+  },
+  {
+   "id": "divers",
+   "elements": [
+    {
+     "chemin": "affichage.message_chargement",
+     "type": "bool"
+    },
+    {
+     "chemin": "affichage.couleur_prefixe",
+     "type": "texte",
+     "motif": "couleur",
+     "avance": true
+    },
+    {
+     "type": "action",
+     "action": "tout_reinitialiser"
+    }
+   ]
+  },
+  {
+   "id": "profils",
+   "elements": [
+    {
+     "chemin": "profils.confirmer",
+     "type": "bool"
+    },
+    {
+     "chemin": "profils.dependances_auto",
+     "type": "bool"
+    },
+    {
+     "chemin": "profils.dependances_facultatives",
+     "type": "bool",
+     "avance": true
+    },
+    {
+     "chemin": "profils.portee",
+     "type": "choix",
+     "choix": [
+      "perso",
+      "tous"
+     ],
+     "texte_choix": "profil.portee_%s",
+     "avance": true
+    },
+    {
+     "chemin": "profils.proposer",
+     "type": "bool"
+    },
+    {
+     "chemin": "profils.delai_proposition",
+     "type": "nombre",
+     "min": 0,
+     "max": 30,
+     "pas": 1,
+     "avance": true
+    },
+    {
+     "chemin": "profils.situation.groupe",
+     "type": "texte",
+     "avance": true
+    },
+    {
+     "chemin": "profils.situation.raid",
+     "type": "texte",
+     "avance": true
+    },
+    {
+     "chemin": "profils.situation.champ",
+     "type": "texte",
+     "avance": true
+    }
+   ]
+  },
+  {
+   "id": "aide",
+   "elements": [
+    {
+     "chemin": "aide.visite_auto",
+     "type": "bool"
+    },
+    {
+     "chemin": "aide.portee",
+     "type": "choix",
+     "choix": [
+      "tout",
+      "moi",
+      "addons"
+     ],
+     "texte_choix": "aideportee.%s",
+     "avance": true
+    },
+    {
+     "chemin": "aide.regrouper",
+     "type": "choix",
+     "choix": [
+      "categorie",
+      "addon"
+     ],
+     "texte_choix": "aideregroupe.%s",
+     "apres": "peindre"
+    },
+    {
+     "chemin": "aide.executer_maj",
+     "type": "bool",
+     "avance": true
+    },
+    {
+     "chemin": "aide.montrer_eteints",
+     "type": "bool",
+     "avance": true
+    },
+    {
+     "chemin": "aide.detecter",
+     "type": "bool",
+     "avance": true
+    },
+    {
+     "type": "action",
+     "action": "ouvrir_antiseche"
+    },
+    {
+     "type": "action",
+     "action": "revoir_visite"
+    }
+   ]
+  }
+ ],
+ "onglets": [
+  {
+   "id": "fenetre",
+   "groupes": [
+    "fenetre",
+    "acces",
+    "aide"
+   ]
+  },
+  {
+   "id": "liste",
+   "groupes": [
+    "tri",
+    "filtres",
+    "recherche",
+    "colonnes",
+    "badges"
+   ]
+  },
+  {
+   "id": "fiches",
+   "groupes": [
+    "fiche"
+   ]
+  },
+  {
+   "id": "profils",
+   "groupes": [
+    "profils",
+    "actions",
+    "commandes"
+   ]
+  },
+  {
+   "id": "erreurs",
+   "groupes": [
+    "erreurs",
+    "journal",
+    "divers"
+   ]
+  }
+ ]
+}

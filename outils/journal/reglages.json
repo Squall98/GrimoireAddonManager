@@ -1,0 +1,10 @@
+{
+ "_aide": "Réglages de l'outil du journal (chemins relatifs à ce dossier).",
+ "dossier_wtf": "../../../../_forever_/WTF",
+ "fichier_sauvegarde": "MesAddons.lua",
+ "variable": "MesAddonsDB",
+ "cle_journal": "erreurs_journal",
+ "dossier_sortie": "pages",
+ "nom_page": "journal-erreurs-{compte}.html",
+ "format_date": "%d/%m/%Y %H:%M"
+}

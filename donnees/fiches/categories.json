@@ -1,0 +1,166 @@
+{
+ "version": 1,
+ "source": "Catégories de CurseForge (liste vérifiée par Perplexity le 15/11/2026) + catégories lues dans les .toc",
+ "categories": {
+  "achievements": {
+   "fr": "Hauts faits",
+   "en": "Achievements",
+   "source": "curseforge"
+  },
+  "action-bars": {
+   "fr": "Barres d'action",
+   "en": "Action Bars",
+   "source": "curseforge"
+  },
+  "artwork": {
+   "fr": "Illustrations",
+   "en": "Artwork",
+   "source": "curseforge"
+  },
+  "auction-economy": {
+   "fr": "Hôtel des ventes & économie",
+   "en": "Auction & Economy",
+   "source": "curseforge"
+  },
+  "audio-video": {
+   "fr": "Audio & vidéo",
+   "en": "Audio & Video",
+   "source": "curseforge"
+  },
+  "bags-inventory": {
+   "fr": "Sacs & inventaire",
+   "en": "Bags & Inventory",
+   "source": "curseforge"
+  },
+  "boss-encounters": {
+   "fr": "Combats de boss",
+   "en": "Boss Encounters",
+   "source": "curseforge"
+  },
+  "buffs-debuffs": {
+   "fr": "Buffs & debuffs",
+   "en": "Buffs & Debuffs",
+   "source": "curseforge"
+  },
+  "chat-communication": {
+   "fr": "Chat & communication",
+   "en": "Chat & Communication",
+   "source": "curseforge"
+  },
+  "class": {
+   "fr": "Classe",
+   "en": "Class",
+   "source": "curseforge"
+  },
+  "combat": {
+   "fr": "Combat",
+   "en": "Combat",
+   "source": "curseforge"
+  },
+  "companions": {
+   "fr": "Compagnons",
+   "en": "Companions",
+   "source": "curseforge"
+  },
+  "data-export": {
+   "fr": "Export de données",
+   "en": "Data Export",
+   "source": "curseforge"
+  },
+  "guild": {
+   "fr": "Guilde",
+   "en": "Guild",
+   "source": "curseforge"
+  },
+  "huds": {
+   "fr": "Affichage tête haute",
+   "en": "HUDs",
+   "source": "curseforge"
+  },
+  "libraries": {
+   "fr": "Bibliothèques",
+   "en": "Libraries",
+   "source": "curseforge"
+  },
+  "map-minimap": {
+   "fr": "Carte & minicarte",
+   "en": "Map & Minimap",
+   "source": "curseforge"
+  },
+  "mail": {
+   "fr": "Courrier",
+   "en": "Mail",
+   "source": "curseforge"
+  },
+  "miscellaneous": {
+   "fr": "Divers",
+   "en": "Miscellaneous",
+   "source": "curseforge"
+  },
+  "plugins": {
+   "fr": "Extensions",
+   "en": "Plugins",
+   "source": "curseforge"
+  },
+  "professions": {
+   "fr": "Métiers",
+   "en": "Professions",
+   "source": "curseforge"
+  },
+  "quests-leveling": {
+   "fr": "Quêtes & leveling",
+   "en": "Quests & Leveling",
+   "source": "curseforge"
+  },
+  "roleplay": {
+   "fr": "Jeu de rôle",
+   "en": "Roleplay",
+   "source": "curseforge"
+  },
+  "tooltip": {
+   "fr": "Infobulles",
+   "en": "Tooltip",
+   "source": "curseforge"
+  },
+  "transmogrification": {
+   "fr": "Transmogrification",
+   "en": "Transmogrification",
+   "source": "curseforge"
+  },
+  "unit-frames": {
+   "fr": "Cadres d'unités",
+   "en": "Unit Frames",
+   "source": "curseforge"
+  },
+  "guides": {
+   "fr": "Guides",
+   "en": "Guides",
+   "source": "toc"
+  },
+  "collections": {
+   "fr": "Collections",
+   "en": "Collections",
+   "source": "toc"
+  },
+  "equipment": {
+   "fr": "Équipement",
+   "en": "Equipment",
+   "source": "toc"
+  },
+  "user-interface": {
+   "fr": "Interface",
+   "en": "User Interface",
+   "source": "toc"
+  },
+  "inventory": {
+   "fr": "Inventaire",
+   "en": "Inventory",
+   "source": "toc"
+  },
+  "dbm": {
+   "fr": "Modules DBM",
+   "en": "DBM modules",
+   "source": "toc"
+  }
+ }
+}

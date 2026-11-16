@@ -1,0 +1,7 @@
+<Bindings>
+	<Binding name="MESADDONS_FENETRE" header="MESADDONS" category="ADDONS">MesAddonsRaccourci("fenetre")</Binding>
+	<Binding name="MESADDONS_PROFILS" category="ADDONS">MesAddonsRaccourci("profils")</Binding>
+	<Binding name="MESADDONS_RECHARGER" category="ADDONS">MesAddonsRaccourci("recharger")</Binding>
+	<Binding name="MESADDONS_ANTISECHE" category="ADDONS">MesAddonsRaccourci("antiseche")</Binding>
+	<Binding name="MESADDONS_MINI" category="ADDONS">MesAddonsRaccourci("mini")</Binding>
+</Bindings>

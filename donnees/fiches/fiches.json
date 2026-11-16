@@ -1,0 +1,2875 @@
+{
+ "version": 1,
+ "langues": [
+  "fr",
+  "en"
+ ],
+ "genere": "2026-11-15",
+ "fiches": {
+  "Auctionator": {
+   "categories": [
+    "auction-economy"
+   ],
+   "curseforge": "https://www.curseforge.com/wow/addons/auctionator",
+   "confiance": "haute",
+   "utilite": "confort",
+   "fr": {
+    "resume": "Hôtel des ventes plus rapide : recherche par liste, prix du marché, vente en un clic, annulation facile.",
+    "commandes": "/atr (ou /auctionator)",
+    "remarques": "Recoupe en partie Naowh Forever : The Market (vente à l'HV). L'un ou l'autre suffit."
+   },
+   "en": {
+    "resume": "Faster auction house: shopping lists, market prices, one-click selling, easy cancelling.",
+    "commandes": "/atr (or /auctionator)",
+    "remarques": "Partly overlaps Naowh Forever: The Market (selling). One of the two is enough."
+   },
+   "doublons": [
+    "NaowhForever_Market"
+   ],
+   "note_lien": "",
+   "type": "principal",
+   "icone": "Interface\\AddOns\\Auctionator\\Images\\Logo",
+   "dependances": [],
+   "titre_toc": "Auctionator",
+   "verifie": "2026-11-15"
+  },
+  "Baganator": {
+   "categories": [
+    "bags-inventory"
+   ],
+   "curseforge": "https://www.curseforge.com/wow/addons/baganator",
+   "confiance": "haute",
+   "utilite": "confort",
+   "fr": {
+    "resume": "Sacs réunis en un seul, rangés par catégories, avec recherche ; voit aussi les sacs et la banque de tes autres persos.",
+    "commandes": "/bgr (ou /baganator), /bgrs <mot> pour chercher",
+    "remarques": "Va avec Syndicator (garder les deux activés)."
+   },
+   "en": {
+    "resume": "All bags merged into one, sorted by category, with search; also shows the bags and bank of your other characters.",
+    "commandes": "/bgr (or /baganator), /bgrs <word> to search",
+    "remarques": "Works with Syndicator (keep both enabled)."
+   },
+   "doublons": [],
+   "note_lien": "",
+   "type": "principal",
+   "icone": "Interface\\AddOns\\Baganator\\Assets\\logo.tga",
+   "dependances": [],
+   "titre_toc": "Baganator",
+   "verifie": "2026-11-15"
+  },
+  "BetterFishing": {
+   "categories": [
+    "professions"
+   ],
+   "curseforge": "https://www.curseforge.com/wow/addons/better-fishing",
+   "confiance": "haute",
+   "utilite": "confort",
+   "fr": {
+    "resume": "Pêche avec une seule touche ou un double-clic, et son du bouchon plus fort.",
+    "commandes": "/bf (ou /betterfishing)",
+    "remarques": "Doublon de FishyWashy : en garder un seul activé."
+   },
+   "en": {
+    "resume": "Fish with a single key or a double-click, with a louder bobber sound.",
+    "commandes": "/bf (or /betterfishing)",
+    "remarques": "Duplicate of FishyWashy: keep only one enabled."
+   },
+   "doublons": [
+    "FishyWashy"
+   ],
+   "note_lien": "",
+   "type": "principal",
+   "icone": "Interface\\AddOns\\BetterFishing\\fishingicon.blp",
+   "dependances": [],
+   "titre_toc": "Better Fishing",
+   "verifie": "2026-11-15"
+  },
+  "Curator": {
+   "categories": [
+    "collections"
+   ],
+   "curseforge": null,
+   "confiance": "moyenne",
+   "utilite": "gadget",
+   "fr": {
+    "resume": "Mini-jeu de cartes à collectionner sur les créatures d'Azeroth : ouvre des boosters, remplis ton album zone par zone, montre-le.",
+    "commandes": "/curator",
+    "remarques": "Purement pour le plaisir, rien d'indispensable."
+   },
+   "en": {
+    "resume": "Collectible card mini-game about Azeroth's creatures: open boosters, fill your album zone by zone, show it off.",
+    "commandes": "/curator",
+    "remarques": "Purely for fun, nothing essential."
+   },
+   "doublons": [],
+   "note_lien": "Page CurseForge non confirmée par la recherche du 15/11/2026 : adresse laissée vide.",
+   "type": "principal",
+   "icone": "Interface\\AddOns\\Curator\\Media\\Icon",
+   "dependances": [],
+   "titre_toc": "Curator",
+   "verifie": "2026-11-15"
+  },
+  "DBM-Azeroth": {
+   "type": "module",
+   "parent": "DBM-Core",
+   "categories": [
+    "boss-encounters"
+   ],
+   "curseforge": "https://www.curseforge.com/projects/3358",
+   "confiance": "haute",
+   "utilite": "indispensable",
+   "fr": {
+    "resume": "Les boss du monde.",
+    "commandes": "",
+    "remarques": ""
+   },
+   "en": {
+    "resume": "World bosses.",
+    "commandes": "",
+    "remarques": ""
+   },
+   "doublons": [],
+   "note_lien": "",
+   "icone": "Interface\\AddOns\\DBM-Core\\textures\\dbm_airhorn",
+   "dependances": [
+    "DBM-Core"
+   ],
+   "titre_toc": "<DBM> World Bosses (Vanilla)",
+   "verifie": "2026-11-15"
+  },
+  "DBM-Brawlers": {
+   "type": "module",
+   "parent": "DBM-Core",
+   "categories": [
+    "dbm"
+   ],
+   "curseforge": "https://www.curseforge.com/projects/3358",
+   "confiance": "haute",
+   "utilite": "gadget",
+   "fr": {
+    "resume": "Module DBM d'une autre extension ou d'un mode de jeu : peu utile sur Forever, peut rester désactivé.",
+    "commandes": "",
+    "remarques": ""
+   },
+   "en": {
+    "resume": "DBM module for another expansion or game mode: little use on Forever, can stay disabled.",
+    "commandes": "",
+    "remarques": ""
+   },
+   "doublons": [],
+   "note_lien": "",
+   "icone": "Interface\\AddOns\\DBM-Core\\textures\\dbm_airhorn",
+   "dependances": [
+    "DBM-Core"
+   ],
+   "titre_toc": "<DBM Mod> Brawlers",
+   "verifie": "2026-11-15"
+  },
+  "DBM-Challenges": {
+   "type": "module",
+   "parent": "DBM-Core",
+   "categories": [
+    "dbm"
+   ],
+   "curseforge": "https://www.curseforge.com/projects/3358",
+   "confiance": "haute",
+   "utilite": "gadget",
+   "fr": {
+    "resume": "Module DBM d'une autre extension ou d'un mode de jeu : peu utile sur Forever, peut rester désactivé.",
+    "commandes": "",
+    "remarques": ""
+   },
+   "en": {
+    "resume": "DBM module for another expansion or game mode: little use on Forever, can stay disabled.",
+    "commandes": "",
+    "remarques": ""
+   },
+   "doublons": [],
+   "note_lien": "",
+   "icone": "Interface\\AddOns\\DBM-Core\\textures\\dbm_airhorn",
+   "dependances": [
+    "DBM-Core"
+   ],
+   "titre_toc": "<DBM Mod> Challenges",
+   "verifie": "2026-11-15"
+  },
+  "DBM-Core": {
+   "categories": [
+    "boss-encounters"
+   ],
+   "curseforge": "https://www.curseforge.com/projects/3358",
+   "confiance": "haute",
+   "utilite": "indispensable",
+   "fr": {
+    "resume": "Deadly Boss Mods : alertes et minuteurs pendant les combats de boss (donjons, raids).",
+    "commandes": "/dbm (options), /pull <secondes>, /break <minutes>, /range",
+    "remarques": "Les ~30 dossiers DBM-* sont ses modules. Seuls ceux marqués Forever ou Vanilla servent ici ; les autres (Midnight, BC, WotLK, MoP…) restent « périmés » et peuvent rester désactivés."
+   },
+   "en": {
+    "resume": "Deadly Boss Mods: alerts and timers during boss fights (dungeons, raids).",
+    "commandes": "/dbm (options), /pull <seconds>, /break <minutes>, /range",
+    "remarques": "The ~30 DBM-* folders are its modules. Only those marked Forever or Vanilla are useful here; the others (Midnight, BC, WotLK, MoP…) stay 'out of date' and can remain disabled."
+   },
+   "doublons": [],
+   "note_lien": "",
+   "type": "principal",
+   "icone": "Interface\\AddOns\\DBM-Core\\textures\\dbm_airhorn",
+   "dependances": [
+    "DBM-StatusBarTimers"
+   ],
+   "titre_toc": "<DBM Core> Main Core",
+   "verifie": "2026-11-15"
+  },
+  "DBM-Delves-Midnight": {
+   "type": "module",
+   "parent": "DBM-Core",
+   "categories": [
+    "dbm"
+   ],
+   "curseforge": "https://www.curseforge.com/projects/3358",
+   "confiance": "haute",
+   "utilite": "gadget",
+   "fr": {
+    "resume": "Modules DBM des gouffres (Delves) : n'existent pas sur Forever, peuvent rester désactivés.",
+    "commandes": "",
+    "remarques": ""
+   },
+   "en": {
+    "resume": "DBM modules for Delves: not on Forever, can stay disabled.",
+    "commandes": "",
+    "remarques": ""
+   },
+   "doublons": [],
+   "note_lien": "",
+   "icone": "Interface\\AddOns\\DBM-Core\\textures\\dbm_airhorn",
+   "dependances": [
+    "DBM-Core"
+   ],
+   "titre_toc": "<DBM Mod> Delves (Midnight)",
+   "verifie": "2026-11-15"
+  },
+  "DBM-Delves-WarWithin": {
+   "type": "module",
+   "parent": "DBM-Core",
+   "categories": [
+    "dbm"
+   ],
+   "curseforge": "https://www.curseforge.com/projects/3358",
+   "confiance": "haute",
+   "utilite": "gadget",
+   "fr": {
+    "resume": "Modules DBM des gouffres (Delves) : n'existent pas sur Forever, peuvent rester désactivés.",
+    "commandes": "",
+    "remarques": ""
+   },
+   "en": {
+    "resume": "DBM modules for Delves: not on Forever, can stay disabled.",
+    "commandes": "",
+    "remarques": ""
+   },
+   "doublons": [],
+   "note_lien": "",
+   "icone": "Interface\\AddOns\\DBM-Core\\textures\\dbm_airhorn",
+   "dependances": [
+    "DBM-Core"
+   ],
+   "titre_toc": "<DBM Mod> Delves (TWW)",
+   "verifie": "2026-11-15"
+  },
+  "DBM-GUI": {
+   "type": "module",
+   "parent": "DBM-Core",
+   "categories": [
+    "boss-encounters"
+   ],
+   "curseforge": "https://www.curseforge.com/projects/3358",
+   "confiance": "haute",
+   "utilite": "indispensable",
+   "fr": {
+    "resume": "La fenêtre des options de DBM (/dbm).",
+    "commandes": "",
+    "remarques": ""
+   },
+   "en": {
+    "resume": "DBM's options window (/dbm).",
+    "commandes": "",
+    "remarques": ""
+   },
+   "doublons": [],
+   "note_lien": "",
+   "icone": "Interface\\AddOns\\DBM-Core\\textures\\dbm_airhorn",
+   "dependances": [
+    "DBM-Core"
+   ],
+   "titre_toc": "<DBM Core> Options GUI",
+   "verifie": "2026-11-15"
+  },
+  "DBM-Lairs-Midnight": {
+   "type": "module",
+   "parent": "DBM-Core",
+   "categories": [
+    "dbm"
+   ],
+   "curseforge": "https://www.curseforge.com/projects/3358",
+   "confiance": "haute",
+   "utilite": "gadget",
+   "fr": {
+    "resume": "Modules DBM d'antres d'une autre extension : périmés sur Forever, peuvent rester désactivés.",
+    "commandes": "",
+    "remarques": ""
+   },
+   "en": {
+    "resume": "DBM modules for lairs of another expansion: out of date on Forever, can stay disabled.",
+    "commandes": "",
+    "remarques": ""
+   },
+   "doublons": [],
+   "note_lien": "",
+   "icone": "Interface\\AddOns\\DBM-Core\\textures\\dbm_airhorn",
+   "dependances": [
+    "DBM-Core"
+   ],
+   "titre_toc": "<DBM Mod> Lairs (Midnight)",
+   "verifie": "2026-11-15"
+  },
+  "DBM-Midnight": {
+   "type": "module",
+   "parent": "DBM-Core",
+   "categories": [
+    "dbm"
+   ],
+   "curseforge": "https://www.curseforge.com/projects/3358",
+   "confiance": "haute",
+   "utilite": "gadget",
+   "fr": {
+    "resume": "Module DBM d'une autre extension ou d'un mode de jeu : peu utile sur Forever, peut rester désactivé.",
+    "commandes": "",
+    "remarques": ""
+   },
+   "en": {
+    "resume": "DBM module for another expansion or game mode: little use on Forever, can stay disabled.",
+    "commandes": "",
+    "remarques": ""
+   },
+   "doublons": [],
+   "note_lien": "",
+   "icone": "Interface\\AddOns\\DBM-Core\\textures\\dbm_airhorn",
+   "dependances": [
+    "DBM-Core"
+   ],
+   "titre_toc": "<DBM Mod> World Bosses (Midnight)",
+   "verifie": "2026-11-15"
+  },
+  "DBM-Party-BC": {
+   "type": "module",
+   "parent": "DBM-Core",
+   "categories": [
+    "dbm"
+   ],
+   "curseforge": "https://www.curseforge.com/projects/3358",
+   "confiance": "haute",
+   "utilite": "gadget",
+   "fr": {
+    "resume": "Modules DBM des donjons d'autres extensions : périmés sur Forever, peuvent rester désactivés.",
+    "commandes": "",
+    "remarques": ""
+   },
+   "en": {
+    "resume": "DBM modules for dungeons of other expansions: out of date on Forever, can stay disabled.",
+    "commandes": "",
+    "remarques": ""
+   },
+   "doublons": [],
+   "note_lien": "",
+   "icone": "Interface\\AddOns\\DBM-Core\\textures\\dbm_airhorn",
+   "dependances": [
+    "DBM-Core"
+   ],
+   "titre_toc": "<DBM Mod> Dungeons (BC)",
+   "verifie": "2026-11-15"
+  },
+  "DBM-Party-BfA": {
+   "type": "module",
+   "parent": "DBM-Core",
+   "categories": [
+    "dbm"
+   ],
+   "curseforge": "https://www.curseforge.com/projects/3358",
+   "confiance": "haute",
+   "utilite": "gadget",
+   "fr": {
+    "resume": "Modules DBM des donjons d'autres extensions : périmés sur Forever, peuvent rester désactivés.",
+    "commandes": "",
+    "remarques": ""
+   },
+   "en": {
+    "resume": "DBM modules for dungeons of other expansions: out of date on Forever, can stay disabled.",
+    "commandes": "",
+    "remarques": ""
+   },
+   "doublons": [],
+   "note_lien": "",
+   "icone": "Interface\\AddOns\\DBM-Core\\textures\\dbm_airhorn",
+   "dependances": [
+    "DBM-Core"
+   ],
+   "titre_toc": "<DBM Mod> Dungeons (BfA)",
+   "verifie": "2026-11-15"
+  },
+  "DBM-Party-Cataclysm": {
+   "type": "module",
+   "parent": "DBM-Core",
+   "categories": [
+    "dbm"
+   ],
+   "curseforge": "https://www.curseforge.com/projects/3358",
+   "confiance": "haute",
+   "utilite": "gadget",
+   "fr": {
+    "resume": "Modules DBM des donjons d'autres extensions : périmés sur Forever, peuvent rester désactivés.",
+    "commandes": "",
+    "remarques": ""
+   },
+   "en": {
+    "resume": "DBM modules for dungeons of other expansions: out of date on Forever, can stay disabled.",
+    "commandes": "",
+    "remarques": ""
+   },
+   "doublons": [],
+   "note_lien": "",
+   "icone": "Interface\\AddOns\\DBM-Core\\textures\\dbm_airhorn",
+   "dependances": [
+    "DBM-Core"
+   ],
+   "titre_toc": "<DBM Mod> Dungeons (Cata)",
+   "verifie": "2026-11-15"
+  },
+  "DBM-Party-Dragonflight": {
+   "type": "module",
+   "parent": "DBM-Core",
+   "categories": [
+    "dbm"
+   ],
+   "curseforge": "https://www.curseforge.com/projects/3358",
+   "confiance": "haute",
+   "utilite": "gadget",
+   "fr": {
+    "resume": "Modules DBM des donjons d'autres extensions : périmés sur Forever, peuvent rester désactivés.",
+    "commandes": "",
+    "remarques": ""
+   },
+   "en": {
+    "resume": "DBM modules for dungeons of other expansions: out of date on Forever, can stay disabled.",
+    "commandes": "",
+    "remarques": ""
+   },
+   "doublons": [],
+   "note_lien": "",
+   "icone": "Interface\\AddOns\\DBM-Core\\textures\\dbm_airhorn",
+   "dependances": [
+    "DBM-Core"
+   ],
+   "titre_toc": "<DBM Mod> Dungeons (DF)",
+   "verifie": "2026-11-15"
+  },
+  "DBM-Party-Forever": {
+   "type": "module",
+   "parent": "DBM-Core",
+   "categories": [
+    "boss-encounters"
+   ],
+   "curseforge": "https://www.curseforge.com/projects/3358",
+   "confiance": "haute",
+   "utilite": "indispensable",
+   "fr": {
+    "resume": "Les donjons propres à WoW Forever.",
+    "commandes": "",
+    "remarques": ""
+   },
+   "en": {
+    "resume": "Dungeons specific to WoW Forever.",
+    "commandes": "",
+    "remarques": ""
+   },
+   "doublons": [],
+   "note_lien": "",
+   "icone": "Interface\\AddOns\\DBM-Core\\textures\\dbm_airhorn",
+   "dependances": [
+    "DBM-Core"
+   ],
+   "titre_toc": "<DBM Mod> Dungeons (Forever)",
+   "verifie": "2026-11-15"
+  },
+  "DBM-Party-Legion": {
+   "type": "module",
+   "parent": "DBM-Core",
+   "categories": [
+    "dbm"
+   ],
+   "curseforge": "https://www.curseforge.com/projects/3358",
+   "confiance": "haute",
+   "utilite": "gadget",
+   "fr": {
+    "resume": "Modules DBM des donjons d'autres extensions : périmés sur Forever, peuvent rester désactivés.",
+    "commandes": "",
+    "remarques": ""
+   },
+   "en": {
+    "resume": "DBM modules for dungeons of other expansions: out of date on Forever, can stay disabled.",
+    "commandes": "",
+    "remarques": ""
+   },
+   "doublons": [],
+   "note_lien": "",
+   "icone": "Interface\\AddOns\\DBM-Core\\textures\\dbm_airhorn",
+   "dependances": [
+    "DBM-Core"
+   ],
+   "titre_toc": "<DBM Mod> Dungeons (Legion)",
+   "verifie": "2026-11-15"
+  },
+  "DBM-Party-Midnight": {
+   "type": "module",
+   "parent": "DBM-Core",
+   "categories": [
+    "dbm"
+   ],
+   "curseforge": "https://www.curseforge.com/projects/3358",
+   "confiance": "haute",
+   "utilite": "gadget",
+   "fr": {
+    "resume": "Modules DBM des donjons d'autres extensions : périmés sur Forever, peuvent rester désactivés.",
+    "commandes": "",
+    "remarques": ""
+   },
+   "en": {
+    "resume": "DBM modules for dungeons of other expansions: out of date on Forever, can stay disabled.",
+    "commandes": "",
+    "remarques": ""
+   },
+   "doublons": [],
+   "note_lien": "",
+   "icone": "Interface\\AddOns\\DBM-Core\\textures\\dbm_airhorn",
+   "dependances": [
+    "DBM-Core"
+   ],
+   "titre_toc": "<DBM Mod> Dungeons (Midnight)",
+   "verifie": "2026-11-15"
+  },
+  "DBM-Party-MoP": {
+   "type": "module",
+   "parent": "DBM-Core",
+   "categories": [
+    "dbm"
+   ],
+   "curseforge": "https://www.curseforge.com/projects/3358",
+   "confiance": "haute",
+   "utilite": "gadget",
+   "fr": {
+    "resume": "Modules DBM des donjons d'autres extensions : périmés sur Forever, peuvent rester désactivés.",
+    "commandes": "",
+    "remarques": ""
+   },
+   "en": {
+    "resume": "DBM modules for dungeons of other expansions: out of date on Forever, can stay disabled.",
+    "commandes": "",
+    "remarques": ""
+   },
+   "doublons": [],
+   "note_lien": "",
+   "icone": "Interface\\AddOns\\DBM-Core\\textures\\dbm_airhorn",
+   "dependances": [
+    "DBM-Core"
+   ],
+   "titre_toc": "<DBM Mod> Dungeons (MoP)",
+   "verifie": "2026-11-15"
+  },
+  "DBM-Party-Shadowlands": {
+   "type": "module",
+   "parent": "DBM-Core",
+   "categories": [
+    "dbm"
+   ],
+   "curseforge": "https://www.curseforge.com/projects/3358",
+   "confiance": "haute",
+   "utilite": "gadget",
+   "fr": {
+    "resume": "Modules DBM des donjons d'autres extensions : périmés sur Forever, peuvent rester désactivés.",
+    "commandes": "",
+    "remarques": ""
+   },
+   "en": {
+    "resume": "DBM modules for dungeons of other expansions: out of date on Forever, can stay disabled.",
+    "commandes": "",
+    "remarques": ""
+   },
+   "doublons": [],
+   "note_lien": "",
+   "icone": "Interface\\AddOns\\DBM-Core\\textures\\dbm_airhorn",
+   "dependances": [
+    "DBM-Core"
+   ],
+   "titre_toc": "<DBM Mod> Dungeons (SL)",
+   "verifie": "2026-11-15"
+  },
+  "DBM-Party-Vanilla": {
+   "type": "module",
+   "parent": "DBM-Core",
+   "categories": [
+    "boss-encounters"
+   ],
+   "curseforge": "https://www.curseforge.com/projects/3358",
+   "confiance": "haute",
+   "utilite": "indispensable",
+   "fr": {
+    "resume": "Les donjons classiques.",
+    "commandes": "",
+    "remarques": ""
+   },
+   "en": {
+    "resume": "Classic dungeons.",
+    "commandes": "",
+    "remarques": ""
+   },
+   "doublons": [],
+   "note_lien": "",
+   "icone": "Interface\\AddOns\\DBM-Core\\textures\\dbm_airhorn",
+   "dependances": [
+    "DBM-Core"
+   ],
+   "titre_toc": "<DBM Mod> Dungeons (Vanilla)",
+   "verifie": "2026-11-15"
+  },
+  "DBM-Party-WarWithin": {
+   "type": "module",
+   "parent": "DBM-Core",
+   "categories": [
+    "dbm"
+   ],
+   "curseforge": "https://www.curseforge.com/projects/3358",
+   "confiance": "haute",
+   "utilite": "gadget",
+   "fr": {
+    "resume": "Modules DBM des donjons d'autres extensions : périmés sur Forever, peuvent rester désactivés.",
+    "commandes": "",
+    "remarques": ""
+   },
+   "en": {
+    "resume": "DBM modules for dungeons of other expansions: out of date on Forever, can stay disabled.",
+    "commandes": "",
+    "remarques": ""
+   },
+   "doublons": [],
+   "note_lien": "",
+   "icone": "Interface\\AddOns\\DBM-Core\\textures\\dbm_airhorn",
+   "dependances": [
+    "DBM-Core"
+   ],
+   "titre_toc": "<DBM Mod> Dungeons (WW)",
+   "verifie": "2026-11-15"
+  },
+  "DBM-Party-WoD": {
+   "type": "module",
+   "parent": "DBM-Core",
+   "categories": [
+    "dbm"
+   ],
+   "curseforge": "https://www.curseforge.com/projects/3358",
+   "confiance": "haute",
+   "utilite": "gadget",
+   "fr": {
+    "resume": "Modules DBM des donjons d'autres extensions : périmés sur Forever, peuvent rester désactivés.",
+    "commandes": "",
+    "remarques": ""
+   },
+   "en": {
+    "resume": "DBM modules for dungeons of other expansions: out of date on Forever, can stay disabled.",
+    "commandes": "",
+    "remarques": ""
+   },
+   "doublons": [],
+   "note_lien": "",
+   "icone": "Interface\\AddOns\\DBM-Core\\textures\\dbm_airhorn",
+   "dependances": [
+    "DBM-Core"
+   ],
+   "titre_toc": "<DBM Mod> Dungeons (WoD)",
+   "verifie": "2026-11-15"
+  },
+  "DBM-Party-WotLK": {
+   "type": "module",
+   "parent": "DBM-Core",
+   "categories": [
+    "dbm"
+   ],
+   "curseforge": "https://www.curseforge.com/projects/3358",
+   "confiance": "haute",
+   "utilite": "gadget",
+   "fr": {
+    "resume": "Modules DBM des donjons d'autres extensions : périmés sur Forever, peuvent rester désactivés.",
+    "commandes": "",
+    "remarques": ""
+   },
+   "en": {
+    "resume": "DBM modules for dungeons of other expansions: out of date on Forever, can stay disabled.",
+    "commandes": "",
+    "remarques": ""
+   },
+   "doublons": [],
+   "note_lien": "",
+   "icone": "Interface\\AddOns\\DBM-Core\\textures\\dbm_airhorn",
+   "dependances": [
+    "DBM-Core"
+   ],
+   "titre_toc": "<DBM Mod> Dungeons (WotLK)",
+   "verifie": "2026-11-15"
+  },
+  "DBM-Raids-Midnight": {
+   "type": "module",
+   "parent": "DBM-Core",
+   "categories": [
+    "dbm"
+   ],
+   "curseforge": "https://www.curseforge.com/projects/3358",
+   "confiance": "haute",
+   "utilite": "gadget",
+   "fr": {
+    "resume": "Modules DBM des raids d'autres extensions : périmés sur Forever, peuvent rester désactivés.",
+    "commandes": "",
+    "remarques": ""
+   },
+   "en": {
+    "resume": "DBM modules for raids of other expansions: out of date on Forever, can stay disabled.",
+    "commandes": "",
+    "remarques": ""
+   },
+   "doublons": [],
+   "note_lien": "",
+   "icone": "Interface\\AddOns\\DBM-Core\\textures\\dbm_airhorn",
+   "dependances": [
+    "DBM-Core"
+   ],
+   "titre_toc": "<DBM Mod> Raids (Midnight)",
+   "verifie": "2026-11-15"
+  },
+  "DBM-Raids-Vanilla": {
+   "type": "module",
+   "parent": "DBM-Core",
+   "categories": [
+    "boss-encounters"
+   ],
+   "curseforge": "https://www.curseforge.com/projects/3358",
+   "confiance": "haute",
+   "utilite": "indispensable",
+   "fr": {
+    "resume": "Les raids classiques (Cœur du Magma, Onyxia…).",
+    "commandes": "",
+    "remarques": ""
+   },
+   "en": {
+    "resume": "Classic raids (Molten Core, Onyxia…).",
+    "commandes": "",
+    "remarques": ""
+   },
+   "doublons": [],
+   "note_lien": "",
+   "icone": "Interface\\AddOns\\DBM-Core\\textures\\dbm_airhorn",
+   "dependances": [
+    "DBM-Core"
+   ],
+   "titre_toc": "<DBM Mod> Raids (Vanilla)",
+   "verifie": "2026-11-15"
+  },
+  "DBM-StatusBarTimers": {
+   "type": "module",
+   "parent": "DBM-Core",
+   "categories": [
+    "boss-encounters"
+   ],
+   "curseforge": "https://www.curseforge.com/projects/3358",
+   "confiance": "haute",
+   "utilite": "indispensable",
+   "fr": {
+    "resume": "Les barres de minuteurs de DBM : obligatoire.",
+    "commandes": "",
+    "remarques": ""
+   },
+   "en": {
+    "resume": "DBM's timer bars: required.",
+    "commandes": "",
+    "remarques": ""
+   },
+   "doublons": [],
+   "note_lien": "",
+   "icone": "Interface\\AddOns\\DBM-Core\\textures\\dbm_airhorn",
+   "dependances": [],
+   "titre_toc": "<DBM Core> Status Bar Timers",
+   "verifie": "2026-11-15"
+  },
+  "DBM-VPVEM": {
+   "type": "module",
+   "parent": "DBM-Core",
+   "categories": [
+    "boss-encounters"
+   ],
+   "curseforge": "https://www.curseforge.com/projects/3358",
+   "confiance": "haute",
+   "utilite": "indispensable",
+   "fr": {
+    "resume": "Pack de voix pour les alertes DBM (en anglais).",
+    "commandes": "",
+    "remarques": ""
+   },
+   "en": {
+    "resume": "Voice pack for DBM alerts (English).",
+    "commandes": "",
+    "remarques": ""
+   },
+   "doublons": [],
+   "note_lien": "",
+   "icone": "Interface\\AddOns\\DBM-Core\\textures\\dbm_airhorn",
+   "dependances": [
+    "DBM-Core"
+   ],
+   "titre_toc": "<DBM Media> Voicepack VEM",
+   "verifie": "2026-11-15"
+  },
+  "DBM-WorldEvents": {
+   "type": "module",
+   "parent": "DBM-Core",
+   "categories": [
+    "dbm"
+   ],
+   "curseforge": "https://www.curseforge.com/projects/3358",
+   "confiance": "haute",
+   "utilite": "gadget",
+   "fr": {
+    "resume": "Module DBM d'une autre extension ou d'un mode de jeu : peu utile sur Forever, peut rester désactivé.",
+    "commandes": "",
+    "remarques": ""
+   },
+   "en": {
+    "resume": "DBM module for another expansion or game mode: little use on Forever, can stay disabled.",
+    "commandes": "",
+    "remarques": ""
+   },
+   "doublons": [],
+   "note_lien": "",
+   "icone": "Interface\\AddOns\\DBM-Core\\textures\\dbm_airhorn",
+   "dependances": [
+    "DBM-Core"
+   ],
+   "titre_toc": "<DBM Mod> World Events",
+   "verifie": "2026-11-15"
+  },
+  "Details": {
+   "categories": [
+    "combat"
+   ],
+   "curseforge": "https://www.curseforge.com/projects/61284",
+   "confiance": "haute",
+   "utilite": "confort",
+   "fr": {
+    "resume": "Compteur de dégâts et de soins (DPS/HPS), avec le détail de chaque sort et de chaque combat.",
+    "commandes": "/details",
+    "remarques": "Les dossiers Details_* sont ses extensions. Details_TinyThreat fait doublon avec le compteur de menace de Naowh Forever : Combat."
+   },
+   "en": {
+    "resume": "Damage and healing meter (DPS/HPS), with the breakdown of each spell and each fight.",
+    "commandes": "/details",
+    "remarques": "The Details_* folders are its plugins. Details_TinyThreat duplicates the threat meter of Naowh Forever: Combat."
+   },
+   "doublons": [
+    "Details_TinyThreat"
+   ],
+   "note_lien": "",
+   "type": "principal",
+   "icone": "Interface\\AddOns\\Details\\images\\minimap",
+   "dependances": [],
+   "titre_toc": "Details! Damage Meter",
+   "verifie": "2026-11-15"
+  },
+  "Details_Compare2": {
+   "type": "module",
+   "parent": "Details",
+   "categories": [
+    "combat"
+   ],
+   "curseforge": "https://www.curseforge.com/projects/61284",
+   "confiance": "haute",
+   "utilite": "confort",
+   "fr": {
+    "resume": "Nouvel onglet Comparer dans le détail d'un joueur.",
+    "commandes": "",
+    "remarques": ""
+   },
+   "en": {
+    "resume": "New Compare tab in a player's breakdown.",
+    "commandes": "",
+    "remarques": ""
+   },
+   "doublons": [],
+   "note_lien": "",
+   "icone": "Interface\\AddOns\\Details\\images\\minimap",
+   "dependances": [
+    "Details"
+   ],
+   "titre_toc": "Details!: Compare 2.0",
+   "verifie": "2026-11-15"
+  },
+  "Details_DataStorage": {
+   "type": "module",
+   "parent": "Details",
+   "categories": [
+    "combat"
+   ],
+   "curseforge": "https://www.curseforge.com/projects/61284",
+   "confiance": "haute",
+   "utilite": "confort",
+   "fr": {
+    "resume": "Stockage des données de Details (à garder).",
+    "commandes": "",
+    "remarques": ""
+   },
+   "en": {
+    "resume": "Storage for Details data (keep).",
+    "commandes": "",
+    "remarques": ""
+   },
+   "doublons": [],
+   "note_lien": "",
+   "icone": "Interface\\AddOns\\Details\\images\\minimap",
+   "dependances": [
+    "Details"
+   ],
+   "titre_toc": "Details!: Storage",
+   "verifie": "2026-11-15"
+  },
+  "Details_EncounterDetails": {
+   "type": "module",
+   "parent": "Details",
+   "categories": [
+    "combat"
+   ],
+   "curseforge": "https://www.curseforge.com/projects/61284",
+   "confiance": "haute",
+   "utilite": "confort",
+   "fr": {
+    "resume": "Analyse détaillée d'un combat de boss (phases, graphiques).",
+    "commandes": "",
+    "remarques": ""
+   },
+   "en": {
+    "resume": "Detailed analysis of a boss fight (phases, graphs).",
+    "commandes": "",
+    "remarques": ""
+   },
+   "doublons": [],
+   "note_lien": "",
+   "icone": "Interface\\AddOns\\Details\\images\\minimap",
+   "dependances": [
+    "Details"
+   ],
+   "titre_toc": "Details!: Encounter Breakdown (plugin)",
+   "verifie": "2026-11-15"
+  },
+  "Details_RaidCheck": {
+   "type": "module",
+   "parent": "Details",
+   "categories": [
+    "combat"
+   ],
+   "curseforge": "https://www.curseforge.com/projects/61284",
+   "confiance": "haute",
+   "utilite": "confort",
+   "fr": {
+    "resume": "Talents, niveau d'objets, nourriture et flacons du groupe.",
+    "commandes": "",
+    "remarques": ""
+   },
+   "en": {
+    "resume": "Group talents, item level, food and flasks.",
+    "commandes": "",
+    "remarques": ""
+   },
+   "doublons": [],
+   "note_lien": "",
+   "icone": "Interface\\AddOns\\Details\\images\\minimap",
+   "dependances": [
+    "Details"
+   ],
+   "titre_toc": "Details!: Raid Check (plugin)",
+   "verifie": "2026-11-15"
+  },
+  "Details_Streamer": {
+   "type": "module",
+   "parent": "Details",
+   "categories": [
+    "combat"
+   ],
+   "curseforge": "https://www.curseforge.com/projects/61284",
+   "confiance": "haute",
+   "utilite": "gadget",
+   "fr": {
+    "resume": "Affiche les sorts que tu lances (pour le streaming).",
+    "commandes": "",
+    "remarques": ""
+   },
+   "en": {
+    "resume": "Shows the spells you cast (for streaming).",
+    "commandes": "",
+    "remarques": ""
+   },
+   "doublons": [],
+   "note_lien": "",
+   "icone": "Interface\\AddOns\\Details\\images\\minimap",
+   "dependances": [
+    "Details"
+   ],
+   "titre_toc": "Details!: Streamer (plugin)",
+   "verifie": "2026-11-15"
+  },
+  "Details_TinyThreat": {
+   "type": "module",
+   "parent": "Details",
+   "categories": [
+    "combat"
+   ],
+   "curseforge": "https://www.curseforge.com/projects/61284",
+   "confiance": "haute",
+   "utilite": "confort",
+   "fr": {
+    "resume": "Compteur de menace (doublon de Naowh : Combat).",
+    "commandes": "",
+    "remarques": ""
+   },
+   "en": {
+    "resume": "Threat meter (duplicate of Naowh: Combat).",
+    "commandes": "",
+    "remarques": ""
+   },
+   "doublons": [],
+   "note_lien": "",
+   "icone": "Interface\\AddOns\\Details\\images\\minimap",
+   "dependances": [
+    "Details"
+   ],
+   "titre_toc": "Details!: Tiny Threat (plugin)",
+   "verifie": "2026-11-15"
+  },
+  "Details_Vanguard": {
+   "type": "module",
+   "parent": "Details",
+   "categories": [
+    "combat"
+   ],
+   "curseforge": "https://www.curseforge.com/projects/61284",
+   "confiance": "haute",
+   "utilite": "confort",
+   "fr": {
+    "resume": "Vie et debuffs des tanks du groupe.",
+    "commandes": "",
+    "remarques": ""
+   },
+   "en": {
+    "resume": "Health and debuffs of the group's tanks.",
+    "commandes": "",
+    "remarques": ""
+   },
+   "doublons": [],
+   "note_lien": "",
+   "icone": "Interface\\AddOns\\Details\\images\\minimap",
+   "dependances": [
+    "Details"
+   ],
+   "titre_toc": "Details!: Vanguard (plugin)",
+   "verifie": "2026-11-15"
+  },
+  "DialogueUI": {
+   "categories": [
+    "quests-leveling"
+   ],
+   "curseforge": "https://www.curseforge.com/wow/addons/dialogueui",
+   "confiance": "haute",
+   "utilite": "confort",
+   "fr": {
+    "resume": "Remplace la fenêtre des quêtes et des discussions par une interface façon jeu moderne, plus lisible, jouable au clavier.",
+    "commandes": "Réglages : Échap > Options > AddOns",
+    "remarques": "Compatible avec Spoken (les voix FR continuent)."
+   },
+   "en": {
+    "resume": "Replaces the quest and gossip windows with a modern-game style interface, more readable, playable with the keyboard.",
+    "commandes": "Settings: Esc > Options > AddOns",
+    "remarques": "Compatible with Spoken (the French voices keep working)."
+   },
+   "doublons": [],
+   "note_lien": "",
+   "type": "principal",
+   "icone": "Interface\\AddOns\\DialogueUI\\Art\\Icons\\Logo",
+   "dependances": [],
+   "titre_toc": "Dialogue UI",
+   "verifie": "2026-11-15"
+  },
+  "FishyWashy": {
+   "categories": [
+    "professions"
+   ],
+   "curseforge": "https://www.curseforge.com/wow/addons/fishywashy-forever-fishing",
+   "confiance": "haute",
+   "utilite": "confort",
+   "fr": {
+    "resume": "Aide à la pêche : bouchon plus bruyant, boutons d'appâts, lancer facile, statistiques de pêche.",
+    "commandes": "/fishy",
+    "remarques": "Doublon de BetterFishing : en garder un seul activé."
+   },
+   "en": {
+    "resume": "Fishing helper: louder bobber, lure buttons, easy casting, fishing statistics.",
+    "commandes": "/fishy",
+    "remarques": "Duplicate of BetterFishing: keep only one enabled."
+   },
+   "doublons": [
+    "BetterFishing"
+   ],
+   "note_lien": "",
+   "type": "principal",
+   "icone": "4777763",
+   "dependances": [],
+   "titre_toc": "FishyWashy",
+   "verifie": "2026-11-15"
+  },
+  "ForeverClassGuide": {
+   "categories": [
+    "guides",
+    "class"
+   ],
+   "curseforge": "https://www.curseforge.com/projects/1739093",
+   "confiance": "haute",
+   "utilite": "confort",
+   "fr": {
+    "resume": "ForeverGuide : guide de ta classe (talents, sorts du maître, nourriture à buff, campement, métiers, Héritage).",
+    "commandes": "/fg (ou /foreverguide)",
+    "remarques": "Recoupe en partie Naowh Forever : Training Planner (quoi apprendre, talents)."
+   },
+   "en": {
+    "resume": "ForeverGuide: guide for your class (talents, trainer spells, buff food, camp, professions, Legacy).",
+    "commandes": "/fg (or /foreverguide)",
+    "remarques": "Partly overlaps Naowh Forever: Training Planner (what to learn, talents)."
+   },
+   "doublons": [
+    "NaowhForever_Training"
+   ],
+   "note_lien": "",
+   "type": "principal",
+   "icone": "Interface\\AddOns\\ForeverClassGuide\\Media\\icon",
+   "dependances": [],
+   "titre_toc": "ForeverGuide",
+   "verifie": "2026-11-15"
+  },
+  "ForeverDungeonJournal": {
+   "categories": [
+    "boss-encounters"
+   ],
+   "curseforge": "https://www.curseforge.com/wow/addons/forever-dungeon-journal",
+   "confiance": "haute",
+   "utilite": "gadget",
+   "fr": {
+    "resume": "DungeonJournal : boss, butin et quêtes des donjons.",
+    "commandes": "/dj",
+    "remarques": "DÉSACTIVÉ exprès : doublon de Naowh Forever : Dungeon Journal."
+   },
+   "en": {
+    "resume": "DungeonJournal: bosses, loot and quests of the dungeons.",
+    "commandes": "/dj",
+    "remarques": "DISABLED on purpose: duplicate of Naowh Forever: Dungeon Journal."
+   },
+   "doublons": [
+    "NaowhForever_DungeonJournal"
+   ],
+   "note_lien": "",
+   "type": "principal",
+   "icone": "Interface\\Icons\\INV_Misc_Book_09",
+   "dependances": [],
+   "titre_toc": "DungeonJournal",
+   "verifie": "2026-11-15"
+  },
+  "ForeverLootSparkles": {
+   "categories": [
+    "miscellaneous"
+   ],
+   "curseforge": "https://www.curseforge.com/projects/1729017",
+   "confiance": "haute",
+   "utilite": "gadget",
+   "fr": {
+    "resume": "Fait toujours briller les objets de quête à ramasser (le jeu coupe parfois cet effet).",
+    "commandes": "Réglages : Échap > Options > AddOns",
+    "remarques": ""
+   },
+   "en": {
+    "resume": "Always makes quest items to loot sparkle (the game sometimes turns this effect off).",
+    "commandes": "Settings: Esc > Options > AddOns",
+    "remarques": ""
+   },
+   "doublons": [],
+   "note_lien": "",
+   "type": "principal",
+   "icone": "Interface\\AddOns\\ForeverLootSparkles\\Icon",
+   "dependances": [],
+   "titre_toc": "Forever Loot Sparkles",
+   "verifie": "2026-11-15"
+  },
+  "ForeverSecrets": {
+   "categories": [
+    "miscellaneous",
+    "quests-leveling"
+   ],
+   "curseforge": "https://www.curseforge.com/wow/addons/foreversecrets",
+   "confiance": "haute",
+   "utilite": "gadget",
+   "fr": {
+    "resume": "Quêtes cachées, livres de bibliothèque et secrets de WoW Forever, avec coordonnées, captures et suivi par perso.",
+    "commandes": "/fsecret (secrets), /fbooks (livres)",
+    "remarques": "Les livres recoupent Naowh Forever : Discovery."
+   },
+   "en": {
+    "resume": "Hidden quests, library books and secrets of WoW Forever, with coordinates, screenshots and per-character tracking.",
+    "commandes": "/fsecret (secrets), /fbooks (books)",
+    "remarques": "Books overlap Naowh Forever: Discovery."
+   },
+   "doublons": [
+    "NaowhForever_Discovery"
+   ],
+   "note_lien": "",
+   "type": "principal",
+   "icone": "Interface\\AddOns\\ForeverSecrets\\Media\\ForeverSecrets.tga",
+   "dependances": [],
+   "titre_toc": "ForeverSecrets",
+   "verifie": "2026-11-15"
+  },
+  "GTFO": {
+   "categories": [
+    "combat"
+   ],
+   "curseforge": "https://www.curseforge.com/wow/addons/gtfo",
+   "confiance": "haute",
+   "utilite": "confort",
+   "fr": {
+    "resume": "Son d'alerte quand tu restes dans quelque chose qui fait mal (feu, poison…) : « sors de là ! ».",
+    "commandes": "/gtfo",
+    "remarques": ""
+   },
+   "en": {
+    "resume": "Warning sound when you stand in something harmful (fire, poison…): 'get out!'.",
+    "commandes": "/gtfo",
+    "remarques": ""
+   },
+   "doublons": [],
+   "note_lien": "",
+   "type": "principal",
+   "icone": null,
+   "dependances": [],
+   "titre_toc": null,
+   "verifie": "2026-11-15"
+  },
+  "GearQuestForever": {
+   "categories": [
+    "quests-leveling",
+    "equipment"
+   ],
+   "curseforge": "https://www.curseforge.com/projects/1698950",
+   "confiance": "haute",
+   "utilite": "confort",
+   "fr": {
+    "resume": "Améliorations d'équipement pendant le leveling : clique un emplacement, choisis l'objet à aller chercher, suis-le dans le journal.",
+    "commandes": "/gq (ou /gearquest)",
+    "remarques": "Les dossiers GearQuestForever_<CLASSE> sont ses données ; GearQuestForever_Languages le met en français."
+   },
+   "en": {
+    "resume": "Gear upgrades while leveling: click a slot, pick the item to go get, track it in the quest log.",
+    "commandes": "/gq (or /gearquest)",
+    "remarques": "The GearQuestForever_<CLASS> folders are its data; GearQuestForever_Languages translates it."
+   },
+   "doublons": [],
+   "note_lien": "",
+   "type": "principal",
+   "icone": "Interface\\AddOns\\GearQuestForever\\Art\\GearQuest-Icon",
+   "dependances": [],
+   "titre_toc": "GearQuest Forever",
+   "verifie": "2026-11-15"
+  },
+  "GearQuestForever_DRUID": {
+   "type": "module",
+   "parent": "GearQuestForever",
+   "categories": [
+    "quests-leveling",
+    "equipment"
+   ],
+   "curseforge": "https://www.curseforge.com/projects/1698950",
+   "confiance": "haute",
+   "utilite": "gadget",
+   "fr": {
+    "resume": "Données d'une classe : seule celle de ton perso sert.",
+    "commandes": "",
+    "remarques": ""
+   },
+   "en": {
+    "resume": "Data for one class: only your character's class is used.",
+    "commandes": "",
+    "remarques": ""
+   },
+   "doublons": [],
+   "note_lien": "",
+   "icone": "Interface\\Icons\\ClassIcon_Druid",
+   "dependances": [
+    "GearQuestForever",
+    "GearQuestForever"
+   ],
+   "titre_toc": "GearQuest Forever: Druid",
+   "verifie": "2026-11-15"
+  },
+  "GearQuestForever_HUNTER": {
+   "type": "module",
+   "parent": "GearQuestForever",
+   "categories": [
+    "quests-leveling",
+    "equipment"
+   ],
+   "curseforge": "https://www.curseforge.com/projects/1698950",
+   "confiance": "haute",
+   "utilite": "gadget",
+   "fr": {
+    "resume": "Données d'une classe : seule celle de ton perso sert.",
+    "commandes": "",
+    "remarques": ""
+   },
+   "en": {
+    "resume": "Data for one class: only your character's class is used.",
+    "commandes": "",
+    "remarques": ""
+   },
+   "doublons": [],
+   "note_lien": "",
+   "icone": "Interface\\Icons\\ClassIcon_Hunter",
+   "dependances": [
+    "GearQuestForever",
+    "GearQuestForever"
+   ],
+   "titre_toc": "GearQuest Forever: Hunter",
+   "verifie": "2026-11-15"
+  },
+  "GearQuestForever_Languages": {
+   "type": "module",
+   "parent": "GearQuestForever",
+   "categories": [
+    "quests-leveling",
+    "equipment"
+   ],
+   "curseforge": "https://www.curseforge.com/projects/1698950",
+   "confiance": "haute",
+   "utilite": "confort",
+   "fr": {
+    "resume": "Met GearQuest en français : à garder activé.",
+    "commandes": "",
+    "remarques": ""
+   },
+   "en": {
+    "resume": "Translates GearQuest to French: keep enabled.",
+    "commandes": "",
+    "remarques": ""
+   },
+   "doublons": [],
+   "note_lien": "",
+   "icone": "Interface\\Icons\\INV_Misc_Book_09",
+   "dependances": [],
+   "titre_toc": "GearQuest Forever: Languages",
+   "verifie": "2026-11-15"
+  },
+  "GearQuestForever_MAGE": {
+   "type": "module",
+   "parent": "GearQuestForever",
+   "categories": [
+    "quests-leveling",
+    "equipment"
+   ],
+   "curseforge": "https://www.curseforge.com/projects/1698950",
+   "confiance": "haute",
+   "utilite": "gadget",
+   "fr": {
+    "resume": "Données d'une classe : seule celle de ton perso sert.",
+    "commandes": "",
+    "remarques": ""
+   },
+   "en": {
+    "resume": "Data for one class: only your character's class is used.",
+    "commandes": "",
+    "remarques": ""
+   },
+   "doublons": [],
+   "note_lien": "",
+   "icone": "Interface\\Icons\\ClassIcon_Mage",
+   "dependances": [
+    "GearQuestForever",
+    "GearQuestForever"
+   ],
+   "titre_toc": "GearQuest Forever: Mage",
+   "verifie": "2026-11-15"
+  },
+  "GearQuestForever_PALADIN": {
+   "type": "module",
+   "parent": "GearQuestForever",
+   "categories": [
+    "quests-leveling",
+    "equipment"
+   ],
+   "curseforge": "https://www.curseforge.com/projects/1698950",
+   "confiance": "haute",
+   "utilite": "gadget",
+   "fr": {
+    "resume": "Données d'une classe : seule celle de ton perso sert.",
+    "commandes": "",
+    "remarques": ""
+   },
+   "en": {
+    "resume": "Data for one class: only your character's class is used.",
+    "commandes": "",
+    "remarques": ""
+   },
+   "doublons": [],
+   "note_lien": "",
+   "icone": "Interface\\Icons\\ClassIcon_Paladin",
+   "dependances": [
+    "GearQuestForever",
+    "GearQuestForever"
+   ],
+   "titre_toc": "GearQuest Forever: Paladin",
+   "verifie": "2026-11-15"
+  },
+  "GearQuestForever_PRIEST": {
+   "type": "module",
+   "parent": "GearQuestForever",
+   "categories": [
+    "quests-leveling",
+    "equipment"
+   ],
+   "curseforge": "https://www.curseforge.com/projects/1698950",
+   "confiance": "haute",
+   "utilite": "gadget",
+   "fr": {
+    "resume": "Données d'une classe : seule celle de ton perso sert.",
+    "commandes": "",
+    "remarques": ""
+   },
+   "en": {
+    "resume": "Data for one class: only your character's class is used.",
+    "commandes": "",
+    "remarques": ""
+   },
+   "doublons": [],
+   "note_lien": "",
+   "icone": "Interface\\Icons\\ClassIcon_Priest",
+   "dependances": [
+    "GearQuestForever",
+    "GearQuestForever"
+   ],
+   "titre_toc": "GearQuest Forever: Priest",
+   "verifie": "2026-11-15"
+  },
+  "GearQuestForever_ROGUE": {
+   "type": "module",
+   "parent": "GearQuestForever",
+   "categories": [
+    "quests-leveling",
+    "equipment"
+   ],
+   "curseforge": "https://www.curseforge.com/projects/1698950",
+   "confiance": "haute",
+   "utilite": "gadget",
+   "fr": {
+    "resume": "Données d'une classe : seule celle de ton perso sert.",
+    "commandes": "",
+    "remarques": ""
+   },
+   "en": {
+    "resume": "Data for one class: only your character's class is used.",
+    "commandes": "",
+    "remarques": ""
+   },
+   "doublons": [],
+   "note_lien": "",
+   "icone": "Interface\\Icons\\ClassIcon_Rogue",
+   "dependances": [
+    "GearQuestForever",
+    "GearQuestForever"
+   ],
+   "titre_toc": "GearQuest Forever: Rogue",
+   "verifie": "2026-11-15"
+  },
+  "GearQuestForever_SHAMAN": {
+   "type": "module",
+   "parent": "GearQuestForever",
+   "categories": [
+    "quests-leveling",
+    "equipment"
+   ],
+   "curseforge": "https://www.curseforge.com/projects/1698950",
+   "confiance": "haute",
+   "utilite": "gadget",
+   "fr": {
+    "resume": "Données d'une classe : seule celle de ton perso sert.",
+    "commandes": "",
+    "remarques": ""
+   },
+   "en": {
+    "resume": "Data for one class: only your character's class is used.",
+    "commandes": "",
+    "remarques": ""
+   },
+   "doublons": [],
+   "note_lien": "",
+   "icone": "Interface\\Icons\\ClassIcon_Shaman",
+   "dependances": [
+    "GearQuestForever",
+    "GearQuestForever"
+   ],
+   "titre_toc": "GearQuest Forever: Shaman",
+   "verifie": "2026-11-15"
+  },
+  "GearQuestForever_WARLOCK": {
+   "type": "module",
+   "parent": "GearQuestForever",
+   "categories": [
+    "quests-leveling",
+    "equipment"
+   ],
+   "curseforge": "https://www.curseforge.com/projects/1698950",
+   "confiance": "haute",
+   "utilite": "gadget",
+   "fr": {
+    "resume": "Données d'une classe : seule celle de ton perso sert.",
+    "commandes": "",
+    "remarques": ""
+   },
+   "en": {
+    "resume": "Data for one class: only your character's class is used.",
+    "commandes": "",
+    "remarques": ""
+   },
+   "doublons": [],
+   "note_lien": "",
+   "icone": "Interface\\Icons\\ClassIcon_Warlock",
+   "dependances": [
+    "GearQuestForever",
+    "GearQuestForever"
+   ],
+   "titre_toc": "GearQuest Forever: Warlock",
+   "verifie": "2026-11-15"
+  },
+  "GearQuestForever_WARRIOR": {
+   "type": "module",
+   "parent": "GearQuestForever",
+   "categories": [
+    "quests-leveling",
+    "equipment"
+   ],
+   "curseforge": "https://www.curseforge.com/projects/1698950",
+   "confiance": "haute",
+   "utilite": "gadget",
+   "fr": {
+    "resume": "Données d'une classe : seule celle de ton perso sert.",
+    "commandes": "",
+    "remarques": ""
+   },
+   "en": {
+    "resume": "Data for one class: only your character's class is used.",
+    "commandes": "",
+    "remarques": ""
+   },
+   "doublons": [],
+   "note_lien": "",
+   "icone": "Interface\\Icons\\ClassIcon_Warrior",
+   "dependances": [
+    "GearQuestForever",
+    "GearQuestForever"
+   ],
+   "titre_toc": "GearQuest Forever: Warrior",
+   "verifie": "2026-11-15"
+  },
+  "MinimapButtonButton": {
+   "categories": [
+    "map-minimap",
+    "user-interface"
+   ],
+   "curseforge": "https://www.curseforge.com/projects/446096",
+   "confiance": "haute",
+   "utilite": "confort",
+   "fr": {
+    "resume": "Range tous les boutons de la minicarte dans un seul bouton.",
+    "commandes": "Clique son bouton près de la minicarte",
+    "remarques": ""
+   },
+   "en": {
+    "resume": "Gathers all minimap buttons into a single button.",
+    "commandes": "Click its button near the minimap",
+    "remarques": ""
+   },
+   "doublons": [],
+   "note_lien": "",
+   "type": "principal",
+   "icone": "Interface\\AddOns\\MinimapButtonButton\\Media\\Logo.blp",
+   "dependances": [],
+   "titre_toc": "MinimapButtonButton",
+   "verifie": "2026-11-15"
+  },
+  "NaowhForever": {
+   "categories": [
+    "miscellaneous",
+    "combat",
+    "professions",
+    "auction-economy",
+    "quests-leveling"
+   ],
+   "curseforge": "https://www.curseforge.com/wow/addons/naowhforever",
+   "confiance": "haute",
+   "utilite": "indispensable",
+   "fr": {
+    "resume": "Le « tout-en-un » de Forever : une fenêtre commune pour ses 15 modules (BiS, donjons, quoi apprendre, métiers, HV, combat, confort…).",
+    "commandes": "/nf (ou /nao, /naowh), /nfquests (quêtes et rares par zone)",
+    "remarques": "Remplace DungeonJournal et What's Training (désactivés). Chaque module s'allume dans /nf > Réglages > Modules."
+   },
+   "en": {
+    "resume": "The Forever 'all-in-one': a shared window for its 15 modules (BiS, dungeons, what to learn, professions, AH, combat, comfort…).",
+    "commandes": "/nf (or /nao, /naowh), /nfquests (quests and rares by zone)",
+    "remarques": "Replaces DungeonJournal and What's Training (disabled). Each module is switched on in /nf > Settings > Modules."
+   },
+   "doublons": [],
+   "note_lien": "Site officiel aussi : https://naowh.gg/forever/",
+   "type": "principal",
+   "icone": "Interface\\AddOns\\NaowhForever\\Core\\Media\\LogoAddon.tga",
+   "dependances": [],
+   "titre_toc": "Naowh Forever",
+   "verifie": "2026-11-15"
+  },
+  "NaowhForever_AuctionData": {
+   "type": "module",
+   "parent": "NaowhForever",
+   "categories": [
+    "miscellaneous",
+    "combat",
+    "professions",
+    "auction-economy",
+    "quests-leveling"
+   ],
+   "curseforge": "https://www.curseforge.com/wow/addons/naowhforever",
+   "confiance": "haute",
+   "utilite": "indispensable",
+   "fr": {
+    "resume": "Prix de tous les hôtels des ventes (données, chargées toutes seules).",
+    "commandes": "",
+    "remarques": ""
+   },
+   "en": {
+    "resume": "Prices of all auction houses (data, loaded automatically).",
+    "commandes": "",
+    "remarques": ""
+   },
+   "doublons": [],
+   "note_lien": "Site officiel aussi : https://naowh.gg/forever/",
+   "icone": "Interface\\AddOns\\NaowhForever\\Core\\Media\\LogoAddon.tga",
+   "dependances": [
+    "NaowhForever"
+   ],
+   "titre_toc": "Naowh Forever: Auction Data",
+   "verifie": "2026-11-15"
+  },
+  "NaowhForever_BiS": {
+   "type": "module",
+   "parent": "NaowhForever",
+   "categories": [
+    "miscellaneous",
+    "combat",
+    "professions",
+    "auction-economy",
+    "quests-leveling"
+   ],
+   "curseforge": "https://www.curseforge.com/wow/addons/naowhforever",
+   "confiance": "haute",
+   "utilite": "indispensable",
+   "fr": {
+    "resume": "Listes BiS, poids de stats, Gear Score, fenêtre du perso et d'inspection.",
+    "commandes": "",
+    "remarques": ""
+   },
+   "en": {
+    "resume": "BiS lists, stat weights, Gear Score, character and inspect windows.",
+    "commandes": "",
+    "remarques": ""
+   },
+   "doublons": [],
+   "note_lien": "Site officiel aussi : https://naowh.gg/forever/",
+   "icone": "Interface\\AddOns\\NaowhForever\\Core\\Media\\LogoAddon.tga",
+   "dependances": [
+    "NaowhForever"
+   ],
+   "titre_toc": "Naowh Forever: BiS List",
+   "verifie": "2026-11-15"
+  },
+  "NaowhForever_Combat": {
+   "type": "module",
+   "parent": "NaowhForever",
+   "categories": [
+    "miscellaneous",
+    "combat",
+    "professions",
+    "auction-economy",
+    "quests-leveling"
+   ],
+   "curseforge": "https://www.curseforge.com/wow/addons/naowhforever",
+   "confiance": "haute",
+   "utilite": "indispensable",
+   "fr": {
+    "resume": "Barre de consommables, swing timer, menace, PvP, debuffs de raid, bénédictions… (un interrupteur chacun).",
+    "commandes": "",
+    "remarques": ""
+   },
+   "en": {
+    "resume": "Consumables bar, swing timer, threat, PvP, raid debuffs, blessings… (one switch each).",
+    "commandes": "",
+    "remarques": ""
+   },
+   "doublons": [],
+   "note_lien": "Site officiel aussi : https://naowh.gg/forever/",
+   "icone": "Interface\\AddOns\\NaowhForever\\Core\\Media\\LogoAddon.tga",
+   "dependances": [
+    "NaowhForever"
+   ],
+   "titre_toc": "Naowh Forever: Combat",
+   "verifie": "2026-11-15"
+  },
+  "NaowhForever_Discovery": {
+   "type": "module",
+   "parent": "NaowhForever",
+   "categories": [
+    "miscellaneous",
+    "combat",
+    "professions",
+    "auction-economy",
+    "quests-leveling"
+   ],
+   "curseforge": "https://www.curseforge.com/wow/addons/naowhforever",
+   "confiance": "haute",
+   "utilite": "indispensable",
+   "fr": {
+    "resume": "Livres de bibliothèque, Sac de couchage douillet, quêtes et rares par zone (/nfquests).",
+    "commandes": "",
+    "remarques": ""
+   },
+   "en": {
+    "resume": "Library books, Cosy Sleeping Bag, quests and rares by zone (/nfquests).",
+    "commandes": "",
+    "remarques": ""
+   },
+   "doublons": [],
+   "note_lien": "Site officiel aussi : https://naowh.gg/forever/",
+   "icone": "Interface\\AddOns\\NaowhForever\\Core\\Media\\LogoAddon.tga",
+   "dependances": [
+    "NaowhForever"
+   ],
+   "titre_toc": "Naowh Forever: Discovery",
+   "verifie": "2026-11-15"
+  },
+  "NaowhForever_DiscoveryData": {
+   "type": "module",
+   "parent": "NaowhForever",
+   "categories": [
+    "miscellaneous",
+    "combat",
+    "professions",
+    "auction-economy",
+    "quests-leveling"
+   ],
+   "curseforge": "https://www.curseforge.com/wow/addons/naowhforever",
+   "confiance": "haute",
+   "utilite": "indispensable",
+   "fr": {
+    "resume": "Données des quêtes et rares (chargées toutes seules).",
+    "commandes": "",
+    "remarques": ""
+   },
+   "en": {
+    "resume": "Quest and rare data (loaded automatically).",
+    "commandes": "",
+    "remarques": ""
+   },
+   "doublons": [],
+   "note_lien": "Site officiel aussi : https://naowh.gg/forever/",
+   "icone": "Interface\\AddOns\\NaowhForever\\Core\\Media\\LogoAddon.tga",
+   "dependances": [
+    "NaowhForever",
+    "NaowhForever_Discovery"
+   ],
+   "titre_toc": "Naowh Forever: Discovery Data",
+   "verifie": "2026-11-15"
+  },
+  "NaowhForever_DungeonJournal": {
+   "type": "module",
+   "parent": "NaowhForever",
+   "categories": [
+    "miscellaneous",
+    "combat",
+    "professions",
+    "auction-economy",
+    "quests-leveling"
+   ],
+   "curseforge": "https://www.curseforge.com/wow/addons/naowhforever",
+   "confiance": "haute",
+   "utilite": "indispensable",
+   "fr": {
+    "resume": "Boss, butin et quêtes de chaque donjon (remplace DungeonJournal).",
+    "commandes": "",
+    "remarques": ""
+   },
+   "en": {
+    "resume": "Bosses, loot and quests of each dungeon (replaces DungeonJournal).",
+    "commandes": "",
+    "remarques": ""
+   },
+   "doublons": [],
+   "note_lien": "Site officiel aussi : https://naowh.gg/forever/",
+   "icone": "Interface\\AddOns\\NaowhForever\\Core\\Media\\LogoAddon.tga",
+   "dependances": [
+    "NaowhForever"
+   ],
+   "titre_toc": "Naowh Forever: Dungeon Journal",
+   "verifie": "2026-11-15"
+  },
+  "NaowhForever_JourneysData": {
+   "type": "module",
+   "parent": "NaowhForever",
+   "categories": [
+    "miscellaneous",
+    "combat",
+    "professions",
+    "auction-economy",
+    "quests-leveling"
+   ],
+   "curseforge": "https://www.curseforge.com/wow/addons/naowhforever",
+   "confiance": "haute",
+   "utilite": "indispensable",
+   "fr": {
+    "resume": "Données des trajets à pied de Journeys (chargées toutes seules).",
+    "commandes": "",
+    "remarques": ""
+   },
+   "en": {
+    "resume": "Walking-route data for Journeys (loaded automatically).",
+    "commandes": "",
+    "remarques": ""
+   },
+   "doublons": [],
+   "note_lien": "Site officiel aussi : https://naowh.gg/forever/",
+   "icone": "Interface\\AddOns\\NaowhForever\\Core\\Media\\LogoAddon.tga",
+   "dependances": [
+    "NaowhForever"
+   ],
+   "titre_toc": "Naowh Forever: Journeys Data",
+   "verifie": "2026-11-15"
+  },
+  "NaowhForever_Locales": {
+   "type": "module",
+   "parent": "NaowhForever",
+   "categories": [
+    "miscellaneous",
+    "combat",
+    "professions",
+    "auction-economy",
+    "quests-leveling"
+   ],
+   "curseforge": "https://www.curseforge.com/wow/addons/naowhforever",
+   "confiance": "haute",
+   "utilite": "indispensable",
+   "fr": {
+    "resume": "Traduction française de Naowh : à garder activé.",
+    "commandes": "",
+    "remarques": ""
+   },
+   "en": {
+    "resume": "French translation of Naowh: keep enabled.",
+    "commandes": "",
+    "remarques": ""
+   },
+   "doublons": [],
+   "note_lien": "Site officiel aussi : https://naowh.gg/forever/",
+   "icone": "Interface\\AddOns\\NaowhForever\\Core\\Media\\LogoAddon.tga",
+   "dependances": [
+    "NaowhForever"
+   ],
+   "titre_toc": "Naowh Forever: Locales",
+   "verifie": "2026-11-15"
+  },
+  "NaowhForever_Market": {
+   "type": "module",
+   "parent": "NaowhForever",
+   "categories": [
+    "miscellaneous",
+    "combat",
+    "professions",
+    "auction-economy",
+    "quests-leveling"
+   ],
+   "curseforge": "https://www.curseforge.com/wow/addons/naowhforever",
+   "confiance": "haute",
+   "utilite": "indispensable",
+   "fr": {
+    "resume": "Panneau à côté de l'HV pour vendre tes sacs, plus une fenêtre farm / composants / prix.",
+    "commandes": "",
+    "remarques": ""
+   },
+   "en": {
+    "resume": "Panel beside the AH to sell your bags, plus a farm / reagents / prices window.",
+    "commandes": "",
+    "remarques": ""
+   },
+   "doublons": [],
+   "note_lien": "Site officiel aussi : https://naowh.gg/forever/",
+   "icone": "Interface\\AddOns\\NaowhForever\\Core\\Media\\LogoAddon.tga",
+   "dependances": [
+    "NaowhForever"
+   ],
+   "titre_toc": "Naowh Forever: The Market",
+   "verifie": "2026-11-15"
+  },
+  "NaowhForever_Professions": {
+   "type": "module",
+   "parent": "NaowhForever",
+   "categories": [
+    "miscellaneous",
+    "combat",
+    "professions",
+    "auction-economy",
+    "quests-leveling"
+   ],
+   "curseforge": "https://www.curseforge.com/wow/addons/naowhforever",
+   "confiance": "haute",
+   "utilite": "indispensable",
+   "fr": {
+    "resume": "Recettes, composants et artisanat dans une fenêtre, avec les recettes pas encore apprises.",
+    "commandes": "",
+    "remarques": ""
+   },
+   "en": {
+    "resume": "Recipes, reagents and crafting in one window, including recipes not yet learned.",
+    "commandes": "",
+    "remarques": ""
+   },
+   "doublons": [],
+   "note_lien": "Site officiel aussi : https://naowh.gg/forever/",
+   "icone": "Interface\\AddOns\\NaowhForever\\Core\\Media\\LogoAddon.tga",
+   "dependances": [
+    "NaowhForever"
+   ],
+   "titre_toc": "Naowh Forever: Professions",
+   "verifie": "2026-11-15"
+  },
+  "NaowhForever_QoL": {
+   "type": "module",
+   "parent": "NaowhForever",
+   "categories": [
+    "miscellaneous",
+    "combat",
+    "professions",
+    "auction-economy",
+    "quests-leveling"
+   ],
+   "curseforge": "https://www.curseforge.com/wow/addons/naowhforever",
+   "confiance": "haute",
+   "utilite": "indispensable",
+   "fr": {
+    "resume": "Petits conforts de jeu (/copy pour copier un texte, /nfaim…).",
+    "commandes": "",
+    "remarques": ""
+   },
+   "en": {
+    "resume": "Small quality-of-life features (/copy to copy a text, /nfaim…).",
+    "commandes": "",
+    "remarques": ""
+   },
+   "doublons": [],
+   "note_lien": "Site officiel aussi : https://naowh.gg/forever/",
+   "icone": "Interface\\AddOns\\NaowhForever\\Core\\Media\\LogoAddon.tga",
+   "dependances": [
+    "NaowhForever"
+   ],
+   "titre_toc": "Naowh Forever: Quality of Life",
+   "verifie": "2026-11-15"
+  },
+  "NaowhForever_SearchIndex": {
+   "type": "module",
+   "parent": "NaowhForever",
+   "categories": [
+    "miscellaneous",
+    "combat",
+    "professions",
+    "auction-economy",
+    "quests-leveling"
+   ],
+   "curseforge": "https://www.curseforge.com/wow/addons/naowhforever",
+   "confiance": "haute",
+   "utilite": "gadget",
+   "fr": {
+    "resume": "Permet à la recherche des réglages de trouver les options des modules éteints.",
+    "commandes": "",
+    "remarques": ""
+   },
+   "en": {
+    "resume": "Lets the settings search find options of switched-off modules.",
+    "commandes": "",
+    "remarques": ""
+   },
+   "doublons": [],
+   "note_lien": "Site officiel aussi : https://naowh.gg/forever/",
+   "icone": "Interface\\AddOns\\NaowhForever\\Core\\Media\\LogoAddon.tga",
+   "dependances": [
+    "NaowhForever"
+   ],
+   "titre_toc": "Naowh Forever: Search Index",
+   "verifie": "2026-11-15"
+  },
+  "NaowhForever_Training": {
+   "type": "module",
+   "parent": "NaowhForever",
+   "categories": [
+    "miscellaneous",
+    "combat",
+    "professions",
+    "auction-economy",
+    "quests-leveling"
+   ],
+   "curseforge": "https://www.curseforge.com/wow/addons/naowhforever",
+   "confiance": "haute",
+   "utilite": "indispensable",
+   "fr": {
+    "resume": "Quoi apprendre maintenant et jusqu'au 60, builds de talents (remplace What's Training).",
+    "commandes": "",
+    "remarques": ""
+   },
+   "en": {
+    "resume": "What to learn now and up to 60, talent builds (replaces What's Training).",
+    "commandes": "",
+    "remarques": ""
+   },
+   "doublons": [],
+   "note_lien": "Site officiel aussi : https://naowh.gg/forever/",
+   "icone": "Interface\\AddOns\\NaowhForever\\Core\\Media\\LogoAddon.tga",
+   "dependances": [
+    "NaowhForever"
+   ],
+   "titre_toc": "Naowh Forever: Training Planner",
+   "verifie": "2026-11-15"
+  },
+  "NaowhForever_Utilities": {
+   "type": "module",
+   "parent": "NaowhForever",
+   "categories": [
+    "miscellaneous",
+    "combat",
+    "professions",
+    "auction-economy",
+    "quests-leveling"
+   ],
+   "curseforge": "https://www.curseforge.com/wow/addons/naowhforever",
+   "confiance": "haute",
+   "utilite": "indispensable",
+   "fr": {
+    "resume": "Suivi d'instances, Journeys, macros, inspection et recherche de groupe, barres d'action… (un interrupteur chacun).",
+    "commandes": "",
+    "remarques": ""
+   },
+   "en": {
+    "resume": "Instance tracking, Journeys, macros, inspect and group finder, action bars… (one switch each).",
+    "commandes": "",
+    "remarques": ""
+   },
+   "doublons": [],
+   "note_lien": "Site officiel aussi : https://naowh.gg/forever/",
+   "icone": "Interface\\AddOns\\NaowhForever\\Core\\Media\\LogoAddon.tga",
+   "dependances": [
+    "NaowhForever"
+   ],
+   "titre_toc": "Naowh Forever: Utilities",
+   "verifie": "2026-11-15"
+  },
+  "OPie": {
+   "categories": [
+    "action-bars"
+   ],
+   "curseforge": "https://www.curseforge.com/wow/addons/opie",
+   "confiance": "haute",
+   "utilite": "confort",
+   "fr": {
+    "resume": "Roues d'actions : tu maintiens une touche, une roue de sorts/objets/montures apparaît, tu choisis à la souris.",
+    "commandes": "/opie",
+    "remarques": ""
+   },
+   "en": {
+    "resume": "Action rings: hold a key, a ring of spells/items/mounts appears, pick with the mouse.",
+    "commandes": "/opie",
+    "remarques": ""
+   },
+   "doublons": [],
+   "note_lien": "",
+   "type": "principal",
+   "icone": "Interface/AddOns/OPie/gfx/opie_ring_icon",
+   "dependances": [],
+   "titre_toc": "OPie",
+   "verifie": "2026-11-15"
+  },
+  "OpenMap": {
+   "categories": [
+    "map-minimap"
+   ],
+   "curseforge": "https://www.curseforge.com/projects/1735937",
+   "confiance": "haute",
+   "utilite": "confort",
+   "fr": {
+    "resume": "Carte du monde d'un seul tenant : toutes les zones collées, on zoome de l'une à l'autre.",
+    "commandes": "/openmap",
+    "remarques": "La carte de Blizzard, le journal de quêtes et Questie continuent de marcher."
+   },
+   "en": {
+    "resume": "Seamless world map: all zones joined together, zoom from one to the next.",
+    "commandes": "/openmap",
+    "remarques": "Blizzard's map, the quest log and Questie keep working."
+   },
+   "doublons": [],
+   "note_lien": "Site officiel aussi : https://openmap.world",
+   "type": "principal",
+   "icone": "Interface\\AddOns\\OpenMap\\Media\\Textures\\OpenMapIcon",
+   "dependances": [],
+   "titre_toc": "OpenMap",
+   "verifie": "2026-11-15"
+  },
+  "Pawn": {
+   "categories": [
+    "equipment"
+   ],
+   "curseforge": "https://www.curseforge.com/wow/addons/pawn",
+   "confiance": "moyenne",
+   "utilite": "confort",
+   "fr": {
+    "resume": "Compare les objets et marque les améliorations (flèche verte) selon les stats de ta spé.",
+    "commandes": "/pawn",
+    "remarques": "Recoupe un peu GearQuest et Naowh : BiS List ; ensemble, ça ne gêne pas."
+   },
+   "en": {
+    "resume": "Compares items and flags upgrades (green arrow) according to your spec's stats.",
+    "commandes": "/pawn",
+    "remarques": "Slightly overlaps GearQuest and Naowh: BiS List; together they do not conflict."
+   },
+   "doublons": [],
+   "note_lien": "",
+   "type": "principal",
+   "icone": "Interface\\AddOns\\Pawn\\Textures\\PawnIcon.tga",
+   "dependances": [],
+   "titre_toc": "Pawn",
+   "verifie": "2026-11-15"
+  },
+  "Plater": {
+   "categories": [
+    "unit-frames"
+   ],
+   "curseforge": "https://www.curseforge.com/projects/100547",
+   "confiance": "haute",
+   "utilite": "confort",
+   "fr": {
+    "resume": "Barres de vie au-dessus des ennemis (nameplates) très réglables : menace, sorts lancés, debuffs.",
+    "commandes": "/plater",
+    "remarques": ""
+   },
+   "en": {
+    "resume": "Highly customisable nameplates above enemies: threat, cast bars, debuffs.",
+    "commandes": "/plater",
+    "remarques": ""
+   },
+   "doublons": [],
+   "note_lien": "",
+   "type": "principal",
+   "icone": "Interface\\AddOns\\Plater\\images\\cast_bar",
+   "dependances": [],
+   "titre_toc": "Plater",
+   "verifie": "2026-11-15"
+  },
+  "Questie": {
+   "categories": [
+    "quests-leveling",
+    "map-minimap"
+   ],
+   "curseforge": "https://www.curseforge.com/wow/addons/questie",
+   "confiance": "haute",
+   "utilite": "indispensable",
+   "fr": {
+    "resume": "Affiche sur la carte et la minicarte les quêtes disponibles, leurs objectifs et où les rendre.",
+    "commandes": "/questie",
+    "remarques": "QuestieDB (sa base) et QuestieTrace (collecte de données) vont avec."
+   },
+   "en": {
+    "resume": "Shows available quests, their objectives and turn-in points on the map and minimap.",
+    "commandes": "/questie",
+    "remarques": "QuestieDB (its database) and QuestieTrace (data collection) go with it."
+   },
+   "doublons": [],
+   "note_lien": "",
+   "type": "principal",
+   "icone": null,
+   "dependances": [],
+   "titre_toc": "Questie game client not supported",
+   "verifie": "2026-11-15"
+  },
+  "QuestieDB": {
+   "type": "module",
+   "parent": "Questie",
+   "categories": [
+    "quests-leveling",
+    "map-minimap"
+   ],
+   "curseforge": "https://www.curseforge.com/wow/addons/questie",
+   "confiance": "haute",
+   "utilite": "indispensable",
+   "fr": {
+    "resume": "La base de données de Questie : obligatoire.",
+    "commandes": "",
+    "remarques": ""
+   },
+   "en": {
+    "resume": "Questie's database: required.",
+    "commandes": "",
+    "remarques": ""
+   },
+   "doublons": [],
+   "note_lien": "",
+   "icone": null,
+   "dependances": [],
+   "titre_toc": null,
+   "verifie": "2026-11-15"
+  },
+  "QuestieTrace": {
+   "type": "module",
+   "parent": "Questie",
+   "categories": [
+    "quests-leveling",
+    "map-minimap"
+   ],
+   "curseforge": "https://www.curseforge.com/wow/addons/questie",
+   "confiance": "haute",
+   "utilite": "gadget",
+   "fr": {
+    "resume": "Collecte de données pour Questie (facultatif).",
+    "commandes": "",
+    "remarques": ""
+   },
+   "en": {
+    "resume": "Data collection for Questie (optional).",
+    "commandes": "",
+    "remarques": ""
+   },
+   "doublons": [],
+   "note_lien": "",
+   "icone": null,
+   "dependances": [],
+   "titre_toc": null,
+   "verifie": "2026-11-15"
+  },
+  "RXPGuides": {
+   "categories": [
+    "quests-leveling",
+    "guides"
+   ],
+   "curseforge": "https://www.curseforge.com/projects/486246",
+   "confiance": "haute",
+   "utilite": "indispensable",
+   "fr": {
+    "resume": "RestedXP : guide de leveling pas à pas, avec flèche et étapes.",
+    "commandes": "/rxp",
+    "remarques": "Fait doublon avec Zygor : n'activer qu'un seul guide de leveling à la fois."
+   },
+   "en": {
+    "resume": "RestedXP: step-by-step leveling guide, with arrow and steps.",
+    "commandes": "/rxp",
+    "remarques": "Duplicate of Zygor: enable only one leveling guide at a time."
+   },
+   "doublons": [
+    "ZygorGuidesViewerForever"
+   ],
+   "note_lien": "",
+   "type": "principal",
+   "icone": null,
+   "dependances": [],
+   "titre_toc": "RestedXP Guides",
+   "verifie": "2026-11-15"
+  },
+  "RareScanner": {
+   "categories": [
+    "map-minimap",
+    "collections"
+   ],
+   "curseforge": "https://www.curseforge.com/wow/addons/rarescanner",
+   "confiance": "haute",
+   "utilite": "confort",
+   "fr": {
+    "resume": "Prévient (son + bouton avec image) quand un monstre rare, un trésor ou un évènement apparaît sur ta minicarte.",
+    "commandes": "/rs (ou /rarescanner)",
+    "remarques": ""
+   },
+   "en": {
+    "resume": "Alerts you (sound + button with a picture) when a rare mob, treasure or event shows up on your minimap.",
+    "commandes": "/rs (or /rarescanner)",
+    "remarques": ""
+   },
+   "doublons": [],
+   "note_lien": "",
+   "type": "principal",
+   "icone": "Interface\\AddOns\\RareScanner\\Media\\Icons\\OriginalSkull",
+   "dependances": [],
+   "titre_toc": "RareScanner",
+   "verifie": "2026-11-15"
+  },
+  "Spoken": {
+   "categories": [
+    "quests-leveling",
+    "audio-video"
+   ],
+   "curseforge": null,
+   "confiance": "moyenne",
+   "utilite": "confort",
+   "fr": {
+    "resume": "Lit le jeu à voix haute (en français) : quêtes, discussions, lieux, livres, histoires des boss. Une file, un narrateur, un bouton.",
+    "commandes": "/sp (ou /spoken), /spp (lieux), /spr (livres et lettres)",
+    "remarques": "Les dossiers Spoken_* et Spoken*Audio_frFR sont ses modules et ses voix FR. Normal que les packs de voix paraissent « désactivés » ou « périmés »."
+   },
+   "en": {
+    "resume": "Reads the game aloud (in French): quests, gossip, places, books, boss stories. One queue, one narrator, one button.",
+    "commandes": "/sp (or /spoken), /spp (places), /spr (books and letters)",
+    "remarques": "The Spoken_* and Spoken*Audio_frFR folders are its modules and French voices. It is normal for voice packs to look 'disabled' or 'out of date'."
+   },
+   "doublons": [],
+   "note_lien": "La recherche du 15/11/2026 donne deux pages différentes (spoken, spoken-players-chat-tts) sans certitude : adresse laissée vide, à confirmer.",
+   "type": "principal",
+   "icone": "Interface\\AddOns\\Spoken\\icon.tga",
+   "dependances": [],
+   "titre_toc": "Spoken",
+   "verifie": "2026-11-15"
+  },
+  "SpokenBooks": {
+   "categories": [
+    "audio-video"
+   ],
+   "curseforge": null,
+   "confiance": "aucune",
+   "utilite": "gadget",
+   "fr": {
+    "resume": "Ancien add-on, maintenant intégré à Spoken.",
+    "commandes": "",
+    "remarques": "Ce dossier ne se charge jamais : il peut partir à la corbeille (_a-supprimer)."
+   },
+   "en": {
+    "resume": "Old add-on, now built into Spoken.",
+    "commandes": "",
+    "remarques": "This folder never loads: it can be moved to the trash (_a-supprimer)."
+   },
+   "doublons": [],
+   "note_lien": "Ancien add-on intégré à Spoken : pas de page.",
+   "type": "principal",
+   "icone": null,
+   "dependances": [],
+   "titre_toc": "Spoken Books (now in Spoken)",
+   "verifie": "2026-11-15"
+  },
+  "SpokenBooksAudio_frFR": {
+   "type": "module",
+   "parent": "Spoken",
+   "categories": [
+    "quests-leveling",
+    "audio-video"
+   ],
+   "curseforge": null,
+   "confiance": "moyenne",
+   "utilite": "confort",
+   "fr": {
+    "resume": "Voix françaises des livres et lettres.",
+    "commandes": "",
+    "remarques": ""
+   },
+   "en": {
+    "resume": "French voices for books and letters.",
+    "commandes": "",
+    "remarques": ""
+   },
+   "doublons": [],
+   "note_lien": "La recherche du 15/11/2026 donne deux pages différentes (spoken, spoken-players-chat-tts) sans certitude : adresse laissée vide, à confirmer.",
+   "icone": "Interface\\AddOns\\SpokenBooksAudio_frFR\\Textures\\AddonIcon.tga",
+   "dependances": [],
+   "titre_toc": "Spoken Books Audio: French",
+   "verifie": "2026-11-15"
+  },
+  "SpokenBossesAudio_frFR": {
+   "type": "module",
+   "parent": "Spoken",
+   "categories": [
+    "quests-leveling",
+    "audio-video"
+   ],
+   "curseforge": null,
+   "confiance": "moyenne",
+   "utilite": "confort",
+   "fr": {
+    "resume": "Voix françaises des histoires des boss : à garder activé.",
+    "commandes": "",
+    "remarques": ""
+   },
+   "en": {
+    "resume": "French voices for boss stories: keep enabled.",
+    "commandes": "",
+    "remarques": ""
+   },
+   "doublons": [],
+   "note_lien": "La recherche du 15/11/2026 donne deux pages différentes (spoken, spoken-players-chat-tts) sans certitude : adresse laissée vide, à confirmer.",
+   "icone": "Interface\\AddOns\\SpokenBossesAudio_frFR\\Textures\\AddonIcon.tga",
+   "dependances": [],
+   "titre_toc": "Spoken French Audio: Bosses",
+   "verifie": "2026-11-15"
+  },
+  "SpokenContributions": {
+   "type": "module",
+   "parent": "Spoken",
+   "categories": [
+    "quests-leveling",
+    "audio-video"
+   ],
+   "curseforge": null,
+   "confiance": "moyenne",
+   "utilite": "gadget",
+   "fr": {
+    "resume": "Garde les répliques récoltées pour les envoyer à spoken.quest/contribute (facultatif).",
+    "commandes": "",
+    "remarques": ""
+   },
+   "en": {
+    "resume": "Keeps collected lines to send to spoken.quest/contribute (optional).",
+    "commandes": "",
+    "remarques": ""
+   },
+   "doublons": [],
+   "note_lien": "La recherche du 15/11/2026 donne deux pages différentes (spoken, spoken-players-chat-tts) sans certitude : adresse laissée vide, à confirmer.",
+   "icone": "Interface\\AddOns\\SpokenContributions\\icon.tga",
+   "dependances": [],
+   "titre_toc": "Spoken Contributions",
+   "verifie": "2026-11-15"
+  },
+  "SpokenQuestsAudioAlliance_frFR": {
+   "type": "module",
+   "parent": "Spoken",
+   "categories": [
+    "quests-leveling",
+    "audio-video"
+   ],
+   "curseforge": null,
+   "confiance": "moyenne",
+   "utilite": "confort",
+   "fr": {
+    "resume": "Voix françaises des quêtes Alliance (inutile pour un perso Horde, mais sans gêne).",
+    "commandes": "",
+    "remarques": ""
+   },
+   "en": {
+    "resume": "French voices for Alliance quests (useless on a Horde character, harmless).",
+    "commandes": "",
+    "remarques": ""
+   },
+   "doublons": [],
+   "note_lien": "La recherche du 15/11/2026 donne deux pages différentes (spoken, spoken-players-chat-tts) sans certitude : adresse laissée vide, à confirmer.",
+   "icone": "Interface\\AddOns\\SpokenQuestsAudioAlliance_frFR\\icon.tga",
+   "dependances": [],
+   "titre_toc": "French Spoken Quests: Alliance",
+   "verifie": "2026-11-15"
+  },
+  "SpokenQuestsAudioGossip_frFR": {
+   "type": "module",
+   "parent": "Spoken",
+   "categories": [
+    "quests-leveling",
+    "audio-video"
+   ],
+   "curseforge": null,
+   "confiance": "moyenne",
+   "utilite": "confort",
+   "fr": {
+    "resume": "Voix françaises des discussions avec les PNJ.",
+    "commandes": "",
+    "remarques": ""
+   },
+   "en": {
+    "resume": "French voices for NPC gossip.",
+    "commandes": "",
+    "remarques": ""
+   },
+   "doublons": [],
+   "note_lien": "La recherche du 15/11/2026 donne deux pages différentes (spoken, spoken-players-chat-tts) sans certitude : adresse laissée vide, à confirmer.",
+   "icone": "Interface\\AddOns\\SpokenQuestsAudioGossip_frFR\\icon.tga",
+   "dependances": [],
+   "titre_toc": "French Spoken Quests: Gossip",
+   "verifie": "2026-11-15"
+  },
+  "SpokenQuestsAudioHorde_frFR": {
+   "type": "module",
+   "parent": "Spoken",
+   "categories": [
+    "quests-leveling",
+    "audio-video"
+   ],
+   "curseforge": null,
+   "confiance": "moyenne",
+   "utilite": "confort",
+   "fr": {
+    "resume": "Voix françaises des quêtes Horde.",
+    "commandes": "",
+    "remarques": ""
+   },
+   "en": {
+    "resume": "French voices for Horde quests.",
+    "commandes": "",
+    "remarques": ""
+   },
+   "doublons": [],
+   "note_lien": "La recherche du 15/11/2026 donne deux pages différentes (spoken, spoken-players-chat-tts) sans certitude : adresse laissée vide, à confirmer.",
+   "icone": "Interface\\AddOns\\SpokenQuestsAudioHorde_frFR\\icon.tga",
+   "dependances": [],
+   "titre_toc": "French Spoken Quests: Horde",
+   "verifie": "2026-11-15"
+  },
+  "SpokenQuestsAudioShared_frFR": {
+   "type": "module",
+   "parent": "Spoken",
+   "categories": [
+    "quests-leveling",
+    "audio-video"
+   ],
+   "curseforge": null,
+   "confiance": "moyenne",
+   "utilite": "confort",
+   "fr": {
+    "resume": "Voix françaises des quêtes communes aux deux factions.",
+    "commandes": "",
+    "remarques": ""
+   },
+   "en": {
+    "resume": "French voices for quests shared by both factions.",
+    "commandes": "",
+    "remarques": ""
+   },
+   "doublons": [],
+   "note_lien": "La recherche du 15/11/2026 donne deux pages différentes (spoken, spoken-players-chat-tts) sans certitude : adresse laissée vide, à confirmer.",
+   "icone": "Interface\\AddOns\\SpokenQuestsAudioShared_frFR\\icon.tga",
+   "dependances": [],
+   "titre_toc": "French Spoken Quests: Shared",
+   "verifie": "2026-11-15"
+  },
+  "SpokenZonesAudio_frFR": {
+   "type": "module",
+   "parent": "Spoken",
+   "categories": [
+    "quests-leveling",
+    "audio-video"
+   ],
+   "curseforge": null,
+   "confiance": "moyenne",
+   "utilite": "confort",
+   "fr": {
+    "resume": "Voix françaises de l'histoire des zones (bêta).",
+    "commandes": "",
+    "remarques": ""
+   },
+   "en": {
+    "resume": "French voices for zone stories (beta).",
+    "commandes": "",
+    "remarques": ""
+   },
+   "doublons": [],
+   "note_lien": "La recherche du 15/11/2026 donne deux pages différentes (spoken, spoken-players-chat-tts) sans certitude : adresse laissée vide, à confirmer.",
+   "icone": "Interface\\AddOns\\SpokenZonesAudio_frFR\\Textures\\AddonIcon.tga",
+   "dependances": [],
+   "titre_toc": "Spoken Zones Audio: French",
+   "verifie": "2026-11-15"
+  },
+  "Spoken_Bosses": {
+   "type": "module",
+   "parent": "Spoken",
+   "categories": [
+    "quests-leveling",
+    "audio-video"
+   ],
+   "curseforge": null,
+   "confiance": "moyenne",
+   "utilite": "confort",
+   "fr": {
+    "resume": "Histoires des boss des donjons et raids (Compendium d'Azeroth).",
+    "commandes": "",
+    "remarques": ""
+   },
+   "en": {
+    "resume": "Boss stories for dungeons and raids (Azeroth Compendium).",
+    "commandes": "",
+    "remarques": ""
+   },
+   "doublons": [],
+   "note_lien": "La recherche du 15/11/2026 donne deux pages différentes (spoken, spoken-players-chat-tts) sans certitude : adresse laissée vide, à confirmer.",
+   "icone": "Interface\\AddOns\\Spoken\\icon.tga",
+   "dependances": [
+    "Spoken"
+   ],
+   "titre_toc": "Spoken Bosses",
+   "verifie": "2026-11-15"
+  },
+  "Spoken_Places": {
+   "type": "module",
+   "parent": "Spoken",
+   "categories": [
+    "quests-leveling",
+    "audio-video"
+   ],
+   "curseforge": null,
+   "confiance": "moyenne",
+   "utilite": "confort",
+   "fr": {
+    "resume": "Lit l'histoire des zones sur la carte (/spp).",
+    "commandes": "",
+    "remarques": ""
+   },
+   "en": {
+    "resume": "Reads the story of zones on the map (/spp).",
+    "commandes": "",
+    "remarques": ""
+   },
+   "doublons": [],
+   "note_lien": "La recherche du 15/11/2026 donne deux pages différentes (spoken, spoken-players-chat-tts) sans certitude : adresse laissée vide, à confirmer.",
+   "icone": "Interface\\AddOns\\Spoken_Places\\Textures\\AddonIcon.tga",
+   "dependances": [
+    "Spoken"
+   ],
+   "titre_toc": "Spoken Places",
+   "verifie": "2026-11-15"
+  },
+  "Spoken_Quests": {
+   "type": "module",
+   "parent": "Spoken",
+   "categories": [
+    "quests-leveling",
+    "audio-video"
+   ],
+   "curseforge": null,
+   "confiance": "moyenne",
+   "utilite": "confort",
+   "fr": {
+    "resume": "Lit les quêtes et les discussions.",
+    "commandes": "",
+    "remarques": ""
+   },
+   "en": {
+    "resume": "Reads quests and gossip.",
+    "commandes": "",
+    "remarques": ""
+   },
+   "doublons": [],
+   "note_lien": "La recherche du 15/11/2026 donne deux pages différentes (spoken, spoken-players-chat-tts) sans certitude : adresse laissée vide, à confirmer.",
+   "icone": "Interface\\AddOns\\Spoken_Quests\\icon.tga",
+   "dependances": [
+    "Spoken"
+   ],
+   "titre_toc": "Spoken Quests",
+   "verifie": "2026-11-15"
+  },
+  "Spoken_Readables": {
+   "type": "module",
+   "parent": "Spoken",
+   "categories": [
+    "quests-leveling",
+    "audio-video"
+   ],
+   "curseforge": null,
+   "confiance": "moyenne",
+   "utilite": "confort",
+   "fr": {
+    "resume": "Lit les livres, lettres, notes et plaques (/spr).",
+    "commandes": "",
+    "remarques": ""
+   },
+   "en": {
+    "resume": "Reads books, letters, notes and plaques (/spr).",
+    "commandes": "",
+    "remarques": ""
+   },
+   "doublons": [],
+   "note_lien": "La recherche du 15/11/2026 donne deux pages différentes (spoken, spoken-players-chat-tts) sans certitude : adresse laissée vide, à confirmer.",
+   "icone": "Interface\\AddOns\\Spoken_Readables\\Textures\\AddonIcon.tga",
+   "dependances": [
+    "Spoken"
+   ],
+   "titre_toc": "Spoken Readables",
+   "verifie": "2026-11-15"
+  },
+  "Syndicator": {
+   "categories": [
+    "bags-inventory"
+   ],
+   "curseforge": "https://www.curseforge.com/wow/addons/syndicator",
+   "confiance": "haute",
+   "utilite": "confort",
+   "fr": {
+    "resume": "Mémorise les objets de tous tes persos (sacs, banque, courrier) ; sert à Baganator et à d'autres add-ons.",
+    "commandes": "/syn, /syns <mot> pour chercher un objet sur tous tes persos",
+    "remarques": "Rien de spécial à faire : laisser activé avec Baganator."
+   },
+   "en": {
+    "resume": "Remembers the items of all your characters (bags, bank, mail); used by Baganator and other add-ons.",
+    "commandes": "/syn, /syns <word> to find an item across all characters",
+    "remarques": "Nothing to do: leave it enabled with Baganator."
+   },
+   "doublons": [],
+   "note_lien": "",
+   "type": "principal",
+   "icone": "Interface\\AddOns\\Syndicator\\Assets\\logo.tga",
+   "dependances": [],
+   "titre_toc": "Syndicator",
+   "verifie": "2026-11-15"
+  },
+  "TomTom": {
+   "categories": [
+    "map-minimap"
+   ],
+   "curseforge": "https://www.curseforge.com/projects/18808",
+   "confiance": "haute",
+   "utilite": "confort",
+   "fr": {
+    "resume": "Flèche de navigation vers des coordonnées (points de passage).",
+    "commandes": "/way <x> <y> (ex. /way 45 60), /cway (point le plus proche), /wayb (retour)",
+    "remarques": ""
+   },
+   "en": {
+    "resume": "Navigation arrow to coordinates (waypoints).",
+    "commandes": "/way <x> <y> (e.g. /way 45 60), /cway (closest point), /wayb (back)",
+    "remarques": ""
+   },
+   "doublons": [],
+   "note_lien": "",
+   "type": "principal",
+   "icone": "Interface\\AddOns\\TomTom\\Images\\Modern\\TomTom-Logo.tga",
+   "dependances": [],
+   "titre_toc": "TomTom",
+   "verifie": "2026-11-15"
+  },
+  "Warmth": {
+   "categories": [
+    "miscellaneous",
+    "map-minimap"
+   ],
+   "curseforge": "https://www.curseforge.com/projects/1799681",
+   "confiance": "haute",
+   "utilite": "gadget",
+   "fr": {
+    "resume": "Feux de camp des joueurs sur ta carte : ce que propose chaque campement, qui est autour, et monter le tien.",
+    "commandes": "/warmth",
+    "remarques": ""
+   },
+   "en": {
+    "resume": "Players' campfires on your map: what each camp offers, who is around, and how to set up your own.",
+    "commandes": "/warmth",
+    "remarques": ""
+   },
+   "doublons": [],
+   "note_lien": "",
+   "type": "principal",
+   "icone": "Interface\\AddOns\\Warmth\\Media\\logo",
+   "dependances": [],
+   "titre_toc": "Warmth",
+   "verifie": "2026-11-15"
+  },
+  "WhatsTraining": {
+   "categories": [
+    "class"
+   ],
+   "curseforge": "https://www.curseforge.com/projects/324944",
+   "confiance": "haute",
+   "utilite": "gadget",
+   "fr": {
+    "resume": "What's Training : liste des sorts disponibles chez ton maître de classe.",
+    "commandes": "/wt",
+    "remarques": "DÉSACTIVÉ exprès : doublon de Naowh Forever : Training Planner."
+   },
+   "en": {
+    "resume": "What's Training: list of spells available from your class trainer.",
+    "commandes": "/wt",
+    "remarques": "DISABLED on purpose: duplicate of Naowh Forever: Training Planner."
+   },
+   "doublons": [
+    "NaowhForever_Training"
+   ],
+   "note_lien": "",
+   "type": "principal",
+   "icone": null,
+   "dependances": [],
+   "titre_toc": "What's Training?",
+   "verifie": "2026-11-15"
+  },
+  "ZephrasCollector": {
+   "categories": [
+    "data-export"
+   ],
+   "curseforge": null,
+   "confiance": "aucune",
+   "utilite": "gadget",
+   "fr": {
+    "resume": "Envoie ce que tu découvres (PNJ, quêtes, butin) au site zephras.com ; Ctrl+C sur un objet donne son lien.",
+    "commandes": "/zephras",
+    "remarques": "Facultatif : utile seulement si tu te sers du site Zephras."
+   },
+   "en": {
+    "resume": "Sends what you discover (NPCs, quests, loot) to zephras.com; Ctrl+C on an item gives its link.",
+    "commandes": "/zephras",
+    "remarques": "Optional: only useful if you use the Zephras site."
+   },
+   "doublons": [],
+   "note_lien": "Add-on d'un site tiers : pas de page CurseForge connue.",
+   "type": "principal",
+   "icone": null,
+   "dependances": [],
+   "titre_toc": "Zephras Collector",
+   "verifie": "2026-11-15"
+  },
+  "ZygorGuidesViewerForever": {
+   "categories": [
+    "quests-leveling",
+    "guides"
+   ],
+   "curseforge": null,
+   "confiance": "aucune",
+   "utilite": "confort",
+   "fr": {
+    "resume": "Zygor : guide de leveling (version gratuite Forever), avec flèche et étapes.",
+    "commandes": "Bouton de la minicarte",
+    "remarques": "Fait doublon avec RestedXP : n'activer qu'un seul guide de leveling à la fois."
+   },
+   "en": {
+    "resume": "Zygor: leveling guide (free Forever version), with arrow and steps.",
+    "commandes": "Minimap button",
+    "remarques": "Duplicate of RestedXP: enable only one leveling guide at a time."
+   },
+   "doublons": [
+    "RXPGuides"
+   ],
+   "note_lien": "Pas de page CurseForge du guide lui-même ; site officiel : https://zygorguides.com/",
+   "type": "principal",
+   "icone": "Interface\\Addons\\ZygorGuidesViewerForever\\Skins\\addon-icon",
+   "dependances": [],
+   "titre_toc": "Zygor Guide Viewer (Forever)",
+   "verifie": "2026-11-15"
+  }
+ }
+}

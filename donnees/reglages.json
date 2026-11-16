@@ -1,0 +1,1218 @@
+{
+ "version": 1,
+ "technique": {
+  "variable_compte": "MesAddonsDB",
+  "variable_perso": "MesAddonsPersoDB",
+  "cle_commande": "MESADDONS",
+  "schema": 1,
+  "fonction_raccourci": "MesAddonsRaccourci",
+  "migrations": [
+   {
+    "id": "fiche_fond_uni_0_7_9",
+    "chemin": "fiche.fond",
+    "de": "jeu",
+    "vers": "uni"
+   }
+  ]
+ },
+ "langue": {
+  "repli": "enUS",
+  "disponibles": {
+   "frFR": {
+    "nom": "Français",
+    "fiche": "fr"
+   },
+   "enUS": {
+    "nom": "English",
+    "fiche": "en"
+   }
+  }
+ },
+ "sous_commandes": [
+  "aide",
+  "ouvrir",
+  "version",
+  "journal",
+  "langue",
+  "commandes",
+  "theme",
+  "taille",
+  "police",
+  "mini",
+  "fiche",
+  "options",
+  "chercher",
+  "tri",
+  "etiquette",
+  "favori",
+  "desinstaller",
+  "sansfiche",
+  "vus",
+  "erreurs",
+  "memoire",
+  "cpu",
+  "profils",
+  "profil",
+  "verrou",
+  "activer",
+  "desactiver",
+  "seul",
+  "essai",
+  "depannage",
+  "retour",
+  "recharger",
+  "perimes",
+  "annuler",
+  "resume",
+  "antiseche",
+  "visite",
+  "diag",
+  "trace"
+ ],
+ "defauts": {
+  "langue": {
+   "choix": "auto"
+  },
+  "commandes": {
+   "liste": [
+    "mesaddons",
+    "maa"
+   ],
+   "sans_argument": "ouvrir"
+  },
+  "affichage": {
+   "message_chargement": true,
+   "couleur_prefixe": "ffd100"
+  },
+  "journal": {
+   "actif": true,
+   "taille_max": 200,
+   "niveau_min": "info",
+   "dedoublonner": true,
+   "capturer_erreurs": true,
+   "lignes_chat": 10
+  },
+  "personnages": {
+   "memoriser": true
+  },
+  "fenetre": {
+   "theme": "auto",
+   "taille": "grande",
+   "police": "jeu",
+   "compact": false,
+   "annuler_max": 5,
+   "modules_replies": true,
+   "fermer_avec_echap": true,
+   "opacite": 100,
+   "taille_texte": "normale",
+   "cats_repliee": false,
+   "fiche_repliee": false
+  },
+  "acces": {
+   "bouton_minicarte": true,
+   "bouton_menu_echap": true,
+   "angle_minicarte": 200,
+   "compteur_minicarte": true,
+   "clic_droit": "menu",
+   "profils_minicarte": true
+  },
+  "fiche": {
+   "infobulle": true,
+   "parties": {
+    "resume": true,
+    "commandes": true,
+    "remarques": true,
+    "note": true,
+    "technique": true,
+    "dependances": true,
+    "doublons": true,
+    "badges": true
+   },
+   "note_max": 1000,
+   "texte_max": 800,
+   "fond": "uni"
+  },
+  "liste": {
+   "tri": "nom",
+   "tri_inverse": false,
+   "favoris_en_haut": true,
+   "nouveaux_en_haut": true,
+   "filtre": "tous",
+   "nouveau_sans_fiche": true,
+   "etiquettes_max": 8,
+   "badges_max": 2,
+   "filtres_visibles": {
+    "tous": true,
+    "actives": true,
+    "desactivees": true,
+    "perimes": true,
+    "doublons": true,
+    "sans_fiche": true,
+    "favoris": true,
+    "a_desinstaller": false,
+    "nouveaux": true,
+    "mis_a_jour": false,
+    "erreurs": false,
+    "essais": false,
+    "en_attente": false
+   },
+   "recherche": {
+    "nom": true,
+    "fiche": true,
+    "note": true,
+    "commandes": true,
+    "etiquettes": true,
+    "notes_toc": true,
+    "categorie": true,
+    "tolerance": true,
+    "distance": 1,
+    "longueur_min": 4,
+    "toutes_categories": true,
+    "pertinence": true,
+    "garder": false
+   },
+   "colonnes": {
+    "icone": true,
+    "etoile": true,
+    "badges": true,
+    "raison": true,
+    "etat_charge": false,
+    "memoire": false
+   },
+   "badges": {
+    "nouveau": true,
+    "mis_a_jour": true,
+    "erreur": true,
+    "doublon": true,
+    "inutile": true,
+    "essai": true,
+    "desinstaller": true,
+    "verrou": true
+   },
+   "grouper_tous": true,
+   "groupes_replies": false
+  },
+  "erreurs": {
+   "actif": true,
+   "max": 100,
+   "taille_message": 500,
+   "taille_pile": 1800,
+   "annonce": "fenetre",
+   "annonce_delai": 10,
+   "masquer_fenetre_jeu": true,
+   "son": false,
+   "lignes_liste": 10,
+   "memoire_alerte": true,
+   "memoire_seuil_total": 500,
+   "memoire_seuil_addon": 80,
+   "memoire_intervalle": 60,
+   "memoire_rappel": 900,
+   "memoire_lignes": 10,
+   "cpu_rappel": true,
+   "cpu_lignes": 10
+  },
+  "profils": {
+   "confirmer": true,
+   "dependances_auto": true,
+   "dependances_facultatives": false,
+   "portee": "perso",
+   "proposer": true,
+   "delai_proposition": 3,
+   "situation": {
+    "groupe": "donjon",
+    "raid": "donjon",
+    "champ": ""
+   }
+  },
+  "actions": {
+   "resume_connexion": true,
+   "maj_clic": true,
+   "essai_message": true
+  },
+  "aide": {
+   "visite_auto": true,
+   "visite_vue": false,
+   "executer_maj": true,
+   "montrer_eteints": true,
+   "detecter": true,
+   "portee": "tout",
+   "regrouper": "categorie"
+  },
+  "options": {
+   "avances": false
+  }
+ },
+ "journal_niveaux": {
+  "debug": 1,
+  "info": 2,
+  "avertissement": 3,
+  "erreur": 4
+ },
+ "interface": {
+  "nom_cadre": "MesAddonsFenetre",
+  "nom_bouton": "MesAddonsBoutonMinicarte",
+  "strate": "HIGH",
+  "marge": 14,
+  "marge_ecran": 40,
+  "ecart": 6,
+  "position_defaut": {
+   "point": "CENTER",
+   "x": 0,
+   "y": 20
+  },
+  "tailles": {
+   "grande": {
+    "l": 940,
+    "h": 580
+   },
+   "moyenne": {
+    "l": 760,
+    "h": 480
+   },
+   "compacte": {
+    "l": 600,
+    "h": 420
+   }
+  },
+  "taille_repli": "grande",
+  "taille_mini": {
+   "l": 360,
+   "h": 480
+  },
+  "taille_min": {
+   "l": 320,
+   "h": 280
+  },
+  "hauteur_entete": 54,
+  "hauteur_pied": 44,
+  "largeur_categories": 190,
+  "largeur_fiche": 280,
+  "hauteur_ligne": 26,
+  "hauteur_ligne_categorie": 24,
+  "hauteur_bandeau": 30,
+  "retrait_module": 22,
+  "marge_ligne": 6,
+  "taille_case": 22,
+  "largeur_fleche": 14,
+  "taille_icone": 18,
+  "taille_embleme": 42,
+  "largeur_barre": 12,
+  "hauteur_pouce": 24,
+  "pas_molette": 52,
+  "taille_poignee": 18,
+  "largeur_bouton": 112,
+  "hauteur_bouton": 26,
+  "largeur_bouton_mode": 130,
+  "taille_croix": 24,
+  "taille_bouton_minicarte": 31,
+  "decalage_minicarte": 5,
+  "themes_ordre": [
+   "auto",
+   "horde",
+   "alliance",
+   "neutre"
+  ],
+  "factions": {
+   "Horde": "horde",
+   "Alliance": "alliance"
+  },
+  "theme_repli": "neutre",
+  "themes": {
+   "horde": {
+    "dore": "#d6b25e",
+    "dore_clair": "#f6dc8f",
+    "dore_sombre": "#7a5c22",
+    "fond": "#2c1912",
+    "fond_sombre": "#150a07",
+    "accent": "#9e2a1f",
+    "accent_sombre": "#4a0f0a",
+    "lueur": "#ffbe5a2e",
+    "texte": "#f1e2c0",
+    "texte_doux": "#d8cbb0",
+    "texte_eteint": "#8c8270",
+    "parchemin": "#c8b083",
+    "parchemin_texte": "#24180a",
+    "parchemin_titre": "#3a1a04",
+    "parchemin_filet": "#6e2606",
+    "noir": "#000000cc",
+    "champ": "#3a261022",
+    "parchemin_teinte": "#ffffff",
+    "champ_parchemin": "#b99f70"
+   },
+   "alliance": {
+    "dore": "#d9bd6c",
+    "dore_clair": "#fbe6a6",
+    "dore_sombre": "#6f5a28",
+    "fond": "#16223a",
+    "fond_sombre": "#0a1020",
+    "accent": "#2b5bb0",
+    "accent_sombre": "#0e2453",
+    "lueur": "#8cbeff29",
+    "texte": "#e9eefb",
+    "texte_doux": "#c4cde3",
+    "texte_eteint": "#7d8599",
+    "parchemin": "#c8b083",
+    "parchemin_texte": "#24180a",
+    "parchemin_titre": "#3a1a04",
+    "parchemin_filet": "#6e2606",
+    "noir": "#000000cc",
+    "champ": "#3a261022",
+    "parchemin_teinte": "#ffffff",
+    "champ_parchemin": "#b99f70"
+   },
+   "neutre": {
+    "dore": "#c8b07a",
+    "dore_clair": "#efe0b2",
+    "dore_sombre": "#5d4e2c",
+    "fond": "#262420",
+    "fond_sombre": "#121110",
+    "accent": "#5d6b3a",
+    "accent_sombre": "#283018",
+    "lueur": "#dcdca024",
+    "texte": "#ece6d6",
+    "texte_doux": "#cfc8b4",
+    "texte_eteint": "#85806f",
+    "parchemin": "#c8b083",
+    "parchemin_texte": "#24180a",
+    "parchemin_titre": "#3a1a04",
+    "parchemin_filet": "#6e2606",
+    "noir": "#000000cc",
+    "champ": "#3a261022",
+    "parchemin_teinte": "#ffffff",
+    "champ_parchemin": "#b99f70"
+   }
+  },
+  "emblemes": {
+   "horde": {
+    "fichiers": [
+     "Interface\\Timer\\Horde-Logo",
+     "Interface\\TargetingFrame\\UI-PVP-Horde"
+    ],
+    "atlas": [
+     "UI-HUD-UnitFrame-Player-PVP-HordeIcon",
+     "bfa-landingbutton-horde-up"
+    ]
+   },
+   "alliance": {
+    "fichiers": [
+     "Interface\\Timer\\Alliance-Logo",
+     "Interface\\TargetingFrame\\UI-PVP-Alliance"
+    ],
+    "atlas": [
+     "UI-HUD-UnitFrame-Player-PVP-AllianceIcon",
+     "bfa-landingbutton-alliance-up"
+    ]
+   },
+   "neutre": {
+    "fichiers": [
+     "Interface\\Icons\\INV_Misc_Book_09"
+    ],
+    "atlas": []
+   }
+  },
+  "fonds": {
+   "fenetre": {
+    "fond": "Interface\\DialogFrame\\UI-DialogBox-Background",
+    "bord": "Interface\\DialogFrame\\UI-DialogBox-Gold-Border",
+    "tuile": true,
+    "taille_tuile": 32,
+    "taille_bord": 32,
+    "retrait": 11,
+    "couleur_fond": "fond",
+    "couleur_bord": "dore",
+    "alpha_fond": 1,
+    "plein": "Interface\\Buttons\\WHITE8X8",
+    "opacite": true
+   },
+   "panneau": {
+    "fond": "Interface\\Tooltips\\UI-Tooltip-Background",
+    "bord": "Interface\\Tooltips\\UI-Tooltip-Border",
+    "tuile": true,
+    "taille_tuile": 16,
+    "taille_bord": 14,
+    "retrait": 3,
+    "couleur_fond": "fond_sombre",
+    "couleur_bord": "dore_sombre",
+    "alpha_fond": 0.6,
+    "plein": "Interface\\Buttons\\WHITE8X8",
+    "opacite": true
+   },
+   "parchemin": {
+    "fond": "Interface\\ACHIEVEMENTFRAME\\UI-Achievement-Parchment-Horizontal",
+    "bord": "Interface\\Tooltips\\UI-Tooltip-Border",
+    "tuile": false,
+    "taille_tuile": 16,
+    "taille_bord": 12,
+    "retrait": 3,
+    "couleur_fond": "parchemin",
+    "couleur_bord": "dore_sombre",
+    "alpha_fond": 1,
+    "plein": "Interface\\Buttons\\WHITE8X8",
+    "reglage_plein": "fiche.fond",
+    "valeur_plein": "uni",
+    "couleur_texture": "parchemin_teinte"
+   },
+   "bouton": {
+    "fond": "Interface\\Buttons\\WHITE8X8",
+    "bord": "Interface\\Tooltips\\UI-Tooltip-Border",
+    "tuile": false,
+    "taille_tuile": 8,
+    "taille_bord": 10,
+    "retrait": 2,
+    "couleur_fond": "accent",
+    "couleur_bord": "dore",
+    "alpha_fond": 1
+   },
+   "champ": {
+    "fond": "Interface\\Buttons\\WHITE8X8",
+    "bord": "Interface\\Tooltips\\UI-Tooltip-Border",
+    "tuile": false,
+    "taille_tuile": 8,
+    "taille_bord": 10,
+    "retrait": 2,
+    "couleur_fond": "champ",
+    "couleur_bord": "dore_sombre",
+    "alpha_fond": 1
+   },
+   "volet": {
+    "fond": "Interface\\Buttons\\WHITE8X8",
+    "bord": "Interface\\DialogFrame\\UI-DialogBox-Gold-Border",
+    "tuile": false,
+    "taille_tuile": 8,
+    "taille_bord": 32,
+    "retrait": 11,
+    "couleur_fond": "fond",
+    "couleur_bord": "dore",
+    "alpha_fond": 1
+   },
+   "champ_parchemin": {
+    "fond": "Interface\\Buttons\\WHITE8X8",
+    "bord": "Interface\\Tooltips\\UI-Tooltip-Border",
+    "tuile": false,
+    "taille_tuile": 8,
+    "taille_bord": 10,
+    "retrait": 2,
+    "couleur_fond": "champ_parchemin",
+    "couleur_bord": "parchemin_filet",
+    "alpha_fond": 1
+   }
+  },
+  "textures": {
+   "case_vide": "Interface\\Buttons\\UI-CheckBox-Up",
+   "case_appui": "Interface\\Buttons\\UI-CheckBox-Down",
+   "case_coche": "Interface\\Buttons\\UI-CheckBox-Check",
+   "case_survol": "Interface\\Buttons\\UI-CheckBox-Highlight",
+   "plus": "Interface\\Buttons\\UI-PlusButton-Up",
+   "moins": "Interface\\Buttons\\UI-MinusButton-Up",
+   "poignee": "Interface\\ChatFrame\\UI-ChatIM-SizeGrabber-Up",
+   "poignee_appui": "Interface\\ChatFrame\\UI-ChatIM-SizeGrabber-Down",
+   "ascenseur": "Interface\\Buttons\\UI-ScrollBar-Knob",
+   "blanc": "Interface\\Buttons\\WHITE8X8",
+   "icone_defaut": "Interface\\Icons\\INV_Gizmo_01",
+   "minicarte_icone": "Interface\\Icons\\INV_Misc_Book_09",
+   "minicarte_bord": "Interface\\Minimap\\MiniMap-TrackingBorder",
+   "croix": "Interface\\Buttons\\UI-Panel-MinimizeButton-Up"
+  },
+  "polices": {
+   "jeu": {
+    "chemin": "Fonts\\FRIZQT__.TTF"
+   },
+   "gothique": {
+    "chemin": "Fonts\\MORPHEUS.TTF"
+   },
+   "cinzel": {
+    "chemin": "Interface\\AddOns\\MesAddons\\Polices\\Cinzel.ttf"
+   }
+  },
+  "polices_ordre": [
+   "jeu",
+   "gothique",
+   "cinzel"
+  ],
+  "police_repli": "jeu",
+  "contour_texte": "",
+  "tailles_texte": {
+   "titre": 16,
+   "sous_titre": 11,
+   "normal": 12,
+   "petit": 10,
+   "entete": 13,
+   "fiche": 13,
+   "fiche_titre": 18,
+   "fiche_petit": 11,
+   "fiche_sous_titre": 12
+  },
+  "sans_accent": {
+   "é": "e",
+   "è": "e",
+   "ê": "e",
+   "ë": "e",
+   "à": "a",
+   "â": "a",
+   "ä": "a",
+   "î": "i",
+   "ï": "i",
+   "ô": "o",
+   "ö": "o",
+   "ù": "u",
+   "û": "u",
+   "ü": "u",
+   "ç": "c",
+   "É": "e",
+   "È": "e",
+   "À": "a",
+   "Ç": "c",
+   "Ê": "e",
+   "Ô": "o",
+   "Î": "i",
+   "Â": "a",
+   "Û": "u",
+   "Ù": "u",
+   "Ï": "i",
+   "Ë": "e"
+  },
+  "categorie_autres": "autres",
+  "categorie_tous": "tous",
+  "separateur_info": "  ·  ",
+  "marque_attente": "●",
+  "fiche": {
+   "parties_ordre": [
+    "resume",
+    "commandes",
+    "remarques",
+    "note",
+    "technique",
+    "dependances",
+    "doublons",
+    "badges"
+   ],
+   "ancre_infobulle": "ANCHOR_RIGHT",
+   "largeur_infobulle": 280,
+   "marge": 14,
+   "ecart_bloc": 10,
+   "ecart_titre": 3,
+   "hauteur_champ_min": 60,
+   "hauteur_note_min": 56,
+   "marge_champ": 6,
+   "hauteur_boutons": 24,
+   "ecart_boutons": 6,
+   "hauteur_pied": 64,
+   "taille_pastille": 6,
+   "note_infobulle_max": 90,
+   "memoire_ko_par_mo": 1024,
+   "commande_motif": "^(/[%w_]+)",
+   "curse_projet": "https://www.curseforge.com/projects/%s",
+   "separateur_badges": "  ·  ",
+   "marque_liste": "•",
+   "hauteur_lien": 26,
+   "niveau_volet": 20,
+   "curseur": {
+    "largeur": 2,
+    "clignote": 0.5,
+    "couleur": "parchemin_texte",
+    "bord_actif": "dore_clair",
+    "decalage_x": 0,
+    "decalage_y": 0
+   },
+   "hauteur_outils_note": 22,
+   "largeur_outil_note": 90
+  },
+  "liste": {
+   "hauteur_champ": 24,
+   "hauteur_puce": 22,
+   "ecart": 4,
+   "marge_puce": 12,
+   "largeur_bouton_tri": 160,
+   "largeur_options": 76,
+   "largeur_effacer": 22,
+   "marge_puce_texte": 16,
+   "filtres_ordre": [
+    "tous",
+    "actives",
+    "desactivees",
+    "perimes",
+    "doublons",
+    "sans_fiche",
+    "favoris",
+    "a_desinstaller",
+    "nouveaux",
+    "mis_a_jour",
+    "erreurs",
+    "essais",
+    "en_attente"
+   ],
+   "tris_ordre": [
+    "nom",
+    "categorie",
+    "etat",
+    "memoire",
+    "utilite"
+   ],
+   "utilites": [
+    "indispensable",
+    "confort",
+    "gadget"
+   ],
+   "badges_ordre": [
+    "erreur",
+    "nouveau",
+    "mis_a_jour",
+    "doublon",
+    "essai",
+    "verrou",
+    "desinstaller",
+    "inutile"
+   ],
+   "badge_couleurs": {
+    "erreur": "#ff6a5a",
+    "nouveau": "#7fe08a",
+    "mis_a_jour": "#7fc4ff",
+    "doublon": "#ffb35a",
+    "essai": "#d9a8ff",
+    "desinstaller": "#ff8a8a",
+    "inutile": "#9a9078",
+    "verrou": "#ffd100"
+   },
+   "etoile": {
+    "image": "Interface\\TargetingFrame\\UI-RaidTargetingIcon_1",
+    "taille": 14,
+    "alpha_vide": 0.25
+   },
+   "poids": {
+    "nom": 100,
+    "commandes": 70,
+    "etiquettes": 60,
+    "fiche": 30,
+    "note": 25,
+    "categorie": 20,
+    "notes_toc": 10,
+    "debut_nom": 50,
+    "mot_exact": 30
+   },
+   "motif_mot": "[%w_/#]+",
+   "motif_etiquettes": "[^,;#]+",
+   "motif_erreur": "[Aa]dd[Oo]ns[/\\\\]([^/\\\\:]+)[/\\\\]",
+   "longueur_longue": 8,
+   "raisons_ordinaires": [
+    "charge",
+    "desactive",
+    "a_la_demande",
+    "non_charge"
+   ],
+   "largeur_repli": 400,
+   "separateur_badges": " ",
+   "separateur_liste": ", ",
+   "noms_max_chat": 40,
+   "menu": {
+    "largeur": 250,
+    "hauteur_item": 22,
+    "ecart": 2,
+    "marge": 8,
+    "hauteur_champ": 24,
+    "strate": "DIALOG",
+    "longueur_etiquette": 24,
+    "nom": "MesAddonsMenu"
+   },
+   "entete": {
+    "hauteur": 22,
+    "marge": 4,
+    "taille_fleche": 12,
+    "alpha_fond": 0.12,
+    "ecart_haut": 4
+   },
+   "largeur_bouton_vue": 150,
+   "largeur_bouton_filtre": 170
+  },
+  "options": {
+   "hauteur_ligne": 30,
+   "hauteur_groupe": 34,
+   "marge": 10,
+   "largeur_controle": 170,
+   "hauteur_bouton": 22,
+   "largeur_pas": 24,
+   "largeur_valeur": 60,
+   "retrait": 8,
+   "hauteur_commandes": 74,
+   "niveau_volet": 30,
+   "suggestions_suffixes": [
+    "2",
+    "x",
+    "z",
+    "1"
+   ],
+   "suggestion_prefixe": "m",
+   "motif_couleur": "^%x%x%x%x%x%x$",
+   "hauteur_titre": 30,
+   "confirmer": [
+    "tout_reinitialiser",
+    "effacer_journal",
+    "effacer_erreurs"
+   ],
+   "largeur_retour": 90,
+   "nom_page": "MesAddonsPageOptions",
+   "largeur_onglet": 120,
+   "hauteur_onglet": 28,
+   "ecart_onglet": 4,
+   "ecart_groupe": 12,
+   "alpha_zebre": 0.05,
+   "marge_carte": 6,
+   "hauteur_avances": 26
+  },
+  "erreurs": {
+   "nom_cadre": "MesAddonsErreurs",
+   "largeur": 720,
+   "hauteur": 470,
+   "marge": 12,
+   "ecart": 6,
+   "largeur_liste": 300,
+   "hauteur_ligne": 24,
+   "hauteur_bouton": 22,
+   "largeur_bouton": 118,
+   "hauteur_titre": 26,
+   "hauteur_bandeau": 18,
+   "pas_molette": 40,
+   "largeur_barre": 12,
+   "motif_addon": "[Aa]dd[Oo]ns[/\\\\]([^/\\\\:]+)[/\\\\]",
+   "motif_fichier": "[Aa]dd[Oo]ns[/\\\\][^/\\\\:]+[/\\\\]([^:]-):(%d+):",
+   "inconnu": "?",
+   "son": {
+    "kit": "IG_QUEST_FAILED",
+    "id": 847
+   },
+   "couleur_erreur": "ff6a5a",
+   "couleur_nombre": "ffd100",
+   "couleur_ok": "7fd07f",
+   "message_court": 70,
+   "cvar_cpu": "scriptProfile",
+   "cvar_erreurs": "scriptErrors",
+   "oui": "1",
+   "non": "0",
+   "delai_rafraichir": 0.3
+  },
+  "profils": {
+   "nom_cadre": "MesAddonsProfils",
+   "strate": "DIALOG",
+   "largeur": 680,
+   "hauteur": 540,
+   "decalage_x": 0,
+   "decalage_y": 20,
+   "hauteur_titre": 30,
+   "largeur_liste": 210,
+   "lignes_visibles": 12,
+   "hauteur_ligne": 26,
+   "taille_icone": 18,
+   "taille_icone_grand": 32,
+   "alpha_selection": 0.5,
+   "largeur_couleur": 90,
+   "hauteur_champ": 24,
+   "hauteur_detail": 120,
+   "colonnes_boutons": 2,
+   "hauteur_confirmation": 70,
+   "largeur_bouton": 150,
+   "largeur_bouton_court": 100,
+   "largeur_bouton_entete": 130,
+   "nom_bouton_max": 10,
+   "noms_max": 8,
+   "suite": "...",
+   "separateur": ", ",
+   "fleche": " < ",
+   "boutons_profil": [
+    "enregistrer"
+   ],
+   "situation": {
+    "nom": "MesAddonsSituation",
+    "strate": "DIALOG",
+    "largeur": 440,
+    "hauteur": 110,
+    "decalage_haut": 160,
+    "largeur_bouton": 150
+   }
+  },
+  "decalage_compteur": [
+   4,
+   -2
+  ],
+  "separateur_compteur": " ",
+  "rapide": {
+   "nom": "MesAddonsRapide",
+   "largeur": 230,
+   "hauteur_item": 22,
+   "ecart": 2,
+   "marge": 8,
+   "strate": "DIALOG"
+  },
+  "aide": {
+   "nom_cadre": "MesAddonsAide",
+   "strate": "DIALOG",
+   "largeur": 760,
+   "hauteur": 560,
+   "marge": 14,
+   "ecart": 6,
+   "hauteur_titre": 30,
+   "hauteur_bandeau": 24,
+   "largeur_bouton": 120,
+   "largeur_bouton_portee": 210,
+   "hauteur_bouton": 26,
+   "hauteur_champ": 24,
+   "taille_bouton_entete": 24,
+   "alpha_eteint": 0.55,
+   "cle_memoire": "antiseche",
+   "position_defaut": { "point": "CENTER", "x": 0, "y": 0 },
+   "taille_min": { "l": 560, "h": 380 },
+   "taille_max": { "l": 1400, "h": 1000 },
+   "largeur_effacer": 24,
+   "largeur_onglet": 180,
+   "hauteur_onglet": 26,
+   "ecart_onglet": 3,
+   "hauteur_section": 24,
+   "retrait_onglet": 8,
+   "largeur_nombre": 30,
+   "marge_carte": 8,
+   "ecart_carte": 10,
+   "hauteur_titre_carte": 30,
+   "hauteur_cmd": 40,
+   "hauteur_cmd_seule": 28,
+   "hauteur_note": 26,
+   "retrait_ligne": 10,
+   "haut_cmd": 6,
+   "ecart_desc": 3,
+   "alpha_zebre": 0.05
+  },
+  "visite": {
+   "nom_bulle": "MesAddonsVisite",
+   "strate": "FULLSCREEN_DIALOG",
+   "largeur": 340,
+   "hauteur": 190,
+   "marge": 12,
+   "ecart": 6,
+   "epaisseur_cadre": 3,
+   "marge_cadre": 3,
+   "largeur_bouton": 92,
+   "hauteur_bouton": 24,
+   "marge_ecran": 20
+  },
+  "echelles_texte": {
+   "petite": 0.9,
+   "normale": 1,
+   "grande": 1.12
+  },
+  "replier": {
+   "taille": 24,
+   "gauche": "«",
+   "droite": "»",
+   "fleche_gauche": "Interface\\Buttons\\UI-SpellbookIcon-PrevPage-Up",
+   "fleche_gauche_appui": "Interface\\Buttons\\UI-SpellbookIcon-PrevPage-Down",
+   "fleche_droite": "Interface\\Buttons\\UI-SpellbookIcon-NextPage-Up",
+   "fleche_droite_appui": "Interface\\Buttons\\UI-SpellbookIcon-NextPage-Down",
+   "survol": "Interface\\Buttons\\UI-Common-MouseHilight"
+  },
+  "largeur_repliee": 1,
+  "deroulant": {
+   "hauteur_ligne": 22,
+   "marge": 6,
+   "strate": "FULLSCREEN_DIALOG",
+   "taille_coche": 16,
+   "ecart_separe": 4,
+   "taille_fleche": 12,
+   "fleche": "Interface\\ChatFrame\\ChatFrameExpandArrow"
+  }
+ },
+ "profils": {
+  "id_tout": "@tout",
+  "id_rien": "@rien",
+  "prefixe_id": "p",
+  "max": 30,
+  "nom_max": 24,
+  "addons_max": 400,
+  "icone_defaut": "Interface\\Icons\\INV_Misc_QuestionMark",
+  "icones": [
+   "Interface\\Icons\\INV_Misc_QuestionMark",
+   "Interface\\Icons\\INV_Misc_Book_09",
+   "Interface\\Icons\\INV_Shield_06",
+   "Interface\\Icons\\Trade_Fishing",
+   "Interface\\Icons\\INV_Misc_Bag_08",
+   "Interface\\Icons\\Ability_Mount_RidingHorse",
+   "Interface\\Icons\\INV_Sword_27",
+   "Interface\\Icons\\Spell_Nature_Lightning",
+   "Interface\\Icons\\INV_Misc_Gem_Variety_02"
+  ],
+  "icones_depart": {
+   "leveling": "Interface\\Icons\\Ability_Mount_RidingHorse",
+   "donjon": "Interface\\Icons\\INV_Shield_06",
+   "peche": "Interface\\Icons\\Trade_Fishing",
+   "minimal": "Interface\\Icons\\INV_Misc_Bag_08",
+   "@tout": "Interface\\Icons\\Spell_Nature_Lightning",
+   "@rien": "Interface\\Icons\\INV_Misc_Bone_HumanSkull_01"
+  },
+  "couleur_defaut": "#9E9E9E",
+  "couleur_tout": "#FFD100",
+  "couleur_rien": "#808080",
+  "couleurs": [
+   "#4CAF50",
+   "#2196F3",
+   "#00BCD4",
+   "#9E9E9E",
+   "#FF9800",
+   "#E91E63",
+   "#9C27B0",
+   "#F44336"
+  ],
+  "ordre_prets": [
+   "leveling",
+   "donjon",
+   "peche",
+   "minimal"
+  ],
+  "entete": "MAA1",
+  "type_profil": "P",
+  "type_sauvegarde": "S",
+  "type_verrous": "V",
+  "type_note": "N",
+  "type_etiquettes": "E",
+  "type_favoris": "F",
+  "type_actuel": "A",
+  "separateur_enregistrements": "~",
+  "a_echapper": "[%%;=,|:~%c]",
+  "motif_couleur": "^#%x%x%x%x%x%x$",
+  "situations": {
+   "party": "groupe",
+   "raid": "raid",
+   "pvp": "champ",
+   "arena": "champ"
+  },
+  "actions": [
+   "tous",
+   "fusionner",
+   "comparer",
+   "nouveau",
+   "enregistrer",
+   "renommer",
+   "supprimer",
+   "nettoyer",
+   "exporter",
+   "sauvegarde",
+   "importer",
+   "prets"
+  ],
+  "separateur_arguments": "/",
+  "separateur_liste": ", "
+ },
+ "actions": {
+  "profondeur_max": 6,
+  "cvar_perimes": "checkAddonVersion",
+  "valeur_perimes_charges": "0",
+  "valeur_perimes_verifies": "1",
+  "separateur_resume": " · ",
+  "separateur_liste": ", ",
+  "motif_mots": "[^%s,;]+",
+  "compteur_delai": 2,
+  "delai_resume": 4,
+  "raccourcis": [
+   "fenetre",
+   "profils",
+   "recharger",
+   "antiseche",
+   "mini"
+  ]
+ },
+ "aide": {
+  "separateur": ",",
+  "ouvrant": "(",
+  "fermant": ")",
+  "motif_commande": "^(/[%w_]+)",
+  "prefixe_min": 4,
+  "delai_visite": 3,
+  "portees": [
+   "tout",
+   "moi",
+   "addons"
+  ],
+  "sections": [ "moi", "addons" ],
+  "regroupement_categorie": "categorie",
+  "prefixes_page": { "moi": "moi.", "categorie": "cat.", "addon": "addon." },
+  "id_resultats": "resultats",
+  "groupes": [
+   {
+    "id": "fenetre",
+    "sous": [
+     "ouvrir",
+     "mini",
+     "theme",
+     "taille",
+     "police",
+     "options",
+     "langue",
+     "commandes",
+     "version",
+     "aide",
+     "antiseche",
+     "visite"
+    ]
+   },
+   {
+    "id": "liste",
+    "sous": [
+     "fiche",
+     "chercher",
+     "tri",
+     "etiquette",
+     "favori",
+     "desinstaller",
+     "sansfiche",
+     "vus"
+    ]
+   },
+   {
+    "id": "profils",
+    "sous": [
+     "profils",
+     "profil",
+     "verrou"
+    ]
+   },
+   {
+    "id": "actions",
+    "sous": [
+     "activer",
+     "desactiver",
+     "seul",
+     "essai",
+     "depannage",
+     "retour",
+     "recharger",
+     "perimes",
+     "annuler",
+     "resume"
+    ]
+   },
+   {
+    "id": "diagnostic",
+    "sous": [
+     "erreurs",
+     "memoire",
+     "cpu",
+     "journal",
+     "diag",
+     "trace"
+    ]
+   }
+  ],
+  "visite": [
+   {
+    "id": "liste",
+    "cible": "panneauListe",
+    "point": "CENTER",
+    "rel": "CENTER",
+    "x": 0,
+    "y": 0
+   },
+   {
+    "id": "categories",
+    "cible": "panneauCats",
+    "point": "LEFT",
+    "rel": "RIGHT",
+    "x": 14,
+    "y": 0
+   },
+   {
+    "id": "fiche",
+    "cible": "panneauFiche",
+    "point": "RIGHT",
+    "rel": "LEFT",
+    "x": -14,
+    "y": 0
+   },
+   {
+    "id": "entete",
+    "cible": "entete",
+    "point": "TOP",
+    "rel": "BOTTOM",
+    "x": 0,
+    "y": -14
+   },
+   {
+    "id": "pied",
+    "cible": "pied",
+    "point": "BOTTOM",
+    "rel": "TOP",
+    "x": 0,
+    "y": 14
+   }
+  ]
+ },
+ "diagnostic": {
+  "prefixe_chemin": "Interface\\",
+  "fonctions": [
+   "C_AddOns.EnableAddOn",
+   "C_AddOns.DisableAddOn",
+   "C_AddOns.GetAddOnEnableState",
+   "C_AddOns.GetAddOnMetadata",
+   "C_AddOns.SetAddonVersionCheck",
+   "C_AddOns.IsAddonVersionCheckEnabled",
+   "C_AddOns.LoadAddOn",
+   "C_Texture.GetAtlasInfo",
+   "C_Timer.After",
+   "C_UI.Reload",
+   "Settings.RegisterCanvasLayoutCategory",
+   "Settings.RegisterAddOnCategory",
+   "Settings.OpenToCategory",
+   "ReloadUI",
+   "ChatFrame_OpenChat",
+   "debugstack",
+   "seterrorhandler",
+   "geterrorhandler",
+   "GetAddOnMemoryUsage",
+   "UpdateAddOnMemoryUsage",
+   "GetAddOnCPUUsage",
+   "UpdateAddOnCPUUsage",
+   "ResetCPUUsage",
+   "PlaySound",
+   "SOUNDKIT",
+   "BackdropTemplateMixin",
+   "IsInInstance",
+   "GetInstanceInfo",
+   "UnitFactionGroup",
+   "AddonList",
+   "GameMenuFrame",
+   "AddonCompartmentFrame",
+   "Minimap",
+   "SettingsPanel"
+  ],
+  "reglages_cvar": [
+   "scriptProfile",
+   "checkAddonVersion",
+   "scriptErrors"
+  ],
+  "bindings": [
+   "MESADDONS_FENETRE",
+   "MESADDONS_PROFILS",
+   "MESADDONS_RECHARGER",
+   "MESADDONS_ANTISECHE",
+   "MESADDONS_MINI"
+  ],
+  "cadres": [
+   "AddonList",
+   "GameMenuFrame",
+   "SettingsPanel"
+  ],
+  "taille_texture_test": 16,
+  "lignes_max": 200,
+  "trace_max": 300,
+  "trace_cadres": [
+   "corps",
+   "cats",
+   "liste",
+   "fiche",
+   "barre",
+   "bandeau",
+   "sf",
+   "contenu",
+   "fleche_g",
+   "fleche_d",
+   "compteur",
+   "titre",
+   "ligne1",
+   "entete1"
+  ]
+ }
+}

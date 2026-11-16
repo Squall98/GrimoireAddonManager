@@ -1,0 +1,105 @@
+{
+ "version": 1,
+ "profils": {
+  "leveling": {
+   "nom": {
+    "fr": "Leveling",
+    "en": "Leveling"
+   },
+   "icone": "📈",
+   "couleur": "#4CAF50",
+   "addons": [
+    "NaowhForever",
+    "Questie",
+    "RXPGuides",
+    "TomTom",
+    "OpenMap",
+    "GearQuestForever",
+    "DialogueUI",
+    "Spoken",
+    "Baganator",
+    "Syndicator",
+    "Pawn",
+    "RareScanner",
+    "MinimapButtonButton",
+    "OPie"
+   ],
+   "avec_modules": true,
+   "note": {
+    "fr": "Un seul guide de leveling (RestedXP) ; Zygor reste éteint.",
+    "en": "A single leveling guide (RestedXP); Zygor stays off."
+   }
+  },
+  "donjon": {
+   "nom": {
+    "fr": "Donjon",
+    "en": "Dungeon"
+   },
+   "icone": "🛡️",
+   "couleur": "#2196F3",
+   "addons": [
+    "NaowhForever",
+    "DBM-Core",
+    "Details",
+    "GTFO",
+    "Plater",
+    "Baganator",
+    "Syndicator",
+    "Pawn",
+    "DialogueUI",
+    "MinimapButtonButton",
+    "OPie"
+   ],
+   "avec_modules": true,
+   "note": {
+    "fr": "DBM et Details avec leurs modules utiles ; pas de guide de leveling.",
+    "en": "DBM and Details with their useful modules; no leveling guide."
+   }
+  },
+  "peche": {
+   "nom": {
+    "fr": "Pêche",
+    "en": "Fishing"
+   },
+   "icone": "🎣",
+   "couleur": "#00BCD4",
+   "addons": [
+    "NaowhForever",
+    "FishyWashy",
+    "Baganator",
+    "Syndicator",
+    "Auctionator",
+    "TomTom",
+    "OpenMap",
+    "MinimapButtonButton"
+   ],
+   "avec_modules": true,
+   "note": {
+    "fr": "Une seule aide à la pêche (FishyWashy) ; BetterFishing reste éteint.",
+    "en": "A single fishing helper (FishyWashy); BetterFishing stays off."
+   }
+  },
+  "minimal": {
+   "nom": {
+    "fr": "Minimal",
+    "en": "Minimal"
+   },
+   "icone": "🪶",
+   "couleur": "#9E9E9E",
+   "addons": [
+    "NaowhForever",
+    "Baganator",
+    "Syndicator",
+    "DBM-Core",
+    "Questie",
+    "MinimapButtonButton"
+   ],
+   "avec_modules": true,
+   "note": {
+    "fr": "Le strict nécessaire pour jouer léger.",
+    "en": "The bare minimum for a light setup."
+   }
+  }
+ },
+ "remarque": "addons = dossiers principaux ; l'outil de profils ne garde que ceux réellement installés."
+}

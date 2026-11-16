@@ -1,0 +1,1147 @@
+<!doctype html>
+<html lang="fr" data-theme="sombre">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mes Add-ons · Mode d'emploi</title>
+<!-- Page fabriquée par fabriquer.py à partir de modele.html et des fichiers donnees\ : ne pas modifier mode-d-emploi.html à la main. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=EB+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root, :root[data-theme="sombre"] {
+  --fond: #120d09; --fond2: #1b140e; --panneau: #231a12; --panneau2: #2d2117; --bord: #5b4428; --bord-doux: #3b2c1b;
+  --or: #d6b25e; --or-clair: #f6dc8f; --or-sombre: #7a5c22; --texte: #f0e4c9; --texte-doux: #c8b795; --texte-eteint: #8d7f66;
+  --accent: #b23a2a; --vert: #6fbf73; --bleu: #6ea8ff; --rouge: #ff7a6a;
+  --parchemin: #e9d9b0; --parchemin-texte: #2a1b0b; --parchemin-titre: #4a2306; --parchemin-filet: #8a3a10;
+  --code: #0d0906; --ombre: 0 10px 30px #0008;
+}
+:root[data-theme="clair"] {
+  --fond: #f3e9d2; --fond2: #ece0c4; --panneau: #fffaf0; --panneau2: #f6ecd6; --bord: #c4a46a; --bord-doux: #e0cfa8;
+  --or: #8a6420; --or-clair: #6b4a10; --or-sombre: #b38d45; --texte: #2a1c0c; --texte-doux: #5c4a30; --texte-eteint: #8b7a5c;
+  --accent: #9e2a1f; --vert: #2e7d32; --bleu: #1d5fc4; --rouge: #c0392b;
+  --parchemin: #f6ebcf; --parchemin-texte: #2a1b0b; --parchemin-titre: #4a2306; --parchemin-filet: #8a3a10;
+  --code: #2a1c0c; --ombre: 0 8px 22px #6b4a1033;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body {
+  background: radial-gradient(ellipse at top, var(--fond2), var(--fond) 70%) fixed; color: var(--texte);
+  font: 18px/1.55 "EB Garamond", Georgia, "Times New Roman", serif;
+}
+h1, h2, h3, h4, .cinzel { font-family: Cinzel, "Trajan Pro", Georgia, serif; letter-spacing: .02em; }
+h2 { color: var(--or); font-size: 1.45rem; margin: 1.6rem 0 .6rem; border-bottom: 1px solid var(--bord-doux); padding-bottom: .3rem; }
+h3 { color: var(--or-clair); font-size: 1.1rem; margin: 1.2rem 0 .4rem; }
+:root[data-theme="clair"] h3 { color: var(--accent); }
+a { color: var(--or-clair); }
+:root[data-theme="clair"] a { color: var(--accent); }
+p { margin: .45rem 0; }
+code, .mono { font-family: Consolas, "Cascadia Mono", monospace; font-size: .86em; }
+code { overflow-wrap: anywhere; background: var(--panneau2); border: 1px solid var(--bord-doux); padding: .05em .35em; border-radius: 4px; }
+pre { background: var(--code); color: #f3e3bd; border: 1px solid var(--bord); border-radius: 8px; padding: .8rem 1rem; overflow-x: auto; font-size: .82rem; line-height: 1.45; margin: .5rem 0; }
+pre code { background: none; border: 0; padding: 0; font-size: inherit; color: inherit; }
+kbd { font-family: inherit; border: 1px solid var(--bord); border-bottom-width: 3px; border-radius: 5px; padding: 0 .35em; background: var(--panneau2); font-size: .9em; }
+button { font: inherit; color: inherit; cursor: pointer; }
+.cache { display: none !important; }
+
+/* ---------- en-tête de la page ---------- */
+.haut { position: sticky; top: 0; z-index: 30; background: linear-gradient(#1c130cf2, #160f0af2); border-bottom: 2px solid var(--or-sombre); box-shadow: var(--ombre); }
+:root[data-theme="clair"] .haut { background: linear-gradient(#fffaf0f2, #f3e7cbf2); }
+.haut-ligne { max-width: 1240px; margin: 0 auto; padding: .55rem 16px .25rem; display: flex; align-items: center; gap: .8rem; flex-wrap: wrap; }
+.sceau { width: 42px; height: 42px; border-radius: 50%; flex: none; display: grid; place-items: center; font-family: Cinzel, serif; font-weight: 700; color: #2a1606;
+  background: radial-gradient(circle at 35% 30%, #fbe6a6, #d6b25e 55%, #7a5c22); box-shadow: 0 0 0 2px #3a2610, 0 0 12px #d6b25e55; }
+.haut h1 { font-size: 1.25rem; margin: 0; color: var(--or-clair); }
+:root[data-theme="clair"] .haut h1 { color: var(--parchemin-titre); }
+.haut .version { font-size: .8rem; color: var(--texte-doux); }
+.haut .droite { margin-left: auto; display: flex; gap: .5rem; align-items: center; flex-wrap: wrap; }
+.bascule { display: inline-flex; border: 1px solid var(--bord); border-radius: 999px; overflow: hidden; }
+.bascule button { background: transparent; border: 0; padding: .2rem .7rem; font-size: .85rem; color: var(--texte-doux); }
+.bascule button.on { background: var(--or); color: #1a1006; font-weight: 600; }
+.onglets { max-width: 1240px; margin: 0 auto; padding: 0 16px; display: flex; gap: .2rem; overflow-x: auto; scrollbar-width: thin; }
+.onglets a { white-space: nowrap; text-decoration: none; color: var(--texte-doux); padding: .45rem .8rem .5rem; border: 1px solid transparent; border-bottom: 0;
+  border-radius: 8px 8px 0 0; font-family: Cinzel, serif; font-size: .82rem; }
+.onglets a:hover { color: var(--or-clair); }
+.onglets a.on { color: var(--or-clair); background: var(--panneau); border-color: var(--or-sombre); }
+:root[data-theme="clair"] .onglets a.on { color: var(--parchemin-titre); }
+
+main { max-width: 1240px; margin: 0 auto; padding: 1rem 16px 3rem; }
+section.onglet { display: none; animation: apparait .25s ease; }
+section.onglet.on { display: block; }
+@keyframes apparait { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+.chapeau { font-size: 1.12rem; color: var(--texte-doux); max-width: 70ch; }
+.grille { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); }
+.carte { background: var(--panneau); border: 1px solid var(--bord-doux); border-radius: 12px; padding: .9rem 1rem; box-shadow: var(--ombre); }
+.carte h3 { margin-top: 0; }
+.carte.cliquable { cursor: pointer; transition: transform .15s, border-color .15s; }
+.carte.cliquable:hover { transform: translateY(-2px); border-color: var(--or); }
+.pastille { display: inline-block; font-size: .75rem; padding: .05rem .5rem; border-radius: 999px; border: 1px solid var(--bord); color: var(--texte-doux); margin: .1rem .15rem .1rem 0; }
+.pastille.or { border-color: var(--or); color: var(--or-clair); }
+:root[data-theme="clair"] .pastille.or { color: var(--or); }
+.puce-btn { background: var(--panneau2); border: 1px solid var(--bord-doux); color: var(--texte-doux); border-radius: 999px; padding: .15rem .7rem; font-size: .88rem; margin: .15rem .2rem .15rem 0; }
+.puce-btn.on { background: var(--or); color: #1a1006; border-color: var(--or); }
+.champ { width: 100%; max-width: 420px; background: var(--panneau2); color: var(--texte); border: 1px solid var(--bord); border-radius: 8px; padding: .45rem .7rem; font: inherit; font-size: .95rem; }
+.champ:focus { outline: 2px solid var(--or); outline-offset: 1px; }
+.bouton { background: linear-gradient(#6b2a16, #4a170b); color: #f6dc8f; border: 1px solid #c9973e; border-radius: 7px; padding: .3rem .9rem; font-family: Cinzel, serif; font-size: .82rem; }
+.bouton:hover { filter: brightness(1.15); }
+.bouton.discret { background: var(--panneau2); color: var(--texte); border-color: var(--bord); }
+.deux { display: grid; gap: 1rem; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+@media (max-width: 860px) { .deux { grid-template-columns: 1fr; } }
+.note { border-left: 3px solid var(--or); background: var(--panneau2); padding: .5rem .8rem; border-radius: 0 8px 8px 0; margin: .7rem 0; }
+.note.attention { border-left-color: var(--accent); }
+.cmd-ligne { display: flex; align-items: center; gap: .4rem; margin: .25rem 0; flex-wrap: wrap; }
+.cmd-ligne code { font-size: .92rem; }
+.copier { font-size: .72rem; padding: .05rem .5rem; border-radius: 5px; border: 1px solid var(--bord); background: transparent; color: var(--texte-doux); }
+.copier.ok { color: var(--vert); border-color: var(--vert); }
+.toast { position: fixed; left: 50%; bottom: 22px; transform: translateX(-50%) translateY(30px); opacity: 0; transition: .25s; z-index: 80;
+  background: var(--panneau); border: 1px solid var(--or); color: var(--texte); padding: .5rem 1rem; border-radius: 10px; box-shadow: var(--ombre); max-width: calc(100vw - 32px); }
+.toast.on { opacity: 1; transform: translateX(-50%); }
+.vide { color: var(--texte-eteint); font-style: italic; }
+details.faq { background: var(--panneau); border: 1px solid var(--bord-doux); border-radius: 10px; margin: .45rem 0; padding: 0 .9rem; }
+details.faq summary { cursor: pointer; padding: .6rem 0; font-weight: 600; color: var(--or-clair); }
+:root[data-theme="clair"] details.faq summary { color: var(--parchemin-titre); }
+details.faq[open] { border-color: var(--or-sombre); }
+details.faq div { padding: 0 0 .7rem; }
+table.simple { border-collapse: collapse; width: 100%; font-size: .95rem; }
+table.simple td, table.simple th { border-bottom: 1px solid var(--bord-doux); padding: .35rem .5rem; text-align: left; vertical-align: top; }
+table.simple th { color: var(--or); font-family: Cinzel, serif; font-size: .8rem; }
+
+/* ---------- prise en main ---------- */
+.etapes-depart { counter-reset: e; }
+.etapes-depart .carte { position: relative; padding-top: 1.4rem; }
+.etapes-depart .carte::before { counter-increment: e; content: counter(e); position: absolute; top: -14px; left: 14px; width: 30px; height: 30px; border-radius: 50%;
+  display: grid; place-items: center; font-family: Cinzel, serif; font-weight: 700; color: #2a1606; background: radial-gradient(circle at 35% 30%, #fbe6a6, #d6b25e 60%, #7a5c22); }
+.liste-cochable { list-style: none; padding: 0; margin: .4rem 0; }
+.liste-cochable li { display: flex; gap: .6rem; align-items: flex-start; padding: .35rem .5rem; border-radius: 8px; }
+.liste-cochable li:hover { background: var(--panneau2); }
+.liste-cochable input { margin-top: .35rem; accent-color: #d6b25e; width: 18px; height: 18px; flex: none; }
+.liste-cochable li.fait span { text-decoration: line-through; color: var(--texte-eteint); }
+.barre-progres { height: 8px; background: var(--panneau2); border-radius: 99px; overflow: hidden; border: 1px solid var(--bord-doux); max-width: 420px; }
+.barre-progres div { height: 100%; width: 0; background: linear-gradient(90deg, #7a5c22, #f6dc8f); transition: width .3s; }
+
+/* ---------- maquette de la fenêtre ---------- */
+.atelier { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 1rem; align-items: start; }
+@media (max-width: 1100px) { .atelier { grid-template-columns: 1fr; } }
+.reglages-mq { display: flex; flex-wrap: wrap; gap: .4rem 1rem; align-items: center; margin: .4rem 0 .8rem; font-size: .9rem; }
+.reglages-mq label { color: var(--texte-doux); }
+.mq-cadre { overflow-x: auto; padding-bottom: .4rem; }
+.mq { --dore: #d6b25e; --dore-clair: #f6dc8f; --dore-sombre: #7a5c22; --mfond: #2c1912; --mfond-sombre: #150a07; --maccent: #9e2a1f; --maccent-sombre: #4a0f0a;
+  --mtexte: #f1e2c0; --mtexte-doux: #d8cbb0; --mtexte-eteint: #8c8270; --mparch: #c8b083; --mparch-texte: #24180a; --mparch-titre: #3a1a04; --mparch-filet: #6e2606;
+  --echelle: 1; position: relative; min-width: 760px; font-family: "Friz Quadrata TT", Georgia, serif; font-size: calc(14px * var(--echelle)); line-height: 1.35;
+  color: var(--mtexte); background: linear-gradient(160deg, var(--mfond), var(--mfond-sombre)); border: 3px solid var(--dore-sombre); border-radius: 10px;
+  box-shadow: 0 0 0 1px #000, inset 0 0 0 1px var(--dore), 0 14px 40px #000a; user-select: none; }
+.mq button { font-family: inherit; }
+.mq [data-zone] { transition: box-shadow .15s; }
+.mq .vise { box-shadow: 0 0 0 2px #fff8, 0 0 0 4px var(--dore-clair) !important; border-radius: 6px; }
+.mq-entete { display: flex; align-items: center; gap: 10px; padding: 8px 12px; border-bottom: 2px solid var(--dore-sombre);
+  background: linear-gradient(var(--maccent-sombre), transparent); border-radius: 8px 8px 0 0; }
+.mq-embleme { width: 40px; height: 40px; border-radius: 50%; border: 2px solid var(--dore); display: grid; place-items: center; font-size: 20px; color: var(--dore-clair);
+  background: radial-gradient(circle, var(--maccent), var(--maccent-sombre)); flex: none; cursor: pointer; }
+.mq-titre { font-family: Cinzel, serif; font-weight: 700; color: var(--dore-clair); font-size: 1.15em; }
+.mq-sous { color: var(--mtexte-doux); font-size: .85em; }
+.mq-entete .espace { flex: 1; }
+.mq-btn { background: linear-gradient(var(--maccent), var(--maccent-sombre)); color: var(--dore-clair); border: 1px solid var(--dore); border-radius: 5px; padding: 3px 10px; font-size: .9em; }
+.mq-btn:hover { filter: brightness(1.2); }
+.mq-btn.rond { width: 26px; height: 26px; padding: 0; border-radius: 50%; display: grid; place-items: center; }
+.mq-btn.eteint { opacity: .55; }
+.mq-corps { display: grid; grid-template-columns: 170px minmax(0, 1fr) 250px; min-height: 380px; }
+.mq-corps.sans-cats { grid-template-columns: 0 minmax(0, 1fr) 250px; }
+.mq-corps.sans-fiche { grid-template-columns: 170px minmax(0, 1fr) 0; }
+.mq-corps.sans-cats.sans-fiche { grid-template-columns: 0 minmax(0, 1fr) 0; }
+.mq-corps > * { min-width: 0; overflow: hidden; }
+.mq-corps.sans-cats .mq-cats, .mq.mini .mq-cats { padding: 0; border: 0; }
+.mq-corps.sans-fiche .mq-fiche, .mq.mini .mq-fiche { padding: 0; border: 0; }
+.mq-cats { border-right: 1px solid var(--dore-sombre); padding: 6px; background: #0003; }
+.mq-cat { display: flex; justify-content: space-between; gap: 4px; padding: 4px 7px; border-radius: 4px; cursor: pointer; color: var(--mtexte-doux); white-space: nowrap; }
+.mq-cat span:first-child { overflow: hidden; text-overflow: ellipsis; }
+.mq-cat:hover { background: #fff1; }
+.mq-cat.on { background: linear-gradient(90deg, var(--maccent), transparent); color: var(--dore-clair); }
+.mq-cat .n { color: var(--mtexte-eteint); font-size: .85em; }
+.mq-centre { display: flex; flex-direction: column; }
+.mq-bandeau { display: flex; align-items: center; gap: 6px; padding: 4px 6px; background: linear-gradient(90deg, transparent, #0005, transparent); border-bottom: 1px solid var(--dore-sombre); }
+.mq-bandeau .titre { flex: 1; text-align: center; font-family: Cinzel, serif; color: var(--dore-clair); }
+.mq-bandeau .compteur { color: var(--mtexte-eteint); font-size: .85em; }
+.mq-fleche { background: none; border: 1px solid var(--dore-sombre); color: var(--dore); border-radius: 4px; width: 22px; height: 22px; padding: 0; line-height: 1; }
+.mq-fleche:hover { color: var(--dore-clair); border-color: var(--dore); }
+.mq-barre { display: flex; gap: 6px; padding: 6px; align-items: center; }
+.mq-barre input { flex: 1; min-width: 80px; background: #0006; border: 1px solid var(--dore-sombre); color: var(--mtexte); border-radius: 4px; padding: 4px 7px; font: inherit; font-size: .92em; }
+.mq-puces { display: flex; flex-wrap: wrap; gap: 4px; padding: 0 6px 6px; }
+.mq-puce { font-size: .82em; padding: 1px 8px; border-radius: 999px; border: 1px solid var(--dore-sombre); background: #0004; color: var(--mtexte-doux); }
+.mq-puce.on { background: var(--dore-sombre); color: var(--dore-clair); border-color: var(--dore); }
+.mq-liste { flex: 1; overflow-y: auto; max-height: 300px; padding: 0 4px 4px; }
+.mq-entete-cat { display: flex; align-items: center; gap: 6px; padding: 3px 6px; margin-top: 4px; color: var(--dore); font-size: .88em; border-bottom: 1px solid #fff1; cursor: pointer; }
+.mq-entete-cat .n { margin-left: auto; color: var(--mtexte-eteint); }
+.mq-ligne { display: flex; align-items: center; gap: 6px; padding: 3px 6px; border-radius: 4px; cursor: pointer; }
+.mq-ligne:hover { background: #fff1; }
+.mq-ligne.choisie { background: linear-gradient(90deg, #ffbe5a33, transparent); outline: 1px solid var(--dore-sombre); }
+.mq-case { width: 17px; height: 17px; border: 1px solid var(--dore); border-radius: 3px; background: #0007; display: grid; place-items: center; font-size: 12px; color: var(--dore-clair); flex: none; }
+.mq-case.modifie { box-shadow: 0 0 6px var(--dore-clair); }
+.mq-icone { width: 18px; height: 18px; border-radius: 3px; background: linear-gradient(135deg, var(--dore-sombre), #000); color: var(--dore-clair); font-size: 11px; display: grid; place-items: center; flex: none; }
+.mq-etoile { color: var(--mtexte-eteint); width: 14px; text-align: center; flex: none; }
+.mq-etoile.on { color: #ffd100; }
+.mq-nom { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.mq-ligne.eteint .mq-nom { color: var(--mtexte-eteint); }
+.mq-mod { color: var(--mtexte-eteint); font-size: .8em; white-space: nowrap; }
+.mq-badge { font-size: .72em; padding: 0 5px; border-radius: 3px; border: 1px solid; white-space: nowrap; }
+.mq-badge.erreur { color: #ff8a7a; } .mq-badge.nouveau, .mq-badge.mis_a_jour { color: #9fe0a2; } .mq-badge.doublon { color: #ffcc66; }
+.mq-badge.essai { color: #8cc8ff; } .mq-badge.inutile, .mq-badge.desinstaller, .mq-badge.verrou { color: #cfc3a8; }
+.mq-raison { margin-left: auto; color: var(--mtexte-eteint); font-size: .78em; white-space: nowrap; }
+.mq-raison.attend { color: var(--dore-clair); }
+.mq-fiche { border-left: 1px solid var(--dore-sombre); padding: 8px; }
+.mq-parchemin { height: 100%; border-radius: 6px; padding: 10px 12px; color: var(--mparch-texte); overflow-y: auto; max-height: 370px;
+  background: #efe3c6; box-shadow: inset 0 0 0 1px #0003; font-family: Georgia, serif; }
+.mq.fond-jeu .mq-parchemin { background: radial-gradient(ellipse at 30% 20%, #e3cf9f, var(--mparch) 60%, #a88d5c); box-shadow: inset 0 0 30px #5a3a1288; }
+.mq-parchemin h4 { font-family: Cinzel, serif; color: var(--mparch-titre); margin: 0 0 2px; font-size: 1.1em; }
+.mq-parchemin h5 { margin: 9px 0 2px; color: var(--mparch-filet); font-family: Cinzel, serif; font-size: .82em; border-bottom: 1px solid #6e260633; }
+.mq-parchemin p { margin: 2px 0; font-size: .95em; }
+.mq-parchemin .petit { font-size: .8em; opacity: .8; }
+.mq-parchemin textarea { width: 100%; height: 44px; font: inherit; font-size: .85em; background: #fff6; border: 1px solid #6e260655; border-radius: 4px; resize: none; color: inherit; }
+.mq-boutons-fiche { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 8px; }
+.mq-boutons-fiche .mq-btn { font-size: .78em; }
+.mq-pied { display: flex; align-items: center; gap: 8px; padding: 7px 12px; border-top: 2px solid var(--dore-sombre); background: linear-gradient(transparent, var(--maccent-sombre)); border-radius: 0 0 8px 8px; }
+.mq-pied .attente { flex: 1; color: var(--mtexte-doux); font-size: .9em; }
+.mq-pied .attente.on { color: var(--dore-clair); }
+.mq-btn.allume { box-shadow: 0 0 10px var(--dore-clair); animation: pulse 1.4s infinite; }
+@keyframes pulse { 50% { box-shadow: 0 0 2px var(--dore-clair); } }
+.mq-menu { position: absolute; z-index: 5; background: #120a06f2; border: 1px solid var(--dore); border-radius: 6px; padding: 4px 0; min-width: 210px; box-shadow: 0 8px 20px #000c; }
+.mq-menu div { padding: 3px 12px; cursor: pointer; color: var(--mtexte); font-size: .92em; }
+.mq-menu div:hover { background: var(--maccent); }
+.mq-menu .titre { color: var(--dore-clair); font-family: Cinzel, serif; cursor: default; border-bottom: 1px solid var(--dore-sombre); margin-bottom: 3px; }
+.mq-menu .titre:hover { background: none; }
+.mq-bulle { position: absolute; z-index: 6; width: 290px; background: #1d120bf5; border: 2px solid var(--dore); border-radius: 10px; padding: 10px 12px; color: var(--mtexte); box-shadow: 0 10px 30px #000d; font-size: 13px; }
+.mq-bulle h4 { margin: 0 0 4px; font-family: Cinzel, serif; color: var(--dore-clair); }
+.mq-bulle .pied-bulle { display: flex; gap: 6px; align-items: center; margin-top: 8px; }
+.mq-bulle .pied-bulle .n { margin-right: auto; color: var(--mtexte-eteint); }
+.mq-voile { position: absolute; inset: 0; background: #000b; display: grid; place-items: center; border-radius: 8px; z-index: 7; color: var(--dore-clair); font-family: Cinzel, serif; font-size: 1.2em; }
+.mq.mini { min-width: 0; max-width: 420px; }
+.mq.mini .mq-corps { grid-template-columns: 0 minmax(0, 1fr) 0; }
+.explique { position: sticky; top: 120px; }
+.explique .carte { border-color: var(--or-sombre); }
+.explique h3 { margin: 0 0 .3rem; }
+.explique .indice { color: var(--texte-eteint); font-size: .9rem; }
+.zones-liste { display: flex; flex-wrap: wrap; gap: .3rem; margin-top: .6rem; }
+
+/* ---------- commandes ---------- */
+.cmd-atelier { display: grid; grid-template-columns: minmax(0, 1fr) 380px; gap: 1rem; align-items: start; }
+@media (max-width: 960px) { .cmd-atelier { grid-template-columns: 1fr; } }
+.cmd-liste { display: grid; gap: .35rem; }
+.cmd-item { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: .6rem; text-align: left; background: var(--panneau); border: 1px solid var(--bord-doux); border-radius: 8px; padding: .4rem .7rem; }
+.cmd-item:hover { border-color: var(--or-sombre); }
+.cmd-item.on { border-color: var(--or); background: var(--panneau2); }
+.cmd-item .n { font-family: Consolas, monospace; color: var(--or-clair); font-size: .9rem; overflow-wrap: anywhere; }
+:root[data-theme="clair"] .cmd-item .n { color: var(--accent); }
+.cmd-item .d { color: var(--texte-doux); font-size: .95rem; }
+@media (max-width: 560px) { .cmd-item { grid-template-columns: 1fr; gap: 0; } }
+.detail { position: sticky; top: 120px; }
+.outils-liste { display: flex; gap: .6rem; flex-wrap: wrap; align-items: center; margin: .6rem 0; }
+
+/* ---------- options ---------- */
+.opt-atelier { display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 1rem; align-items: start; }
+@media (max-width: 760px) { .opt-atelier { grid-template-columns: 1fr; } }
+.opt-onglets { display: flex; flex-direction: column; gap: .3rem; position: sticky; top: 120px; }
+@media (max-width: 760px) { .opt-onglets { flex-direction: row; flex-wrap: wrap; position: static; } }
+.opt-onglets button { text-align: left; background: var(--panneau); border: 1px solid var(--bord-doux); border-radius: 8px; padding: .45rem .8rem; font-family: Cinzel, serif; font-size: .85rem; color: var(--texte-doux); }
+.opt-onglets button.on { border-color: var(--or); color: var(--or-clair); background: linear-gradient(90deg, #9e2a1f55, var(--panneau)); }
+:root[data-theme="clair"] .opt-onglets button.on { color: var(--parchemin-titre); }
+.opt-carte { margin-bottom: 1rem; }
+.opt-el { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: .2rem .8rem; padding: .4rem .2rem; border-bottom: 1px dashed var(--bord-doux); cursor: pointer; }
+.opt-el:last-child { border-bottom: 0; }
+.opt-el:hover .lab { color: var(--or-clair); }
+.opt-el .lab { min-width: 0; }
+.opt-el .val { text-align: right; font-size: .88rem; color: var(--texte-doux); }
+.opt-el .plus { grid-column: 1 / -1; font-size: .9rem; color: var(--texte-doux); display: none; }
+.opt-el.ouvert .plus { display: block; }
+.opt-el .av { font-size: .7rem; color: var(--accent); border: 1px solid var(--accent); border-radius: 4px; padding: 0 .3rem; margin-left: .3rem; vertical-align: 1px; }
+.interrupteur { display: inline-block; width: 34px; height: 18px; border-radius: 99px; background: var(--panneau2); border: 1px solid var(--bord); position: relative; vertical-align: middle; }
+.interrupteur::after { content: ""; position: absolute; top: 2px; left: 2px; width: 12px; height: 12px; border-radius: 50%; background: var(--texte-eteint); transition: .2s; }
+.interrupteur.on { background: #7a5c22; border-color: var(--or); }
+.interrupteur.on::after { left: 18px; background: var(--or-clair); }
+.choix-mini { display: inline-flex; flex-wrap: wrap; gap: 2px; justify-content: flex-end; }
+.choix-mini span { font-size: .75rem; border: 1px solid var(--bord-doux); border-radius: 4px; padding: 0 .35rem; color: var(--texte-eteint); }
+.choix-mini span.on { border-color: var(--or); color: var(--or-clair); }
+:root[data-theme="clair"] .choix-mini span.on { color: var(--or); }
+.case-avances { display: flex; align-items: center; gap: .5rem; background: var(--panneau); border: 1px solid var(--or-sombre); border-radius: 10px; padding: .5rem .8rem; margin-bottom: .8rem; }
+.case-avances input { accent-color: #d6b25e; width: 18px; height: 18px; }
+
+/* ---------- fiches ---------- */
+.fiche-carte h3 { margin-bottom: .2rem; }
+.fiche-carte p { font-size: .95rem; color: var(--texte-doux); }
+.parchemin-modal { position: fixed; inset: 0; background: #000a; z-index: 60; display: grid; place-items: center; padding: 16px; }
+.parchemin-modal .feuille { width: min(620px, 100%); max-height: 86vh; overflow-y: auto; border-radius: 10px; padding: 1.2rem 1.4rem; color: var(--parchemin-texte);
+  background: radial-gradient(ellipse at 30% 15%, #f8edcf, #e6d3a3 65%, #c9ad74); box-shadow: 0 20px 50px #000c, inset 0 0 40px #7a5c2255; border: 2px solid #7a5c22; }
+.feuille h3 { color: var(--parchemin-titre); font-size: 1.4rem; margin: 0; }
+.feuille h4 { font-family: Cinzel, serif; color: var(--parchemin-filet); margin: 1rem 0 .2rem; border-bottom: 1px solid #8a3a1033; font-size: .9rem; }
+.feuille a { color: #7a2a08; }
+.feuille .pastille { color: #4a2306; border-color: #8a6420; }
+
+/* ---------- profils ---------- */
+.profil-carte { border-top: 4px solid var(--couleur, var(--or)); }
+.profil-carte .ico { font-size: 1.6rem; float: right; }
+.chips { display: flex; flex-wrap: wrap; gap: .25rem; margin-top: .4rem; }
+
+/* ---------- dépannage et personnaliser ---------- */
+.symptomes { display: flex; flex-wrap: wrap; gap: .4rem; margin: .6rem 0 1rem; }
+.symptomes button { background: var(--panneau); border: 1px solid var(--bord); border-radius: 10px; padding: .45rem .8rem; color: var(--texte); text-align: left; }
+.symptomes button.on { border-color: var(--or); background: linear-gradient(#6b2a1666, var(--panneau)); }
+.pas { display: grid; grid-template-columns: 38px minmax(0, 1fr); gap: .5rem .7rem; align-items: start; margin: .45rem 0; }
+.pas .num { width: 32px; height: 32px; border-radius: 50%; display: grid; place-items: center; font-family: Cinzel, serif; font-weight: 700; border: 2px solid var(--or); color: var(--or-clair); }
+:root[data-theme="clair"] .pas .num { color: var(--or); }
+.pas.fait .num { background: var(--or); color: #1a1006; }
+.pas.fait .txt { color: var(--texte-eteint); }
+.pas .txt { cursor: pointer; }
+.stepper { background: var(--panneau); border: 1px solid var(--or-sombre); border-radius: 12px; padding: 1rem; box-shadow: var(--ombre); }
+.stepper .points { display: flex; gap: .35rem; margin-bottom: .7rem; flex-wrap: wrap; }
+.stepper .points span { width: 28px; height: 28px; border-radius: 50%; display: grid; place-items: center; font-size: .8rem; border: 1px solid var(--bord); color: var(--texte-eteint); cursor: pointer; }
+.stepper .points span.on { background: var(--or); color: #1a1006; border-color: var(--or); }
+.stepper .points span.passe { border-color: var(--or); color: var(--or-clair); }
+.stepper .nav { display: flex; gap: .5rem; margin-top: .8rem; flex-wrap: wrap; }
+.sous-onglets { display: flex; flex-wrap: wrap; gap: .3rem; margin: .5rem 0 1rem; }
+footer { max-width: 1240px; margin: 0 auto; padding: 1rem 16px 2rem; color: var(--texte-eteint); font-size: .85rem; border-top: 1px solid var(--bord-doux); }
+@media (max-width: 600px) { body { font-size: 17px; } .haut h1 { font-size: 1.05rem; } }
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+</style>
+</head>
+<body>
+
+<header class="haut">
+  <div class="haut-ligne">
+    <div class="sceau" aria-hidden="true">M</div>
+    <div>
+      <h1>Mes Add-ons · Mode d'emploi</h1>
+      <div class="version">Version 1.0.0 · WoW Forever (interface 16001) · 102 fiches · 39 commandes</div>
+    </div>
+    <div class="droite">
+      <span class="version">Commande :</span>
+      <div class="bascule" id="choix-cmd" role="group" aria-label="Commande montrée dans la page"></div>
+      <div class="bascule" id="choix-theme" role="group" aria-label="Thème de la page">
+        <button data-v="sombre">Sombre</button><button data-v="clair">Clair</button>
+      </div>
+    </div>
+  </div>
+  <nav class="onglets" id="onglets">
+    <a href="#prise-en-main">Prise en main</a>
+    <a href="#la-fenetre">La fenêtre</a>
+    <a href="#les-fiches">Les fiches</a>
+    <a href="#profils">Profils</a>
+    <a href="#commandes">Commandes</a>
+    <a href="#options">Options</a>
+    <a href="#erreurs">Erreurs et dépannage</a>
+    <a href="#personnaliser">Personnaliser</a>
+    <a href="#faq">Questions fréquentes</a>
+  </nav>
+</header>
+
+<main>
+
+<!-- =================================================================== PRISE EN MAIN -->
+<section class="onglet" id="prise-en-main">
+  <h2>Bienvenue dans ton grimoire d'add-ons</h2>
+  <p class="chapeau">Mes Add-ons range tous tes add-ons dans une seule fenêtre : tu les allumes ou les éteins d'un clic, tu lis en
+  deux lignes à quoi chacun sert, et tu passes d'un coup d'un jeu d'add-ons à un autre (leveling, donjon, pêche…) avec les profils.</p>
+
+  <div class="grille etapes-depart" style="margin-top:1.4rem">
+    <div class="carte"><h3>Ouvre la fenêtre</h3>
+      <p>Tape <code>/{c}</code> dans le chat, ou clique le bouton rond près de la minicarte, ou passe par le menu <kbd>Échap</kbd> › AddOns.
+      Tu peux aussi lui donner une touche dans les raccourcis clavier du jeu.</p></div>
+    <div class="carte"><h3>Coche, puis recharge</h3>
+      <p>Une case cochée = add-on allumé. Rien ne change tant que tu n'as pas cliqué <b>Recharger</b> en bas :
+      le jeu ne sait allumer ou éteindre un add-on qu'au rechargement.</p></div>
+    <div class="carte"><h3>Lis la fiche</h3>
+      <p>Clique un add-on : sa fiche, à droite sur le parchemin, dit à quoi il sert, ses commandes et ce qu'il faut savoir.
+      Tu peux y écrire ta propre note.</p></div>
+    <div class="carte"><h3>Change de profil</h3>
+      <p>Bouton <b>Profils</b> en haut : un profil allume d'un coup tout un jeu d'add-ons. Choisis, regarde ce qui change, applique, recharge.</p></div>
+  </div>
+
+  <div class="deux" style="margin-top:1.4rem">
+    <div class="carte">
+      <h3>Ton premier quart d'heure</h3>
+      <p class="indice vide" style="font-style:normal">Coche au fur et à mesure (ta progression reste dans ce navigateur).</p>
+      <div class="barre-progres"><div id="progres-depart"></div></div>
+      <ul class="liste-cochable" id="premiers-pas"></ul>
+      <button class="bouton discret" id="raz-premiers-pas">Recommencer la liste</button>
+    </div>
+    <div class="carte">
+      <h3>Installer</h3>
+      <p><b>Chez un ami</b> (ou sur un autre PC) : copie le dossier <code>MesAddons</code> dans
+      <code>World of Warcraft\_forever_\Interface\AddOns\</code>, lance le jeu, vérifie qu'il est coché dans la liste des add-ons
+      de l'écran des personnages, puis entre en jeu.</p>
+      <p><b>Depuis le dossier du projet</b> (Nykaro) : l'outil <code>outils\installer.py</code> vérifie tout, met l'ancienne version de côté
+      et copie la nouvelle en contrôlant chaque fichier (voir l'onglet <a href="#personnaliser">Personnaliser</a>).</p>
+      <div class="note">Tes réglages, profils, notes et favoris ne sont <b>pas</b> dans le dossier de l'add-on : le jeu les garde dans
+      <code>WTF\Account\…\SavedVariables\</code>. Réinstaller l'add-on ne les efface pas.</div>
+      <h3>Pour découvrir en jouant</h3>
+      <p>Au premier lancement, une <b>visite guidée</b> de 5 bulles te montre la fenêtre (à revoir avec <code>/{c} visite</code>).
+      Le bouton <b>?</b> en haut de la fenêtre ouvre l'<b>antisèche</b> : toutes les commandes, un clic les écrit dans le chat.</p>
+      <p><button class="bouton" id="vers-visite">Essayer la visite ici, sur la maquette</button></p>
+    </div>
+  </div>
+</section>
+
+<!-- =================================================================== LA FENÊTRE -->
+<section class="onglet" id="la-fenetre">
+  <h2>La fenêtre « Grimoire »</h2>
+  <p class="chapeau">Voici une maquette qui marche comme la vraie : coche des cases, clique un add-on, replie une colonne,
+  fais un clic droit sur une ligne… Chaque morceau que tu touches s'explique à droite.</p>
+  <div class="reglages-mq">
+    <label>Thème</label><div class="bascule" id="mq-choix-theme"></div>
+    <label>Fond de la fiche</label><div class="bascule" id="mq-choix-fond"></div>
+    <label>Taille du texte</label><div class="bascule" id="mq-choix-taille"></div>
+    <button class="bouton" id="mq-lancer-visite">Visite guidée</button>
+    <button class="bouton discret" id="mq-raz">Recommencer</button>
+  </div>
+  <div class="atelier">
+    <div class="mq-cadre">
+      <div class="mq" id="mq">
+        <div class="mq-entete" data-zone="entete">
+          <div class="mq-embleme" data-zone="embleme" id="mq-embleme">⚔</div>
+          <div><div class="mq-titre">Mes Add-ons</div><div class="mq-sous" id="mq-sous"></div></div>
+          <div class="espace"></div>
+          <button class="mq-btn" data-zone="profils" id="mq-btn-profils">Profils</button>
+          <button class="mq-btn rond" data-zone="antiseche">?</button>
+          <button class="mq-btn" data-zone="mini" id="mq-btn-mini"></button>
+          <button class="mq-btn rond" data-zone="fermer" aria-label="Fermer">✕</button>
+        </div>
+        <div class="mq-corps" id="mq-corps">
+          <div class="mq-cats" data-zone="categories" id="mq-cats"></div>
+          <div class="mq-centre">
+            <div class="mq-bandeau" data-zone="bandeau">
+              <button class="mq-fleche" data-zone="fleche_g" id="mq-fg">«</button>
+              <span class="titre" id="mq-bandeau-titre"></span><span class="compteur" id="mq-compteur"></span>
+              <button class="mq-fleche" data-zone="fleche_d" id="mq-fd">»</button>
+            </div>
+            <div class="mq-barre">
+              <input id="mq-cherche" data-zone="recherche" placeholder="Nom, /commande, #étiquette…" autocomplete="off">
+              <button class="mq-btn" data-zone="tri" id="mq-tri"></button>
+              <button class="mq-btn" data-zone="vue" id="mq-vue"></button>
+              <button class="mq-btn" data-zone="options">Options</button>
+            </div>
+            <div class="mq-puces" data-zone="puces" id="mq-puces"></div>
+            <div class="mq-liste" data-zone="liste" id="mq-liste"></div>
+          </div>
+          <div class="mq-fiche" data-zone="fiche" id="mq-fiche"></div>
+        </div>
+        <div class="mq-pied" data-zone="pied">
+          <span class="attente" id="mq-attente"></span>
+          <button class="mq-btn" data-zone="annuler" id="mq-annuler"></button>
+          <button class="mq-btn" data-zone="recharger" id="mq-recharger"></button>
+        </div>
+        <div class="mq-menu cache" id="mq-menu"></div>
+        <div class="mq-bulle cache" id="mq-bulle"></div>
+      </div>
+    </div>
+    <aside class="explique">
+      <div class="carte" id="explique"></div>
+      <div class="zones-liste" id="zones-liste" aria-label="Tous les morceaux de la fenêtre"></div>
+    </aside>
+  </div>
+
+  <h2>Les gestes à connaître</h2>
+  <table class="simple" id="gestes"></table>
+</section>
+
+<!-- =================================================================== LES FICHES -->
+<section class="onglet" id="les-fiches">
+  <h2>La fiche d'un add-on</h2>
+  <p class="chapeau">Au survol d'une ligne, une infobulle résume l'add-on ; au clic, la fiche complète s'affiche sur le parchemin.
+  102 fiches sont fournies (31 add-ons et leurs modules). Un add-on sans fiche affiche « Pas encore de fiche pour cet add-on. ».</p>
+  <div class="deux">
+    <div class="carte"><h3>Ce que contient une fiche</h3><table class="simple" id="parties"></table>
+      <p class="indice vide" style="font-style:normal">Chaque partie s'allume ou s'éteint dans Options › Fiches.</p></div>
+    <div class="carte"><h3>Les badges sur une ligne</h3><table class="simple" id="badges"></table></div>
+  </div>
+  <div class="deux" style="margin-top:1rem">
+    <div class="carte"><h3>Pourquoi il ne se charge pas ?</h3>
+      <p>À droite de chaque ligne, l'état est dit en clair :</p><div class="chips" id="raisons"></div>
+      <p style="margin-top:.6rem">« coché » veut dire « sera allumé au prochain rechargement » ; « chargé » veut dire qu'il tourne vraiment maintenant.</p></div>
+    <div class="carte"><h3>Corriger ou compléter une fiche</h3>
+      <p>Bouton <b>Modifier la fiche</b> sous la fiche : ta version passe avant celle du fichier de départ, et
+      <b>Rétablir l'original</b> revient à l'original. Ta <b>note perso</b> se tape directement dans la fiche.</p>
+      <p><b>Ses réglages</b> ouvre la page de réglages de l'add-on (s'il est chargé), <b>Lien CurseForge</b> te montre son adresse à copier.</p>
+      <p>Niveaux d'utilité : <span id="utilites"></span> (à changer par le clic droit sur la ligne).</p></div>
+  </div>
+
+  <h2>Le catalogue des fiches fournies</h2>
+  <div class="outils-liste">
+    <input class="champ" id="cat-cherche" placeholder="Chercher un add-on, une commande (/way), un mot…" autocomplete="off">
+    <select class="champ" id="cat-categorie" style="max-width:260px"></select>
+    <span id="cat-compte" class="version"></span>
+  </div>
+  <div class="grille" id="catalogue"></div>
+</section>
+
+<!-- =================================================================== PROFILS -->
+<section class="onglet" id="profils">
+  <h2>Les profils</h2>
+  <p class="chapeau">Un profil, c'est une liste d'add-ons à allumer ensemble. Ils sont communs à tous tes personnages ;
+  tu les appliques au personnage connecté, ou à tous d'un coup.</p>
+  <h3>Les profils prêts au départ</h3>
+  <p>Clique un profil pour voir ce qu'il allume. Seuls les add-ons vraiment installés sont gardés ; les modules suivent leur add-on principal.</p>
+  <div class="grille" id="profils-grille"></div>
+  <div class="carte cache" id="profil-detail" style="margin-top:1rem"></div>
+
+  <div class="deux" style="margin-top:1rem">
+    <div class="carte">
+      <h3>Appliquer un profil</h3>
+      <div id="profil-etapes"></div>
+      <div class="note">Les <b>verrous</b> protègent un add-on : aucun profil ne l'éteindra (clic droit sur la ligne › Verrouiller,
+      ou <code>/{c} verrou NomDeLAddon</code>). Les dépendances nécessaires sont allumées toutes seules.</div>
+    </div>
+    <div class="carte">
+      <h3>Changer de profil sans ouvrir la fenêtre</h3>
+      <p><b>Clic droit sur le bouton de la minicarte</b> : la liste des profils et quelques outils.</p>
+      <p><b>Une macro</b> : crée une macro du jeu qui contient <code>/{c} profil Donjon</code>, puis <code>/{c} recharger</code> quand tu es prêt.</p>
+      <p><b>En entrant en donjon, raid ou champ de bataille</b>, le gestionnaire peut te <i>proposer</i> le profil associé (jamais tout seul,
+      et pas en plein combat). Les noms se règlent dans Options › Profils.</p>
+      <p><b>Partager avec un ami</b> : Copier ce profil donne une ligne de texte qui commence par <code>MAA1</code> ;
+      ton ami la colle avec Coller / importer.</p>
+    </div>
+  </div>
+
+  <h3>Tout ce que sait faire la commande profil</h3>
+  <table class="simple" id="profil-actions"></table>
+</section>
+
+<!-- =================================================================== COMMANDES -->
+<section class="onglet" id="commandes">
+  <h2>Les commandes</h2>
+  <p class="chapeau">Tout ce que fait la fenêtre a sa commande : pratique pour les macros. On écrit <code>/{c}</code> suivi d'un mot.
+  Les mots anglais marchent aussi (<code>/{c} help</code> = <code>/{c} aide</code>). Choisis une commande pour voir des exemples.</p>
+  <div class="outils-liste">
+    <input class="champ" id="cmd-cherche" placeholder="Chercher : profil, erreur, recharger, pêche…" autocomplete="off">
+    <span id="cmd-compte" class="version"></span>
+  </div>
+  <div id="cmd-groupes" style="margin-bottom:.7rem"></div>
+  <div class="cmd-atelier">
+    <div class="cmd-liste" id="cmd-liste"></div>
+    <aside class="detail"><div class="carte" id="cmd-detail"></div></aside>
+  </div>
+</section>
+
+<!-- =================================================================== OPTIONS -->
+<section class="onglet" id="options">
+  <h2>Les options</h2>
+  <p class="chapeau">Presque tout se règle. Ouvre les options par le bouton <b>Options</b> de la fenêtre, par <code>/{c} options</code>,
+  ou dans le menu du jeu <kbd>Échap</kbd> › Options › AddOns (<code>/{c} options jeu</code>). Les réglages de tous les jours sont montrés ;
+  les réglages fins attendent derrière la case « Montrer les réglages avancés ».</p>
+  <div class="outils-liste">
+    <input class="champ" id="opt-cherche" placeholder="Chercher un réglage : thème, son, mémoire, puce…" autocomplete="off">
+    <span id="opt-compte" class="version"></span>
+  </div>
+  <div class="opt-atelier">
+    <div class="opt-onglets" id="opt-onglets"></div>
+    <div>
+      <label class="case-avances"><input type="checkbox" id="opt-avances"> <span><b>Montrer les réglages avancés</b><br><span class="version">Les réglages de tous les jours sont montrés ; coche pour voir aussi les réglages fins.</span></span></label>
+      <div id="opt-cartes"></div>
+    </div>
+  </div>
+</section>
+
+<!-- =================================================================== ERREURS ET DÉPANNAGE -->
+<section class="onglet" id="erreurs">
+  <h2>Quelque chose ne va pas ?</h2>
+  <p class="chapeau">Choisis ce qui t'arrive : les étapes s'affichent dans l'ordre. Clique une étape quand elle est faite.</p>
+  <div class="symptomes" id="symptomes"></div>
+  <div class="carte" id="symptome-etapes"></div>
+
+  <h2>Les outils de dépannage</h2>
+  <div class="grille">
+    <div class="carte"><h3>La fenêtre des erreurs</h3>
+      <p>Les erreurs Lua de <i>tous</i> tes add-ons sont notées, rangées par add-on, avec la date, le nombre de fois, le fichier et la ligne.
+      Ouvre-la avec <code>/{c} erreurs</code>. <b>Copier</b> copie une erreur (à coller à Claude), <b>Effacer</b> les vide.</p>
+      <p>Le bouton de minicarte affiche un petit compteur rouge quand il y en a.</p></div>
+    <div class="carte"><h3>Le journal sur Windows</h3>
+      <p>Double-clic sur <code>outils\journal\Journal des erreurs.bat</code> (dossier du projet) : il lit la sauvegarde du jeu sans rien y toucher
+      et en fait une page lisible, triée par add-on. Le jeu n'écrit cette sauvegarde qu'au <code>/reload</code> ou quand tu te déconnectes.</p></div>
+    <div class="carte"><h3>Mémoire et processeur</h3>
+      <p><code>/{c} memoire</code> classe les add-ons du plus gourmand au plus sobre. <code>/{c} cpu activer</code> allume le mode mesure
+      (il faut recharger, et il ralentit un peu) ; <code>/{c} cpu couper</code> pour l'éteindre ensuite.</p></div>
+    <div class="carte"><h3>Le mode dépannage</h3>
+      <p><code>/{c} depannage</code> éteint tout sauf les add-ons que tu cites, les verrouillés et ce gestionnaire.
+      Recharge, teste, puis <code>/{c} retour</code> remet <b>exactement</b> tout comme avant, même après plusieurs rechargements.</p></div>
+    <div class="carte"><h3>Essayer un add-on</h3>
+      <p><code>/{c} essai NomDeLAddon</code> l'allume pour une session seulement : à la connexion suivante il s'éteint tout seul.</p></div>
+    <div class="carte"><h3>Pour Claude : diag et trace</h3>
+      <p><code>/{c} diag</code> vérifie ce que le jeu sait faire (fonctions, images, réglages). <code>/{c} trace</code> note la place de chaque
+      morceau de la fenêtre à chaque clic ; retape-la pour arrêter. Les deux écrivent dans la sauvegarde au prochain <code>/reload</code> :
+      dis ensuite à Claude de lire le journal.</p></div>
+  </div>
+</section>
+
+<!-- =================================================================== PERSONNALISER -->
+<section class="onglet" id="personnaliser">
+  <h2>Personnaliser l'add-on</h2>
+  <p class="chapeau">Tout ce que l'add-on affiche ou règle au départ vit dans des fichiers JSON du dossier <code>donnees\</code> du projet,
+  jamais dans le code. On change le JSON, un outil en refait le Lua, un autre installe. Cet onglet est surtout utile si tu as le dossier du projet.</p>
+  <div class="note">Pour <b>toi seul</b>, le plus simple reste souvent en jeu : modifier une fiche, créer un profil, ajouter une commande
+  d'ouverture. Passe par les JSON quand tu veux changer ce que <b>tout le monde</b> reçoit au départ.</div>
+  <div class="sous-onglets" id="perso-choix"></div>
+  <div class="carte" id="perso-contenu"></div>
+
+  <h2>Après chaque changement</h2>
+  <p>Les commandes se tapent dans un terminal ouvert dans le dossier du projet. Utilise Suivant / Retour, ou clique un numéro.</p>
+  <div class="stepper" id="apres"></div>
+</section>
+
+<!-- =================================================================== FAQ -->
+<section class="onglet" id="faq">
+  <h2>Questions fréquentes</h2>
+  <div class="outils-liste">
+    <input class="champ" id="faq-cherche" placeholder="Chercher dans les questions…" autocomplete="off">
+    <span id="faq-compte" class="version"></span>
+  </div>
+  <div id="faq-liste"></div>
+</section>
+
+</main>
+
+<footer>
+  Page fabriquée le 16/11/2026 par <code>fabriquer.py</code> à partir des fichiers <code>donnees\</code> de Mes Add-ons v1.0.0.
+  Pour la remettre à jour après un changement : <code>python -X utf8 fabriquer.py</code> dans son dossier.
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+"use strict";
+const D = {"meta":{"version":"1.0.0","interface":"16001","nom":"Mes Add-ons","dossier":"MesAddons","commandes":["mesaddons","maa"],"commande_courte":"maa","commande_longue":"mesaddons","nb_fiches":102,"nb_principales":31,"nb_categories":32,"nb_profils":4,"nb_commandes":39,"nb_options":125,"date":"16/11/2026","racine":"Gestionnaire-addons"},"r":{"ui":{"oui":"oui","non":"non","vide":"(vide)","copier":"Copier","copie":"Copié !","copie_echec":"Sélectionne le texte et fais Ctrl+C.","aucun":"Rien ne correspond.","toutes":"Toutes","toutes_categories":"Toutes les catégories","resultats":"%d sur %d","valeur_depart":"Au départ","technique":"Nom technique","dans_fichier":"Valeur de départ dans donnees\\reglages.json › defauts.","bornes":"de %s à %s (pas de %s)","avance":"avancé","caches":"%d réglage(s) avancé(s) caché(s) ici.","en_anglais":"En anglais","exemples":"Exemples","a_savoir":"À savoir","choisis_cmd":"Choisis une commande dans la liste.","modules":"%d module(s)","lien":"Page CurseForge","doublons":"Recoupe","dependances":"A besoin de","utilite":"Utilité","commandes_fiche":"Commandes","remarques":"À savoir","resume":"À quoi il sert","fermer":"Fermer","categories":"Catégories","profil_virtuel":"Toujours là, ne se supprime pas.","profil_addons":"%d add-on(s) choisis","precedent":"Retour","suivant":"Suivant","recommencer":"Recommencer","fini":"C'est fini ! Tu peux recommencer quand tu veux.","etape":"Étape %d sur %d","zone_indice":"Clique un morceau de la maquette, ou un nom ci-dessous.","geste":"Geste","effet":"Ce que ça fait","fichier":"Fichier","exemple_reel":"Exemple réel, tiré du fichier","maj_clic":"Maj + clic : « %s » s'allume avec ses modules et ses dépendances.","menu_titre":"Clic droit sur « %s »","menu_effet":"En jeu, « %s » agit tout de suite.","recharge_fait":"Rechargé : les changements sont appliqués.","rien_a_recharger":"Rien à recharger : aucun changement en attente.","annule":"Dernier changement annulé.","rien_a_annuler":"Rien à annuler.","options_maquette":"En jeu, ce bouton ouvre les options dans la fenêtre (voir l'onglet Options).","fermer_maquette":"En jeu, la fenêtre se ferme (Échap aussi). S'il reste des changements, elle te le rappelle.","profils_maquette":"En jeu, ce bouton ouvre la fenêtre des profils (voir l'onglet Profils).","antiseche_maquette":"En jeu, l'antisèche s'ouvre : toutes les commandes, cliquables.","theme_auto":"auto (ta faction)","commande_copiee":"Commande copiée : colle-la dans le chat du jeu."},"cles_jeu":["bouton.recharger","bouton.recharger_n","bouton.annuler","bouton.annuler_n","pied.aucun","pied.attente","barre.tri","barre.vue_categories","barre.vue_liste","fenetre.vers_mini","fenetre.vers_complet","fenetre.sous_titre","filtre.puce","liste.actifs","liste.modules","liste.aucun_resultat","liste.vide","raison.charge","raison.desactive","raison.coche","raison.decoche","cat.tous","cat.autres","fiche.sert","fiche.commandes","fiche.remarques","fiche.note","fiche.note_indice","fiche.type_principal","fiche.utilite","fiche.invite","bouton.modifier","bouton.reglages","bouton.curseforge","visite.precedent","visite.suivant","visite.fin","visite.passer","visite.compteur","fenetre.replier_cats","fenetre.deplier_cats","fenetre.replier_fiche","fenetre.deplier_fiche","actions.recharge","liste.entete_aide","fiche.doublons","menu.favori","menu.favori_retirer","theme.horde","theme.alliance","theme.neutre","fond_fiche.uni","fond_fiche.jeu","taille_texte.petite","taille_texte.normale","taille_texte.grande"],"premiers_pas":["Taper <code>/{c}<\/code> dans le chat pour ouvrir la fenêtre.","Suivre la visite guidée jusqu'au bout (ou la relancer avec <code>/{c} visite<\/code>).","Cliquer trois add-ons et lire leur fiche à droite.","Mettre une étoile à tes deux add-ons préférés.","Éteindre un add-on dont tu ne te sers pas, puis cliquer <b>Recharger<\/b>.","Ouvrir <b>Profils<\/b> et regarder ce que changerait le profil Donjon.","Taper <code>/{c} resume<\/code> pour avoir l'état en une ligne.","Ouvrir l'antisèche (bouton <b>?<\/b>) et chercher une commande d'un autre add-on."],"maquette":{"faction":"horde","embleme":{"horde":"⚔","alliance":"🛡","neutre":"✦"},"choisi":"Questie","exemples":[{"id":"Questie","actif":true,"favori":true,"badges":[]},{"id":"DBM-Core","actif":true,"favori":false,"badges":[]},{"id":"Details","actif":true,"favori":false,"badges":[]},{"id":"Baganator","actif":true,"favori":true,"badges":["verrou"]},{"id":"Auctionator","actif":false,"favori":false,"badges":[]},{"id":"FishyWashy","actif":true,"favori":false,"badges":[]},{"id":"BetterFishing","actif":false,"favori":false,"badges":["doublon"]},{"id":"TomTom","actif":true,"favori":false,"badges":["nouveau"]},{"id":"GTFO","actif":false,"favori":false,"badges":["essai"]},{"id":"RareScanner","actif":true,"favori":false,"badges":["erreur"]}],"visite_cibles":{"liste":"mq-liste","categories":"mq-cats","fiche":"mq-fiche","entete":"mq-btn-profils","pied":"mq-recharger"}},"zones":{"entete":{"titre":"L'en-tête","texte":"Le nom, le nombre d'add-ons et combien sont allumés. On attrape la fenêtre par là pour la déplacer ; le coin en bas à droite change sa taille, qu'elle retient."},"embleme":{"titre":"L'emblème de faction","texte":"Le thème suit ta faction : rouge et or pour la Horde, bleu pour l'Alliance (réglage « Thème » : auto, horde, alliance, neutre). Essaie les boutons Thème au-dessus de la maquette."},"profils":{"titre":"Le bouton Profils","texte":"Ouvre la fenêtre des profils : choisir un profil, voir ce qui change (+x / -y), appliquer. Le nom du profil en cours s'affiche dessus."},"antiseche":{"titre":"Le « ? » : l'antisèche","texte":"Toutes les commandes, celles de ce gestionnaire et celles de tes add-ons, avec une recherche. Un clic écrit la commande dans le chat ; Maj + clic la lance (si l'option est cochée)."},"mini":{"titre":"Version mini / complète","texte":"La version mini ne garde que la liste : idéale pour cocher vite. Un clic de plus pour revenir à la version complète. Commande : <code>/{c} mini<\/code>."},"fermer":{"titre":"Fermer","texte":"Ferme la fenêtre. <kbd>Échap<\/kbd> la ferme aussi (réglable). S'il reste des changements pas encore appliqués, elle te le rappelle."},"categories":{"titre":"La colonne des catégories","texte":"Filtre la liste par thème (cartes, combat, sacs…), d'après les catégories CurseForge. Un add-on peut être dans plusieurs. Les add-ons sans fiche sont rangés à part, dans « Autres (sans catégorie) »."},"bandeau":{"titre":"Le bandeau « Tous les add-ons »","texte":"Rappelle la catégorie montrée et combien d'add-ons sont allumés dedans. Les deux flèches à ses bouts replient les colonnes."},"fleche_g":{"titre":"La flèche « de gauche","texte":"Replie la colonne des catégories pour donner plus de place à la liste ; un nouveau clic la remet. Le choix est gardé (réglage « Colonne des catégories repliée »)."},"fleche_d":{"titre":"La flèche » de droite","texte":"Replie la colonne de la fiche ; un nouveau clic la remet. L'infobulle au survol reste là pour lire le résumé."},"recherche":{"titre":"La recherche","texte":"Cherche dans le nom, la fiche, ta note, les commandes (<code>/way<\/code>) et les étiquettes (<code>#pvp<\/code>). Plusieurs mots marchent, et les petites fautes de frappe sont tolérées. Tape « carte » ou « pêche » dans la maquette."},"tri":{"titre":"Le tri","texte":"Clic : change le tri (nom, catégorie, état, mémoire, utilité). Clic droit : inverse l'ordre. Les favoris restent en haut (réglable)."},"vue":{"titre":"Vue : catégories / liste","texte":"Dans « Tous les add-ons », range la liste sous des en-têtes de catégories repliables, avec une case pour cocher toute la catégorie d'un coup ; ou montre une seule liste. Pas pendant une recherche."},"options":{"titre":"Le bouton Options","texte":"Ouvre les options dans la fenêtre : des onglets à gauche, une carte par sujet, et la case « Montrer les réglages avancés » pour les réglages fins."},"puces":{"titre":"Les puces de filtres","texte":"Un clic montre seulement les add-ons allumés, éteints, favoris, en double, sans fiche… Le chiffre dit combien. Quelles puces apparaissent se règle dans Options › Liste."},"liste":{"titre":"La liste des add-ons","texte":"Une ligne par add-on : la case (allumé ou non), l'icône, l'étoile des favoris, le nom, le nombre de modules, des badges, et l'état en clair à droite. Les modules sont repliés sous leur add-on principal."},"case":{"titre":"La case","texte":"Coche = allumer, décoche = éteindre. Rien ne change avant « Recharger ». Cocher l'add-on principal coche aussi ses modules. <b>Maj + clic<\/b> : avec ses modules et ses dépendances."},"etoile":{"titre":"L'étoile","texte":"Met l'add-on en favori : il remonte en haut de la liste et apparaît dans la puce « Favoris »."},"ligne":{"titre":"Une ligne","texte":"Clic : sa fiche s'ouvre à droite. Survol : une infobulle résume. <b>Clic droit<\/b> : le menu d'actions (favori, verrou, essai, activer seul, lien…). Essaie le clic droit ici."},"entete_cat":{"titre":"Un en-tête de catégorie","texte":"Clic : replie ou déplie la catégorie. Sa case allume ou éteint toute la catégorie d'un coup."},"menu":{"titre":"Le menu du clic droit","texte":"Les actions rapides sur un add-on : favori, activer avec ses modules, activer seul celui-ci (tout le reste s'éteint), verrouiller, essai d'une session, à désinstaller, marquer comme vu, copier le lien, changer l'utilité."},"fiche":{"titre":"La fiche sur parchemin","texte":"À quoi sert l'add-on, ses commandes, ce qu'il faut savoir, ta note perso, puis la technique (version, mémoire, dépendances, doublons). Le fond est uni clair (plus lisible) ou le parchemin du jeu."},"pied":{"titre":"Le pied de la fenêtre","texte":"Compte les changements qui attendent. Tant que tu n'as pas rechargé, rien n'a changé dans le jeu."},"annuler":{"titre":"Annuler","texte":"Défait le dernier changement de la liste (jusqu'à 5 étapes, réglable). Commande : <code>/{c} annuler<\/code>."},"recharger":{"titre":"Recharger","texte":"Enregistre tes choix et recharge l'interface : c'est là que les add-ons s'allument ou s'éteignent vraiment. Il s'allume et compte les changements en attente. Jamais de rechargement tout seul."}},"gestes":[["Clic sur une case","Allume ou éteint l'add-on (au prochain rechargement)."],["<kbd>Maj<\/kbd> + clic sur une case","Allume l'add-on avec ses modules utiles et ses dépendances."],["Clic sur une ligne","Ouvre sa fiche à droite."],["Survol d'une ligne","Infobulle avec le résumé et l'état."],["Clic droit sur une ligne","Menu d'actions rapides."],["Clic sur l'étoile","Favori oui / non."],["Clic / clic droit sur le tri","Change le tri / inverse l'ordre."],["Flèches « et » du bandeau","Replient la colonne de gauche ou de droite."],["Clic sur le bouton de minicarte","Ouvre ou ferme la fenêtre ; glisser le déplace autour de la minicarte."],["Clic droit sur le bouton de minicarte","Menu : profils, recharger, dépannage, périmés (ou rechargement direct, réglable)."],["<kbd>Échap<\/kbd>","Ferme la fenêtre."],["Raccourcis clavier du jeu","Cinq touches possibles : fenêtre, profils, recharger, antisèche, mini (menu Raccourcis du jeu, rubrique Mes Add-ons)."]],"parties":{"resume":"En une ou deux phrases, ce que fait l'add-on.","commandes":"Ses commandes à lui (par exemple <code>/way<\/code> pour TomTom).","remarques":"Les pièges : doublons, réglages à faire, ce qui ne marche pas sur Forever.","note":"Ta note perso, tapée dans la fiche ; gardée dans ta sauvegarde.","technique":"Version, auteur, mémoire utilisée, état.","dependances":"Les add-ons dont il a besoin, et s'ils sont là et allumés.","doublons":"Les add-ons allumés qui font la même chose.","badges":"Les mêmes badges que sur la ligne."},"badges":{"nouveau":"L'add-on vient d'arriver dans ton dossier AddOns.","mis_a_jour":"Sa version a changé depuis la dernière fois.","erreur":"Il a provoqué au moins une erreur Lua (détail : fenêtre des erreurs).","doublon":"Un autre add-on allumé fait la même chose : garde-en un seul.","inutile":"Pas prévu pour WoW Forever : il est grisé.","essai":"Allumé pour une session seulement ; il s'éteindra à la connexion suivante.","desinstaller":"Tu l'as mis dans ta liste « à désinstaller » (un pense-bête : l'add-on ne peut rien supprimer).","verrou":"Verrouillé : aucun profil ne l'éteindra."},"profil_etapes":["Clique <b>Profils<\/b> en haut de la fenêtre (ou <code>/{c} profils<\/code>).","Choisis un profil à gauche : la fenêtre dit ce qu'il allume et ce qui change par rapport à maintenant (+x à activer, -y à désactiver).","Choisis <b>Ce personnage<\/b> ou <b>Tous les personnages<\/b>, puis <b>Appliquer<\/b> (une confirmation te montre le +x / -y).","Clique <b>Recharger<\/b> : c'est là que les add-ons changent vraiment.","Pour garder l'état actuel comme nouveau profil : <b>Nouveau (état actuel)<\/b>. Pour mettre à jour un profil : <b>Garder l'état actuel ici<\/b>."],"profils_actions":{"tous":{"texte":"Applique le profil à tous tes personnages connus, pas seulement à celui-ci.","exemple":"/{c} profil tous Donjon"},"fusionner":{"texte":"Ajoute les add-ons du profil à ce qui est déjà allumé, sans rien éteindre.","exemple":"/{c} profil fusionner Pêche"},"comparer":{"texte":"Dit ce qui est seulement dans l'un, seulement dans l'autre, et en commun.","exemple":"/{c} profil comparer Donjon / Leveling"},"nouveau":{"texte":"Crée un profil avec ce qui est allumé maintenant.","exemple":"/{c} profil nouveau Raid"},"enregistrer":{"texte":"Remplace le contenu d'un profil par ce qui est allumé maintenant.","exemple":"/{c} profil enregistrer Raid"},"renommer":{"texte":"Change le nom d'un profil (ancien / nouveau).","exemple":"/{c} profil renommer Raid / Raid du jeudi"},"supprimer":{"texte":"Supprime un profil (pas « Tout » ni « Rien »). Il ne revient pas.","exemple":"/{c} profil supprimer Raid"},"nettoyer":{"texte":"Retire d'un profil les add-ons que tu as désinstallés depuis.","exemple":"/{c} profil nettoyer Leveling"},"exporter":{"texte":"Écrit le profil en une ligne de texte (qui commence par MAA1) à copier pour un ami.","exemple":"/{c} profil exporter Donjon"},"sauvegarde":{"texte":"Écrit en une ligne tous tes profils, verrous, notes, étiquettes et favoris : une sauvegarde à garder de côté.","exemple":"/{c} profil sauvegarde"},"importer":{"texte":"Ajoute ce que contient un texte MAA1 reçu (profils, notes…).","exemple":"/{c} profil importer MAA1:…"},"prets":{"texte":"Recrée les profils prêts du départ s'ils ont été supprimés.","exemple":"/{c} profil prets"}},"commandes":{"aide":{"exemples":["/{c} aide"],"plus":"Écrit dans le chat la liste courte de toutes les commandes. Pour une liste cliquable : l'antisèche."},"ouvrir":{"exemples":["/{c}","/{c} ouvrir"],"plus":"Taper la commande seule fait la même chose (réglage « Commande seule = » dans les options avancées)."},"version":{"exemples":["/{c} version"],"plus":"Pratique pour vérifier que la bonne version est installée."},"journal":{"exemples":["/{c} journal","/{c} journal effacer"],"plus":"Le journal note ce que fait le gestionnaire (démarrage, commandes, changements). Les erreurs Lua ont leur propre fenêtre."},"langue":{"exemples":["/{c} langue frFR","/{c} langue enUS","/{c} langue auto"],"plus":"« auto » suit la langue du jeu."},"commandes":{"exemples":["/{c} commandes","/{c} commandes ajouter ma","/{c} commandes retirer mesaddons"],"plus":"Ce sont les noms qui ouvrent la fenêtre. Si un autre add-on a déjà pris un nom, il est refusé et tu es prévenu."},"theme":{"exemples":["/{c} theme horde","/{c} theme auto"]},"taille":{"exemples":["/{c} taille moyenne"],"plus":"La fenêtre se redimensionne aussi à la souris (coin en bas à droite), et retient sa taille."},"police":{"exemples":["/{c} police cinzel"]},"mini":{"exemples":["/{c} mini"]},"fiche":{"exemples":["/{c} fiche infobulle non","/{c} fiche note oui","/{c} fiche technique non"]},"options":{"exemples":["/{c} options","/{c} options jeu"],"plus":"« jeu » ouvre la page dans le menu Échap › Options › AddOns."},"chercher":{"exemples":["/{c} chercher pêche","/{c} chercher /way","/{c} chercher #pvp"],"plus":"Répond dans le chat, sans ouvrir la fenêtre."},"tri":{"exemples":["/{c} tri categorie","/{c} tri inverser"]},"etiquette":{"exemples":["/{c} etiquette Questie quêtes, à tester"],"plus":"Des mots à toi, séparés par des virgules ; ensuite <code>#quêtes<\/code> dans la recherche les retrouve."},"favori":{"exemples":["/{c} favori","/{c} favori Details"]},"desinstaller":{"exemples":["/{c} desinstaller","/{c} desinstaller BetterFishing"],"plus":"Une liste pense-bête : un add-on ne peut pas supprimer de fichiers. Supprime ensuite le dossier toi-même, jeu fermé."},"sansfiche":{"exemples":["/{c} sansfiche"],"plus":"Pour savoir quelles fiches écrire (voir l'onglet Personnaliser)."},"vus":{"exemples":["/{c} vus"],"plus":"Enlève les badges « Nouveau » et « Mis à jour »."},"erreurs":{"exemples":["/{c} erreurs","/{c} erreurs Questie","/{c} erreurs effacer"]},"memoire":{"exemples":["/{c} memoire"]},"cpu":{"exemples":["/{c} cpu activer","/{c} cpu zero","/{c} cpu couper"],"plus":"Le mode mesure demande un rechargement et ralentit un peu le jeu : coupe-le quand tu as fini."},"profils":{"exemples":["/{c} profils"]},"profil":{"exemples":["/{c} profil","/{c} profil Donjon","/{c} profil tous Donjon","/{c} profil nouveau Raid"],"plus":"Sans nom : la liste des profils. Toutes les variantes sont dans l'onglet Profils."},"verrou":{"exemples":["/{c} verrou","/{c} verrou Baganator"],"plus":"Retaper la commande sur un add-on verrouillé le déverrouille."},"activer":{"exemples":["/{c} activer Details"]},"desactiver":{"exemples":["/{c} desactiver RareScanner"]},"seul":{"exemples":["/{c} seul Questie"],"plus":"Idéal pour savoir si un add-on pose problème à lui seul."},"essai":{"exemples":["/{c} essai","/{c} essai GTFO"]},"depannage":{"exemples":["/{c} depannage","/{c} depannage Questie Baganator"],"plus":"Recharge ensuite pour tester ; <code>/{c} retour<\/code> remet tout comme avant."},"retour":{"exemples":["/{c} retour"]},"recharger":{"exemples":["/{c} recharger"],"plus":"Comme le bouton Recharger : à mettre en fin de macro."},"perimes":{"exemples":["/{c} perimes on","/{c} perimes off","/{c} perimes"],"plus":"Un add-on « périmé » est fait pour une autre version du jeu ; souvent il marche quand même."},"annuler":{"exemples":["/{c} annuler"]},"resume":{"exemples":["/{c} resume"],"plus":"La même ligne s'affiche à la connexion (désactivable)."},"antiseche":{"exemples":["/{c} antiseche","/{c} antiseche carte"]},"visite":{"exemples":["/{c} visite"]},"diag":{"exemples":["/{c} diag"],"plus":"Le résultat est écrit dans la sauvegarde au prochain <code>/reload<\/code> : utile pour Claude."},"trace":{"exemples":["/{c} trace"],"plus":"Allume la trace, clique ce qui pose problème, fais <code>/reload<\/code>, puis retape la commande pour l'arrêter."}},"options_aide":{"fenetre.theme":"« auto » prend la couleur de la faction de ton personnage.","fenetre.taille_texte":"Agrandit ou rapetisse tout le texte de la fenêtre.","fenetre.opacite":"Rend le fond de la fenêtre plus ou moins transparent.","fenetre.compact":"Comme le bouton « Version mini » de l'en-tête.","fenetre.cats_repliee":"Même effet que la flèche « du bandeau.","fenetre.fiche_repliee":"Même effet que la flèche » du bandeau.","fiche.fond":"« uni clair » est le plus lisible ; « parchemin du jeu » utilise la texture du jeu.","liste.grouper_tous":"C'est ce que change le bouton « Vue : catégories / liste ».","liste.recherche.tolerance":"« Questei » trouve quand même Questie.","commandes.liste":"Les noms qui ouvrent la fenêtre, séparés par des espaces. Un nom déjà pris par un autre add-on est refusé, et tu es prévenu.","acces.clic_droit":"Ce que fait le clic droit sur le bouton de la minicarte.","actions.maj_clic":"Maj + clic sur une case allume aussi les modules et dépendances.","erreurs.masquer_fenetre_jeu":"Cache la fenêtre rouge d'erreur du jeu : les erreurs restent notées ici.","erreurs.annonce":"Ce qui se passe quand une nouvelle erreur arrive.","profils.proposer":"Jamais automatique : il te demande d'abord, et attend la fin du combat.","profils.confirmer":"Montre +x à allumer, -y à éteindre avant d'appliquer.","aide.visite_auto":"La visite ne se lance qu'une fois ; « Revoir la visite guidée » la relance.","action.tout_reinitialiser":"Remet tous les réglages à leur valeur de départ.","action.reinit_tailles":"Oublie la taille et la place gardées des fenêtres."},"depannage":[{"id":"ouvre","symptome":"La fenêtre ne s'ouvre pas","etapes":["Sur l'écran des personnages, bouton <b>AddOns<\/b> : vérifie que <b>Mes Add-ons<\/b> est coché.","En jeu, tape <code>/mesaddons<\/code> puis <code>/maa<\/code> : si un autre add-on a pris l'un des deux noms, l'autre marche quand même.","Essaie le bouton rond près de la minicarte, ou <kbd>Échap<\/kbd> › AddOns.","S'il est marqué « périmé » : coche « Charger les add-ons périmés » sur l'écran des add-ons, ou <code>/{c} perimes on<\/code> si tu arrives à taper une commande.","Vérifie que le dossier <code>_forever_\\Interface\\AddOns\\MesAddons<\/code> contient bien <code>MesAddons.toc<\/code> (pas un dossier en trop au milieu)."]},{"id":"rien","symptome":"J'ai coché, mais rien n'a changé","etapes":["C'est normal : le jeu n'allume ou n'éteint un add-on qu'au rechargement.","Clique <b>Recharger<\/b> en bas de la fenêtre (ou <code>/{c} recharger<\/code>).","Regarde l'état à droite de la ligne : s'il dit qu'il manque un autre add-on, installe-le ou allume-le aussi."]},{"id":"charge","symptome":"Un add-on ne se charge pas","etapes":["Lis la raison à droite de sa ligne (ou dans sa fiche, partie technique).","« il manque X » : installe X. « X est désactivé » : coche X aussi, ou fais <b>Maj + clic<\/b> sur la case de l'add-on.","« périmé » : <code>/{c} perimes on<\/code>, puis recharge.","« non prévu pour Forever » : ce module est fait pour une autre version du jeu, laisse-le éteint."]},{"id":"erreurs","symptome":"Des erreurs Lua s'affichent","etapes":["Ouvre la fenêtre des erreurs : <code>/{c} erreurs<\/code>. Elles sont rangées par add-on.","Choisis une erreur, puis <b>Copier<\/b> : tu peux la coller à Claude.","Pour savoir si un add-on pose problème seul : <code>/{c} seul NomDeLAddon<\/code>, recharge, teste.","Quand c'est réglé : <code>/{c} erreurs effacer<\/code>."]},{"id":"lent","symptome":"Le jeu rame","etapes":["<code>/{c} memoire<\/code> : le classement des add-ons qui prennent le plus de mémoire.","Pour le processeur : <code>/{c} cpu activer<\/code>, recharge, joue un moment, puis <code>/{c} cpu<\/code> pour lire le classement.","Coupe la mesure ensuite : <code>/{c} cpu couper<\/code> et recharge.","Éteins les gros consommateurs dont tu n'as pas besoin, ou fais-en un profil « léger »."]},{"id":"coupable","symptome":"Je cherche quel add-on casse tout","etapes":["<code>/{c} depannage<\/code> : tout s'éteint sauf ce gestionnaire et tes verrous. Recharge.","Le problème a disparu ? Rallume la moitié de tes add-ons, recharge, recommence avec la moitié qui pose problème.","Tu peux citer ceux à garder : <code>/{c} depannage Questie Baganator<\/code>.","Fini : <code>/{c} retour<\/code> remet exactement tout comme avant, puis recharge."]},{"id":"affichage","symptome":"La fenêtre s'affiche mal","etapes":["Texte pâle ou petit : Options › Fenêtre › « Taille du texte », et Options › Fiches › « Fond de la fiche » sur « uni clair (plus lisible) ».","Fenêtre trop grande ou mal placée : Options › Fenêtre, réglages avancés, « Oublier les tailles gardées ».","Liste vide ou morceaux décalés : <code>/{c} trace<\/code>, refais le geste qui pose problème, <code>/reload<\/code>, puis <code>/{c} trace<\/code> pour l'arrêter.","Lance aussi <code>/{c} diag<\/code> puis <code>/reload<\/code>, et demande à Claude de lire le journal : il y trouvera tout."]},{"id":"profil","symptome":"Un profil a éteint un add-on dont j'ai besoin","etapes":["Tout de suite : <code>/{c} annuler<\/code> (ou le bouton Annuler) avant de recharger.","Pour toujours : verrouille cet add-on (clic droit › Verrouiller) ; aucun profil ne l'éteindra plus.","Ou ajoute-le au profil : applique le profil, coche l'add-on, puis Garder l'état actuel ici."]}],"exemples_source":{"fiche":"TomTom","categorie":"guides","profil":"peche","texte":"bouton.recharger","reglage":"fenetre.taille_texte"},"perso":[{"id":"fiche","titre":"Une fiche","fichier":"donnees\\fiches\\fiches.json","exemple":"fiche","intro":"En jeu, le bouton <b>Modifier la fiche<\/b> suffit pour toi. Pour changer la fiche que tout le monde reçoit, c'est ici.","etapes":["Ouvre le fichier et copie un bloc existant (comme l'exemple ci-dessous).","La clé du bloc = le <b>nom exact du dossier<\/b> de l'add-on dans AddOns.","Remplis <code>fr<\/code> et <code>en<\/code> : <code>resume<\/code> (à quoi il sert), <code>commandes<\/code>, <code>remarques<\/code> (à savoir).","<code>categories<\/code> : des noms pris dans <code>categories.json<\/code> ; <code>utilite<\/code> : indispensable, confort ou gadget.","Un module : <code>\"type\": \"module\"<\/code> et <code>\"parent\"<\/code> = le dossier principal ; il prend ses catégories et son lien.","Pour savoir quels add-ons n'ont pas de fiche : <code>/{c} sansfiche<\/code> en jeu, ou <code>donnees\\fiches\\sans-fiche.py<\/code>. Tu peux aussi demander à Claude d'écrire la fiche : il vérifie sur Internet."]},{"id":"categorie","titre":"Une catégorie","fichier":"donnees\\fiches\\categories.json","exemple":"categorie","intro":"Les catégories de la colonne de gauche. Une fiche les cite par leur nom technique.","etapes":["Ajoute un bloc : le nom technique (minuscules et tirets), puis le nom affiché en <code>fr<\/code> et <code>en<\/code>.","<code>source<\/code> dit d'où elle vient (curseforge, toc, ou ce que tu veux).","Ajoute ce nom technique dans la liste <code>categories<\/code> des fiches concernées."]},{"id":"profil","titre":"Un profil prêt","fichier":"donnees\\fiches\\profils.json","exemple":"profil","intro":"En jeu, <b>Nouveau (état actuel)<\/b> crée un profil pour toi. Ici, ce sont les profils prêts que reçoit un nouveau joueur.","etapes":["Ajoute un bloc : <code>nom<\/code> en fr et en, <code>addons<\/code> = les dossiers principaux (les modules suivent si <code>avec_modules<\/code> vaut true), une <code>note<\/code>, une <code>couleur<\/code>.","Dans <code>donnees\\reglages.json<\/code>, ajoute son nom technique à <code>profils.ordre_prets<\/code> (sinon il n'est pas créé), et une icône du jeu dans <code>profils.icones_depart<\/code>.","Les add-ons absents chez quelqu'un sont simplement ignorés."]},{"id":"commande","titre":"Une commande","fichier":"donnees\\reglages.json","exemple":"commandes","intro":"Deux cas : un <b>nom de plus pour ouvrir<\/b> (comme /ma), ou une <b>nouvelle action<\/b>.","etapes":["Un nom d'ouverture pour toi : <code>/{c} commandes ajouter ma<\/code> en jeu, ou Options › Profils › Commandes.","Pour tout le monde : ajoute le nom dans <code>defauts.commandes.liste<\/code> (lettres et chiffres seulement).","Une nouvelle action (un nouveau mot après /{c}) demande du code Lua : demande-la à Claude. Son nom et sa description iront dans <code>sous_commandes<\/code> et dans les textes (fr et en)."]},{"id":"texte","titre":"Un texte","fichier":"donnees\\textes\\frFR.json + enUS.json","exemple":"texte_fr","intro":"Tous les mots affichés par l'add-on (boutons, messages, aide) sont là, en français et en anglais.","etapes":["Cherche la phrase dans <code>frFR.json<\/code> (Ctrl+F), change-la entre les guillemets.","Garde les <code>%s<\/code> et <code>%d<\/code> : ce sont les places des noms et des nombres, dans le même ordre.","Change aussi la même clé dans <code>enUS.json<\/code> : les deux fichiers doivent avoir exactement les mêmes clés (l'outil de vérification le contrôle)."]},{"id":"reglage","titre":"Une valeur de départ","fichier":"donnees\\reglages.json + options.json","exemple":"reglage","intro":"La valeur qu'a un réglage la première fois (avant que quelqu'un le change en jeu).","etapes":["Dans <code>reglages.json<\/code>, partie <code>defauts<\/code> : change la valeur (le nom technique est montré dans l'onglet Options, en cliquant un réglage).","Dans <code>options.json<\/code> : où il apparaît (groupe, onglet), ses choix, ses bornes, et <code>\"avance\": true<\/code> pour le cacher derrière « réglages avancés ».","Chaque réglage doit être dans <code>options.json<\/code> ou dans sa liste <code>exclus<\/code> avec une raison : la vérification le contrôle."]}],"apres":[{"titre":"Enregistre le fichier","texte":"Enregistre le JSON en UTF-8. Attention aux virgules entre les blocs et aux guillemets droits.","cmd":""},{"titre":"Ouvre un terminal dans le projet","texte":"Toutes les commandes suivantes se lancent depuis le dossier du projet.","cmd":"cd \"Gestionnaire-addons\""},{"titre":"Fabrique le Lua","texte":"Refait les fichiers <code>addon\\MesAddons\\Donnees\\*.lua<\/code> à partir des JSON (ne les modifie jamais à la main).","cmd":"python -X utf8 outils\\generer_donnees.py"},{"titre":"Vérifie tout","texte":"Syntaxe, textes français et anglais, réglages, et tous les tests. Il doit finir sans erreur.","cmd":"python -X utf8 outils\\verifier.py"},{"titre":"Regarde ce que ferait l'installation","texte":"Rien n'est touché : il montre seulement la source, la cible et où l'ancienne version serait rangée.","cmd":"python -X utf8 outils\\installer.py --simuler"},{"titre":"Installe","texte":"Il vérifie encore, range l'ancienne version dans <code>_archives\\installations\\<\/code>, copie la nouvelle et contrôle chaque fichier (SHA256). Seul le dossier MesAddons est touché. Le jeu peut rester ouvert.","cmd":"python -X utf8 outils\\installer.py"},{"titre":"Recharge en jeu","texte":"Tape <code>/reload<\/code>. Si tu as ajouté un fichier Lua (pas seulement des données), quitte et relance le jeu.","cmd":"/reload"},{"titre":"Mets à jour ce mode d'emploi","texte":"Pour que cette page montre tes changements, relance son fabricant dans son dossier.","cmd":"python -X utf8 fabriquer.py"}],"faq":[{"q":"Est-ce que l'add-on peut installer, mettre à jour ou supprimer des add-ons ?","r":"Non. Le jeu ne le permet à aucun add-on : il ne peut qu'allumer ou éteindre ceux qui sont déjà dans ton dossier AddOns. Pour installer ou mettre à jour, passe par ton outil habituel (CurseForge…) ; la liste « à désinstaller » te sert de pense-bête."},{"q":"Pourquoi faut-il toujours recharger ?","r":"Parce que le jeu ne charge ou décharge les add-ons qu'au démarrage de l'interface. Le gestionnaire ne recharge jamais tout seul : il allume le bouton <b>Recharger<\/b> et compte les changements."},{"q":"Est-ce que je perds mes réglages si je réinstalle l'add-on ?","r":"Non. Tes réglages, profils, notes, favoris et le journal sont dans <code>WTF\\Account\\…\\SavedVariables\\MesAddons.lua<\/code> (et un fichier par personnage), pas dans le dossier de l'add-on."},{"q":"Je peux le donner à un ami ?","r":"Oui : copie-lui le dossier <code>MesAddons<\/code>. Rien de personnel n'est dedans ; il reçoit les fiches et les profils prêts de départ. Ses add-ons sans fiche affichent simplement « Pas encore de fiche pour cet add-on. »."},{"q":"Un add-on n'a pas de fiche. Comment en ajouter une ?","r":"En jeu : clique-le, puis <b>Modifier la fiche<\/b>. Pour tout le monde : voir l'onglet Personnaliser, ou demande à Claude de l'écrire (il vérifie sur Internet). <code>/{c} sansfiche<\/code> donne la liste."},{"q":"Ma commande est déjà prise par un autre add-on.","r":"Le gestionnaire refuse le nom pris et te le dit au démarrage ; l'autre nom (/mesaddons ou /maa) marche toujours. Tu peux en ajouter un : <code>/{c} commandes ajouter ma<\/code>."},{"q":"Je veux l'interface en anglais.","r":"<code>/{c} langue enUS<\/code> (ou <code>auto<\/code> pour suivre le jeu). Les commandes marchent dans les deux langues : <code>/{c} help<\/code>, <code>/{c} profile Donjon<\/code>…"},{"q":"Les profils sont-ils propres à chaque personnage ?","r":"Non, ils sont communs à tous. Au moment d'appliquer, tu choisis : seulement le personnage connecté, ou tous ceux que le gestionnaire connaît."},{"q":"Quelle différence entre « coché » et « chargé » ?","r":"« Coché » : il sera allumé au prochain rechargement. « Chargé » : il tourne maintenant. Entre les deux, il faut un rechargement ; la ligne le dit en clair."},{"q":"Le texte est trop petit ou trop pâle.","r":"Options › Fenêtre › « Taille du texte » (petite, normale, grande) ; Options › Fiches › « Fond de la fiche » sur « uni clair (plus lisible) », le plus lisible."},{"q":"Comment revoir la visite guidée ?","r":"<code>/{c} visite<\/code>, ou Options › Fenêtre › « Revoir la visite guidée »."},{"q":"Le bouton de la minicarte me gêne.","r":"Glisse-le autour de la minicarte pour le déplacer, ou décoche « Bouton de la minicarte » dans Options › Fenêtre. La commande et le menu Échap restent."},{"q":"Est-ce que ça marche sur un autre WoW ?","r":"Il est fait pour World of Warcraft Forever (client 1.60.1, interface 16001). Sur une autre version du jeu, il serait vu comme « périmé » et n'est pas testé."},{"q":"Le mode dépannage a tout éteint, comment revenir ?","r":"<code>/{c} retour<\/code> puis recharge : tout revient exactement comme avant, même après plusieurs rechargements."},{"q":"Une erreur fait du bruit ou ouvre une fenêtre à chaque fois.","r":"Options › Erreurs : « Quand une nouvelle erreur arrive » (fenêtre, une ligne dans le chat, ou rien) et « Petit son à chaque nouvelle erreur »."}]},"jeu":{"bouton.recharger":"Recharger","bouton.recharger_n":"Recharger (%d)","bouton.annuler":"Annuler","bouton.annuler_n":"Annuler (%d)","pied.aucun":"Aucun changement en attente.","pied.attente":"%d changement(s) en attente : recharge pour les appliquer.","barre.tri":"Tri : %s","barre.vue_categories":"Vue : catégories","barre.vue_liste":"Vue : liste","fenetre.vers_mini":"Version mini","fenetre.vers_complet":"Version complète","fenetre.sous_titre":"%d add-ons · %d activés","filtre.puce":"%s (%d)","liste.actifs":"%d / %d actifs","liste.modules":"%d modules","liste.aucun_resultat":"Aucun add-on ne correspond.","liste.vide":"Aucun add-on dans cette catégorie.","raison.charge":"chargé","raison.desactive":"désactivé","raison.coche":"coché : sera chargé au rechargement","raison.decoche":"décoché : sera déchargé au rechargement","cat.tous":"Tous les add-ons","cat.autres":"Autres (sans catégorie)","fiche.sert":"À quoi il sert","fiche.commandes":"Commandes","fiche.remarques":"À savoir","fiche.note":"Ma note","fiche.note_indice":"Écris ici ta note perso…","fiche.type_principal":"Add-on principal","fiche.utilite":"Utilité : %s","fiche.invite":"Choisis un add-on dans la liste pour lire sa fiche.","bouton.modifier":"Modifier la fiche","bouton.reglages":"Ses réglages","bouton.curseforge":"Lien CurseForge","visite.precedent":"Retour","visite.suivant":"Suivant","visite.fin":"Terminer","visite.passer":"Passer","visite.compteur":"%d / %d","fenetre.replier_cats":"Replier la colonne des catégories","fenetre.deplier_cats":"Montrer la colonne des catégories","fenetre.replier_fiche":"Replier la fiche","fenetre.deplier_fiche":"Montrer la fiche","actions.recharge":"Rechargement (%d changement(s) en attente)...","liste.entete_aide":"Clic : replier ou déplier la catégorie","fiche.doublons":"Doublons actifs","menu.favori":"Ajouter aux favoris","menu.favori_retirer":"Retirer des favoris","theme.horde":"horde","theme.alliance":"alliance","theme.neutre":"neutre","fond_fiche.uni":"uni clair (plus lisible)","fond_fiche.jeu":"parchemin du jeu","taille_texte.petite":"petite","taille_texte.normale":"normale","taille_texte.grande":"grande"},"groupes_commandes":[{"id":"fenetre","nom":"La fenêtre et les réglages"},{"id":"liste","nom":"Liste, fiches et recherche"},{"id":"profils","nom":"Profils"},{"id":"actions","nom":"Actions rapides"},{"id":"diagnostic","nom":"Erreurs et mesures"}],"commandes":[{"id":"aide","nom":"aide","nom_en":"help","desc":"Affiche cette aide","groupe":"fenetre","exemples":["/{c} aide"],"plus":"Écrit dans le chat la liste courte de toutes les commandes. Pour une liste cliquable : l'antisèche."},{"id":"ouvrir","nom":"ouvrir","nom_en":"open","desc":"Ouvre la fenêtre de Mes Add-ons","groupe":"fenetre","exemples":["/{c}","/{c} ouvrir"],"plus":"Taper la commande seule fait la même chose (réglage « Commande seule = » dans les options avancées)."},{"id":"version","nom":"version","nom_en":"version","desc":"Version, langue et nombre de fiches","groupe":"fenetre","exemples":["/{c} version"],"plus":"Pratique pour vérifier que la bonne version est installée."},{"id":"journal","nom":"journal","nom_en":"log","desc":"Derniers messages du journal (journal effacer pour le vider)","groupe":"diagnostic","exemples":["/{c} journal","/{c} journal effacer"],"plus":"Le journal note ce que fait le gestionnaire (démarrage, commandes, changements). Les erreurs Lua ont leur propre fenêtre."},{"id":"langue","nom":"langue","nom_en":"language","desc":"Langue de l'interface (auto, frFR, enUS)","groupe":"fenetre","exemples":["/{c} langue frFR","/{c} langue enUS","/{c} langue auto"],"plus":"« auto » suit la langue du jeu."},{"id":"commandes","nom":"commandes","nom_en":"commands","desc":"Liste des commandes (commandes ajouter nom / commandes retirer nom)","groupe":"fenetre","exemples":["/{c} commandes","/{c} commandes ajouter ma","/{c} commandes retirer mesaddons"],"plus":"Ce sont les noms qui ouvrent la fenêtre. Si un autre add-on a déjà pris un nom, il est refusé et tu es prévenu."},{"id":"theme","nom":"theme","nom_en":"theme","desc":"Thème de la fenêtre (auto, horde, alliance, neutre)","groupe":"fenetre","exemples":["/{c} theme horde","/{c} theme auto"],"plus":""},{"id":"taille","nom":"taille","nom_en":"size","desc":"Taille de départ de la fenêtre (grande, moyenne, compacte)","groupe":"fenetre","exemples":["/{c} taille moyenne"],"plus":"La fenêtre se redimensionne aussi à la souris (coin en bas à droite), et retient sa taille."},{"id":"police","nom":"police","nom_en":"font","desc":"Police de la fenêtre (jeu, gothique, cinzel)","groupe":"fenetre","exemples":["/{c} police cinzel"],"plus":""},{"id":"mini","nom":"mini","nom_en":"mini","desc":"Passe de la version complète à la version mini et inversement","groupe":"fenetre","exemples":["/{c} mini"],"plus":""},{"id":"fiche","nom":"fiche","nom_en":"sheet","desc":"Infobulle et parties de la fiche (fiche infobulle non, fiche note oui…)","groupe":"liste","exemples":["/{c} fiche infobulle non","/{c} fiche note oui","/{c} fiche technique non"],"plus":""},{"id":"options","nom":"options","nom_en":"options","desc":"Ouvre les options (options jeu : la page du menu Échap)","groupe":"fenetre","exemples":["/{c} options","/{c} options jeu"],"plus":"« jeu » ouvre la page dans le menu Échap › Options › AddOns."},{"id":"chercher","nom":"chercher","nom_en":"search","desc":"Cherche dans les add-ons (chercher pêche, chercher /way, chercher #pvp)","groupe":"liste","exemples":["/{c} chercher pêche","/{c} chercher /way","/{c} chercher #pvp"],"plus":"Répond dans le chat, sans ouvrir la fenêtre."},{"id":"tri","nom":"tri","nom_en":"sort","desc":"Tri de la liste (nom, catégorie, état, mémoire, utilité ; inverser)","groupe":"liste","exemples":["/{c} tri categorie","/{c} tri inverser"],"plus":""},{"id":"etiquette","nom":"etiquette","nom_en":"tag","desc":"Étiquettes d'un add-on (etiquette Nom pvp, à tester)","groupe":"liste","exemples":["/{c} etiquette Questie quêtes, à tester"],"plus":"Des mots à toi, séparés par des virgules ; ensuite <code>#quêtes<\/code> dans la recherche les retrouve."},{"id":"favori","nom":"favori","nom_en":"favorite","desc":"Favoris (favori Nom pour en ajouter ou en retirer ; sans nom : la liste)","groupe":"liste","exemples":["/{c} favori","/{c} favori Details"],"plus":""},{"id":"desinstaller","nom":"desinstaller","nom_en":"remove","desc":"Liste « à désinstaller » (desinstaller Nom pour en ajouter ou en retirer)","groupe":"liste","exemples":["/{c} desinstaller","/{c} desinstaller BetterFishing"],"plus":"Une liste pense-bête : un add-on ne peut pas supprimer de fichiers. Supprime ensuite le dossier toi-même, jeu fermé."},{"id":"sansfiche","nom":"sansfiche","nom_en":"nosheet","desc":"Liste des add-ons sans fiche","groupe":"liste","exemples":["/{c} sansfiche"],"plus":"Pour savoir quelles fiches écrire (voir l'onglet Personnaliser)."},{"id":"vus","nom":"vus","nom_en":"seen","desc":"Marque les nouveautés et mises à jour comme vues","groupe":"liste","exemples":["/{c} vus"],"plus":"Enlève les badges « Nouveau » et « Mis à jour »."},{"id":"erreurs","nom":"erreurs","nom_en":"errors","desc":"Ouvre la fenêtre des erreurs Lua (erreurs effacer pour la vider)","groupe":"diagnostic","exemples":["/{c} erreurs","/{c} erreurs Questie","/{c} erreurs effacer"],"plus":""},{"id":"memoire","nom":"memoire","nom_en":"memory","desc":"Mémoire des add-ons, du plus gourmand au plus sobre","groupe":"diagnostic","exemples":["/{c} memoire"],"plus":""},{"id":"cpu","nom":"cpu","nom_en":"cpu","desc":"Mode mesure du processeur (cpu activer, cpu couper, cpu zero)","groupe":"diagnostic","exemples":["/{c} cpu activer","/{c} cpu zero","/{c} cpu couper"],"plus":"Le mode mesure demande un rechargement et ralentit un peu le jeu : coupe-le quand tu as fini."},{"id":"profils","nom":"profils","nom_en":"profiles","desc":"Ouvre la fenêtre des profils","groupe":"profils","exemples":["/{c} profils"],"plus":""},{"id":"profil","nom":"profil","nom_en":"profile","desc":"Applique un profil : profil <nom>, profil tous <nom>, profil nouveau <nom>","groupe":"profils","exemples":["/{c} profil","/{c} profil Donjon","/{c} profil tous Donjon","/{c} profil nouveau Raid"],"plus":"Sans nom : la liste des profils. Toutes les variantes sont dans l'onglet Profils."},{"id":"verrou","nom":"verrou","nom_en":"lock","desc":"Verrouille ou déverrouille un add-on (jamais désactivé par un profil)","groupe":"profils","exemples":["/{c} verrou","/{c} verrou Baganator"],"plus":"Retaper la commande sur un add-on verrouillé le déverrouille."},{"id":"activer","nom":"activer","nom_en":"enable","desc":"Allume un add-on avec ses dépendances et ses modules : activer <add-on>","groupe":"actions","exemples":["/{c} activer Details"],"plus":""},{"id":"desactiver","nom":"desactiver","nom_en":"disable","desc":"Éteint un add-on et ses modules : desactiver <add-on>","groupe":"actions","exemples":["/{c} desactiver RareScanner"],"plus":""},{"id":"seul","nom":"seul","nom_en":"only","desc":"Éteint tout sauf cet add-on, ses dépendances et les verrouillés : seul <add-on>","groupe":"actions","exemples":["/{c} seul Questie"],"plus":"Idéal pour savoir si un add-on pose problème à lui seul."},{"id":"essai","nom":"essai","nom_en":"trial","desc":"Allume un add-on pour une session seulement : essai <add-on> (sans nom : la liste)","groupe":"actions","exemples":["/{c} essai","/{c} essai GTFO"],"plus":""},{"id":"depannage","nom":"depannage","nom_en":"safe","desc":"Mode dépannage : tout éteindre sauf les add-ons cités et les verrouillés","groupe":"actions","exemples":["/{c} depannage","/{c} depannage Questie Baganator"],"plus":"Recharge ensuite pour tester ; <code>/{c} retour<\/code> remet tout comme avant."},{"id":"retour","nom":"retour","nom_en":"back","desc":"Fin du dépannage : remet tout comme avant","groupe":"actions","exemples":["/{c} retour"],"plus":""},{"id":"recharger","nom":"recharger","nom_en":"reload","desc":"Enregistre les choix puis recharge l'interface","groupe":"actions","exemples":["/{c} recharger"],"plus":"Comme le bouton Recharger : à mettre en fin de macro."},{"id":"perimes","nom":"perimes","nom_en":"outdated","desc":"Charger les add-ons périmés : perimes on|off (sans mot : bascule)","groupe":"actions","exemples":["/{c} perimes on","/{c} perimes off","/{c} perimes"],"plus":"Un add-on « périmé » est fait pour une autre version du jeu ; souvent il marche quand même."},{"id":"annuler","nom":"annuler","nom_en":"undo","desc":"Annule le dernier changement fait dans la liste","groupe":"actions","exemples":["/{c} annuler"],"plus":""},{"id":"resume","nom":"resume","nom_en":"summary","desc":"Une ligne : add-ons, profil, changements en attente, erreurs","groupe":"actions","exemples":["/{c} resume"],"plus":"La même ligne s'affiche à la connexion (désactivable)."},{"id":"antiseche","nom":"antiseche","nom_en":"cheatsheet","desc":"Ouvre l'antisèche : toutes les commandes, un clic les écrit dans le chat (antiseche <mot> pour chercher)","groupe":"fenetre","exemples":["/{c} antiseche","/{c} antiseche carte"],"plus":""},{"id":"visite","nom":"visite","nom_en":"tour","desc":"Lance la visite guidée de la fenêtre (5 bulles)","groupe":"fenetre","exemples":["/{c} visite"],"plus":""},{"id":"diag","nom":"diag","nom_en":"diag","desc":"Vérifie les points incertains du jeu (fonctions, images, réglages) et note le résultat","groupe":"diagnostic","exemples":["/{c} diag"],"plus":"Le résultat est écrit dans la sauvegarde au prochain <code>/reload<\/code> : utile pour Claude."},{"id":"trace","nom":"trace","nom_en":"trace","desc":"Enregistre la place de chaque morceau de la fenêtre à chaque clic (pour Claude) ; retaper pour arrêter","groupe":"diagnostic","exemples":["/{c} trace"],"plus":"Allume la trace, clique ce qui pose problème, fais <code>/reload<\/code>, puis retape la commande pour l'arrêter."}],"options":{"titre":"Options de Mes Add-ons","avances":"Montrer les réglages avancés","avances_aide":"Les réglages de tous les jours sont montrés ; coche pour voir aussi les réglages fins.","onglets":[{"id":"fenetre","nom":"Fenêtre","cartes":[{"id":"fenetre","nom":"La fenêtre","elements":[{"chemin":"fenetre.theme","type":"choix","label":"Thème","defaut":"auto","avance":false,"aide":"« auto » prend la couleur de la faction de ton personnage.","choix":["auto","horde","alliance","neutre"]},{"chemin":"fenetre.taille","type":"choix","label":"Taille de départ","defaut":"grande","avance":false,"aide":"","choix":["grande","moyenne","compacte"]},{"chemin":"fenetre.taille_texte","type":"choix","label":"Taille du texte","defaut":"normale","avance":false,"aide":"Agrandit ou rapetisse tout le texte de la fenêtre.","choix":["petite","normale","grande"]},{"chemin":"fenetre.police","type":"choix","label":"Police","defaut":"jeu","avance":true,"aide":"","choix":["jeu","gothique","cinzel"]},{"chemin":"fenetre.opacite","type":"choix","label":"Fond de la fenêtre (opacité)","defaut":"opaque","avance":false,"aide":"Rend le fond de la fenêtre plus ou moins transparent.","choix":["opaque","85 %","70 %","transparent (50 %)"]},{"chemin":"fenetre.compact","type":"bool","label":"Version mini (liste seule)","defaut":"non","avance":false,"aide":"Comme le bouton « Version mini » de l'en-tête."},{"chemin":"fenetre.cats_repliee","type":"bool","label":"Colonne des catégories repliée","defaut":"non","avance":false,"aide":"Même effet que la flèche « du bandeau."},{"chemin":"fenetre.fiche_repliee","type":"bool","label":"Colonne de la fiche repliée","defaut":"non","avance":false,"aide":"Même effet que la flèche » du bandeau."},{"chemin":"fenetre.annuler_max","type":"nombre","label":"Étapes d'annulation gardées","defaut":"5","avance":true,"aide":"","bornes":[1,20,1]},{"chemin":"fenetre.modules_replies","type":"bool","label":"Modules repliés au départ","defaut":"oui","avance":false,"aide":""},{"chemin":"fenetre.fermer_avec_echap","type":"bool","label":"Échap ferme la fenêtre","defaut":"oui","avance":false,"aide":""},{"chemin":"langue.choix","type":"choix","label":"Langue de l'interface","defaut":"auto","avance":false,"aide":"","choix":["auto","Français","English"]},{"type":"action","label":"Oublier les tailles gardées","avance":true,"aide":"Oublie la taille et la place gardées des fenêtres."}]},{"id":"acces","nom":"Façons d'ouvrir","elements":[{"chemin":"acces.bouton_minicarte","type":"bool","label":"Bouton de la minicarte","defaut":"oui","avance":false,"aide":""},{"chemin":"acces.bouton_menu_echap","type":"bool","label":"Ouvrir par le bouton AddOns du menu Échap","defaut":"oui","avance":false,"aide":""},{"chemin":"acces.angle_minicarte","type":"nombre","label":"Place du bouton (degrés)","defaut":"200","avance":true,"aide":"","bornes":[0,359,15]},{"chemin":"acces.compteur_minicarte","type":"bool","label":"Compteur sur le bouton de la minicarte","defaut":"oui","avance":false,"aide":""},{"chemin":"acces.clic_droit","type":"choix","label":"Clic droit sur le bouton","defaut":"Menu (profils et outils)","avance":true,"aide":"Ce que fait le clic droit sur le bouton de la minicarte.","choix":["Menu (profils et outils)","Recharger si des changements attendent"]},{"chemin":"acces.profils_minicarte","type":"bool","label":"Profils dans le menu du bouton","defaut":"oui","avance":true,"aide":""}]},{"id":"aide","nom":"Aide : antisèche et visite","elements":[{"chemin":"aide.visite_auto","type":"bool","label":"Lancer la visite guidée au premier lancement","defaut":"oui","avance":false,"aide":"La visite ne se lance qu'une fois ; « Revoir la visite guidée » la relance."},{"chemin":"aide.portee","type":"choix","label":"Contenu de l'antisèche à l'ouverture","defaut":"Tout","avance":true,"aide":"","choix":["Tout","Ce gestionnaire","Mes add-ons installés"]},{"chemin":"aide.regrouper","type":"choix","label":"Antisèche : ranger les commandes des add-ons","defaut":"Par catégorie","avance":false,"aide":"","choix":["Par catégorie","Un onglet par add-on"]},{"chemin":"aide.executer_maj","type":"bool","label":"Maj + clic sur une commande de l'antisèche : la lancer","defaut":"oui","avance":true,"aide":""},{"chemin":"aide.montrer_eteints","type":"bool","label":"Montrer aussi les commandes des add-ons éteints","defaut":"oui","avance":true,"aide":""},{"chemin":"aide.detecter","type":"bool","label":"Repérer les commandes que les fiches ne citent pas","defaut":"oui","avance":true,"aide":""},{"type":"action","label":"Ouvrir l'antisèche des commandes","avance":false,"aide":""},{"type":"action","label":"Revoir la visite guidée","avance":false,"aide":""}]}]},{"id":"liste","nom":"Liste","cartes":[{"id":"tri","nom":"Tri de la liste","elements":[{"chemin":"liste.tri","type":"choix","label":"Trier par","defaut":"Nom","avance":false,"aide":"","choix":["Nom","Catégorie","État","Mémoire","Utilité"]},{"chemin":"liste.tri_inverse","type":"bool","label":"Ordre inversé","defaut":"non","avance":true,"aide":""},{"chemin":"liste.grouper_tous","type":"bool","label":"« Tous les add-ons » rangé par catégories","defaut":"oui","avance":false,"aide":"C'est ce que change le bouton « Vue : catégories / liste »."},{"chemin":"liste.groupes_replies","type":"bool","label":"Catégories repliées au départ","defaut":"non","avance":false,"aide":""},{"chemin":"liste.favoris_en_haut","type":"bool","label":"Favoris en haut","defaut":"oui","avance":false,"aide":""},{"chemin":"liste.nouveaux_en_haut","type":"bool","label":"Nouveaux en haut","defaut":"oui","avance":true,"aide":""},{"chemin":"liste.nouveau_sans_fiche","type":"bool","label":"« Nouveau » seulement sans fiche","defaut":"oui","avance":true,"aide":""}]},{"id":"filtres","nom":"Filtres rapides affichés","elements":[{"chemin":"liste.filtres_visibles.tous","type":"bool","label":"Puce « Tous »","defaut":"oui","avance":true,"aide":""},{"chemin":"liste.filtres_visibles.actives","type":"bool","label":"Puce « Activés »","defaut":"oui","avance":true,"aide":""},{"chemin":"liste.filtres_visibles.desactivees","type":"bool","label":"Puce « Désactivés »","defaut":"oui","avance":true,"aide":""},{"chemin":"liste.filtres_visibles.perimes","type":"bool","label":"Puce « Périmés »","defaut":"oui","avance":true,"aide":""},{"chemin":"liste.filtres_visibles.doublons","type":"bool","label":"Puce « Doublons »","defaut":"oui","avance":true,"aide":""},{"chemin":"liste.filtres_visibles.sans_fiche","type":"bool","label":"Puce « Sans fiche »","defaut":"oui","avance":true,"aide":""},{"chemin":"liste.filtres_visibles.favoris","type":"bool","label":"Puce « Favoris »","defaut":"oui","avance":true,"aide":""},{"chemin":"liste.filtres_visibles.a_desinstaller","type":"bool","label":"Puce « À désinstaller »","defaut":"non","avance":true,"aide":""},{"chemin":"liste.filtres_visibles.nouveaux","type":"bool","label":"Puce « Nouveaux »","defaut":"oui","avance":true,"aide":""},{"chemin":"liste.filtres_visibles.mis_a_jour","type":"bool","label":"Puce « Mis à jour »","defaut":"non","avance":true,"aide":""},{"chemin":"liste.filtres_visibles.erreurs","type":"bool","label":"Puce « Erreurs »","defaut":"non","avance":true,"aide":""},{"chemin":"liste.filtres_visibles.essais","type":"bool","label":"Puce « En essai »","defaut":"non","avance":true,"aide":""},{"chemin":"liste.filtres_visibles.en_attente","type":"bool","label":"Puce « Modifiés »","defaut":"non","avance":true,"aide":""}]},{"id":"recherche","nom":"Recherche","elements":[{"chemin":"liste.recherche.nom","type":"bool","label":"Chercher dans le nom","defaut":"oui","avance":true,"aide":""},{"chemin":"liste.recherche.fiche","type":"bool","label":"Chercher dans la fiche","defaut":"oui","avance":true,"aide":""},{"chemin":"liste.recherche.note","type":"bool","label":"Chercher dans ma note","defaut":"oui","avance":true,"aide":""},{"chemin":"liste.recherche.commandes","type":"bool","label":"Chercher dans les commandes","defaut":"oui","avance":true,"aide":""},{"chemin":"liste.recherche.etiquettes","type":"bool","label":"Chercher dans les étiquettes","defaut":"oui","avance":true,"aide":""},{"chemin":"liste.recherche.notes_toc","type":"bool","label":"Chercher dans le texte de l'add-on","defaut":"oui","avance":true,"aide":""},{"chemin":"liste.recherche.categorie","type":"bool","label":"Chercher dans la catégorie","defaut":"oui","avance":true,"aide":""},{"chemin":"liste.recherche.tolerance","type":"bool","label":"Tolérer les fautes de frappe","defaut":"oui","avance":false,"aide":"« Questei » trouve quand même Questie."},{"chemin":"liste.recherche.distance","type":"nombre","label":"Fautes tolérées par mot","defaut":"1","avance":true,"aide":"","bornes":[0,3,1]},{"chemin":"liste.recherche.longueur_min","type":"nombre","label":"Longueur minimale pour tolérer","defaut":"4","avance":true,"aide":"","bornes":[2,8,1]},{"chemin":"liste.recherche.toutes_categories","type":"bool","label":"Chercher dans toutes les catégories","defaut":"oui","avance":false,"aide":""},{"chemin":"liste.recherche.pertinence","type":"bool","label":"Meilleurs résultats d'abord","defaut":"oui","avance":true,"aide":""},{"chemin":"liste.recherche.garder","type":"bool","label":"Garder la recherche au rechargement","defaut":"non","avance":true,"aide":""}]},{"id":"colonnes","nom":"Ce qui s'affiche sur une ligne","elements":[{"chemin":"liste.colonnes.icone","type":"bool","label":"Icône de l'add-on","defaut":"oui","avance":false,"aide":""},{"chemin":"liste.colonnes.etoile","type":"bool","label":"Étoile des favoris","defaut":"oui","avance":false,"aide":""},{"chemin":"liste.colonnes.badges","type":"bool","label":"Badges","defaut":"oui","avance":false,"aide":""},{"chemin":"liste.colonnes.raison","type":"bool","label":"Pourquoi il ne se charge pas","defaut":"oui","avance":true,"aide":""},{"chemin":"liste.colonnes.etat_charge","type":"bool","label":"Dire aussi « chargé » ou « désactivé »","defaut":"non","avance":true,"aide":""},{"chemin":"liste.colonnes.memoire","type":"bool","label":"Mémoire utilisée","defaut":"non","avance":true,"aide":""},{"chemin":"liste.badges_max","type":"nombre","label":"Badges par ligne (au plus)","defaut":"2","avance":true,"aide":"","bornes":[0,6,1]},{"chemin":"liste.etiquettes_max","type":"nombre","label":"Étiquettes par add-on (au plus)","defaut":"8","avance":true,"aide":"","bornes":[1,20,1]}]},{"id":"badges","nom":"Badges","elements":[{"chemin":"liste.badges.nouveau","type":"bool","label":"Badge « Nouveau »","defaut":"oui","avance":true,"aide":""},{"chemin":"liste.badges.mis_a_jour","type":"bool","label":"Badge « Mis à jour »","defaut":"oui","avance":true,"aide":""},{"chemin":"liste.badges.erreur","type":"bool","label":"Badge « Erreur »","defaut":"oui","avance":true,"aide":""},{"chemin":"liste.badges.doublon","type":"bool","label":"Badge « Doublon »","defaut":"oui","avance":true,"aide":""},{"chemin":"liste.badges.inutile","type":"bool","label":"Badge « Inutile »","defaut":"oui","avance":true,"aide":""},{"chemin":"liste.badges.essai","type":"bool","label":"Badge « Essai »","defaut":"oui","avance":true,"aide":""},{"chemin":"liste.badges.desinstaller","type":"bool","label":"Badge « À retirer »","defaut":"oui","avance":true,"aide":""},{"chemin":"liste.badges.verrou","type":"bool","label":"Badge « Verrou »","defaut":"oui","avance":true,"aide":""},{"type":"action","label":"Marquer tout comme vu","avance":true,"aide":""}]}]},{"id":"fiches","nom":"Fiches","cartes":[{"id":"fiche","nom":"La fiche et l'infobulle","elements":[{"chemin":"fiche.infobulle","type":"bool","label":"Infobulle au survol","defaut":"oui","avance":false,"aide":""},{"chemin":"fiche.fond","type":"choix","label":"Fond de la fiche","defaut":"uni clair (plus lisible)","avance":false,"aide":"« uni clair » est le plus lisible ; « parchemin du jeu » utilise la texture du jeu.","choix":["parchemin du jeu","uni clair (plus lisible)"]},{"chemin":"fiche.parties.resume","type":"bool","label":"Fiche : à quoi il sert","defaut":"oui","avance":false,"aide":""},{"chemin":"fiche.parties.commandes","type":"bool","label":"Fiche : commandes","defaut":"oui","avance":false,"aide":""},{"chemin":"fiche.parties.remarques","type":"bool","label":"Fiche : à savoir","defaut":"oui","avance":false,"aide":""},{"chemin":"fiche.parties.note","type":"bool","label":"Fiche : note perso","defaut":"oui","avance":false,"aide":""},{"chemin":"fiche.parties.technique","type":"bool","label":"Fiche : technique","defaut":"oui","avance":true,"aide":""},{"chemin":"fiche.parties.dependances","type":"bool","label":"Fiche : dépendances","defaut":"oui","avance":true,"aide":""},{"chemin":"fiche.parties.doublons","type":"bool","label":"Fiche : doublons","defaut":"oui","avance":true,"aide":""},{"chemin":"fiche.parties.badges","type":"bool","label":"Fiche : badges","defaut":"oui","avance":true,"aide":""},{"chemin":"fiche.note_max","type":"nombre","label":"Longueur d'une note","defaut":"1000","avance":true,"aide":"","bornes":[100,5000,100]},{"chemin":"fiche.texte_max","type":"nombre","label":"Longueur d'un texte de fiche","defaut":"800","avance":true,"aide":"","bornes":[100,5000,100]}]}]},{"id":"profils","nom":"Profils","cartes":[{"id":"profils","nom":"Profils","elements":[{"chemin":"profils.confirmer","type":"bool","label":"Montrer ce qui change avant d'appliquer un profil (+x / -y)","defaut":"oui","avance":false,"aide":"Montre +x à allumer, -y à éteindre avant d'appliquer."},{"chemin":"profils.dependances_auto","type":"bool","label":"Activer aussi les dépendances d'un profil","defaut":"oui","avance":false,"aide":""},{"chemin":"profils.dependances_facultatives","type":"bool","label":"Activer aussi les dépendances facultatives (ex. Baganator active Syndicator)","defaut":"non","avance":true,"aide":""},{"chemin":"profils.portee","type":"choix","label":"Appliquer un profil à","defaut":"Ce personnage","avance":true,"aide":"","choix":["Ce personnage","Tous les personnages"]},{"chemin":"profils.proposer","type":"bool","label":"Proposer le profil associé en donjon, raid ou champ de bataille","defaut":"oui","avance":false,"aide":"Jamais automatique : il te demande d'abord, et attend la fin du combat."},{"chemin":"profils.delai_proposition","type":"nombre","label":"Attendre (secondes) avant de proposer","defaut":"3","avance":true,"aide":"","bornes":[0,30,1]},{"chemin":"profils.situation.groupe","type":"texte","label":"Profil proposé en donjon (nom)","defaut":"donjon","avance":true,"aide":""},{"chemin":"profils.situation.raid","type":"texte","label":"Profil proposé en raid (nom)","defaut":"donjon","avance":true,"aide":""},{"chemin":"profils.situation.champ","type":"texte","label":"Profil proposé en champ de bataille (nom)","defaut":"(vide)","avance":true,"aide":""}]},{"id":"actions","nom":"Actions rapides","elements":[{"chemin":"actions.resume_connexion","type":"bool","label":"Résumé d'une ligne à la connexion","defaut":"oui","avance":false,"aide":""},{"chemin":"actions.maj_clic","type":"bool","label":"Maj + clic sur une case : avec modules et dépendances","defaut":"oui","avance":false,"aide":"Maj + clic sur une case allume aussi les modules et dépendances."},{"chemin":"actions.essai_message","type":"bool","label":"Dire quels essais se terminent","defaut":"oui","avance":true,"aide":""}]},{"id":"commandes","nom":"Commandes","elements":[{"chemin":"commandes.liste","type":"commandes","label":"Commandes d'ouverture","defaut":"/mesaddons /maa","avance":false,"aide":"Les noms qui ouvrent la fenêtre, séparés par des espaces. Un nom déjà pris par un autre add-on est refusé, et tu es prévenu."},{"chemin":"commandes.sans_argument","type":"choix","label":"Commande seule","defaut":"ouvrir","avance":true,"aide":"","choix":["ouvrir","aide","options"]}]}]},{"id":"erreurs","nom":"Erreurs","cartes":[{"id":"erreurs","nom":"Erreurs, mémoire et processeur","elements":[{"chemin":"erreurs.actif","type":"bool","label":"Noter les erreurs Lua","defaut":"oui","avance":false,"aide":""},{"chemin":"erreurs.annonce","type":"choix","label":"Quand une nouvelle erreur arrive","defaut":"ouvrir la fenêtre","avance":false,"aide":"Ce qui se passe quand une nouvelle erreur arrive.","choix":["ouvrir la fenêtre","une ligne dans le chat","rien (compter en silence)"]},{"chemin":"erreurs.annonce_delai","type":"nombre","label":"Secondes entre deux annonces","defaut":"10","avance":true,"aide":"","bornes":[0,120,5]},{"chemin":"erreurs.masquer_fenetre_jeu","type":"bool","label":"Cacher la fenêtre d'erreur du jeu","defaut":"oui","avance":false,"aide":"Cache la fenêtre rouge d'erreur du jeu : les erreurs restent notées ici."},{"chemin":"erreurs.son","type":"bool","label":"Petit son à chaque nouvelle erreur","defaut":"non","avance":false,"aide":""},{"chemin":"erreurs.max","type":"nombre","label":"Erreurs différentes gardées","defaut":"100","avance":true,"aide":"","bornes":[10,500,10]},{"chemin":"erreurs.taille_message","type":"nombre","label":"Signes gardés du message","defaut":"500","avance":true,"aide":"","bornes":[100,2000,100]},{"chemin":"erreurs.taille_pile","type":"nombre","label":"Signes gardés de la pile d'appels","defaut":"1800","avance":true,"aide":"","bornes":[200,6000,200]},{"chemin":"erreurs.lignes_liste","type":"nombre","label":"Lignes de la liste d'erreurs","defaut":"10","avance":true,"aide":"","bornes":[5,20,1]},{"chemin":"erreurs.memoire_alerte","type":"bool","label":"Prévenir si la mémoire dépasse un seuil","defaut":"oui","avance":false,"aide":""},{"chemin":"erreurs.memoire_seuil_total","type":"nombre","label":"Seuil de mémoire totale (Mo)","defaut":"500","avance":true,"aide":"","bornes":[100,4000,50]},{"chemin":"erreurs.memoire_seuil_addon","type":"nombre","label":"Seuil de mémoire par add-on (Mo)","defaut":"80","avance":true,"aide":"","bornes":[10,1000,10]},{"chemin":"erreurs.memoire_intervalle","type":"nombre","label":"Secondes entre deux mesures","defaut":"60","avance":true,"aide":"","bornes":[10,600,10]},{"chemin":"erreurs.memoire_rappel","type":"nombre","label":"Secondes avant de répéter une alerte","defaut":"900","avance":true,"aide":"","bornes":[60,3600,60]},{"chemin":"erreurs.memoire_lignes","type":"nombre","label":"Lignes de la commande mémoire","defaut":"10","avance":true,"aide":"","bornes":[3,50,1]},{"chemin":"erreurs.cpu_rappel","type":"bool","label":"Rappeler que le mode mesure est allumé","defaut":"oui","avance":true,"aide":""},{"chemin":"erreurs.cpu_lignes","type":"nombre","label":"Lignes de la commande processeur","defaut":"10","avance":true,"aide":"","bornes":[3,50,1]},{"type":"action","label":"Ouvrir la fenêtre des erreurs","avance":false,"aide":""},{"type":"action","label":"Effacer toutes les erreurs notées","avance":false,"aide":""}]},{"id":"journal","nom":"Journal et personnages","elements":[{"chemin":"journal.actif","type":"bool","label":"Journal actif","defaut":"oui","avance":true,"aide":""},{"chemin":"journal.taille_max","type":"nombre","label":"Lignes gardées","defaut":"200","avance":true,"aide":"","bornes":[50,1000,50]},{"chemin":"journal.niveau_min","type":"choix","label":"Niveau minimal","defaut":"info","avance":true,"aide":"","choix":["debug","info","avertissement","erreur"]},{"chemin":"journal.dedoublonner","type":"bool","label":"Regrouper les lignes identiques","defaut":"oui","avance":true,"aide":""},{"chemin":"journal.capturer_erreurs","type":"bool","label":"Noter les erreurs Lua","defaut":"oui","avance":true,"aide":""},{"chemin":"journal.lignes_chat","type":"nombre","label":"Lignes montrées dans le chat","defaut":"10","avance":true,"aide":"","bornes":[1,50,1]},{"chemin":"personnages.memoriser","type":"bool","label":"Mémoriser mes personnages","defaut":"oui","avance":true,"aide":""},{"type":"action","label":"Vider le journal","avance":true,"aide":""}]},{"id":"divers","nom":"Divers","elements":[{"chemin":"affichage.message_chargement","type":"bool","label":"Message au chargement","defaut":"oui","avance":false,"aide":""},{"chemin":"affichage.couleur_prefixe","type":"texte","label":"Couleur du préfixe (hexadécimal)","defaut":"ffd100","avance":true,"aide":""},{"type":"action","label":"Remettre toutes les valeurs de départ","avance":false,"aide":"Remet tous les réglages à leur valeur de départ."}]}]}],"exclus":{"liste.filtre":"choisi avec la liste déroulante « Filtre » de la barre","aide.visite_vue":"état interne : dit si la visite a déjà eu lieu (le bouton « Revoir la visite guidée » la relance)","options.avances":"case « Montrer les réglages avancés » en haut du panneau d'options"}},"fiches":[{"id":"DBM-Core","titre":"<DBM Core> Main Core","categories":["boss-encounters"],"utilite":"indispensable","resume":"Deadly Boss Mods : alertes et minuteurs pendant les combats de boss (donjons, raids).","commandes":"/dbm (options), /pull <secondes>, /break <minutes>, /range","remarques":"Les ~30 dossiers DBM-* sont ses modules. Seuls ceux marqués Forever ou Vanilla servent ici ; les autres (Midnight, BC, WotLK, MoP…) restent « périmés » et peuvent rester désactivés.","lien":"https://www.curseforge.com/projects/3358","modules":26,"doublons":[],"dependances":["DBM-StatusBarTimers"]},{"id":"Auctionator","titre":"Auctionator","categories":["auction-economy"],"utilite":"confort","resume":"Hôtel des ventes plus rapide : recherche par liste, prix du marché, vente en un clic, annulation facile.","commandes":"/atr (ou /auctionator)","remarques":"Recoupe en partie Naowh Forever : The Market (vente à l'HV). L'un ou l'autre suffit.","lien":"https://www.curseforge.com/wow/addons/auctionator","modules":0,"doublons":["NaowhForever_Market"],"dependances":[]},{"id":"Baganator","titre":"Baganator","categories":["bags-inventory"],"utilite":"confort","resume":"Sacs réunis en un seul, rangés par catégories, avec recherche ; voit aussi les sacs et la banque de tes autres persos.","commandes":"/bgr (ou /baganator), /bgrs <mot> pour chercher","remarques":"Va avec Syndicator (garder les deux activés).","lien":"https://www.curseforge.com/wow/addons/baganator","modules":0,"doublons":[],"dependances":[]},{"id":"BetterFishing","titre":"Better Fishing","categories":["professions"],"utilite":"confort","resume":"Pêche avec une seule touche ou un double-clic, et son du bouchon plus fort.","commandes":"/bf (ou /betterfishing)","remarques":"Doublon de FishyWashy : en garder un seul activé.","lien":"https://www.curseforge.com/wow/addons/better-fishing","modules":0,"doublons":["FishyWashy"],"dependances":[]},{"id":"Curator","titre":"Curator","categories":["collections"],"utilite":"gadget","resume":"Mini-jeu de cartes à collectionner sur les créatures d'Azeroth : ouvre des boosters, remplis ton album zone par zone, montre-le.","commandes":"/curator","remarques":"Purement pour le plaisir, rien d'indispensable.","lien":"","modules":0,"doublons":[],"dependances":[]},{"id":"Details","titre":"Details! Damage Meter","categories":["combat"],"utilite":"confort","resume":"Compteur de dégâts et de soins (DPS/HPS), avec le détail de chaque sort et de chaque combat.","commandes":"/details","remarques":"Les dossiers Details_* sont ses extensions. Details_TinyThreat fait doublon avec le compteur de menace de Naowh Forever : Combat.","lien":"https://www.curseforge.com/projects/61284","modules":7,"doublons":["Details_TinyThreat"],"dependances":[]},{"id":"DialogueUI","titre":"Dialogue UI","categories":["quests-leveling"],"utilite":"confort","resume":"Remplace la fenêtre des quêtes et des discussions par une interface façon jeu moderne, plus lisible, jouable au clavier.","commandes":"Réglages : Échap > Options > AddOns","remarques":"Compatible avec Spoken (les voix FR continuent).","lien":"https://www.curseforge.com/wow/addons/dialogueui","modules":0,"doublons":[],"dependances":[]},{"id":"ForeverDungeonJournal","titre":"DungeonJournal","categories":["boss-encounters"],"utilite":"gadget","resume":"DungeonJournal : boss, butin et quêtes des donjons.","commandes":"/dj","remarques":"DÉSACTIVÉ exprès : doublon de Naowh Forever : Dungeon Journal.","lien":"https://www.curseforge.com/wow/addons/forever-dungeon-journal","modules":0,"doublons":["NaowhForever_DungeonJournal"],"dependances":[]},{"id":"FishyWashy","titre":"FishyWashy","categories":["professions"],"utilite":"confort","resume":"Aide à la pêche : bouchon plus bruyant, boutons d'appâts, lancer facile, statistiques de pêche.","commandes":"/fishy","remarques":"Doublon de BetterFishing : en garder un seul activé.","lien":"https://www.curseforge.com/wow/addons/fishywashy-forever-fishing","modules":0,"doublons":["BetterFishing"],"dependances":[]},{"id":"ForeverLootSparkles","titre":"Forever Loot Sparkles","categories":["miscellaneous"],"utilite":"gadget","resume":"Fait toujours briller les objets de quête à ramasser (le jeu coupe parfois cet effet).","commandes":"Réglages : Échap > Options > AddOns","remarques":"","lien":"https://www.curseforge.com/projects/1729017","modules":0,"doublons":[],"dependances":[]},{"id":"ForeverClassGuide","titre":"ForeverGuide","categories":["guides","class"],"utilite":"confort","resume":"ForeverGuide : guide de ta classe (talents, sorts du maître, nourriture à buff, campement, métiers, Héritage).","commandes":"/fg (ou /foreverguide)","remarques":"Recoupe en partie Naowh Forever : Training Planner (quoi apprendre, talents).","lien":"https://www.curseforge.com/projects/1739093","modules":0,"doublons":["NaowhForever_Training"],"dependances":[]},{"id":"ForeverSecrets","titre":"ForeverSecrets","categories":["miscellaneous","quests-leveling"],"utilite":"gadget","resume":"Quêtes cachées, livres de bibliothèque et secrets de WoW Forever, avec coordonnées, captures et suivi par perso.","commandes":"/fsecret (secrets), /fbooks (livres)","remarques":"Les livres recoupent Naowh Forever : Discovery.","lien":"https://www.curseforge.com/wow/addons/foreversecrets","modules":0,"doublons":["NaowhForever_Discovery"],"dependances":[]},{"id":"GearQuestForever","titre":"GearQuest Forever","categories":["quests-leveling","equipment"],"utilite":"confort","resume":"Améliorations d'équipement pendant le leveling : clique un emplacement, choisis l'objet à aller chercher, suis-le dans le journal.","commandes":"/gq (ou /gearquest)","remarques":"Les dossiers GearQuestForever_<CLASSE> sont ses données ; GearQuestForever_Languages le met en français.","lien":"https://www.curseforge.com/projects/1698950","modules":10,"doublons":[],"dependances":[]},{"id":"GTFO","titre":"GTFO","categories":["combat"],"utilite":"confort","resume":"Son d'alerte quand tu restes dans quelque chose qui fait mal (feu, poison…) : « sors de là ! ».","commandes":"/gtfo","remarques":"","lien":"https://www.curseforge.com/wow/addons/gtfo","modules":0,"doublons":[],"dependances":[]},{"id":"MinimapButtonButton","titre":"MinimapButtonButton","categories":["map-minimap","user-interface"],"utilite":"confort","resume":"Range tous les boutons de la minicarte dans un seul bouton.","commandes":"Clique son bouton près de la minicarte","remarques":"","lien":"https://www.curseforge.com/projects/446096","modules":0,"doublons":[],"dependances":[]},{"id":"NaowhForever","titre":"Naowh Forever","categories":["miscellaneous","combat","professions","auction-economy","quests-leveling"],"utilite":"indispensable","resume":"Le « tout-en-un » de Forever : une fenêtre commune pour ses 15 modules (BiS, donjons, quoi apprendre, métiers, HV, combat, confort…).","commandes":"/nf (ou /nao, /naowh), /nfquests (quêtes et rares par zone)","remarques":"Remplace DungeonJournal et What's Training (désactivés). Chaque module s'allume dans /nf > Réglages > Modules.","lien":"https://www.curseforge.com/wow/addons/naowhforever","modules":14,"doublons":[],"dependances":[]},{"id":"OpenMap","titre":"OpenMap","categories":["map-minimap"],"utilite":"confort","resume":"Carte du monde d'un seul tenant : toutes les zones collées, on zoome de l'une à l'autre.","commandes":"/openmap","remarques":"La carte de Blizzard, le journal de quêtes et Questie continuent de marcher.","lien":"https://www.curseforge.com/projects/1735937","modules":0,"doublons":[],"dependances":[]},{"id":"OPie","titre":"OPie","categories":["action-bars"],"utilite":"confort","resume":"Roues d'actions : tu maintiens une touche, une roue de sorts/objets/montures apparaît, tu choisis à la souris.","commandes":"/opie","remarques":"","lien":"https://www.curseforge.com/wow/addons/opie","modules":0,"doublons":[],"dependances":[]},{"id":"Pawn","titre":"Pawn","categories":["equipment"],"utilite":"confort","resume":"Compare les objets et marque les améliorations (flèche verte) selon les stats de ta spé.","commandes":"/pawn","remarques":"Recoupe un peu GearQuest et Naowh : BiS List ; ensemble, ça ne gêne pas.","lien":"https://www.curseforge.com/wow/addons/pawn","modules":0,"doublons":[],"dependances":[]},{"id":"Plater","titre":"Plater","categories":["unit-frames"],"utilite":"confort","resume":"Barres de vie au-dessus des ennemis (nameplates) très réglables : menace, sorts lancés, debuffs.","commandes":"/plater","remarques":"","lien":"https://www.curseforge.com/projects/100547","modules":0,"doublons":[],"dependances":[]},{"id":"Questie","titre":"Questie game client not supported","categories":["quests-leveling","map-minimap"],"utilite":"indispensable","resume":"Affiche sur la carte et la minicarte les quêtes disponibles, leurs objectifs et où les rendre.","commandes":"/questie","remarques":"QuestieDB (sa base) et QuestieTrace (collecte de données) vont avec.","lien":"https://www.curseforge.com/wow/addons/questie","modules":2,"doublons":[],"dependances":[]},{"id":"RareScanner","titre":"RareScanner","categories":["map-minimap","collections"],"utilite":"confort","resume":"Prévient (son + bouton avec image) quand un monstre rare, un trésor ou un évènement apparaît sur ta minicarte.","commandes":"/rs (ou /rarescanner)","remarques":"","lien":"https://www.curseforge.com/wow/addons/rarescanner","modules":0,"doublons":[],"dependances":[]},{"id":"RXPGuides","titre":"RestedXP Guides","categories":["quests-leveling","guides"],"utilite":"indispensable","resume":"RestedXP : guide de leveling pas à pas, avec flèche et étapes.","commandes":"/rxp","remarques":"Fait doublon avec Zygor : n'activer qu'un seul guide de leveling à la fois.","lien":"https://www.curseforge.com/projects/486246","modules":0,"doublons":["ZygorGuidesViewerForever"],"dependances":[]},{"id":"Spoken","titre":"Spoken","categories":["quests-leveling","audio-video"],"utilite":"confort","resume":"Lit le jeu à voix haute (en français) : quêtes, discussions, lieux, livres, histoires des boss. Une file, un narrateur, un bouton.","commandes":"/sp (ou /spoken), /spp (lieux), /spr (livres et lettres)","remarques":"Les dossiers Spoken_* et Spoken*Audio_frFR sont ses modules et ses voix FR. Normal que les packs de voix paraissent « désactivés » ou « périmés ».","lien":"","modules":12,"doublons":[],"dependances":[]},{"id":"SpokenBooks","titre":"Spoken Books (now in Spoken)","categories":["audio-video"],"utilite":"gadget","resume":"Ancien add-on, maintenant intégré à Spoken.","commandes":"","remarques":"Ce dossier ne se charge jamais : il peut partir à la corbeille (_a-supprimer).","lien":"","modules":0,"doublons":[],"dependances":[]},{"id":"Syndicator","titre":"Syndicator","categories":["bags-inventory"],"utilite":"confort","resume":"Mémorise les objets de tous tes persos (sacs, banque, courrier) ; sert à Baganator et à d'autres add-ons.","commandes":"/syn, /syns <mot> pour chercher un objet sur tous tes persos","remarques":"Rien de spécial à faire : laisser activé avec Baganator.","lien":"https://www.curseforge.com/wow/addons/syndicator","modules":0,"doublons":[],"dependances":[]},{"id":"TomTom","titre":"TomTom","categories":["map-minimap"],"utilite":"confort","resume":"Flèche de navigation vers des coordonnées (points de passage).","commandes":"/way <x> <y> (ex. /way 45 60), /cway (point le plus proche), /wayb (retour)","remarques":"","lien":"https://www.curseforge.com/projects/18808","modules":0,"doublons":[],"dependances":[]},{"id":"Warmth","titre":"Warmth","categories":["miscellaneous","map-minimap"],"utilite":"gadget","resume":"Feux de camp des joueurs sur ta carte : ce que propose chaque campement, qui est autour, et monter le tien.","commandes":"/warmth","remarques":"","lien":"https://www.curseforge.com/projects/1799681","modules":0,"doublons":[],"dependances":[]},{"id":"WhatsTraining","titre":"What's Training?","categories":["class"],"utilite":"gadget","resume":"What's Training : liste des sorts disponibles chez ton maître de classe.","commandes":"/wt","remarques":"DÉSACTIVÉ exprès : doublon de Naowh Forever : Training Planner.","lien":"https://www.curseforge.com/projects/324944","modules":0,"doublons":["NaowhForever_Training"],"dependances":[]},{"id":"ZephrasCollector","titre":"Zephras Collector","categories":["data-export"],"utilite":"gadget","resume":"Envoie ce que tu découvres (PNJ, quêtes, butin) au site zephras.com ; Ctrl+C sur un objet donne son lien.","commandes":"/zephras","remarques":"Facultatif : utile seulement si tu te sers du site Zephras.","lien":"","modules":0,"doublons":[],"dependances":[]},{"id":"ZygorGuidesViewerForever","titre":"Zygor Guide Viewer (Forever)","categories":["quests-leveling","guides"],"utilite":"confort","resume":"Zygor : guide de leveling (version gratuite Forever), avec flèche et étapes.","commandes":"Bouton de la minicarte","remarques":"Fait doublon avec RestedXP : n'activer qu'un seul guide de leveling à la fois.","lien":"","modules":0,"doublons":["RXPGuides"],"dependances":[]}],"categories":[{"id":"huds","nom":"Affichage tête haute","n":0},{"id":"audio-video","nom":"Audio & vidéo","n":2},{"id":"action-bars","nom":"Barres d'action","n":1},{"id":"libraries","nom":"Bibliothèques","n":0},{"id":"buffs-debuffs","nom":"Buffs & debuffs","n":0},{"id":"unit-frames","nom":"Cadres d'unités","n":1},{"id":"map-minimap","nom":"Carte & minicarte","n":6},{"id":"chat-communication","nom":"Chat & communication","n":0},{"id":"class","nom":"Classe","n":2},{"id":"collections","nom":"Collections","n":2},{"id":"combat","nom":"Combat","n":3},{"id":"boss-encounters","nom":"Combats de boss","n":2},{"id":"companions","nom":"Compagnons","n":0},{"id":"mail","nom":"Courrier","n":0},{"id":"miscellaneous","nom":"Divers","n":4},{"id":"data-export","nom":"Export de données","n":1},{"id":"plugins","nom":"Extensions","n":0},{"id":"guides","nom":"Guides","n":3},{"id":"guild","nom":"Guilde","n":0},{"id":"achievements","nom":"Hauts faits","n":0},{"id":"auction-economy","nom":"Hôtel des ventes & économie","n":2},{"id":"artwork","nom":"Illustrations","n":0},{"id":"tooltip","nom":"Infobulles","n":0},{"id":"user-interface","nom":"Interface","n":1},{"id":"inventory","nom":"Inventaire","n":0},{"id":"roleplay","nom":"Jeu de rôle","n":0},{"id":"dbm","nom":"Modules DBM","n":0},{"id":"professions","nom":"Métiers","n":3},{"id":"quests-leveling","nom":"Quêtes & leveling","n":8},{"id":"bags-inventory","nom":"Sacs & inventaire","n":2},{"id":"transmogrification","nom":"Transmogrification","n":0},{"id":"equipment","nom":"Équipement","n":2}],"profils":[{"id":"leveling","nom":"Leveling","icone":"📈","couleur":"#4CAF50","note":"Un seul guide de leveling (RestedXP) ; Zygor reste éteint.","addons":["NaowhForever","Questie","RXPGuides","TomTom","OpenMap","GearQuestForever","DialogueUI","Spoken","Baganator","Syndicator","Pawn","RareScanner","MinimapButtonButton","OPie"],"avec_modules":true},{"id":"donjon","nom":"Donjon","icone":"🛡️","couleur":"#2196F3","note":"DBM et Details avec leurs modules utiles ; pas de guide de leveling.","addons":["NaowhForever","DBM-Core","Details","GTFO","Plater","Baganator","Syndicator","Pawn","DialogueUI","MinimapButtonButton","OPie"],"avec_modules":true},{"id":"peche","nom":"Pêche","icone":"🎣","couleur":"#00BCD4","note":"Une seule aide à la pêche (FishyWashy) ; BetterFishing reste éteint.","addons":["NaowhForever","FishyWashy","Baganator","Syndicator","Auctionator","TomTom","OpenMap","MinimapButtonButton"],"avec_modules":true},{"id":"minimal","nom":"Minimal","icone":"🪶","couleur":"#9E9E9E","note":"Le strict nécessaire pour jouer léger.","addons":["NaowhForever","Baganator","Syndicator","DBM-Core","Questie","MinimapButtonButton"],"avec_modules":true},{"id":"@tout","nom":"Tout","icone":"","couleur":"#FFD100","note":"Active tout ce qui est prévu pour Forever (tes verrous restent).","addons":[],"virtuel":true},{"id":"@rien","nom":"Rien","icone":"","couleur":"#808080","note":"Coupe tout, sauf ce qui est verrouillé et ce gestionnaire.","addons":[],"virtuel":true}],"profils_actions":[{"id":"tous","mot":"tous","mot_en":"all","texte":"Applique le profil à tous tes personnages connus, pas seulement à celui-ci.","exemple":"/{c} profil tous Donjon"},{"id":"fusionner","mot":"fusionner","mot_en":"merge","texte":"Ajoute les add-ons du profil à ce qui est déjà allumé, sans rien éteindre.","exemple":"/{c} profil fusionner Pêche"},{"id":"comparer","mot":"comparer","mot_en":"compare","texte":"Dit ce qui est seulement dans l'un, seulement dans l'autre, et en commun.","exemple":"/{c} profil comparer Donjon / Leveling"},{"id":"nouveau","mot":"nouveau","mot_en":"new","texte":"Crée un profil avec ce qui est allumé maintenant.","exemple":"/{c} profil nouveau Raid"},{"id":"enregistrer","mot":"enregistrer","mot_en":"save","texte":"Remplace le contenu d'un profil par ce qui est allumé maintenant.","exemple":"/{c} profil enregistrer Raid"},{"id":"renommer","mot":"renommer","mot_en":"rename","texte":"Change le nom d'un profil (ancien / nouveau).","exemple":"/{c} profil renommer Raid / Raid du jeudi"},{"id":"supprimer","mot":"supprimer","mot_en":"delete","texte":"Supprime un profil (pas « Tout » ni « Rien »). Il ne revient pas.","exemple":"/{c} profil supprimer Raid"},{"id":"nettoyer","mot":"nettoyer","mot_en":"clean","texte":"Retire d'un profil les add-ons que tu as désinstallés depuis.","exemple":"/{c} profil nettoyer Leveling"},{"id":"exporter","mot":"exporter","mot_en":"export","texte":"Écrit le profil en une ligne de texte (qui commence par MAA1) à copier pour un ami.","exemple":"/{c} profil exporter Donjon"},{"id":"sauvegarde","mot":"sauvegarde","mot_en":"backup","texte":"Écrit en une ligne tous tes profils, verrous, notes, étiquettes et favoris : une sauvegarde à garder de côté.","exemple":"/{c} profil sauvegarde"},{"id":"importer","mot":"importer","mot_en":"import","texte":"Ajoute ce que contient un texte MAA1 reçu (profils, notes…).","exemple":"/{c} profil importer MAA1:…"},{"id":"prets","mot":"prets","mot_en":"ready","texte":"Recrée les profils prêts du départ s'ils ont été supprimés.","exemple":"/{c} profil prets"}],"listes":{"badges":[{"id":"nouveau","court":"Nouveau","label":"Badge « Nouveau »","texte":"L'add-on vient d'arriver dans ton dossier AddOns."},{"id":"mis_a_jour","court":"Mis à jour","label":"Badge « Mis à jour »","texte":"Sa version a changé depuis la dernière fois."},{"id":"erreur","court":"Erreur","label":"Badge « Erreur »","texte":"Il a provoqué au moins une erreur Lua (détail : fenêtre des erreurs)."},{"id":"doublon","court":"Doublon","label":"Badge « Doublon »","texte":"Un autre add-on allumé fait la même chose : garde-en un seul."},{"id":"inutile","court":"Inutile","label":"Badge « Inutile »","texte":"Pas prévu pour WoW Forever : il est grisé."},{"id":"essai","court":"Essai","label":"Badge « Essai »","texte":"Allumé pour une session seulement ; il s'éteindra à la connexion suivante."},{"id":"desinstaller","court":"À retirer","label":"Badge « À retirer »","texte":"Tu l'as mis dans ta liste « à désinstaller » (un pense-bête : l'add-on ne peut rien supprimer)."},{"id":"verrou","court":"Verrou","label":"Badge « Verrou »","texte":"Verrouillé : aucun profil ne l'éteindra."}],"filtres":[{"id":"tous","nom":"Tous","visible":true},{"id":"actives","nom":"Activés","visible":true},{"id":"desactivees","nom":"Désactivés","visible":true},{"id":"perimes","nom":"Périmés","visible":true},{"id":"doublons","nom":"Doublons","visible":true},{"id":"sans_fiche","nom":"Sans fiche","visible":true},{"id":"favoris","nom":"Favoris","visible":true},{"id":"a_desinstaller","nom":"À désinstaller","visible":false},{"id":"nouveaux","nom":"Nouveaux","visible":true},{"id":"mis_a_jour","nom":"Mis à jour","visible":false},{"id":"erreurs","nom":"Erreurs","visible":false},{"id":"essais","nom":"En essai","visible":false},{"id":"en_attente","nom":"Modifiés","visible":false}],"parties":[{"id":"resume","nom":"À quoi il sert","actif":true,"texte":"En une ou deux phrases, ce que fait l'add-on."},{"id":"commandes","nom":"Commandes","actif":true,"texte":"Ses commandes à lui (par exemple <code>/way<\/code> pour TomTom)."},{"id":"remarques","nom":"À savoir","actif":true,"texte":"Les pièges : doublons, réglages à faire, ce qui ne marche pas sur Forever."},{"id":"note","nom":"Note perso","actif":true,"texte":"Ta note perso, tapée dans la fiche ; gardée dans ta sauvegarde."},{"id":"technique","nom":"Technique","actif":true,"texte":"Version, auteur, mémoire utilisée, état."},{"id":"dependances","nom":"Dépendances","actif":true,"texte":"Les add-ons dont il a besoin, et s'ils sont là et allumés."},{"id":"doublons","nom":"Doublons","actif":true,"texte":"Les add-ons allumés qui font la même chose."},{"id":"badges","nom":"Badges","actif":true,"texte":"Les mêmes badges que sur la ligne."}],"tri":[{"id":"nom","nom":"Nom"},{"id":"categorie","nom":"Catégorie"},{"id":"etat","nom":"État"},{"id":"memoire","nom":"Mémoire"},{"id":"utilite","nom":"Utilité"}],"raisons":["chargé","activé, pas chargé","coché : sera chargé au rechargement","décoché : sera déchargé au rechargement","désactivé","chargé à la demande","périmé","non prévu pour Forever","il manque X","X est désactivé"],"utilites":[{"id":"indispensable","nom":"indispensable"},{"id":"confort","nom":"confort"},{"id":"gadget","nom":"gadget"}],"visite":[{"id":"liste","titre":"Tes add-ons","texte":"Une ligne par add-on. Coche la case pour l'allumer ou l'éteindre : rien ne change avant « Recharger ». Maj + clic ajoute aussi ses dépendances ; le clic droit ouvre un menu d'actions."},{"id":"categories","titre":"Les catégories","texte":"Filtre la liste par thème (cartes, combat, sacs…). Les add-ons sans fiche sont rangés à part."},{"id":"fiche","titre":"La fiche","texte":"Clique un add-on : sa fiche dit à quoi il sert, quelles commandes il connaît et ce qu'il faut savoir. Tu peux y ajouter ta propre note ou corriger le texte."},{"id":"entete","titre":"Profils et version mini","texte":"Un profil allume d'un coup tout un jeu d'add-ons (donjon, leveling…). Le bouton de droite passe la fenêtre en version mini (la liste seule) et inversement. Le « ? » ouvre l'antisèche des commandes."},{"id":"pied","titre":"Recharger et commandes","texte":"Les changements attendent ici : « Annuler » les défait, « Recharger » les applique. Tape /{c} antiseche pour voir toutes les commandes, ou clique sur le « ? »."}],"menu":["Ajouter aux favoris","Activer avec ses modules","Activer seul celui-ci","Verrouiller","Marquer en essai","Marquer « à désinstaller »","Marquer comme vu","Copier le lien","Utilité : non précisée (changer)"]},"themes":{"horde":{"dore":"#d6b25e","dore_clair":"#f6dc8f","dore_sombre":"#7a5c22","fond":"#2c1912","fond_sombre":"#150a07","accent":"#9e2a1f","accent_sombre":"#4a0f0a","texte":"#f1e2c0","texte_doux":"#d8cbb0","texte_eteint":"#8c8270","parchemin":"#c8b083","parchemin_texte":"#24180a","parchemin_titre":"#3a1a04","parchemin_filet":"#6e2606"},"alliance":{"dore":"#d9bd6c","dore_clair":"#fbe6a6","dore_sombre":"#6f5a28","fond":"#16223a","fond_sombre":"#0a1020","accent":"#2b5bb0","accent_sombre":"#0e2453","texte":"#e9eefb","texte_doux":"#c4cde3","texte_eteint":"#7d8599","parchemin":"#c8b083","parchemin_texte":"#24180a","parchemin_titre":"#3a1a04","parchemin_filet":"#6e2606"},"neutre":{"dore":"#c8b07a","dore_clair":"#efe0b2","dore_sombre":"#5d4e2c","fond":"#262420","fond_sombre":"#121110","accent":"#5d6b3a","accent_sombre":"#283018","texte":"#ece6d6","texte_doux":"#cfc8b4","texte_eteint":"#85806f","parchemin":"#c8b083","parchemin_texte":"#24180a","parchemin_titre":"#3a1a04","parchemin_filet":"#6e2606"}},"perso_ex":{"fiche":"{\n  \"TomTom\": {\n    \"categories\": [\n      \"map-minimap\"\n    ],\n    \"curseforge\": \"https://www.curseforge.com/projects/18808\",\n    \"confiance\": \"haute\",\n    \"utilite\": \"confort\",\n    \"fr\": {\n      \"resume\": \"Flèche de navigation vers des coordonnées (points de passage).\",\n      \"commandes\": \"/way <x> <y> (ex. /way 45 60), /cway (point le plus proche), /wayb (retour)\",\n      \"remarques\": \"\"\n    },\n    \"en\": {\n      \"resume\": \"Navigation arrow to coordinates (waypoints).\",\n      \"commandes\": \"/way <x> <y> (e.g. /way 45 60), /cway (closest point), /wayb (back)\",\n      \"remarques\": \"\"\n    },\n    \"doublons\": [],\n    \"note_lien\": \"\",\n    \"type\": \"principal\",\n    \"icone\": \"Interface\\\\AddOns\\\\TomTom\\\\Images\\\\Modern\\\\TomTom-Logo.tga\",\n    \"dependances\": [],\n    \"titre_toc\": \"TomTom\",\n    \"verifie\": \"2026-11-15\"\n  }\n}","categorie":"{\n  \"guides\": {\n    \"fr\": \"Guides\",\n    \"en\": \"Guides\",\n    \"source\": \"toc\"\n  }\n}","profil":"{\n  \"peche\": {\n    \"nom\": {\n      \"fr\": \"Pêche\",\n      \"en\": \"Fishing\"\n    },\n    \"icone\": \"🎣\",\n    \"couleur\": \"#00BCD4\",\n    \"addons\": [\n      \"NaowhForever\",\n      \"FishyWashy\",\n      \"Baganator\",\n      \"Syndicator\",\n      \"Auctionator\",\n      \"TomTom\",\n      \"OpenMap\",\n      \"MinimapButtonButton\"\n    ],\n    \"avec_modules\": true,\n    \"note\": {\n      \"fr\": \"Une seule aide à la pêche (FishyWashy) ; BetterFishing reste éteint.\",\n      \"en\": \"A single fishing helper (FishyWashy); BetterFishing stays off.\"\n    }\n  }\n}","texte_fr":"{\n  \"bouton.recharger\": \"Recharger\"\n}","texte_en":"{\n  \"bouton.recharger\": \"Reload\"\n}","commandes":"{\n  \"commandes\": {\n    \"liste\": [\n      \"mesaddons\",\n      \"maa\"\n    ],\n    \"sans_argument\": \"ouvrir\"\n  }\n}","reglage":"{\n  \"defauts\": {\n    \"fenetre\": {\n      \"taille_texte\": \"normale\"\n    }\n  }\n}"}};
+const R = D.r, U = R.ui, J = D.jeu;
+const $ = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => Array.from(r.querySelectorAll(s));
+
+/* ---------- petits outils ---------- */
+function stocker(cle, v) { try { localStorage.setItem("maa-mode-emploi." + cle, JSON.stringify(v)); } catch (e) { /* stockage indisponible */ } }
+function relire(cle, defaut) { try { const v = localStorage.getItem("maa-mode-emploi." + cle); return v === null ? defaut : JSON.parse(v); } catch (e) { return defaut; } }
+function esc(s) { return String(s).replace(/[&<>"]/g, ch => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[ch])); }
+function fmt(s, ...a) { let i = 0; return String(s).replace(/%(?:\.\d+)?[sdf]/g, m => (i < a.length ? a[i++] : m)); }
+function sansAccents(s) { return String(s).normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase(); }
+function texteSeul(html) { const d = document.createElement("div"); d.innerHTML = html; return d.textContent; }
+function correspond(q, ...champs) {
+  const mots = sansAccents(q).split(/\s+/).filter(Boolean);
+  const tout = sansAccents(champs.join(" "));
+  return mots.every(m => tout.includes(m));
+}
+let CMD = relire("cmd", D.meta.commande_courte);
+if (!D.meta.commandes.includes(CMD)) CMD = D.meta.commande_courte;
+const c = s => String(s).replace(/\{c\}/g, CMD);
+function toast(msg) { const t = $("#toast"); t.innerHTML = msg; t.classList.add("on"); clearTimeout(toast.h); toast.h = setTimeout(() => t.classList.remove("on"), 2600); }
+async function copier(texte, bouton) {
+  let ok = false;
+  try { await navigator.clipboard.writeText(texte); ok = true; } catch (e) { ok = false; }
+  if (bouton) { bouton.textContent = ok ? U.copie : U.copier; bouton.classList.toggle("ok", ok); setTimeout(() => { bouton.textContent = U.copier; bouton.classList.remove("ok"); }, 1500); }
+  if (!ok) toast(U.copie_echec);
+}
+function ligneCmd(cmd, rendre = true) {
+  const txt = rendre ? c(cmd) : cmd;
+  return `<div class="cmd-ligne"><code>${esc(txt)}</code><button class="copier" data-copier="${esc(txt)}">${U.copier}</button></div>`;
+}
+document.addEventListener("click", e => { const b = e.target.closest("[data-copier]"); if (b) copier(b.dataset.copier, b); });
+
+/* ---------- {c} dans le texte fixe de la page ---------- */
+const noeudsC = [];
+(function chercherC() {
+  const w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+  let n; while ((n = w.nextNode())) { if (n.nodeValue.includes("{c}") && !n.parentElement.closest("script")) noeudsC.push([n, n.nodeValue]); }
+})();
+function majC() { noeudsC.forEach(([n, orig]) => { n.nodeValue = c(orig); }); }
+
+/* ---------- thème et commande ---------- */
+function appliquerTheme(v) { document.documentElement.dataset.theme = v; $$("#choix-theme button").forEach(b => b.classList.toggle("on", b.dataset.v === v)); stocker("theme", v); }
+$$("#choix-theme button").forEach(b => b.addEventListener("click", () => appliquerTheme(b.dataset.v)));
+appliquerTheme(relire("theme", "sombre") === "clair" ? "clair" : "sombre");
+$("#choix-cmd").innerHTML = D.meta.commandes.map(n => `<button data-v="${esc(n)}">/${esc(n)}</button>`).join("");
+function choisirCmd(n) {
+  CMD = n; stocker("cmd", n);
+  $$("#choix-cmd button").forEach(b => b.classList.toggle("on", b.dataset.v === n));
+  majC(); toutRendre();
+}
+$$("#choix-cmd button").forEach(b => b.addEventListener("click", () => choisirCmd(b.dataset.v)));
+
+/* ---------- onglets ---------- */
+const ids = $$("section.onglet").map(s => s.id);
+function montrer(id) {
+  if (!ids.includes(id)) id = ids[0];
+  $$("section.onglet").forEach(s => s.classList.toggle("on", s.id === id));
+  $$("#onglets a").forEach(a => a.classList.toggle("on", a.getAttribute("href") === "#" + id));
+}
+window.addEventListener("hashchange", () => { montrer(location.hash.slice(1)); window.scrollTo({ top: 0 }); });
+document.addEventListener("click", e => {
+  const a = e.target.closest('a[href^="#"]'); if (!a) return;
+  const id = a.getAttribute("href").slice(1);
+  if (ids.includes(id)) { e.preventDefault(); history.replaceState(null, "", "#" + id); montrer(id); window.scrollTo({ top: 0 }); }
+});
+
+/* =================================================================== PRISE EN MAIN */
+function rendrePremiersPas() {
+  const faits = relire("premiers-pas", []);
+  $("#premiers-pas").innerHTML = R.premiers_pas.map((t, i) =>
+    `<li class="${faits.includes(i) ? "fait" : ""}"><input type="checkbox" id="pp${i}" data-i="${i}" ${faits.includes(i) ? "checked" : ""}><label for="pp${i}"><span>${c(t)}</span></label></li>`).join("");
+  $("#progres-depart").style.width = (100 * faits.length / R.premiers_pas.length) + "%";
+}
+$("#premiers-pas").addEventListener("change", e => {
+  const i = +e.target.dataset.i; let f = relire("premiers-pas", []);
+  f = e.target.checked ? [...new Set([...f, i])] : f.filter(x => x !== i);
+  stocker("premiers-pas", f); rendrePremiersPas();
+  if (f.length === R.premiers_pas.length) toast(U.fini);
+});
+$("#raz-premiers-pas").addEventListener("click", () => { stocker("premiers-pas", []); rendrePremiersPas(); });
+$("#vers-visite").addEventListener("click", () => { location.hash = "la-fenetre"; setTimeout(() => visite.debut(), 300); });
+
+/* =================================================================== MAQUETTE */
+const FICHE = Object.fromEntries(D.fiches.map(f => [f.id, f]));
+const CAT = Object.fromEntries(D.categories.map(x => [x.id, x.nom]));
+const BADGE = Object.fromEntries(D.listes.badges.map(b => [b.id, b]));
+const MQ = R.maquette;
+const mq = { etat: null };
+function mqInitial() {
+  mq.etat = {
+    lignes: MQ.exemples.filter(x => FICHE[x.id]).map(x => ({ id: x.id, actif: x.actif, depart: x.actif, favori: x.favori, badges: x.badges })),
+    choisi: MQ.choisi, cat: "tous", filtre: "tous", tri: 0, vue: "categories", cherche: "", pile: [],
+    sansCats: false, sansFiche: false, mini: false, replis: {},
+    theme: relire("mq-theme", MQ.faction), fond: relire("mq-fond", "uni"), taille: relire("mq-taille", "normale")
+  };
+  $("#mq-cherche").value = "";
+}
+function mqLigne(id) { return mq.etat.lignes.find(l => l.id === id); }
+function enAttente() { return mq.etat.lignes.filter(l => l.actif !== l.depart).length; }
+function mqCatsDe(l) { const cs = FICHE[l.id].categories; return cs.length ? cs : ["__autres"]; }
+function nomCat(id) { return id === "__autres" ? J["cat.autres"] : (CAT[id] || id); }
+function mqVisibles() {
+  const e = mq.etat;
+  let ls = e.lignes.filter(l => {
+    if (e.cat !== "tous" && !mqCatsDe(l).includes(e.cat)) return false;
+    if (e.filtre === "actives" && !l.actif) return false;
+    if (e.filtre === "desactivees" && l.actif) return false;
+    if (e.filtre === "favoris" && !l.favori) return false;
+    if (e.filtre === "doublons" && !l.badges.includes("doublon")) return false;
+    if (e.filtre === "nouveaux" && !l.badges.includes("nouveau")) return false;
+    if (e.filtre === "erreurs" && !l.badges.includes("erreur")) return false;
+    if (e.filtre === "essais" && !l.badges.includes("essai")) return false;
+    if (e.filtre === "en_attente" && l.actif === l.depart) return false;
+    if (["perimes", "sans_fiche", "a_desinstaller", "mis_a_jour"].includes(e.filtre)) return false;
+    if (e.cherche) { const f = FICHE[l.id]; if (!correspond(e.cherche, f.titre, f.id, f.resume, f.commandes, f.remarques, f.categories.map(nomCat).join(" "))) return false; }
+    return true;
+  });
+  const cle = D.listes.tri[e.tri].id;
+  const util = { indispensable: 0, confort: 1, gadget: 2, "": 3 };
+  ls.sort((a, b) => {
+    if (a.favori !== b.favori) return a.favori ? -1 : 1;
+    const fa = FICHE[a.id], fb = FICHE[b.id];
+    if (cle === "categorie") { const x = nomCat(mqCatsDe(a)[0]).localeCompare(nomCat(mqCatsDe(b)[0])); if (x) return x; }
+    if (cle === "etat" && a.actif !== b.actif) return a.actif ? -1 : 1;
+    if (cle === "utilite") { const x = util[fa.utilite] - util[fb.utilite]; if (x) return x; }
+    return fa.titre.localeCompare(fb.titre);
+  });
+  return ls;
+}
+function mqRaison(l) {
+  if (l.actif !== l.depart) return `<span class="mq-raison attend">${esc(l.actif ? J["raison.coche"] : J["raison.decoche"])}</span>`;
+  return `<span class="mq-raison">${esc(l.actif ? J["raison.charge"] : J["raison.desactive"])}</span>`;
+}
+function mqHtmlLigne(l) {
+  const f = FICHE[l.id];
+  const badges = l.badges.map(b => `<span class="mq-badge ${b}" title="${esc(BADGE[b] ? BADGE[b].texte : "")}">${esc(BADGE[b] ? BADGE[b].court : b)}</span>`).join("");
+  return `<div class="mq-ligne ${l.actif ? "" : "eteint"} ${mq.etat.choisi === l.id ? "choisie" : ""}" data-zone="ligne" data-id="${esc(l.id)}" title="${esc(f.resume)}">
+    <span class="mq-case ${l.actif !== l.depart ? "modifie" : ""}" data-zone="case" data-id="${esc(l.id)}">${l.actif ? "✓" : ""}</span>
+    <span class="mq-icone">${esc((f.titre.match(/[A-Za-z0-9]/) || [f.titre.charAt(0)])[0])}</span>
+    <span class="mq-etoile ${l.favori ? "on" : ""}" data-zone="etoile" data-id="${esc(l.id)}">★</span>
+    <span class="mq-nom">${esc(f.titre)}</span>${f.modules ? `<span class="mq-mod">${esc(fmt(J["liste.modules"], f.modules))}</span>` : ""}${badges}${mqRaison(l)}</div>`;
+}
+function mqRendre() {
+  const e = mq.etat, th = D.themes[e.theme] || D.themes[Object.keys(D.themes)[0]];
+  const m = $("#mq");
+  const vars = { "--dore": th.dore, "--dore-clair": th.dore_clair, "--dore-sombre": th.dore_sombre, "--mfond": th.fond, "--mfond-sombre": th.fond_sombre,
+    "--maccent": th.accent, "--maccent-sombre": th.accent_sombre, "--mtexte": th.texte, "--mtexte-doux": th.texte_doux, "--mtexte-eteint": th.texte_eteint,
+    "--mparch": th.parchemin, "--mparch-texte": th.parchemin_texte, "--mparch-titre": th.parchemin_titre, "--mparch-filet": th.parchemin_filet };
+  Object.entries(vars).forEach(([k, v]) => v && m.style.setProperty(k, v));
+  m.style.setProperty("--echelle", { petite: .88, normale: 1, grande: 1.14 }[e.taille] || 1);
+  m.classList.toggle("fond-jeu", e.fond === "jeu");
+  m.classList.toggle("mini", e.mini);
+  $("#mq-embleme").textContent = MQ.embleme[e.theme] || MQ.embleme.neutre;
+  const actifs = e.lignes.filter(l => l.actif).length;
+  $("#mq-sous").textContent = fmt(J["fenetre.sous_titre"], e.lignes.length, actifs);
+  $("#mq-btn-mini").textContent = e.mini ? J["fenetre.vers_complet"] : J["fenetre.vers_mini"];
+  const corps = $("#mq-corps");
+  corps.classList.toggle("sans-cats", e.sansCats); corps.classList.toggle("sans-fiche", e.sansFiche);
+  $("#mq-fg").title = e.sansCats ? J["fenetre.deplier_cats"] : J["fenetre.replier_cats"];
+  $("#mq-fd").title = e.sansFiche ? J["fenetre.deplier_fiche"] : J["fenetre.replier_fiche"];
+  $("#mq-fg").textContent = e.sansCats ? "»" : "«";
+  $("#mq-fd").textContent = e.sansFiche ? "«" : "»";
+  // catégories
+  const compte = {};
+  e.lignes.forEach(l => mqCatsDe(l).forEach(k => { compte[k] = (compte[k] || 0) + 1; }));
+  const cats = Object.keys(compte).filter(k => k !== "__autres").sort((a, b) => nomCat(a).localeCompare(nomCat(b)));
+  if (compte.__autres) cats.push("__autres");
+  $("#mq-cats").innerHTML = [`<div class="mq-cat ${e.cat === "tous" ? "on" : ""}" data-cat="tous"><span>${esc(J["cat.tous"])}</span><span class="n">${e.lignes.length}</span></div>`]
+    .concat(cats.map(k => `<div class="mq-cat ${e.cat === k ? "on" : ""}" data-cat="${esc(k)}"><span>${esc(nomCat(k))}</span><span class="n">${compte[k]}</span></div>`)).join("");
+  // bandeau, barre, puces
+  const vis = mqVisibles();
+  const dansCat = e.lignes.filter(l => e.cat === "tous" || mqCatsDe(l).includes(e.cat));
+  $("#mq-bandeau-titre").textContent = e.cat === "tous" ? J["cat.tous"] : nomCat(e.cat);
+  $("#mq-compteur").textContent = fmt(J["liste.actifs"], dansCat.filter(l => l.actif).length, dansCat.length);
+  $("#mq-tri").textContent = fmt(J["barre.tri"], D.listes.tri[e.tri].nom);
+  $("#mq-vue").textContent = e.vue === "categories" ? J["barre.vue_categories"] : J["barre.vue_liste"];
+  const nb = { tous: e.lignes.length, actives: e.lignes.filter(l => l.actif).length, desactivees: e.lignes.filter(l => !l.actif).length,
+    favoris: e.lignes.filter(l => l.favori).length, doublons: e.lignes.filter(l => l.badges.includes("doublon")).length,
+    nouveaux: e.lignes.filter(l => l.badges.includes("nouveau")).length, perimes: 0, sans_fiche: 0 };
+  $("#mq-puces").innerHTML = D.listes.filtres.filter(f => f.visible).map(f =>
+    `<button class="mq-puce ${e.filtre === f.id ? "on" : ""}" data-filtre="${esc(f.id)}">${esc(fmt(J["filtre.puce"], f.nom, nb[f.id] || 0))}</button>`).join("");
+  // liste
+  let html = "";
+  if (!vis.length) html = `<p style="padding:8px;color:var(--mtexte-eteint)">${esc(J["liste.aucun_resultat"])}</p>`;
+  else if (e.vue === "categories" && e.cat === "tous" && !e.cherche) {
+    const groupes = {};
+    vis.forEach(l => { const k = mqCatsDe(l)[0]; (groupes[k] = groupes[k] || []).push(l); });
+    Object.keys(groupes).sort((a, b) => (a === "__autres") - (b === "__autres") || nomCat(a).localeCompare(nomCat(b))).forEach(k => {
+      const g = groupes[k], replie = e.replis[k];
+      html += `<div class="mq-entete-cat" data-zone="entete_cat" data-grp="${esc(k)}" title="${esc(J["liste.entete_aide"])}"><span>${replie ? "▸" : "▾"}</span><span>${esc(nomCat(k))}</span><span class="n">${g.filter(l => l.actif).length}/${g.length}</span></div>`;
+      if (!replie) html += g.map(mqHtmlLigne).join("");
+    });
+  } else html = vis.map(mqHtmlLigne).join("");
+  $("#mq-liste").innerHTML = html;
+  // fiche
+  const f = FICHE[e.choisi];
+  if (!f) $("#mq-fiche").innerHTML = `<div class="mq-parchemin"><p>${esc(J["fiche.invite"])}</p></div>`;
+  else {
+    const dbl = (f.doublons || []).filter(d => FICHE[d]).map(d => FICHE[d].titre);
+    $("#mq-fiche").innerHTML = `<div class="mq-parchemin"><h4>${esc(f.titre)}</h4>
+      <p class="petit">${esc(J["fiche.type_principal"])}${f.utilite ? " · " + esc(fmt(J["fiche.utilite"], (D.listes.utilites.find(u => u.id === f.utilite) || {}).nom || f.utilite)) : ""}</p>
+      <h5>${esc(J["fiche.sert"])}</h5><p>${esc(f.resume)}</p>
+      ${f.commandes ? `<h5>${esc(J["fiche.commandes"])}</h5><p>${esc(f.commandes)}</p>` : ""}
+      ${f.remarques ? `<h5>${esc(J["fiche.remarques"])}</h5><p>${esc(f.remarques)}</p>` : ""}
+      ${dbl.length ? `<h5>${esc(J["fiche.doublons"])}</h5><p>${esc(dbl.join(", "))}</p>` : ""}
+      <h5>${esc(J["fiche.note"])}</h5><textarea placeholder="${esc(J["fiche.note_indice"])}"></textarea>
+      <div class="mq-boutons-fiche"><button class="mq-btn">${esc(J["bouton.modifier"])}</button><button class="mq-btn">${esc(J["bouton.reglages"])}</button><button class="mq-btn">${esc(J["bouton.curseforge"])}</button></div></div>`;
+  }
+  // pied
+  const n = enAttente();
+  $("#mq-attente").textContent = n ? fmt(J["pied.attente"], n) : J["pied.aucun"];
+  $("#mq-attente").classList.toggle("on", n > 0);
+  $("#mq-recharger").textContent = n ? fmt(J["bouton.recharger_n"], n) : J["bouton.recharger"];
+  $("#mq-recharger").classList.toggle("allume", n > 0);
+  $("#mq-annuler").textContent = e.pile.length ? fmt(J["bouton.annuler_n"], e.pile.length) : J["bouton.annuler"];
+  $("#mq-annuler").classList.toggle("eteint", !e.pile.length);
+  // réglages au-dessus
+  $("#mq-choix-theme").innerHTML = Object.keys(D.themes).map(k => `<button data-v="${k}" class="${e.theme === k ? "on" : ""}">${esc(J["theme." + k] || k)}</button>`).join("");
+  $("#mq-choix-fond").innerHTML = ["uni", "jeu"].map(k => `<button data-v="${k}" class="${e.fond === k ? "on" : ""}">${esc(J["fond_fiche." + k])}</button>`).join("");
+  $("#mq-choix-taille").innerHTML = ["petite", "normale", "grande"].map(k => `<button data-v="${k}" class="${e.taille === k ? "on" : ""}">${esc(J["taille_texte." + k])}</button>`).join("");
+}
+function expliquer(zone) {
+  const z = R.zones[zone]; if (!z) return;
+  $("#explique").innerHTML = `<h3>${esc(z.titre)}</h3><p>${c(z.texte)}</p>`;
+  $$("#zones-liste button").forEach(b => b.classList.toggle("on", b.dataset.zone === zone));
+}
+function viser(el) { $$("#mq .vise").forEach(x => x.classList.remove("vise")); if (el) { el.classList.add("vise"); setTimeout(() => el.classList.remove("vise"), 1800); } }
+function changer(id, valeur) {
+  const l = mqLigne(id); if (!l || l.actif === valeur) return;
+  mq.etat.pile.push({ id, avant: l.actif }); if (mq.etat.pile.length > 5) mq.etat.pile.shift();
+  l.actif = valeur;
+}
+function fermerMenu() { $("#mq-menu").classList.add("cache"); }
+$("#mq").addEventListener("click", e => {
+  fermerMenu();
+  if (e.target.closest("#mq-bulle")) return;
+  const zEl = e.target.closest("[data-zone]");
+  const zone = zEl ? zEl.dataset.zone : null;
+  const st = mq.etat;
+  const cat = e.target.closest("[data-cat]");
+  const puce = e.target.closest("[data-filtre]");
+  if (cat) { st.cat = cat.dataset.cat; }
+  else if (puce) { st.filtre = puce.dataset.filtre; }
+  else if (zone === "case") {
+    const l = mqLigne(zEl.dataset.id);
+    if (e.shiftKey && !l.actif) { changer(l.id, true); toast(fmt(U.maj_clic, FICHE[l.id].titre)); }
+    else changer(l.id, !l.actif);
+  }
+  else if (zone === "etoile") { const l = mqLigne(zEl.dataset.id); l.favori = !l.favori; }
+  else if (zone === "ligne") { st.choisi = zEl.dataset.id; }
+  else if (zone === "entete_cat") { const k = zEl.dataset.grp; st.replis[k] = !st.replis[k]; }
+  else if (zone === "fleche_g") { st.sansCats = !st.sansCats; }
+  else if (zone === "fleche_d") { st.sansFiche = !st.sansFiche; }
+  else if (zone === "tri") { st.tri = (st.tri + 1) % D.listes.tri.length; }
+  else if (zone === "vue") { st.vue = st.vue === "categories" ? "liste" : "categories"; }
+  else if (zone === "mini") { st.mini = !st.mini; }
+  else if (zone === "embleme") { const ks = Object.keys(D.themes); st.theme = ks[(ks.indexOf(st.theme) + 1) % ks.length]; stocker("mq-theme", st.theme); }
+  else if (zone === "annuler") { const p = st.pile.pop(); if (p) { mqLigne(p.id).actif = p.avant; toast(U.annule); } else toast(U.rien_a_annuler); }
+  else if (zone === "recharger") {
+    const n = enAttente();
+    if (!n) toast(U.rien_a_recharger);
+    else {
+      const v = document.createElement("div"); v.className = "mq-voile"; v.textContent = fmt(J["actions.recharge"], n); $("#mq").appendChild(v);
+      setTimeout(() => { v.remove(); st.lignes.forEach(l => { l.depart = l.actif; }); st.pile = []; mqRendre(); toast(U.recharge_fait); }, 1100);
+    }
+  }
+  else if (zone === "options") toast(U.options_maquette);
+  else if (zone === "fermer") toast(U.fermer_maquette);
+  else if (zone === "profils") toast(U.profils_maquette);
+  else if (zone === "antiseche") toast(U.antiseche_maquette);
+  if (zone) expliquer(zone);
+  if (zone !== "recherche") mqRendre();
+});
+$("#mq").addEventListener("contextmenu", e => {
+  const lg = e.target.closest(".mq-ligne"); const tri = e.target.closest("#mq-tri");
+  if (tri) { e.preventDefault(); toast(texteSeul(R.zones.tri.texte)); expliquer("tri"); return; }
+  if (!lg) return;
+  e.preventDefault();
+  const id = lg.dataset.id, l = mqLigne(id), f = FICHE[id];
+  const box = $("#mq").getBoundingClientRect();
+  const items = D.listes.menu.map((t, i) => (i === 0 && l.favori) ? J["menu.favori_retirer"] : t);
+  const menu = $("#mq-menu");
+  menu.innerHTML = `<div class="titre">${esc(f.titre)}</div>` + items.map((t, i) => `<div data-i="${i}">${esc(t)}</div>`).join("");
+  menu.style.left = Math.min(e.clientX - box.left, box.width - 230) + "px";
+  menu.style.top = Math.min(e.clientY - box.top, box.height - 260) + "px";
+  menu.classList.remove("cache");
+  menu.onclick = ev => {
+    ev.stopPropagation();
+    const it = ev.target.closest("[data-i]"); if (!it) return;
+    if (it.dataset.i === "0") l.favori = !l.favori;
+    fermerMenu(); mqRendre(); toast(fmt(U.menu_effet, it.textContent));
+  };
+  expliquer("menu");
+});
+document.addEventListener("click", e => { if (!e.target.closest("#mq")) fermerMenu(); });
+$("#mq-cherche").addEventListener("input", e => { mq.etat.cherche = e.target.value; mqRendre(); });
+$("#mq-cherche").addEventListener("focus", () => expliquer("recherche"));
+$(".reglages-mq").addEventListener("click", e => {
+  const b = e.target.closest("button[data-v]"); if (!b) return;
+  const p = b.parentElement.id, st = mq.etat;
+  if (p === "mq-choix-theme") { st.theme = b.dataset.v; stocker("mq-theme", st.theme); expliquer("embleme"); }
+  if (p === "mq-choix-fond") { st.fond = b.dataset.v; stocker("mq-fond", st.fond); expliquer("fiche"); }
+  if (p === "mq-choix-taille") { st.taille = b.dataset.v; stocker("mq-taille", st.taille); }
+  mqRendre();
+});
+$("#mq-raz").addEventListener("click", () => { visite.fin(); mqInitial(); mqRendre(); expliquerIndice(); });
+function expliquerIndice() { $("#explique").innerHTML = `<h3>${esc(R.zones.liste.titre)}</h3><p>${c(R.zones.liste.texte)}</p><p class="indice">${esc(U.zone_indice)}</p>`; }
+$("#zones-liste").innerHTML = Object.entries(R.zones).map(([k, z]) => `<button class="puce-btn" data-zone="${k}">${esc(z.titre)}</button>`).join("");
+$("#zones-liste").addEventListener("click", e => {
+  const b = e.target.closest("[data-zone]"); if (!b) return;
+  expliquer(b.dataset.zone);
+  const cible = $(`#mq [data-zone="${b.dataset.zone}"]`); viser(cible);
+});
+$("#gestes").innerHTML = `<tr><th>${esc(U.geste)}</th><th>${esc(U.effet)}</th></tr>` + R.gestes.map(([g, t]) => `<tr><td>${g}</td><td>${c(t)}</td></tr>`).join("");
+
+/* ---------- visite guidée sur la maquette ---------- */
+const visite = {
+  i: -1,
+  debut() { mq.etat.mini = false; mq.etat.sansCats = false; mq.etat.sansFiche = false; mqRendre(); this.i = 0; this.montrer(); },
+  fin() { this.i = -1; $("#mq-bulle").classList.add("cache"); $$("#mq .vise").forEach(x => x.classList.remove("vise")); },
+  montrer() {
+    const etapes = D.listes.visite, et = etapes[this.i];
+    const cible = document.getElementById(MQ.visite_cibles[et.id]);
+    $$("#mq .vise").forEach(x => x.classList.remove("vise"));
+    if (cible) cible.classList.add("vise");
+    const b = $("#mq-bulle"), dernier = this.i === etapes.length - 1;
+    b.innerHTML = `<h4>${esc(et.titre)}</h4><div>${esc(c(et.texte))}</div><div class="pied-bulle"><span class="n">${esc(fmt(J["visite.compteur"], this.i + 1, etapes.length))}</span>
+      <button class="mq-btn" data-v="passer">${esc(J["visite.passer"])}</button>${this.i ? `<button class="mq-btn" data-v="retour">${esc(J["visite.precedent"])}</button>` : ""}
+      <button class="mq-btn" data-v="suivant">${esc(dernier ? J["visite.fin"] : J["visite.suivant"])}</button></div>`;
+    b.classList.remove("cache");
+    const m = $("#mq").getBoundingClientRect(), r = cible ? cible.getBoundingClientRect() : m;
+    let x = r.left - m.left + r.width / 2 - 145, y = r.bottom - m.top + 8;
+    if (r.height > 150) y = r.top - m.top + 30;
+    else if (y + b.offsetHeight > m.height) y = r.top - m.top - b.offsetHeight - 8;
+    if (y < 0) y = 40;
+    b.style.left = Math.max(6, Math.min(x, m.width - 296)) + "px"; b.style.top = y + "px";
+    $("#explique").innerHTML = `<h3>${esc(et.titre)}</h3><p>${esc(c(et.texte))}</p>`;
+  }
+};
+$("#mq-bulle").addEventListener("click", e => {
+  const v = e.target.closest("[data-v]"); if (!v) return;
+  if (v.dataset.v === "passer") return visite.fin();
+  if (v.dataset.v === "retour") visite.i--;
+  else if (++visite.i >= D.listes.visite.length) { visite.fin(); return toast(U.fini); }
+  visite.montrer();
+});
+$("#mq-lancer-visite").addEventListener("click", () => visite.debut());
+
+/* =================================================================== FICHES */
+function rendreFiches() {
+  $("#parties").innerHTML = D.listes.parties.map(p => `<tr><td><b>${esc(p.nom)}</b>${p.actif ? "" : ` <span class="pastille">${esc(U.avance)}</span>`}</td><td>${c(p.texte)}</td></tr>`).join("");
+  $("#badges").innerHTML = D.listes.badges.map(b => `<tr><td><span class="pastille or">${esc(b.court)}</span></td><td>${c(b.texte)}</td></tr>`).join("");
+  $("#raisons").innerHTML = D.listes.raisons.map(r => `<span class="pastille">${esc(r)}</span>`).join("");
+  $("#utilites").innerHTML = D.listes.utilites.map(u => `<span class="pastille or">${esc(u.nom)}</span>`).join(" ");
+  const sel = $("#cat-categorie");
+  if (!sel.options.length) sel.innerHTML = `<option value="">${esc(U.toutes_categories)}</option>` + D.categories.filter(x => x.n).map(x => `<option value="${esc(x.id)}">${esc(x.nom)} (${x.n})</option>`).join("");
+  rendreCatalogue();
+}
+function rendreCatalogue() {
+  const q = $("#cat-cherche").value, cat = $("#cat-categorie").value;
+  const ls = D.fiches.filter(f => (!cat || f.categories.includes(cat)) && (!q || correspond(q, f.titre, f.id, f.resume, f.commandes, f.remarques, f.categories.map(nomCat).join(" "))));
+  $("#cat-compte").textContent = fmt(U.resultats, ls.length, D.fiches.length);
+  $("#catalogue").innerHTML = ls.length ? ls.map(f => `<div class="carte cliquable fiche-carte" data-fiche="${esc(f.id)}"><h3>${esc(f.titre)}</h3>
+    <div>${f.categories.map(k => `<span class="pastille">${esc(nomCat(k))}</span>`).join("")}${f.utilite ? `<span class="pastille or">${esc((D.listes.utilites.find(u => u.id === f.utilite) || {}).nom || f.utilite)}</span>` : ""}</div>
+    <p>${esc(f.resume)}</p></div>`).join("") : `<p class="vide">${esc(U.aucun)}</p>`;
+}
+$("#cat-cherche").addEventListener("input", rendreCatalogue);
+$("#cat-categorie").addEventListener("change", rendreCatalogue);
+$("#catalogue").addEventListener("click", e => {
+  const k = e.target.closest("[data-fiche]"); if (!k) return;
+  const f = FICHE[k.dataset.fiche];
+  const nomDe = id => (FICHE[id] ? FICHE[id].titre : id);
+  const m = document.createElement("div"); m.className = "parchemin-modal";
+  m.innerHTML = `<div class="feuille" role="dialog" aria-label="${esc(f.titre)}"><h3>${esc(f.titre)}</h3>
+    <div>${f.categories.map(x => `<span class="pastille">${esc(nomCat(x))}</span>`).join("")}${f.modules ? `<span class="pastille">${esc(fmt(U.modules, f.modules))}</span>` : ""}</div>
+    <h4>${esc(U.resume)}</h4><p>${esc(f.resume)}</p>
+    ${f.commandes ? `<h4>${esc(U.commandes_fiche)}</h4><p>${esc(f.commandes)}</p>` : ""}
+    ${f.remarques ? `<h4>${esc(U.remarques)}</h4><p>${esc(f.remarques)}</p>` : ""}
+    ${f.dependances.length ? `<h4>${esc(U.dependances)}</h4><p>${esc(f.dependances.join(", "))}</p>` : ""}
+    ${f.doublons.length ? `<h4>${esc(U.doublons)}</h4><p>${esc(f.doublons.map(nomDe).join(", "))}</p>` : ""}
+    ${f.lien ? `<p style="margin-top:1rem"><a href="${esc(f.lien)}" target="_blank" rel="noopener">${esc(U.lien)}</a></p>` : ""}
+    <p style="text-align:right"><button class="bouton">${esc(U.fermer)}</button></p></div>`;
+  m.addEventListener("click", ev => { if (ev.target === m || ev.target.closest("button")) m.remove(); });
+  document.addEventListener("keydown", function k2(ev) { if (ev.key === "Escape") { m.remove(); document.removeEventListener("keydown", k2); } });
+  document.body.appendChild(m);
+});
+
+/* =================================================================== PROFILS */
+function rendreProfils() {
+  $("#profils-grille").innerHTML = D.profils.map(p => `<div class="carte cliquable profil-carte" style="--couleur:${esc(p.couleur)}" data-profil="${esc(p.id)}">
+    <span class="ico">${esc(p.icone)}</span><h3>${esc(p.nom)}</h3><p>${esc(p.note)}</p>
+    <span class="pastille">${esc(p.virtuel ? U.profil_virtuel : fmt(U.profil_addons, p.addons.length))}</span></div>`).join("");
+  $("#profil-etapes").innerHTML = R.profil_etapes.map((t, i) => `<div class="pas"><span class="num">${i + 1}</span><div class="txt">${c(t)}</div></div>`).join("");
+  $("#profil-actions").innerHTML = D.profils_actions.map(a => `<tr><td><code>${esc(a.mot)}</code><br><span class="version">${esc(U.en_anglais)} : ${esc(a.mot_en)}</span></td>
+    <td>${c(a.texte)}${ligneCmd(a.exemple)}</td></tr>`).join("");
+}
+$("#profils-grille").addEventListener("click", e => {
+  const k = e.target.closest("[data-profil]"); if (!k) return;
+  const p = D.profils.find(x => x.id === k.dataset.profil), d = $("#profil-detail");
+  d.classList.remove("cache"); d.style.borderTop = `4px solid ${p.couleur}`;
+  d.innerHTML = `<h3>${esc(p.icone)} ${esc(p.nom)}</h3><p>${esc(p.note)}</p>
+    ${p.addons.length ? `<div class="chips">${p.addons.map(a => `<span class="pastille or">${esc(FICHE[a] ? FICHE[a].titre : a)}</span>`).join("")}</div>` : ""}
+    ${ligneCmd("/{c} profil " + p.nom)}`;
+  d.scrollIntoView({ behavior: "smooth", block: "nearest" });
+});
+
+/* =================================================================== COMMANDES */
+const cmdEtat = { groupe: "", choisie: relire("cmd-choisie", "profil") };
+function rendreCommandes() {
+  $("#cmd-groupes").innerHTML = [`<button class="puce-btn ${cmdEtat.groupe ? "" : "on"}" data-g="">${esc(U.toutes)}</button>`]
+    .concat(D.groupes_commandes.map(g => `<button class="puce-btn ${cmdEtat.groupe === g.id ? "on" : ""}" data-g="${esc(g.id)}">${esc(g.nom)}</button>`)).join("");
+  const q = $("#cmd-cherche").value;
+  const ls = D.commandes.filter(x => (!cmdEtat.groupe || x.groupe === cmdEtat.groupe) && (!q || correspond(q, x.nom, x.nom_en, x.desc, x.exemples.join(" "), texteSeul(x.plus))));
+  $("#cmd-compte").textContent = fmt(U.resultats, ls.length, D.commandes.length);
+  $("#cmd-liste").innerHTML = ls.length ? ls.map(x => `<button class="cmd-item ${cmdEtat.choisie === x.id ? "on" : ""}" data-cmd="${esc(x.id)}"><span class="n">/${esc(CMD)} ${esc(x.nom)}</span><span class="d">${esc(x.desc)}</span></button>`).join("")
+    : `<p class="vide">${esc(U.aucun)}</p>`;
+  rendreDetailCmd();
+}
+function rendreDetailCmd() {
+  const x = D.commandes.find(k => k.id === cmdEtat.choisie);
+  if (!x) { $("#cmd-detail").innerHTML = `<p class="vide">${esc(U.choisis_cmd)}</p>`; return; }
+  const g = D.groupes_commandes.find(k => k.id === x.groupe);
+  $("#cmd-detail").innerHTML = `<h3><code>/${esc(CMD)} ${esc(x.nom)}</code></h3><p>${esc(x.desc)}.</p>
+    ${g ? `<span class="pastille or">${esc(g.nom)}</span>` : ""} <span class="pastille">${esc(U.en_anglais)} : /${esc(CMD)} ${esc(x.nom_en)}</span>
+    ${x.exemples.length ? `<h3>${esc(U.exemples)}</h3>${x.exemples.map(ex => ligneCmd(ex)).join("")}` : ""}
+    ${x.plus ? `<h3>${esc(U.a_savoir)}</h3><p>${c(x.plus)}</p>` : ""}`;
+}
+$("#cmd-groupes").addEventListener("click", e => { const b = e.target.closest("[data-g]"); if (!b) return; cmdEtat.groupe = b.dataset.g; rendreCommandes(); });
+$("#cmd-cherche").addEventListener("input", rendreCommandes);
+$("#cmd-liste").addEventListener("click", e => { const b = e.target.closest("[data-cmd]"); if (!b) return; cmdEtat.choisie = b.dataset.cmd; stocker("cmd-choisie", cmdEtat.choisie); rendreCommandes(); if (window.innerWidth < 960) $("#cmd-detail").scrollIntoView({ behavior: "smooth", block: "nearest" }); });
+
+/* =================================================================== OPTIONS */
+const optEtat = { onglet: D.options.onglets[0].id, avances: relire("opt-avances", false) };
+function valeurOpt(e) {
+  if (e.type === "action") return `<span class="bouton discret" style="font-size:.72rem">${esc(e.label)}</span>`;
+  if (e.type === "bool") return `<span class="interrupteur ${e.defaut === U.oui ? "on" : ""}" title="${esc(U.valeur_depart)} : ${esc(e.defaut)}"></span>`;
+  if (e.type === "choix") return `<span class="choix-mini">${e.choix.map(ch => `<span class="${ch === e.defaut ? "on" : ""}">${esc(ch)}</span>`).join("")}</span>`;
+  return `<span>${esc(e.defaut)}</span>`;
+}
+function htmlOpt(e) {
+  const plus = [];
+  if (e.aide) plus.push(c(e.aide));
+  if (e.type !== "action") plus.push(`${esc(U.valeur_depart)} : <b>${esc(e.defaut)}</b>${e.bornes ? " · " + esc(fmt(U.bornes, ...e.bornes)) : ""}`);
+  if (e.chemin) plus.push(`${esc(U.technique)} : <code>${esc(e.chemin)}</code>`);
+  return `<div class="opt-el" tabindex="0"><div class="lab">${esc(e.type === "action" ? "" : e.label)}${e.avance ? `<span class="av">${esc(U.avance)}</span>` : ""}</div>
+    <div class="val">${valeurOpt(e)}</div><div class="plus">${plus.join("<br>")}</div></div>`;
+}
+function rendreOptions() {
+  $("#opt-avances").checked = optEtat.avances;
+  const q = $("#opt-cherche").value.trim();
+  $("#opt-onglets").innerHTML = D.options.onglets.map(o => `<button class="${!q && optEtat.onglet === o.id ? "on" : ""}" data-o="${esc(o.id)}">${esc(o.nom)}</button>`).join("");
+  let html = "", trouves = 0, total = 0;
+  D.options.onglets.forEach(o => {
+    if (!q && o.id !== optEtat.onglet) return;
+    o.cartes.forEach(carte => {
+      const els = carte.elements.filter(e => {
+        total++;
+        if (q) return correspond(q, e.label, e.aide || "", e.chemin || "", carte.nom, o.nom, (e.choix || []).join(" "));
+        return optEtat.avances || !e.avance;
+      });
+      const caches = q ? 0 : carte.elements.filter(e => e.avance).length;
+      trouves += els.length;
+      if (!els.length && q) return;
+      html += `<div class="carte opt-carte"><h3>${q ? esc(o.nom) + " › " : ""}${esc(carte.nom)}</h3>${els.map(htmlOpt).join("")}
+        ${!optEtat.avances && caches ? `<p class="version">${esc(fmt(U.caches, caches))}</p>` : ""}</div>`;
+    });
+  });
+  $("#opt-cartes").innerHTML = html || `<p class="vide">${esc(U.aucun)}</p>`;
+  $("#opt-compte").textContent = q ? fmt(U.resultats, trouves, total) : "";
+}
+$("#opt-onglets").addEventListener("click", e => { const b = e.target.closest("[data-o]"); if (!b) return; optEtat.onglet = b.dataset.o; $("#opt-cherche").value = ""; rendreOptions(); });
+$("#opt-avances").addEventListener("change", e => { optEtat.avances = e.target.checked; stocker("opt-avances", optEtat.avances); rendreOptions(); });
+$("#opt-cherche").addEventListener("input", rendreOptions);
+$("#opt-cartes").addEventListener("click", e => { const el = e.target.closest(".opt-el"); if (el) el.classList.toggle("ouvert"); });
+$("#opt-cartes").addEventListener("keydown", e => { if (e.key === "Enter" && e.target.classList.contains("opt-el")) e.target.classList.toggle("ouvert"); });
+
+/* =================================================================== DÉPANNAGE */
+const depEtat = { id: relire("symptome", R.depannage[0].id), faits: {} };
+function rendreDepannage() {
+  $("#symptomes").innerHTML = R.depannage.map(s => `<button class="${depEtat.id === s.id ? "on" : ""}" data-s="${esc(s.id)}">${esc(s.symptome)}</button>`).join("");
+  const s = R.depannage.find(x => x.id === depEtat.id) || R.depannage[0];
+  const faits = depEtat.faits[s.id] || [];
+  $("#symptome-etapes").innerHTML = `<h3>${esc(s.symptome)}</h3>` + s.etapes.map((t, i) =>
+    `<div class="pas ${faits.includes(i) ? "fait" : ""}" data-i="${i}"><span class="num">${faits.includes(i) ? "✓" : i + 1}</span><div class="txt">${c(t)}</div></div>`).join("")
+    + `<div class="stepper nav" style="border:0;padding:0;box-shadow:none;background:none"><button class="bouton discret" data-raz="1">${esc(U.recommencer)}</button></div>`;
+}
+$("#symptomes").addEventListener("click", e => { const b = e.target.closest("[data-s]"); if (!b) return; depEtat.id = b.dataset.s; stocker("symptome", depEtat.id); rendreDepannage(); });
+$("#symptome-etapes").addEventListener("click", e => {
+  if (e.target.closest("[data-copier]")) return;
+  if (e.target.closest("[data-raz]")) { depEtat.faits[depEtat.id] = []; return rendreDepannage(); }
+  const p = e.target.closest(".pas"); if (!p) return;
+  const i = +p.dataset.i, f = depEtat.faits[depEtat.id] = depEtat.faits[depEtat.id] || [];
+  f.includes(i) ? f.splice(f.indexOf(i), 1) : f.push(i);
+  rendreDepannage();
+});
+
+/* =================================================================== PERSONNALISER */
+const persoEtat = { id: R.perso[0].id, pas: 0 };
+function rendrePerso() {
+  $("#perso-choix").innerHTML = R.perso.map(p => `<button class="puce-btn ${persoEtat.id === p.id ? "on" : ""}" data-p="${esc(p.id)}">${esc(p.titre)}</button>`).join("");
+  const p = R.perso.find(x => x.id === persoEtat.id);
+  const ex = D.perso_ex[p.exemple];
+  $("#perso-contenu").innerHTML = `<h3>${esc(p.titre)}</h3><p>${c(p.intro)}</p><p><span class="pastille or">${esc(U.fichier)}</span> <code>${esc(p.fichier)}</code></p>
+    ${p.etapes.map((t, i) => `<div class="pas"><span class="num">${i + 1}</span><div class="txt">${c(t)}</div></div>`).join("")}
+    ${ex ? `<h3>${esc(U.exemple_reel)}</h3><pre><code>${esc(ex)}</code></pre>` : ""}
+    ${p.id === "texte" && D.perso_ex.texte_en ? `<pre><code>${esc(D.perso_ex.texte_en)}</code></pre>` : ""}`;
+}
+$("#perso-choix").addEventListener("click", e => { const b = e.target.closest("[data-p]"); if (!b) return; persoEtat.id = b.dataset.p; rendrePerso(); });
+function rendreApres() {
+  const n = R.apres.length, i = persoEtat.pas, et = R.apres[i];
+  $("#apres").innerHTML = `<div class="points">${R.apres.map((_, k) => `<span class="${k === i ? "on" : k < i ? "passe" : ""}" data-k="${k}">${k + 1}</span>`).join("")}</div>
+    <div class="version">${esc(fmt(U.etape, i + 1, n))}</div><h3>${esc(et.titre)}</h3><p>${c(et.texte)}</p>${et.cmd ? ligneCmd(et.cmd) : ""}
+    <div class="nav"><button class="bouton discret" data-n="-1" ${i ? "" : "disabled"}>${esc(U.precedent)}</button>
+    ${i < n - 1 ? `<button class="bouton" data-n="1">${esc(U.suivant)}</button>` : `<button class="bouton" data-n="0">${esc(U.recommencer)}</button>`}</div>`;
+}
+$("#apres").addEventListener("click", e => {
+  const k = e.target.closest("[data-k]"), b = e.target.closest("[data-n]");
+  if (k) persoEtat.pas = +k.dataset.k;
+  else if (b) persoEtat.pas = +b.dataset.n === 0 ? 0 : Math.max(0, Math.min(R.apres.length - 1, persoEtat.pas + (+b.dataset.n)));
+  else return;
+  rendreApres();
+});
+
+/* =================================================================== FAQ */
+function rendreFaq() {
+  const q = $("#faq-cherche").value;
+  const ls = R.faq.filter(f => !q || correspond(q, f.q, texteSeul(f.r)));
+  $("#faq-compte").textContent = q ? fmt(U.resultats, ls.length, R.faq.length) : "";
+  $("#faq-liste").innerHTML = ls.length ? ls.map(f => `<details class="faq" ${q ? "open" : ""}><summary>${esc(f.q)}</summary><div>${c(f.r)}</div></details>`).join("") : `<p class="vide">${esc(U.aucun)}</p>`;
+}
+$("#faq-cherche").addEventListener("input", rendreFaq);
+
+/* =================================================================== démarrage */
+function toutRendre() { mqRendre(); rendreFiches(); rendreProfils(); rendreCommandes(); rendreOptions(); rendreDepannage(); rendrePerso(); rendreApres(); rendreFaq(); rendrePremiersPas(); }
+mqInitial();
+choisirCmd(CMD);
+expliquerIndice();
+montrer(location.hash.slice(1));
+</script>
+</body>
+</html>

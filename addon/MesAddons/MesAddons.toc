@@ -1,0 +1,61 @@
+## Interface: 16001
+## Title: Mes Add-ons
+## Title-frFR: Mes Add-ons
+## Notes: Add-on manager with profiles, categories and a short sheet for every add-on.
+## Notes-frFR: Gestionnaire d'add-ons : profils, catégories et une fiche pour chaque add-on.
+## Author: Nykaro and Claude
+## Version: 1.0.0
+## SavedVariables: MesAddonsDB
+## SavedVariablesPerCharacter: MesAddonsPersoDB
+## X-Category: Utility
+
+Core\Espace.lua
+Donnees\Reglages.lua
+Donnees\Textes_frFR.lua
+Donnees\Textes_enUS.lua
+Donnees\Categories.lua
+Donnees\Fiches.lua
+Donnees\Profils.lua
+Donnees\Options.lua
+Core\Reglages.lua
+Core\Langue.lua
+Core\Sortie.lua
+Core\Journal.lua
+Core\Fiches.lua
+Core\Personnages.lua
+Core\Commandes.lua
+Fenetre\Style.lua
+Fenetre\Deroulant.lua
+Liste\Modele.lua
+Liste\Recherche.lua
+Liste\Barre.lua
+Liste\Menu.lua
+Fenetre\Cadre.lua
+Liste\Vue.lua
+Fiche\Modele.lua
+Fiche\Infobulle.lua
+Fiche\Parchemin.lua
+Fiche\Commande.lua
+Liste\Commande.lua
+Options\Appliquer.lua
+Options\Panneau.lua
+Options\Page.lua
+Erreurs\Capture.lua
+Erreurs\Sante.lua
+Erreurs\Fenetre.lua
+Erreurs\Commande.lua
+Profils\Modele.lua
+Profils\Interface.lua
+Profils\Situation.lua
+Profils\Commande.lua
+Actions\Modele.lua
+Actions\Commande.lua
+Actions\Connexion.lua
+Actions\Rapide.lua
+Aide\Modele.lua
+Aide\Fenetre.lua
+Aide\Visite.lua
+Aide\Commande.lua
+Fenetre\Acces.lua
+Diag\Commande.lua
+Core\Demarrage.lua
