@@ -206,7 +206,7 @@ IMG = {
 
 def page_options(L):
     X = TXT[L]
-    o = ["[%s](../%s/Options.md)" % ("🇫🇷 " + X["otherlink"] if L == "en" else "🇬🇧 " + X["otherlink"], "fr" if L == "en" else "en")]
+    o = ["[%s](../%s/Options.md)" % ("" + X["otherlink"] if L == "en" else "" + X["otherlink"], "fr" if L == "en" else "en")]
     o = ["> 🌐 " + o[0] + " · [🏠 " + ("Home" if L == "en" else "Accueil") + "](../Home.md)", "", "# " + X["opts"], "", X["head"], ""]
     o.append("> 📍 " + ("Open them with the **Options** button of the window, `/gam options`, or the game's Esc menu › Options › AddOns (`/gam options game`)."
                          if L == "en" else
@@ -218,7 +218,7 @@ def page_options(L):
         o.append("## " + {"fenetre": "🪟", "liste": "📋", "fiches": "📜", "profils": "🎒", "erreurs": "🐞"}[ong["id"]] + " " + T[L]["opt.onglet." + ong["id"]])
         o.append("")
         img = IMG[L].get(ong["id"], IMG["en"][ong["id"]])
-        o.append("![%s](../../../media/captures/%s.png)" % (T[L]["opt.onglet." + ong["id"]], img))
+        o.append("![%s](https://raw.githubusercontent.com/Squall98/GrimoireAddonManager/main/media/captures/%s.png)" % (T[L]["opt.onglet." + ong["id"]], img))
         o.append("")
         for gid in ong["groupes"]:
             g = groupes[gid]
@@ -256,7 +256,7 @@ def page_options(L):
 
 def page_commandes(L):
     X = TXT[L]
-    o = ["> 🌐 [%s](../%s/Commands.md)" % ("🇫🇷 " + X["otherlink"] if L == "en" else "🇬🇧 " + X["otherlink"], "fr" if L == "en" else "en") + " · [🏠 " + ("Home" if L == "en" else "Accueil") + "](../Home.md)", "",
+    o = ["> 🌐 [%s](../%s/Commands.md)" % ("" + X["otherlink"] if L == "en" else "" + X["otherlink"], "fr" if L == "en" else "en") + " · [🏠 " + ("Home" if L == "en" else "Accueil") + "](../Home.md)", "",
          "# " + X["ctitle"], "", X["cintro"], "", X["cn"].format(n=len(reg["sous_commandes"])), "",
          "| %s | %s |" % X["ccol"], "|---|---|"]
     for s in reg["sous_commandes"]:

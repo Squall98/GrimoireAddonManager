@@ -1,8 +1,8 @@
-> 🌐 [🇬🇧 Read in English](../en/The-window.md) · [🏠 Accueil](../Home.md)
+> 🌐 [Read in English](../en/The-window.md) · [🏠 Accueil](../Home.md)
 
 # 📖 La fenêtre
 
-![Filtres, tri et vue](../../../media/captures/gam-en-3-filter.png)
+![Filtres, tri et vue](https://raw.githubusercontent.com/Squall98/GrimoireAddonManager/main/media/captures/gam-en-3-filter.png)
 *La liste Filtre, le bouton de tri et le bouton de vue dans la barre du haut (capture anglaise).*
 
 ## 🧩 Les trois colonnes
@@ -18,7 +18,7 @@ Les **flèches « et »** du bandeau replient la colonne de gauche ou de droite 
 - **En-tête** : le nom, le nombre d'add-ons et combien sont allumés. Attrape-le pour déplacer la fenêtre ; tire le coin en bas à droite pour la redimensionner.
 - **Bouton de langue** (il affiche **EN** ou **FR**, la langue où tu passes) : un clic change la langue et recharge l'interface.
 
-![Bouton de langue](../../../media/captures/gam-en-wiki-language.png)
+![Bouton de langue](https://raw.githubusercontent.com/Squall98/GrimoireAddonManager/main/media/captures/gam-en-wiki-language.png)
 *La fenêtre en anglais, avec le bouton **FR** pour revenir au français.*
 
 - **Profils**, **Version mini**, **?** (antisèche) et **✕** pour fermer. **Options** est à droite de la barre, sous le titre.
@@ -39,7 +39,7 @@ La liste déroulante **Vue** propose :
   - `#pvp` trouve les add-ons étiquetés *pvp*.
   - Plusieurs mots marchent ensemble.
 
-![Le tri](../../../media/captures/gam-en-wiki-sort.png)
+![Le tri](https://raw.githubusercontent.com/Squall98/GrimoireAddonManager/main/media/captures/gam-en-wiki-sort.png)
 *Les choix de tri (capture anglaise).*
 
 ## ⭐ Favoris, étiquettes et badges
@@ -72,7 +72,7 @@ La liste déroulante **Vue** propose :
 | Clic droit sur le bouton de la minicarte | Menu : profils, recharger, dépannage, périmés |
 
 ## 📋 Le menu clic droit
-![Menu clic droit](../../../media/captures/gam-en-wiki-rightclick.png)
+![Menu clic droit](https://raw.githubusercontent.com/Squall98/GrimoireAddonManager/main/media/captures/gam-en-wiki-rightclick.png)
 
 Il propose : ajouter aux favoris / retirer, marquer en essai, marquer « à désinstaller », niveau d'utilité, marquer comme vu, étiquettes, **Verrouiller / Déverrouiller**, **Activer avec ses modules**, **Activer seulement celui-ci**, **Copier le lien**.
 
@@ -87,7 +87,7 @@ Les deux boutons « tout » s'annulent.
 ## 📱 Version mini
 Clique **Version mini** (ou `/gam mini`) : il ne reste que la liste, idéale pour cocher vite. Le même bouton, devenu **Version complète**, remet tout. La version mini garde la recherche, **Filtre**, **Options**, **Annuler** et **Recharger** ; le titre devient **GAM**.
 
-![Version mini](../../../media/captures/gam-fr-wiki-mini.png)
+![Version mini](https://raw.githubusercontent.com/Squall98/GrimoireAddonManager/main/media/captures/gam-fr-wiki-mini.png)
 *La version mini.*
 
 Suite : [Les fiches](Sheets.md).

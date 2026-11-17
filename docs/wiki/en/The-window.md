@@ -1,8 +1,8 @@
-> 🌐 [🇫🇷 Lire en français](../fr/The-window.md) · [🏠 Home](../Home.md)
+> 🌐 [Lire en français](../fr/The-window.md) · [🏠 Home](../Home.md)
 
 # 📖 The window
 
-![Filters, sort and view](../../../media/captures/gam-en-3-filter.png)
+![Filters, sort and view](https://raw.githubusercontent.com/Squall98/GrimoireAddonManager/main/media/captures/gam-en-3-filter.png)
 *Filter list, sort button and view button in the top bar.*
 
 ## 🧩 The three columns
@@ -18,7 +18,7 @@ The **arrows « and »** in the banner fold the left or the right column to give
 - **Header**: name, number of add-ons and how many are on. Drag it to move the window; drag the bottom-right corner to resize.
 - **Language button** (shows **FR** or **EN**, the language you switch to): one click changes the language and reloads the interface.
 
-![Language button](../../../media/captures/gam-en-wiki-language.png)
+![Language button](https://raw.githubusercontent.com/Squall98/GrimoireAddonManager/main/media/captures/gam-en-wiki-language.png)
 *The window in English, with the **FR** button to go back to French.*
 
 - **Profiles**, **Mini version**, **?** (cheat sheet) and **✕** to close. **Options** is at the right of the bar under the title.
@@ -39,7 +39,7 @@ The **View** drop-down list lets you pick:
   - `#pvp` finds the add-ons tagged *pvp*.
   - Several words work together.
 
-![Sort](../../../media/captures/gam-en-wiki-sort.png)
+![Sort](https://raw.githubusercontent.com/Squall98/GrimoireAddonManager/main/media/captures/gam-en-wiki-sort.png)
 *The sort choices.*
 
 ## ⭐ Favourites, tags and badges
@@ -72,7 +72,7 @@ The **View** drop-down list lets you pick:
 | Right-click the minimap button | Menu: profiles, reload, safe mode, outdated |
 
 ## 📋 The right-click menu
-![Right-click menu](../../../media/captures/gam-en-wiki-rightclick.png)
+![Right-click menu](https://raw.githubusercontent.com/Squall98/GrimoireAddonManager/main/media/captures/gam-en-wiki-rightclick.png)
 
 It offers: add to / remove from favourites, mark as trial, mark as “to remove”, usefulness level, mark as seen, tags, **Lock / Unlock**, **Enable with its modules**, **Enable only this one**, **Copy the link**.
 
@@ -87,7 +87,7 @@ Both “all” buttons can be undone.
 ## 📱 Mini version
 Click **Mini version** (or `/gam mini`): only the list stays, perfect for ticking quickly. The same button, now called **Full version**, brings everything back. The mini version keeps the search, **Filter**, **Options**, **Undo** and **Reload**; the title becomes **GAM**.
 
-![Mini version](../../../media/captures/gam-fr-wiki-mini.png)
+![Mini version](https://raw.githubusercontent.com/Squall98/GrimoireAddonManager/main/media/captures/gam-fr-wiki-mini.png)
 *The mini version (French capture).*
 
 Next: [The sheets](Sheets.md).

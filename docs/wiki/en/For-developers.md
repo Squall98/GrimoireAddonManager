@@ -1,4 +1,4 @@
-> 🌐 [🇫🇷 Lire en français](../fr/For-developers.md) · [🏠 Home](../Home.md)
+> 🌐 [Lire en français](../fr/For-developers.md) · [🏠 Home](../Home.md)
 
 # 🛠️ For developers
 
@@ -53,4 +53,4 @@ Copy `textes/enUS.json` to e.g. `textes/deDE.json` and translate the values (kee
 4. A line in `DESC` in `outils/fabriquer_wiki.py`, then run it to refresh [Options](Options.md).
 
 ## 📸 Screenshots
-In `media/captures/` (`gam-en-*.png`, `gam-fr-*.png`). Pages link them with relative paths like `../../../media/captures/gam-en-1-window.png`.
+In `media/captures/` (`gam-en-*.png`, `gam-fr-*.png`). Pages link them with relative paths like `https://raw.githubusercontent.com/Squall98/GrimoireAddonManager/main/media/captures/gam-en-1-window.png`.

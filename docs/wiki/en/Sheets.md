@@ -1,10 +1,10 @@
-> 🌐 [🇫🇷 Lire en français](../fr/Sheets.md) · [🏠 Home](../Home.md)
+> 🌐 [Lire en français](../fr/Sheets.md) · [🏠 Home](../Home.md)
 
 # 📜 Sheets and tooltips
 
 GAM ships with **102 sheets**: for each well-known add-on, what it does, its commands and what to know. You will never again wonder “what was this one for?”.
 
-![Tooltip](../../../media/captures/gam-en-2-tooltip.png)
+![Tooltip](https://raw.githubusercontent.com/Squall98/GrimoireAddonManager/main/media/captures/gam-en-2-tooltip.png)
 *Hover an add-on: a short summary.*
 
 ## 💬 The tooltip
@@ -34,7 +34,7 @@ Type in the note area (“Write your own note here…”). It is saved automatic
 - Maximum length: Options › Sheets (advanced).
 
 ## ✏️ Edit a sheet
-![Edit a sheet](../../../media/captures/gam-en-wiki-edit-sheet.png)
+![Edit a sheet](https://raw.githubusercontent.com/Squall98/GrimoireAddonManager/main/media/captures/gam-en-wiki-edit-sheet.png)
 
 Click **Edit sheet** under the sheet: change the text, commands and remarks. Your version wins over the shipped one. **Restore original** brings the original back.
 

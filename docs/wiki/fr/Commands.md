@@ -1,4 +1,4 @@
-> 🌐 [🇬🇧 Read in English](../en/Commands.md) · [🏠 Accueil](../Home.md)
+> 🌐 [Read in English](../en/Commands.md) · [🏠 Accueil](../Home.md)
 
 # ⌨️ Commandes
 

@@ -1,4 +1,4 @@
-> 🌐 [🇫🇷 Lire en français](../fr/Options.md) · [🏠 Home](../Home.md)
+> 🌐 [Lire en français](../fr/Options.md) · [🏠 Home](../Home.md)
 
 # ⚙️ Options
 
@@ -8,7 +8,7 @@ Everything below is generated from the add-on's data files. Options marked 🔧 
 
 ## 🪟 Window
 
-![Window](../../../media/captures/gam-en-wiki-options-window.png)
+![Window](https://raw.githubusercontent.com/Squall98/GrimoireAddonManager/main/media/captures/gam-en-wiki-options-window.png)
 
 ### The window
 
@@ -54,7 +54,7 @@ Everything below is generated from the add-on's data files. Options marked 🔧 
 
 ## 📋 List
 
-![List](../../../media/captures/gam-en-wiki-options-list.png)
+![List](https://raw.githubusercontent.com/Squall98/GrimoireAddonManager/main/media/captures/gam-en-wiki-options-list.png)
 
 ### List sort
 
@@ -133,7 +133,7 @@ Everything below is generated from the add-on's data files. Options marked 🔧 
 
 ## 📜 Sheets
 
-![Sheets](../../../media/captures/gam-en-wiki-options-sheets.png)
+![Sheets](https://raw.githubusercontent.com/Squall98/GrimoireAddonManager/main/media/captures/gam-en-wiki-options-sheets.png)
 
 ### Sheet and tooltip
 
@@ -154,7 +154,7 @@ Everything below is generated from the add-on's data files. Options marked 🔧 
 
 ## 🎒 Profiles
 
-![Profiles](../../../media/captures/gam-en-wiki-options-profiles.png)
+![Profiles](https://raw.githubusercontent.com/Squall98/GrimoireAddonManager/main/media/captures/gam-en-wiki-options-profiles.png)
 
 ### Profiles
 
@@ -187,7 +187,7 @@ Everything below is generated from the add-on's data files. Options marked 🔧 
 
 ## 🐞 Errors
 
-![Errors](../../../media/captures/gam-en-wiki-options-errors.png)
+![Errors](https://raw.githubusercontent.com/Squall98/GrimoireAddonManager/main/media/captures/gam-en-wiki-options-errors.png)
 
 ### Errors, memory and CPU
 

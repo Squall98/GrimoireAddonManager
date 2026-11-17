@@ -1,14 +1,14 @@
-<p align="center"><img src="../../media/logo.png" width="110" alt="Grimoire Addon Manager"></p>
+<p align="center"><img src="https://raw.githubusercontent.com/Squall98/GrimoireAddonManager/main/media/logo.png" width="110" alt="Grimoire Addon Manager"></p>
 
 <h1 align="center">📚 Grimoire Addon Manager (GAM) — Wiki</h1>
 
 <p align="center"><b>Choose your language · Choisis ta langue</b></p>
 
-<p align="center"><a href="en/Getting-started.md">🇬🇧 English</a> &nbsp;·&nbsp; <a href="fr/Getting-started.md">🇫🇷 Français</a></p>
+<p align="center"><a href="en/Getting-started.md">English</a> &nbsp;·&nbsp; <a href="fr/Getting-started.md">Français</a></p>
 
-![GAM](../../media/captures/gam-en-1-window.png)
+![GAM](https://raw.githubusercontent.com/Squall98/GrimoireAddonManager/main/media/captures/gam-en-1-window.png)
 
-## 🇬🇧 English
+## English
 | Page | What you will find |
 |---|---|
 | [🚀 Getting started](en/Getting-started.md) | Install, open, tick then Reload |
@@ -21,7 +21,7 @@
 | [❓ FAQ](en/FAQ.md) | Quick answers |
 | [🛠️ For developers](en/For-developers.md) | Repository, data files, tools |
 
-## 🇫🇷 Français
+## Français
 | Page | Ce que tu y trouves |
 |---|---|
 | [🚀 Prise en main](fr/Getting-started.md) | Installer, ouvrir, cocher puis Recharger |

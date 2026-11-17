@@ -1,4 +1,4 @@
-> 🌐 [🇬🇧 Read in English](../en/For-developers.md) · [🏠 Accueil](../Home.md)
+> 🌐 [Read in English](../en/For-developers.md) · [🏠 Accueil](../Home.md)
 
 # 🛠️ Pour les développeurs
 
@@ -53,4 +53,4 @@ Copie `textes/enUS.json` en, par exemple, `textes/deDE.json` et traduis les vale
 4. Une ligne dans `DESC` de `outils/fabriquer_wiki.py`, puis lance-le pour rafraîchir les [Options](Options.md).
 
 ## 📸 Captures
-Dans `media/captures/` (`gam-en-*.png`, `gam-fr-*.png`). Les pages les relient par des chemins relatifs comme `../../../media/captures/gam-fr-1-fiche.png`.
+Dans `media/captures/` (`gam-en-*.png`, `gam-fr-*.png`). Les pages les relient par des chemins relatifs comme `https://raw.githubusercontent.com/Squall98/GrimoireAddonManager/main/media/captures/gam-fr-1-fiche.png`.

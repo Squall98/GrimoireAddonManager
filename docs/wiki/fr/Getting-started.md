@@ -1,8 +1,8 @@
-> 🌐 [🇬🇧 Read in English](../en/Getting-started.md) · [🏠 Accueil](../Home.md)
+> 🌐 [Read in English](../en/Getting-started.md) · [🏠 Accueil](../Home.md)
 
 # 🚀 Prise en main
 
-![La fenêtre de GAM](../../../media/captures/gam-en-1-window.png)
+![La fenêtre de GAM](https://raw.githubusercontent.com/Squall98/GrimoireAddonManager/main/media/captures/gam-en-1-window.png)
 *La fenêtre Grimoire : les catégories à gauche, tes add-ons au milieu, la fiche à droite.*
 
 ## 📥 Installer
@@ -32,7 +32,7 @@ Au choix :
 - Clique **Profils** en haut pour changer d'un coup tout un jeu d'add-ons ([Profils](Profiles.md)).
 - Clique **?** en haut pour l'antisèche de toutes les commandes ; tape `/gam visite` pour la visite guidée en 5 bulles.
 
-![La visite guidée](../../../media/captures/gam-en-wiki-tour.png)
+![La visite guidée](https://raw.githubusercontent.com/Squall98/GrimoireAddonManager/main/media/captures/gam-en-wiki-tour.png)
 *La visite guidée montre les parties principales de la fenêtre en 5 bulles.*
 
 Suite : [La fenêtre](The-window.md).

@@ -1,4 +1,4 @@
-> 🌐 [🇫🇷 Lire en français](../fr/Commands.md) · [🏠 Home](../Home.md)
+> 🌐 [Lire en français](../fr/Commands.md) · [🏠 Home](../Home.md)
 
 # ⌨️ Commands
 

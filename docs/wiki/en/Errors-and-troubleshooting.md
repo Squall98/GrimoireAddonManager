@@ -1,8 +1,8 @@
-> 🌐 [🇫🇷 Lire en français](../fr/Errors-and-troubleshooting.md) · [🏠 Home](../Home.md)
+> 🌐 [Lire en français](../fr/Errors-and-troubleshooting.md) · [🏠 Home](../Home.md)
 
 # 🐞 Errors and troubleshooting
 
-![Lua errors in detail](../../../media/captures/gam-en-wiki-options-errors.png)
+![Lua errors in detail](https://raw.githubusercontent.com/Squall98/GrimoireAddonManager/main/media/captures/gam-en-wiki-options-errors.png)
 *The Errors tab of the options.*
 
 ## 🐞 The error window

@@ -1,4 +1,4 @@
-> 🌐 [🇫🇷 Lire en français](../fr/FAQ.md) · [🏠 Home](../Home.md)
+> 🌐 [Lire en français](../fr/FAQ.md) · [🏠 Home](../Home.md)
 
 # ❓ Frequently asked questions
 

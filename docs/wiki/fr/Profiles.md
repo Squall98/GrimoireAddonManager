@@ -1,10 +1,10 @@
-> 🌐 [🇬🇧 Read in English](../en/Profiles.md) · [🏠 Accueil](../Home.md)
+> 🌐 [Read in English](../en/Profiles.md) · [🏠 Accueil](../Home.md)
 
 # 🎒 Les profils
 
 Un profil est une liste d'add-ons à allumer ensemble. Les profils sont communs à tous tes personnages ; en l'appliquant tu choisis **Ce personnage** ou **Tous les personnages**.
 
-![La fenêtre des profils](../../../media/captures/gam-fr-wiki-profils.png)
+![La fenêtre des profils](https://raw.githubusercontent.com/Squall98/GrimoireAddonManager/main/media/captures/gam-fr-wiki-profils.png)
 *La fenêtre des profils : la liste à gauche, ce que le profil allume, et ce qui change.*
 
 ## 🎁 Les profils prêts

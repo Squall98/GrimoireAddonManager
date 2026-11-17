@@ -1,10 +1,10 @@
-> 🌐 [🇫🇷 Lire en français](../fr/Profiles.md) · [🏠 Home](../Home.md)
+> 🌐 [Lire en français](../fr/Profiles.md) · [🏠 Home](../Home.md)
 
 # 🎒 Profiles
 
 A profile is a list of add-ons to turn on together. Profiles are shared by all your characters; when you apply one you choose **This character** or **All characters**.
 
-![Profiles window](../../../media/captures/gam-en-4-profiles.png)
+![Profiles window](https://raw.githubusercontent.com/Squall98/GrimoireAddonManager/main/media/captures/gam-en-4-profiles.png)
 *The profiles window: the list on the left, what the profile turns on, and what changes.*
 
 ## 🎁 Ready-made profiles

@@ -1,10 +1,10 @@
-> 🌐 [🇬🇧 Read in English](../en/Sheets.md) · [🏠 Accueil](../Home.md)
+> 🌐 [Read in English](../en/Sheets.md) · [🏠 Accueil](../Home.md)
 
 # 📜 Les fiches et l'infobulle
 
 GAM livre **102 fiches** : pour chaque add-on connu, à quoi il sert, ses commandes et ce qu'il faut savoir. Plus jamais « il sert à quoi, celui-là ? ».
 
-![Une fiche](../../../media/captures/gam-fr-1-fiche.png)
+![Une fiche](https://raw.githubusercontent.com/Squall98/GrimoireAddonManager/main/media/captures/gam-fr-1-fiche.png)
 *Une fiche, à droite de la liste.*
 
 ## 💬 L'infobulle
@@ -34,7 +34,7 @@ Tape dans la zone de note (« Écris ici ta note perso… »). Elle est gardée 
 - Longueur maximale : Options › Fiches (avancé).
 
 ## ✏️ Modifier une fiche
-![Modifier une fiche](../../../media/captures/gam-en-wiki-edit-sheet.png)
+![Modifier une fiche](https://raw.githubusercontent.com/Squall98/GrimoireAddonManager/main/media/captures/gam-en-wiki-edit-sheet.png)
 
 Clique **Modifier la fiche** sous la fiche : change le texte, les commandes et les remarques. Ta version passe avant celle livrée. **Rétablir l'original** revient à la version de départ.
 

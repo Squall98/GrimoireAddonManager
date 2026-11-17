@@ -1,8 +1,8 @@
-> 🌐 [🇬🇧 Read in English](../en/Errors-and-troubleshooting.md) · [🏠 Accueil](../Home.md)
+> 🌐 [Read in English](../en/Errors-and-troubleshooting.md) · [🏠 Accueil](../Home.md)
 
 # 🐞 Erreurs et dépannage
 
-![Les erreurs Lua en détail](../../../media/captures/gam-fr-4-erreurs.png)
+![Les erreurs Lua en détail](https://raw.githubusercontent.com/Squall98/GrimoireAddonManager/main/media/captures/gam-fr-4-erreurs.png)
 *La fenêtre des erreurs.*
 
 ## 🐞 La fenêtre des erreurs

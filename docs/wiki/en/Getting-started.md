@@ -1,8 +1,8 @@
-> 🌐 [🇫🇷 Lire en français](../fr/Getting-started.md) · [🏠 Home](../Home.md)
+> 🌐 [Lire en français](../fr/Getting-started.md) · [🏠 Home](../Home.md)
 
 # 🚀 Getting started
 
-![The GAM window](../../../media/captures/gam-en-1-window.png)
+![The GAM window](https://raw.githubusercontent.com/Squall98/GrimoireAddonManager/main/media/captures/gam-en-1-window.png)
 *The Grimoire window: categories on the left, your add-ons in the middle, the sheet on the right.*
 
 ## 📥 Install
@@ -32,7 +32,7 @@ Pick whichever you like:
 - Press **Profiles** at the top to switch a whole set of add-ons at once ([Profiles](Profiles.md)).
 - Press **?** at the top for the cheat sheet of every command; type `/gam tour` for the 5-bubble guided tour.
 
-![The guided tour](../../../media/captures/gam-en-wiki-tour.png)
+![The guided tour](https://raw.githubusercontent.com/Squall98/GrimoireAddonManager/main/media/captures/gam-en-wiki-tour.png)
 *The guided tour shows the main parts of the window in 5 bubbles.*
 
 Next: [The window](The-window.md).
