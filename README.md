@@ -6,7 +6,16 @@
 
 <p align="center"><a href="#-english">English</a> · <a href="#-français">Français</a> · <a href="https://www.curseforge.com/wow/addons/grimoire-addon-manager">CurseForge</a> · MIT</p>
 
-<!-- CAPTURES -->
+<p align="center"><img src="media/captures/gam-en-1-window.png" width="860" alt="Grimoire Addon Manager"></p>
+
+<table>
+<tr><td align="center"><img src="media/captures/gam-en-2-tooltip.png" width="420"><br><sub>A summary on hover · <i>Un résumé au survol</i></sub></td><td align="center"><img src="media/captures/gam-fr-1-fiche.png" width="420"><br><sub>A sheet for every add-on · <i>Une fiche par add-on</i></sub></td></tr>
+<tr><td align="center"><img src="media/captures/gam-en-3-filter.png" width="420"><br><sub>Filters, sort and view · <i>Filtres, tri et vue</i></sub></td><td align="center"><img src="media/captures/gam-en-4-profiles.png" width="420"><br><sub>Profiles · <i>Les profils</i></sub></td></tr>
+<tr><td align="center"><img src="media/captures/gam-fr-2-options.png" width="420"><br><sub>Options, everyday settings first · <i>Options, l'essentiel d'abord</i></sub></td><td align="center"><img src="media/captures/gam-en-5-cheatsheet.png" width="420"><br><sub>Every command in one place · <i>Toutes les commandes</i></sub></td></tr>
+<tr><td align="center"><img src="media/captures/gam-fr-4-erreurs.png" width="420"><br><sub>Lua errors with full details · <i>Les erreurs Lua en détail</i></sub></td><td align="center"><img src="media/captures/gam-fr-3-alliance.png" width="420"><br><sub>Horde or Alliance colours · <i>Couleurs Horde ou Alliance</i></sub></td></tr>
+</table>
+
+<p align="center"><a href="https://github.com/Squall98/GrimoireAddonManager/wiki">📚 Wiki (English · Français)</a></p>
 
 # 🌐 English
 **Grimoire Addon Manager (GAM)** puts all your add-ons in one grimoire-style window, in your faction's colours. Turn them on and off in a click, switch whole sets with profiles, and never forget again what an add-on is for: every add-on has its own little sheet.
