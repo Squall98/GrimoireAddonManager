@@ -161,6 +161,17 @@ function B.majChamp()
 	if vide then B.indice:Show() B.effacer:Hide() else B.indice:Hide() B.effacer:Show() end
 end
 
+-- Version mini : on garde la recherche, Filtre et Options (Vue et Tri restent dans les options) ; ne change que des
+-- points d'attache au changement de mode, jamais pendant un redimensionnement.
+function B.disposer(mini)
+	if not B.cadre then return end
+	local L = cfg()
+	B.vue:SetShown(not mini)
+	B.tri:SetShown(not mini)
+	B.filtreBouton:ClearAllPoints()
+	B.filtreBouton:SetPoint("RIGHT", mini and B.options or B.vue, "LEFT", -L.ecart, 0)
+end
+
 -- Textes des trois listes déroulantes (la barre garde toujours la même hauteur).
 function B.rafraichir()
 	if not B.cadre then return end

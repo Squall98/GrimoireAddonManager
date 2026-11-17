@@ -94,4 +94,20 @@ T.test("migration : l'ancien fond de fiche « jeu » passe une fois sur « uni �
 	T.sans_erreur()
 end)
 
+T.test("bouton de langue de la fenêtre : affiche la langue suivante, la choisit et recharge l'interface", function(B)
+	local ns = B.demarrer({ locale = "frFR" })
+	ns.Fenetre.ouvrir()
+	local b = ns.Fenetre.boutonLangue
+	T.eq(b.etiquette:GetText(), "EN", "en français, le bouton propose l'anglais")
+	local avant = B.rechargements
+	b:Click()
+	T.eq(ns.Reglages.lire("langue.choix"), "enUS")
+	T.eq(B.rechargements, avant + 1, "l'interface se recharge")
+	ns = B.recharger()
+	ns.Fenetre.ouvrir()
+	T.eq(ns.Fenetre.boutonLangue.etiquette:GetText(), "FR", "en anglais, il propose le français")
+	T.eq(ns.Fenetre.titre:GetText(), "Grimoire Addon Manager")
+	T.sans_erreur()
+end)
+
 T.fin()

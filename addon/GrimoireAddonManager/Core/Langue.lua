@@ -12,6 +12,23 @@ function L.disponibles()
 	return liste
 end
 
+-- Langue suivante (bouton de la fenêtre) : celle qui vient après la langue affichée, dans l'ordre des disponibles.
+function L.suivante()
+	local liste, actuelle = L.disponibles(), L.code()
+	for i, code in ipairs(liste) do
+		if code == actuelle then return liste[i % #liste + 1] end
+	end
+	return liste[1]
+end
+
+-- Passe à la langue suivante puis recharge l'interface (tous les textes, y compris ceux posés à la construction).
+function L.basculer()
+	local code = L.suivante()
+	ns.Reglages.ecrire("langue.choix", code)
+	ns.Journal.ecrire("info", "journal.langue", code)
+	ns.Liste.recharger()
+end
+
 -- Code de langue réellement utilisé (ex. "frFR").
 function L.code()
 	local dispo = reglages().disponibles

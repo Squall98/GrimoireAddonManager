@@ -29,7 +29,8 @@
    "optlangue.frFR",
    "optlangue.enUS",
    "fiche.partie.badges",
-   "nom"
+   "nom",
+   "nom_court"
   ],
   "mots_francais": [
    "le",

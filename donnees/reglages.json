@@ -22,8 +22,22 @@
     ],
     "vers": [
      "mesaddons",
+     "gam",
+     "maa"
+    ]
+   },
+   {
+    "id": "commande_gam_en_avant_1_2_0",
+    "chemin": "commandes.liste",
+    "de": [
+     "mesaddons",
      "maa",
      "gam"
+    ],
+    "vers": [
+     "mesaddons",
+     "gam",
+     "maa"
     ]
    }
   ]
@@ -39,6 +53,10 @@
     "nom": "English",
     "fiche": "en"
    }
+  },
+  "bouton": {
+   "frFR": "FR",
+   "enUS": "EN"
   }
  },
  "sous_commandes": [
@@ -89,8 +107,8 @@
   "commandes": {
    "liste": [
     "mesaddons",
-    "maa",
-    "gam"
+    "gam",
+    "maa"
    ],
    "sans_argument": "ouvrir"
   },
@@ -284,18 +302,18 @@
     "h": 480
    },
    "compacte": {
-    "l": 600,
-    "h": 420
+    "l": 660,
+    "h": 440
    }
   },
   "taille_repli": "grande",
   "taille_mini": {
-   "l": 360,
-   "h": 480
+   "l": 660,
+   "h": 520
   },
   "taille_min": {
-   "l": 320,
-   "h": 280
+   "l": 660,
+   "h": 300
   },
   "hauteur_entete": 54,
   "hauteur_pied": 44,
@@ -746,7 +764,7 @@
    "largeur_pas": 24,
    "largeur_valeur": 60,
    "retrait": 8,
-   "hauteur_commandes": 74,
+   "hauteur_commandes": 96,
    "niveau_volet": 30,
    "suggestions_suffixes": [
     "2",
@@ -939,7 +957,8 @@
    "ecart_separe": 4,
    "taille_fleche": 12,
    "fleche": "Interface\\ChatFrame\\ChatFrameExpandArrow"
-  }
+  },
+  "largeur_bouton_langue": 34
  },
  "profils": {
   "id_tout": "@tout",

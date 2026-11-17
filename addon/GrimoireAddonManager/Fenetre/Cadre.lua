@@ -109,6 +109,19 @@ function F.disposer()
 	liste:SetPoint("BOTTOMRIGHT", fiche, "BOTTOMLEFT", sansFiche and 0 or -d.ecart, 0)
 	if sansCats then cats:Hide() else cats:Show() end
 	if sansFiche then fiche:Hide() else fiche:Show() end
+	-- version mini : seulement l'essentiel (barre : recherche + Filtre + Options ; pied : Annuler + Recharger)
+	if F.toutActiver then
+		F.toutActiver:SetShown(not mini)
+		F.toutDesactiver:SetShown(not mini)
+		F.texteAttente:ClearAllPoints()
+		if mini then
+			F.texteAttente:SetPoint("LEFT", F.pied, "LEFT", 10, 0)
+		else
+			F.texteAttente:SetPoint("LEFT", F.toutDesactiver, "RIGHT", 12, 0)
+		end
+		F.texteAttente:SetPoint("RIGHT", F.annuler, "LEFT", -8, 0)
+	end
+	if ns.Barre.disposer then ns.Barre.disposer(mini) end
 	if ns.Vue.pret then ns.Vue.majReplis() end
 	if ns.Diag and ns.Diag.tracer then ns.Diag.tracer("disposer") end
 end
@@ -163,6 +176,18 @@ local function construireEntete(f)
 		F.boutonAide = ns.AideFenetre.brancher(entete, F.croix)
 		avant = F.boutonAide
 	end
+	-- bouton de langue (affiche la langue où l'on passe : « EN » quand la fenêtre est en français)
+	F.boutonLangue = S.bouton(entete, d.largeur_bouton_langue, d.hauteur_bouton)
+	F.boutonLangue:SetPoint("RIGHT", avant, "LEFT", -8, 0)
+	F.boutonLangue:SetScript("OnClick", function() ns.Langue.basculer() end)
+	F.boutonLangue:HookScript("OnEnter", function(self)
+		GameTooltip:SetOwner(self, "ANCHOR_BOTTOM")
+		GameTooltip:ClearLines()
+		GameTooltip:AddLine(ns.T("fenetre.langue_aide", ns.Langue.nom(ns.Langue.suivante())), 1, 1, 1, true)
+		GameTooltip:Show()
+	end)
+	F.boutonLangue:HookScript("OnLeave", function() GameTooltip:Hide() end)
+	avant = F.boutonLangue
 	F.boutonMode = S.bouton(entete, d.largeur_bouton_mode, d.hauteur_bouton)
 	F.boutonMode:SetPoint("RIGHT", avant, "LEFT", -8, 0)
 	F.boutonMode:SetScript("OnClick", function() F.definirMini(F.mode() ~= "mini") end)
@@ -310,13 +335,14 @@ function F.rafraichir()
 	if not F.cadre then return end
 	local d = ui()
 	local mini = F.mode() == "mini"
-	F.titre:SetText(ns.T("nom"))
+	F.titre:SetText(ns.T(mini and "nom_court" or "nom"))
 	local total, actifs = #ns.Liste.entrees(), 0
 	for _, e in ipairs(ns.Liste.entrees()) do
 		if ns.Liste.actif(e.nom) then actifs = actifs + 1 end
 	end
 	F.sousTitre:SetText(ns.T("fenetre.sous_titre", total, actifs))
 	F.boutonMode:Texte(ns.T(mini and "fenetre.vers_complet" or "fenetre.vers_mini"))
+	F.boutonLangue:Texte(ns.donnees.reglages.langue.bouton[ns.Langue.suivante()] or ns.Langue.suivante())
 	F.toutActiver:Texte(ns.T("bouton.tout_activer"))
 	F.toutDesactiver:Texte(ns.T("bouton.tout_desactiver"))
 	local en_attente = ns.Liste.enAttente()

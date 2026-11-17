@@ -42,26 +42,26 @@ T.test("les commandes de ce gestionnaire sont toutes dans l'antisèche, une fois
 	local vus = {}
 	for _, l in ipairs(liste) do
 		if l.type == "cmd" then
-			T.vrai(l.cmd:find("^/maa "), "écrite avec la commande du joueur : " .. l.cmd)
+			T.vrai(l.cmd:find("^/gam "), "écrite avec la commande du joueur : " .. l.cmd)
 			T.faux(vus[l.cmd], "en double : " .. l.cmd)
 			vus[l.cmd] = true
 		end
 	end
 	for _, id in ipairs(ns.donnees.reglages.sous_commandes) do
-		T.vrai(vus["/maa " .. ns.T("sous." .. id .. ".nom")], "manque : " .. id)
+		T.vrai(vus["/gam " .. ns.T("sous." .. id .. ".nom")], "manque : " .. id)
 	end
-	T.vrai(vus["/maa antiseche"] and vus["/maa visite"], "les deux nouvelles y sont")
+	T.vrai(vus["/gam antiseche"] and vus["/gam visite"], "les deux nouvelles y sont")
 end)
 
 T.test("la commande affichée est la plus courte de celles qui marchent (une autre est prise par un autre add-on)", function(B)
 	local ns = B.demarrer()
-	T.eq(ns.Aide.principale(), "maa")
-	_G.SLASH_AUTRE1 = "/maa"
+	T.eq(ns.Aide.principale(), "gam")
+	_G.SLASH_AUTRE1 = "/gam"
 	_G.SlashCmdList.AUTRE = function() end
 	ns.Commandes.enregistrer()
-	T.eq(ns.Aide.principale(), "gam", "/maa prise : la plus courte qui reste est /gam")
-	T.vrai(trouver(lignes_de(ns, "moi"), "/gam profil"))
-	T.faux(trouver(lignes_de(ns, "moi"), "/maa profil"))
+	T.eq(ns.Aide.principale(), "maa", "/gam prise : la plus courte qui reste est /maa")
+	T.vrai(trouver(lignes_de(ns, "moi"), "/maa profil"))
+	T.faux(trouver(lignes_de(ns, "moi"), "/gam profil"))
 	_G.SLASH_AUTRE1, _G.SlashCmdList.AUTRE = nil, nil
 end)
 
@@ -70,7 +70,7 @@ T.test("les commandes des add-ons viennent des fiches, avec les add-ons éteints
 	local tout = lignes_de(ns, "addons")
 	T.vrai(trouver(tout, "/bgr"), "Baganator éteint mais montré")
 	T.vrai(trouver(tout, "/bgr").eteint, "grisé")
-	T.faux(trouver(tout, "/maa profil"), "portée « add-ons » : pas les nôtres")
+	T.faux(trouver(tout, "/gam profil"), "portée « add-ons » : pas les nôtres")
 	ns.Reglages.ecrire("aide.montrer_eteints", false)
 	T.faux(trouver(lignes_de(ns, "addons"), "/bgr"), "caché si le réglage le demande")
 end)
@@ -104,16 +104,16 @@ T.test("la recherche garde les commandes qui correspondent, sans tenir compte de
 	local tout, total_tout = lignes_de(ns, "tout")
 	local l, total = lignes_de(ns, "tout", "PROFIL")
 	T.vrai(total > 0 and total < total_tout, "filtrée")
-	T.vrai(trouver(l, "/maa profil"))
-	T.faux(trouver(l, "/maa erreurs"))
+	T.vrai(trouver(l, "/gam profil"))
+	T.faux(trouver(l, "/gam erreurs"))
 	-- un groupe entier si son titre correspond
 	local g, tg = lignes_de(ns, "moi", "Erreurs et mesures")
-	T.vrai(trouver(g, "/maa erreurs") and trouver(g, "/maa cpu"), "groupe entier")
+	T.vrai(trouver(g, "/gam erreurs") and trouver(g, "/gam cpu"), "groupe entier")
 	local rien, zero = lignes_de(ns, "tout", "zzzxqj")
 	T.eq(zero, 0)
 	T.eq(#rien, 0)
 	-- accents ignorés
-	T.vrai(trouver(lignes_de(ns, "tout", "antiseche"), "/maa antiseche"))
+	T.vrai(trouver(lignes_de(ns, "tout", "antiseche"), "/gam antiseche"))
 	T.vrai(select(2, lignes_de(ns, "tout", "quêtes")) == select(2, lignes_de(ns, "tout", "quetes")), "accents ignorés")
 end)
 
@@ -122,13 +122,13 @@ T.test("l'antisèche s'ouvre, se remplit, et un clic écrit la commande dans le 
 	local ns = B.demarrer()
 	local W = ns.AideFenetre
 	ns.Commandes.executer("antiseche")
-	T.vrai(W.estOuverte(), "ouverte par /maa antiseche")
+	T.vrai(W.estOuverte(), "ouverte par /gam antiseche")
 	T.vrai(#W.donnees > 0)
 	T.eq(W.donnees[1].type, "groupe")
-	local l = trouver(W.donnees, "/maa profil")
+	local l = trouver(W.donnees, "/gam profil")
 	W.cliquer(l, false)
-	T.eq(B.chat_saisie, "/maa profil ")
-	T.vrai(W.message:GetText():find("/maa profil", 1, true), "message dans la fenêtre")
+	T.eq(B.chat_saisie, "/gam profil ")
+	T.vrai(W.message:GetText():find("/gam profil", 1, true), "message dans la fenêtre")
 	-- clic sur une vraie ligne de la page : la commande en doré, sa description dessous
 	local r = W.lignesVisibles()[1]
 	T.vrai(r and r.ligne.type == "cmd", "une ligne de commande montrée")
@@ -146,15 +146,15 @@ T.test("Maj + clic lance la commande tout de suite (réglable)", function(B)
 	local W = ns.AideFenetre
 	W.ouvrir()
 	local avant = ns.Fenetre.mode()
-	W.cliquer(trouver(W.donnees, "/maa mini"), true)
-	T.vrai(ns.Fenetre.mode() ~= avant, "/maa mini a été lancée")
+	W.cliquer(trouver(W.donnees, "/gam mini"), true)
+	T.vrai(ns.Fenetre.mode() ~= avant, "/gam mini a été lancée")
 	T.eq(B.chat_saisie, nil, "rien écrit dans le chat")
 	-- réglage coupé : Maj + clic écrit comme un clic simple
 	ns.Reglages.ecrire("aide.executer_maj", false)
 	local mode = ns.Fenetre.mode()
-	W.cliquer(trouver(W.donnees, "/maa mini"), true)
+	W.cliquer(trouver(W.donnees, "/gam mini"), true)
 	T.eq(ns.Fenetre.mode(), mode)
-	T.eq(B.chat_saisie, "/maa mini ")
+	T.eq(B.chat_saisie, "/gam mini ")
 	-- commande introuvable : message d'échec, pas d'erreur
 	ns.Reglages.ecrire("aide.executer_maj", true)
 	W.cliquer({ type = "cmd", cmd = "/zzabsente", ecrit = "/zzabsente " }, true)
@@ -166,8 +166,8 @@ T.test("sans zone de saisie de chat, la commande est dite dans le chat du jeu", 
 	local ns = B.demarrer()
 	_G.ChatFrame_OpenChat = nil
 	ns.AideFenetre.ouvrir()
-	ns.AideFenetre.cliquer(trouver(ns.AideFenetre.donnees, "/maa profil"), false)
-	T.vrai(B.chat_contient("/maa profil"), "dite dans le chat")
+	ns.AideFenetre.cliquer(trouver(ns.AideFenetre.donnees, "/gam profil"), false)
+	T.vrai(B.chat_contient("/gam profil"), "dite dans le chat")
 	T.sans_erreur()
 end)
 
@@ -251,7 +251,7 @@ T.test("la recherche filtre toutes les pages : onglet « Résultats » en tête,
 	ns.Commandes.executer("antiseche profil")
 	T.eq(W.recherche, "profil")
 	T.vrai(W.resume:GetText():find("profil", 1, true), "résumé du filtre")
-	T.vrai(trouver(W.donnees, "/maa profils"))
+	T.vrai(trouver(W.donnees, "/gam profils"))
 	local o = onglets(W)
 	T.eq(o[1].page.id, ra.id_resultats, "onglet des résultats en tête")
 	T.eq(o[1].etiquette:GetText(), ns.T("aide.onglet_resultats"))
@@ -308,8 +308,8 @@ T.test("Maj + clic sur une ligne de la page la lance", function(B)
 	local W = ns.AideFenetre
 	W.ouvrir()
 	local cible
-	for _, r in ipairs(W.lignesVisibles()) do if r.ligne.cmd == "/maa mini" then cible = r end end
-	T.vrai(cible, "/maa mini sur la première page")
+	for _, r in ipairs(W.lignesVisibles()) do if r.ligne.cmd == "/gam mini" then cible = r end end
+	T.vrai(cible, "/gam mini sur la première page")
 	local avant = ns.Fenetre.mode()
 	B.maj = true
 	cible:Click()
@@ -471,8 +471,8 @@ T.test("la visite montre 5 bulles dans l'ordre, chacune sur sa partie de la fen�
 	V.suivant()
 	T.faux(V.estActive(), "terminée")
 	T.faux(bulle_visible(ns))
-	T.vrai(B.chat_contient("/maa " .. ns.T("sous.visite.nom")), "dit comment la revoir")
-	T.vrai(B.chat_contient("/maa " .. ns.T("sous.antiseche.nom")), "dit où sont les commandes")
+	T.vrai(B.chat_contient("/gam " .. ns.T("sous.visite.nom")), "dit comment la revoir")
+	T.vrai(B.chat_contient("/gam " .. ns.T("sous.antiseche.nom")), "dit où sont les commandes")
 	T.sans_erreur()
 end)
 
@@ -567,9 +567,9 @@ end)
 T.test("le mode mini se règle aussi par la commande et par la case des options", function(B)
 	local ns = B.demarrer()
 	ns.Fenetre.ouvrir()
-	B.slash("/maa mini")
+	B.slash("/gam mini")
 	T.eq(ns.Fenetre.mode(), "mini")
-	B.slash("/maa mini")
+	B.slash("/gam mini")
 	T.eq(ns.Fenetre.mode(), "complet")
 	ns.Options.definir("fenetre.compact", true, "mini")
 	T.eq(ns.Fenetre.mode(), "mini")

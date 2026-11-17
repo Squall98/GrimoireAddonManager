@@ -181,8 +181,8 @@ ns.donnees.reglages = {
 		commandes = {
 			liste = {
 				"mesaddons",
-				"maa",
 				"gam",
+				"maa",
 			},
 			sans_argument = "ouvrir",
 		},
@@ -672,6 +672,7 @@ ns.donnees.reglages = {
 		hauteur_pouce = 24,
 		largeur_barre = 12,
 		largeur_bouton = 112,
+		largeur_bouton_langue = 34,
 		largeur_bouton_mode = 130,
 		largeur_categories = 190,
 		largeur_fiche = 280,
@@ -800,7 +801,7 @@ ns.donnees.reglages = {
 			ecart_onglet = 4,
 			hauteur_avances = 26,
 			hauteur_bouton = 22,
-			hauteur_commandes = 74,
+			hauteur_commandes = 96,
 			hauteur_groupe = 34,
 			hauteur_ligne = 30,
 			hauteur_onglet = 28,
@@ -943,19 +944,19 @@ ns.donnees.reglages = {
 		taille_embleme = 42,
 		taille_icone = 18,
 		taille_min = {
-			h = 280,
-			l = 320,
+			h = 300,
+			l = 660,
 		},
 		taille_mini = {
-			h = 480,
-			l = 360,
+			h = 520,
+			l = 660,
 		},
 		taille_poignee = 18,
 		taille_repli = "grande",
 		tailles = {
 			compacte = {
-				h = 420,
-				l = 600,
+				h = 440,
+				l = 660,
 			},
 			grande = {
 				h = 580,
@@ -1086,6 +1087,10 @@ ns.donnees.reglages = {
 		info = 2,
 	},
 	langue = {
+		bouton = {
+			enUS = "EN",
+			frFR = "FR",
+		},
 		disponibles = {
 			enUS = {
 				fiche = "en",
@@ -1238,8 +1243,22 @@ ns.donnees.reglages = {
 				id = "commande_gam_1_1_0",
 				vers = {
 					"mesaddons",
+					"gam",
+					"maa",
+				},
+			},
+			{
+				chemin = "commandes.liste",
+				de = {
+					"mesaddons",
 					"maa",
 					"gam",
+				},
+				id = "commande_gam_en_avant_1_2_0",
+				vers = {
+					"mesaddons",
+					"gam",
+					"maa",
 				},
 			},
 		},
