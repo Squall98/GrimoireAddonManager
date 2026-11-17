@@ -10,7 +10,7 @@
  "dossier_tests": "outils/banc/tests",
  "anglais": {
   "noms_propres": [
-   "Mes Add-ons",
+   "Grimoire Addon Manager",
    "Français"
   ],
   "identiques_ok": [
@@ -28,7 +28,8 @@
    "memoire.nom_total",
    "optlangue.frFR",
    "optlangue.enUS",
-   "fiche.partie.badges"
+   "fiche.partie.badges",
+   "nom"
   ],
   "mots_francais": [
    "le",

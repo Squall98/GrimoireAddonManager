@@ -4,7 +4,7 @@
 ## Notes: Add-on manager with profiles, categories and a short sheet for every add-on.
 ## Notes-frFR: Gestionnaire d'add-ons : profils, catégories et une fiche pour chaque add-on.
 ## Author: Nykaro and Claude
-## Version: 1.1.1
+## Version: 1.1.2
 ## SavedVariables: MesAddonsDB
 ## SavedVariablesPerCharacter: MesAddonsPersoDB
 ## X-Category: Utility
