@@ -12,6 +12,19 @@
     "chemin": "fiche.fond",
     "de": "jeu",
     "vers": "uni"
+   },
+   {
+    "id": "commande_gam_1_1_0",
+    "chemin": "commandes.liste",
+    "de": [
+     "mesaddons",
+     "maa"
+    ],
+    "vers": [
+     "mesaddons",
+     "maa",
+     "gam"
+    ]
    }
   ]
  },
@@ -76,7 +89,8 @@
   "commandes": {
    "liste": [
     "mesaddons",
-    "maa"
+    "maa",
+    "gam"
    ],
    "sans_argument": "ouvrir"
   },
@@ -857,9 +871,19 @@
    "taille_bouton_entete": 24,
    "alpha_eteint": 0.55,
    "cle_memoire": "antiseche",
-   "position_defaut": { "point": "CENTER", "x": 0, "y": 0 },
-   "taille_min": { "l": 560, "h": 380 },
-   "taille_max": { "l": 1400, "h": 1000 },
+   "position_defaut": {
+    "point": "CENTER",
+    "x": 0,
+    "y": 0
+   },
+   "taille_min": {
+    "l": 560,
+    "h": 380
+   },
+   "taille_max": {
+    "l": 1400,
+    "h": 1000
+   },
    "largeur_effacer": 24,
    "largeur_onglet": 180,
    "hauteur_onglet": 26,
@@ -1027,9 +1051,16 @@
    "moi",
    "addons"
   ],
-  "sections": [ "moi", "addons" ],
+  "sections": [
+   "moi",
+   "addons"
+  ],
   "regroupement_categorie": "categorie",
-  "prefixes_page": { "moi": "moi.", "categorie": "cat.", "addon": "addon." },
+  "prefixes_page": {
+   "moi": "moi.",
+   "categorie": "cat.",
+   "addon": "addon."
+  },
   "id_resultats": "resultats",
   "groupes": [
    {

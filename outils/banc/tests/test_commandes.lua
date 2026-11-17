@@ -8,7 +8,10 @@ T.test("/mesaddons et /maa répondent (aide)", function(B)
 	B.chat = {}
 	T.vrai(B.slash("/maa aide"))
 	T.vrai(B.chat_contient("affiche cette aide"))
-	T.eq(#ns.Commandes.actives, 2)
+	T.eq(#ns.Commandes.actives, 3)
+	B.chat = {}
+	T.vrai(B.slash("/gam aide"), "/gam (Grimoire Addon Manager) répond aussi")
+	T.vrai(B.chat_contient("affiche cette aide"))
 	T.sans_erreur()
 end)
 
@@ -25,7 +28,7 @@ T.test("une commande déjà prise est refusée, signalée et mise au journal", f
 	B.slash("/mesaddons commandes ajouter ma")
 	T.vrai(B.chat_contient("/ma : déjà prise (MAINASSISTON)"), "message de refus")
 	T.eq(ns.Commandes.refusees.ma, "MAINASSISTON")
-	T.faux(SLASH_MESADDONS3, "pas enregistrée")
+	T.faux(SLASH_MESADDONS4, "pas enregistrée")
 	local derniere = MesAddonsDB.journal[#MesAddonsDB.journal]
 	T.eq(derniere.k, "journal.commande_prise")
 	-- toujours rejoignable par les autres noms

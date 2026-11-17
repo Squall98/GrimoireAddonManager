@@ -38,7 +38,7 @@ T.test("la fenêtre se construit sans erreur en Horde, avec son vrai emblème", 
 	T.vrai(ns.Fenetre.embleme:GetTexture():find("Horde"), "emblème de la Horde")
 	T.vrai(egal(ns.Fenetre.cadre._couleur_bord, couleur(ns, "dore")), "bord doré du thème")
 	T.vrai(egal(ns.Fenetre.cadre._couleur_fond, couleur(ns, "fond")), "fond du thème")
-	T.eq(ns.Fenetre.titre:GetText(), "Mes Add-ons")
+	T.eq(ns.Fenetre.titre:GetText(), "Grimoire Addon Manager")
 	T.vrai(ns.Fenetre.cadre._police == nil and ns.Fenetre.titre._police[1] == "Fonts\\FRIZQT__.TTF", "police du jeu par défaut")
 end)
 
@@ -375,7 +375,7 @@ T.test("ouverture par /maa, /mesaddons et le bouton de la minicarte", function(B
 	b:Click()
 	T.faux(ns.Fenetre.estOuverte())
 	b._scripts.OnEnter(b)
-	T.vrai(GameTooltip.lignes[1] == "Mes Add-ons")
+	T.vrai(GameTooltip.lignes[1] == "Grimoire Addon Manager")
 	T.sans_erreur()
 end)
 

@@ -182,6 +182,7 @@ ns.donnees.reglages = {
 			liste = {
 				"mesaddons",
 				"maa",
+				"gam",
 			},
 			sans_argument = "ouvrir",
 		},
@@ -1227,6 +1228,19 @@ ns.donnees.reglages = {
 				de = "jeu",
 				id = "fiche_fond_uni_0_7_9",
 				vers = "uni",
+			},
+			{
+				chemin = "commandes.liste",
+				de = {
+					"mesaddons",
+					"maa",
+				},
+				id = "commande_gam_1_1_0",
+				vers = {
+					"mesaddons",
+					"maa",
+					"gam",
+				},
 			},
 		},
 		schema = 1,

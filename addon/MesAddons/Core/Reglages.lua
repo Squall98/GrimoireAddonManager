@@ -45,7 +45,13 @@ function R.migrer()
 	for _, m in ipairs(R.technique().migrations or {}) do
 		if not R.compte.migrations[m.id] then
 			R.compte.migrations[m.id] = true
-			if R.lire(m.chemin) == m.de then R.ecrire(m.chemin, m.vers) end
+			local v = R.lire(m.chemin)
+			-- une liste se compare élément par élément (ex. la liste des commandes)
+			local pareil = (v == m.de)
+			if type(v) == "table" and type(m.de) == "table" then
+				pareil = table.concat(v, ",") == table.concat(m.de, ",")
+			end
+			if pareil then R.ecrire(m.chemin, R.copie(m.vers)) end
 		end
 	end
 end

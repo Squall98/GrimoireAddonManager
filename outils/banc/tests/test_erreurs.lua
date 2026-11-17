@@ -60,7 +60,7 @@ T.test("sans aucun indice, l'erreur est gardée sous « inconnu »", function(B)
 	T.eq(ns.Erreurs.addons()[1].addon, ns.donnees.reglages.interface.erreurs.inconnu)
 end)
 
-T.test("nos propres erreurs sont aussi attribuées à Mes Add-ons", function(B)
+T.test("nos propres erreurs sont aussi attribuées à Grimoire Addon Manager", function(B)
 	local ns = B.demarrer()
 	B.erreur_jeu("Interface/AddOns/MesAddons/Liste/Vue.lua:9: oups")
 	T.eq(ns.Erreurs.liste()[1].addon, "MesAddons")

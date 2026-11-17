@@ -92,7 +92,7 @@ T.test("le volet s'ouvre dans la fenêtre : un contrôle par option, rien ne cas
 	local attendu = 0
 	for _, g in ipairs(ns.donnees.options.groupes) do attendu = attendu + #g.elements end
 	T.eq(#ns.Options.instVolet.lignes, attendu, "une ligne par élément du schéma")
-	T.eq(ns.Options.volet.titre:GetText(), "Options de Mes Add-ons")
+	T.eq(ns.Options.volet.titre:GetText(), "Options de Grimoire Addon Manager")
 	T.eq(ns.Options.volet.retour.etiquette:GetText(), "Retour")
 	T.eq(ligne(ns, "fenetre.theme").bouton.etiquette:GetText(), "auto")
 	T.eq(ligne(ns, "fenetre.compact").texte:GetText(), "Version mini (liste seule)")
@@ -235,7 +235,7 @@ T.test("la langue et le message de chargement se règlent dans les options", fun
 	ligne(ns, "langue.choix").bouton:Click() -- -> enUS
 	T.eq(ns.Reglages.lire("langue.choix"), "enUS")
 	T.eq(ligne(ns, "fenetre.theme").texte:GetText(), "Theme", "options en anglais")
-	T.eq(ns.Options.volet.titre:GetText(), "Mes Add-ons options")
+	T.eq(ns.Options.volet.titre:GetText(), "Grimoire Addon Manager options")
 	T.eq(ns.Barre.options.etiquette:GetText(), "Options")
 	T.eq(ns.Barre.tri.etiquette:GetText(), "Sort: Name", "barre en anglais")
 	-- clic droit = valeur précédente
@@ -295,7 +295,7 @@ T.test("la page du menu Échap › Options › AddOns existe et reprend les mêm
 	local ns = B.demarrer()
 	T.eq(#B.parametres.categories, 1, "une page enregistrée")
 	local cat = B.parametres.categories[1]
-	T.eq(cat.nom, "Mes Add-ons")
+	T.eq(cat.nom, "Grimoire Addon Manager")
 	T.vrai(cat.ajoutee, "enregistrée comme page d'add-on")
 	local page = cat.cadre
 	T.vrai(page == ns.Options.page)
@@ -304,7 +304,7 @@ T.test("la page du menu Échap › Options › AddOns existe et reprend les mêm
 	local attendu = 0
 	for _, g in ipairs(ns.donnees.options.groupes) do attendu = attendu + #g.elements end
 	T.eq(#page.inst.lignes, attendu, "autant de réglages que dans la fenêtre")
-	T.eq(page.titre:GetText(), "Options de Mes Add-ons")
+	T.eq(page.titre:GetText(), "Options de Grimoire Addon Manager")
 	-- un changement dans la page se voit dans la fenêtre, et l'inverse
 	ns.Fenetre.ouvrir()
 	ns.Options.ouvrirVolet()
@@ -317,7 +317,7 @@ T.test("la page du menu Échap › Options › AddOns existe et reprend les mêm
 	-- ouverture
 	B.slash("/maa options jeu")
 	T.eq(B.parametres.ouvertures[1], 1, "la page du jeu est ouverte")
-	-- « Ouvrir Mes Add-ons » depuis la page
+	-- « Ouvrir Grimoire Addon Manager » depuis la page
 	ns.Fenetre.fermer()
 	page.ouvrir:Click()
 	T.vrai(ns.Fenetre.estOuverte())
@@ -417,7 +417,7 @@ T.test("colonnes repliables (boutons du bandeau et options), bouton Vue, taille 
 	end
 	ns.Fenetre.toutDesactiver:Click()
 	for _, e in ipairs(ns.Liste.entrees()) do
-		T.eq(ns.Liste.actif(e.nom), e.moi and true or false, "tout désactivé sauf Mes Add-ons : " .. e.nom)
+		T.eq(ns.Liste.actif(e.nom), e.moi and true or false, "tout désactivé sauf Grimoire Addon Manager : " .. e.nom)
 	end
 	ns.Fenetre.annuler:Click()
 	T.sans_erreur()

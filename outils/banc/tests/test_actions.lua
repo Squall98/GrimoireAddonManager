@@ -398,7 +398,7 @@ T.test("raccourcis clavier : fonction globale et noms dans le menu Raccourcis", 
 	T.vrai(ns.Fenetre.estOuverte())
 	f("fenetre")
 	T.faux(ns.Fenetre.estOuverte())
-	T.eq(BINDING_HEADER_MESADDONS, "Mes Add-ons")
+	T.eq(BINDING_HEADER_MESADDONS, "Grimoire Addon Manager")
 	T.eq(BINDING_NAME_MESADDONS_FENETRE, "Ouvrir ou fermer la fenêtre")
 	T.vrai(BINDING_NAME_MESADDONS_PROFILS and BINDING_NAME_MESADDONS_RECHARGER)
 	-- chaque raccourci du fichier de réglages a bien son nom, et le Bindings.xml les cite tous

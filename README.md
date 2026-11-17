@@ -1,4 +1,4 @@
-# Mes Add-ons
+# Grimoire Addon Manager (GAM)
 
 Gestionnaire d'add-ons pour **World of Warcraft Forever** (client 1.60.1, interface 16001), en français et en anglais.
 *An add-on manager for WoW Forever, in French and English.*
@@ -17,7 +17,7 @@ Tous tes add-ons dans une seule fenêtre façon grimoire, aux couleurs de ta fac
 ## Installer
 
 Copie le dossier `addon/MesAddons` dans `World of Warcraft\_forever_\Interface\AddOns\`, puis lance le jeu.
-Commandes : `/mesaddons` ou `/maa` (`/maa aide` pour la liste). Mode d'emploi complet : `addon/MesAddons/mode-d-emploi.html`.
+Commandes : `/gam`, `/maa` ou `/mesaddons` (`/maa aide` pour la liste). Mode d'emploi complet : `addon/MesAddons/mode-d-emploi.html`.
 
 ## Le dépôt
 

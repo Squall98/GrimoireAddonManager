@@ -5,9 +5,9 @@ T.test("le démarrage est écrit au journal, dans les deux langues", function(B)
 	local ns = B.demarrer({ locale = "frFR" })
 	local j = MesAddonsDB.journal
 	T.eq(j[1].k, "journal.demarrage")
-	T.vrai(ns.Journal.formater(j[1]):find("Démarrage v1.0.0"))
+	T.vrai(ns.Journal.formater(j[1]):find("Démarrage v1.1.0"))
 	ns = B.demarrer({ locale = "enUS" })
-	T.vrai(ns.Journal.formater(MesAddonsDB.journal[1]):find("Starting v1.0.0"))
+	T.vrai(ns.Journal.formater(MesAddonsDB.journal[1]):find("Starting v1.1.0"))
 end)
 
 T.test("taille maximale respectée (réglage)", function(B)
@@ -66,7 +66,7 @@ T.test("/mesaddons journal affiche et efface", function(B)
 	B.chat = {}
 	B.slash("/mesaddons journal")
 	T.vrai(B.chat_contient("Journal :"))
-	T.vrai(B.chat_contient("Démarrage v1.0.0"))
+	T.vrai(B.chat_contient("Démarrage v1.1.0"))
 	B.chat = {}
 	B.slash("/mesaddons journal effacer")
 	T.vrai(B.chat_contient("Journal vidé."))
@@ -115,7 +115,7 @@ T.test("/mesaddons version affiche version, langue et nombre de fiches", functio
 	B.demarrer()
 	B.chat = {}
 	B.slash("/mesaddons version")
-	T.vrai(B.chat_contient("v1.0.0, interface 16001, langue Français, 102 fiches"))
+	T.vrai(B.chat_contient("v1.1.0, interface 16001, langue Français, 102 fiches"))
 end)
 
 T.fin()

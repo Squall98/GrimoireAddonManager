@@ -73,7 +73,7 @@ T.test("appliquer Donjon puis recharger donne exactement les add-ons du profil",
 	ns = B.recharger()
 	local on = actifs(ns)
 	for nom in pairs(contenu.set) do T.vrai(on[nom], nom .. " doit être actif") end
-	T.eq(compte(on), #contenu.ordre + 1, "rien d'autre n'est actif (sauf Mes Add-ons)")
+	T.eq(compte(on), #contenu.ordre + 1, "rien d'autre n'est actif (sauf Grimoire Addon Manager)")
 	T.vrai(on["MesAddons"], "ce gestionnaire reste")
 	T.vrai(on["DBM-Core"] and on["Details"], "DBM et Details")
 	T.faux(on["Questie"], "Questie coupé")

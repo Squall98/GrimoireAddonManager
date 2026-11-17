@@ -30,7 +30,7 @@ T.test("C_AddOns imite le jeu : liste des vrais .toc, plusieurs valeurs, état p
 	T.eq(C_AddOns.GetAddOnEnableState("Auctionator"), 0)
 	local _, _, _, _, raison2 = C_AddOns.GetAddOnInfo("Auctionator")
 	T.eq(raison2, "DISABLED")
-	T.eq(C_AddOns.GetAddOnMetadata("MesAddons", "Version"), "1.0.0")
+	T.eq(C_AddOns.GetAddOnMetadata("MesAddons", "Version"), "1.1.0")
 	T.eq(C_AddOns.GetAddOnMetadata("Introuvable", "Version"), nil)
 	T.vrai(C_AddOns.IsAddOnLoaded("MesAddons"))
 	T.faux(C_AddOns.IsAddOnLoaded("Auctionator"))

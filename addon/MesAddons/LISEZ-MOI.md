@@ -1,4 +1,4 @@
-# Mes Add-ons
+# Grimoire Addon Manager (GAM)
 
 Gestionnaire d'add-ons pour **World of Warcraft Forever** (client 1.60.1). Il range tous tes add-ons dans une seule
 fenêtre : tu les allumes ou les éteins d'un clic, une fiche te dit à quoi chacun sert, et les profils (Leveling, Donjon,
@@ -9,14 +9,14 @@ Pêche, Minimal…) allument d'un coup tout un jeu d'add-ons.
 1. Ferme le jeu.
 2. Copie le dossier `MesAddons` dans `World of Warcraft\_forever_\Interface\AddOns\`
    (on doit trouver `…\AddOns\MesAddons\MesAddons.toc`, sans dossier en trop au milieu).
-3. Lance le jeu. Sur l'écran des personnages, bouton **AddOns** : vérifie que « Mes Add-ons » est coché.
+3. Lance le jeu. Sur l'écran des personnages, bouton **AddOns** : vérifie que « Grimoire Addon Manager » est coché.
 
 Tes réglages, profils, notes et favoris ne sont pas dans ce dossier (le jeu les garde dans
 `WTF\Account\…\SavedVariables\`) : réinstaller ou mettre à jour l'add-on ne les efface pas.
 
 ## Les commandes principales
 
-On les tape dans le chat. `/maa` et `/mesaddons` marchent pareil ; les mots anglais aussi (`/maa help`).
+On les tape dans le chat. `/gam`, `/maa` et `/mesaddons` marchent pareil ; les mots anglais aussi (`/maa help`).
 
 | Commande | Ce qu'elle fait |
 |---|---|

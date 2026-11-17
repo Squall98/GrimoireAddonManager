@@ -59,8 +59,8 @@ T.test("la commande affichée est la plus courte de celles qui marchent (une aut
 	_G.SLASH_AUTRE1 = "/maa"
 	_G.SlashCmdList.AUTRE = function() end
 	ns.Commandes.enregistrer()
-	T.eq(ns.Aide.principale(), "mesaddons")
-	T.vrai(trouver(lignes_de(ns, "moi"), "/mesaddons profil"))
+	T.eq(ns.Aide.principale(), "gam", "/maa prise : la plus courte qui reste est /gam")
+	T.vrai(trouver(lignes_de(ns, "moi"), "/gam profil"))
 	T.faux(trouver(lignes_de(ns, "moi"), "/maa profil"))
 	_G.SLASH_AUTRE1, _G.SlashCmdList.AUTRE = nil, nil
 end)
