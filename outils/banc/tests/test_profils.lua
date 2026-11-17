@@ -74,7 +74,7 @@ T.test("appliquer Donjon puis recharger donne exactement les add-ons du profil",
 	local on = actifs(ns)
 	for nom in pairs(contenu.set) do T.vrai(on[nom], nom .. " doit être actif") end
 	T.eq(compte(on), #contenu.ordre + 1, "rien d'autre n'est actif (sauf Grimoire Addon Manager)")
-	T.vrai(on["MesAddons"], "ce gestionnaire reste")
+	T.vrai(on["GrimoireAddonManager"], "ce gestionnaire reste")
 	T.vrai(on["DBM-Core"] and on["Details"], "DBM et Details")
 	T.faux(on["Questie"], "Questie coupé")
 	T.faux(on["RXPGuides"], "le guide de leveling coupé")
@@ -103,7 +103,7 @@ T.test("« Rien » coupe tout sauf ce gestionnaire et les verrous ; « Tout » r
 	ns.Profils.appliquer(ns.Profils.tous()[2], "perso")
 	local on = actifs(ns)
 	T.eq(compte(on), 2, "ce gestionnaire et Questie")
-	T.vrai(on["MesAddons"] and on["Questie"])
+	T.vrai(on["GrimoireAddonManager"] and on["Questie"])
 	ns.Profils.appliquer(ns.Profils.tous()[1], "perso")
 	on = actifs(ns)
 	for _, e in ipairs(ns.Liste.entrees()) do
@@ -305,7 +305,7 @@ T.test("tous les personnages : le profil s'applique aussi aux personnages déjà
 	T.eq(touches, 2)
 	T.faux(C_AddOns.GetAddOnEnableState("Pawn", "Player-1-AUTRE") ~= 0, "Pawn coupé chez l autre personnage")
 	T.vrai(C_AddOns.GetAddOnEnableState("Questie", "Player-1-AUTRE") ~= 0, "le contenu du profil reste actif chez lui")
-	T.vrai(C_AddOns.GetAddOnEnableState("MesAddons", "Player-1-AUTRE") ~= 0, "ce gestionnaire aussi")
+	T.vrai(C_AddOns.GetAddOnEnableState("GrimoireAddonManager", "Player-1-AUTRE") ~= 0, "ce gestionnaire aussi")
 	-- au perso seul, l'autre personnage n'est pas touché
 	B.etat_perso["Player-1-AUTRE"] = {}
 	ns.Profils.appliquer(profil(ns, "Leveling"), "perso")

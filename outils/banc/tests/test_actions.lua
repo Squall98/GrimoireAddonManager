@@ -51,7 +51,7 @@ T.test("activer seul : tout est coupé sauf l'add-on, ses dépendances, les verr
 	T.vrai(a["DBM-Core"], "l'add-on reste")
 	T.vrai(a["DBM-StatusBarTimers"], "sa dépendance requise reste")
 	T.vrai(a["Questie"], "le verrouillé reste")
-	T.vrai(a["MesAddons"], "ce gestionnaire reste")
+	T.vrai(a["GrimoireAddonManager"], "ce gestionnaire reste")
 	T.eq(compte(a), 4, "rien d'autre")
 	T.vrai(moins > 0 and plus >= 0)
 	-- un seul Annuler remet tout
@@ -149,7 +149,7 @@ T.test("une macro change de profil : /maa profil Donjon donne exactement ce que 
 	local ok, qui = memes(attendu, a)
 	T.vrai(ok, "différence avec le profil : " .. tostring(qui))
 	T.vrai(compte(a) < compte(avant), "le profil a bien coupé des add-ons")
-	T.vrai(ns.Liste.actif("MesAddons"))
+	T.vrai(ns.Liste.actif("GrimoireAddonManager"))
 	T.vrai(B.chat_contient("appliqué"))
 	T.eq(ns.Profils.actuel().id, "donjon")
 	-- en anglais aussi
@@ -171,7 +171,7 @@ T.test("commandes : activer, desactiver, seul, annuler (français et anglais)", 
 	B.slash("/maa desactiver auctionator")
 	T.faux(ns.Liste.actif("Auctionator"))
 	B.slash("/maa seul TomTom")
-	T.vrai(ns.Liste.actif("TomTom") and ns.Liste.actif("MesAddons"))
+	T.vrai(ns.Liste.actif("TomTom") and ns.Liste.actif("GrimoireAddonManager"))
 	T.faux(ns.Liste.actif("Questie"))
 	B.slash("/maa activer ZzzInconnu")
 	T.vrai(B.chat_contient("inconnu"))
@@ -209,7 +209,7 @@ T.test("dépannage puis retour remet tout comme avant (même après un rechargem
 	local avant = actifs(ns)
 	B.slash("/maa depannage Questie")
 	local a = actifs(ns)
-	T.vrai(a["Questie"] and a["TomTom"] and a["MesAddons"], "cité, verrouillé et gestionnaire")
+	T.vrai(a["Questie"] and a["TomTom"] and a["GrimoireAddonManager"], "cité, verrouillé et gestionnaire")
 	T.vrai(compte(a) < compte(avant) / 2, "presque tout est coupé")
 	T.vrai(ns.Actions.depannageActif())
 	-- un second dépannage ne perd pas l'état d'origine
@@ -237,7 +237,7 @@ T.test("dépannage sans nom : seulement les verrouillés et le gestionnaire ; un
 	T.faux(ns.Actions.depannageActif())
 	B.slash("/maa safe")
 	local a = actifs(ns)
-	T.vrai(a["TomTom"] and a["MesAddons"])
+	T.vrai(a["TomTom"] and a["GrimoireAddonManager"])
 	T.eq(compte(a), 2)
 	B.slash("/maa back")
 	T.vrai(memes(avant, actifs(ns)))
@@ -402,7 +402,7 @@ T.test("raccourcis clavier : fonction globale et noms dans le menu Raccourcis", 
 	T.eq(BINDING_NAME_MESADDONS_FENETRE, "Ouvrir ou fermer la fenêtre")
 	T.vrai(BINDING_NAME_MESADDONS_PROFILS and BINDING_NAME_MESADDONS_RECHARGER)
 	-- chaque raccourci du fichier de réglages a bien son nom, et le Bindings.xml les cite tous
-	local f2 = io.open((os.getenv("MAA_RACINE") or ".") .. "/addon/MesAddons/Bindings.xml", "rb")
+	local f2 = io.open((os.getenv("MAA_RACINE") or ".") .. "/addon/GrimoireAddonManager/Bindings.xml", "rb")
 	local xml = f2:read("*a")
 	f2:close()
 	for _, id in ipairs(ns.donnees.reglages.actions.raccourcis) do

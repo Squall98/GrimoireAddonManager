@@ -4,8 +4,8 @@
   python -X utf8 outils/installer.py                      vérifie l'add-on (outils/verifier.py) puis installe
   python -X utf8 outils/installer.py --vers DOSSIER       installe dans un autre dossier AddOns (essais)
 
-Règles : seul le dossier MesAddons est touché (aucun autre add-on) ; rien n'est supprimé : l'ancienne version
-est déplacée dans _archives/installations/MesAddons-<date>_<heure> ; la copie est comparée fichier par fichier
+Règles : seul le dossier GrimoireAddonManager est touché (aucun autre add-on) ; rien n'est supprimé : l'ancienne version
+est déplacée dans _archives/installations/GrimoireAddonManager-<date>_<heure> ; la copie est comparée fichier par fichier
 (nombre, octets, SHA256) et, en cas d'écart, l'ancienne version est remise en place.
 """
 import datetime

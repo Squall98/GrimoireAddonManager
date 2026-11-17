@@ -535,7 +535,7 @@
     "chemin": "Fonts\\MORPHEUS.TTF"
    },
    "cinzel": {
-    "chemin": "Interface\\AddOns\\MesAddons\\Polices\\Cinzel.ttf"
+    "chemin": "Interface\\AddOns\\GrimoireAddonManager\\Polices\\Cinzel.ttf"
    }
   },
   "polices_ordre": [

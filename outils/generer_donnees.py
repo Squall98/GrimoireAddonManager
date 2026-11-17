@@ -1,4 +1,4 @@
-"""Génère les fichiers de données Lua de l'add-on (addon/MesAddons/Donnees/*.lua) à partir des JSON de donnees/.
+"""Génère les fichiers de données Lua de l'add-on (addon/GrimoireAddonManager/Donnees/*.lua) à partir des JSON de donnees/.
 
 Les JSON sont la source ; les .lua sont générés, jamais édités à la main (l'en-tête le dit).
   python -X utf8 outils/generer_donnees.py            écrit les fichiers

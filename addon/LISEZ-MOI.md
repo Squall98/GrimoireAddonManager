@@ -1,12 +1,12 @@
-Le code de l'add-on « Mes Add-ons » (dossier MesAddons, à copier dans Interface\AddOns du jeu par `outils/installer.py`).
+Le code de l'add-on « Mes Add-ons » (dossier GrimoireAddonManager, à copier dans Interface\AddOns du jeu par `outils/installer.py`).
 
-# addon/MesAddons
+# addon/GrimoireAddonManager
 
 Squelette (B1-02), fenêtre Grimoire (B2-01) et fiche + infobulle (B2-02) puis recherche, tris, badges et options (B2-03, v0.4.0) : l'add-on charge ses données, ses réglages, son journal, ses textes (français et anglais), enregistre ses commandes et ouvre la fenêtre (catégories, liste, fiche courte, activer/désactiver, Recharger, Annuler) ; au survol une infobulle, au clic la fiche complète sur le parchemin (note perso, fiche modifiable, réglages et lien CurseForge) ; une barre de recherche (tolérante aux fautes, par nom, fiche, note, commandes `/way`, étiquettes `#pvp`), des tris, des puces de filtres, des favoris, des badges, la raison en clair, un menu au clic droit et un panneau d'options complet (dans la fenêtre et dans Échap › Options › AddOns).
 
 | Fichier | Rôle |
 |---|---|
-| `MesAddons.toc` | carte d'identité : Interface 16001, version, SavedVariables (compte `MesAddonsDB`, personnage `MesAddonsPersoDB`), ordre de chargement |
+| `GrimoireAddonManager.toc` | carte d'identité : Interface 16001, version, SavedVariables (compte `MesAddonsDB`, personnage `MesAddonsPersoDB`), ordre de chargement |
 | `Donnees\*.lua` | **générés** par `outils/generer_donnees.py` depuis `donnees/` : ne jamais les modifier à la main |
 | `Core\Espace.lua` | espace commun `ns` partagé par tous les fichiers |
 | `Core\Reglages.lua` | valeurs de départ + choix sauvegardés (lire / écrire typé / réinitialiser), complétés à chaque mise à jour sans perdre les choix |

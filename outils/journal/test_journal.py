@@ -43,7 +43,7 @@ verifie(e["message"] == 'a"b\\c' + chr(233), "échappements")
 
 # 3. fichier jamais modifié + page fabriquée
 with tempfile.TemporaryDirectory() as d:
-    f = Path(d) / "MesAddons.lua"
+    f = Path(d) / "GrimoireAddonManager.lua"
     f.write_text(texte, encoding="utf-8")
     avant = hashlib.sha256(f.read_bytes()).hexdigest()
     r = subprocess.run([sys.executable, str(ICI / "journal.py"), "--source", str(f), "--sortie", d, "--ne-pas-ouvrir"],

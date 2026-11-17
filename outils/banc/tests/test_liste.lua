@@ -152,7 +152,7 @@ T.test("tri : nom, catégorie, état, mémoire, utilité, et ordre inversé", fu
 	ns.Fenetre.memoire().categorie = "tous"
 	ns.Fenetre.rafraichir()
 	local r = rangs(ns)
-	T.vrai(r[1] == "MesAddons" or r[1] == "Questie" or r[1] == "TomTom", "un add-on chargé en tête : " .. tostring(r[1]))
+	T.vrai(r[1] == "GrimoireAddonManager" or r[1] == "Questie" or r[1] == "TomTom", "un add-on chargé en tête : " .. tostring(r[1]))
 	-- mémoire : le plus gros d'abord
 	B.memoire.TomTom = 5000
 	B.memoire.Questie = 12000

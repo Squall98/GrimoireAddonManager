@@ -828,7 +828,7 @@ ns.donnees.reglages = {
 		police_repli = "jeu",
 		polices = {
 			cinzel = {
-				chemin = "Interface\\AddOns\\MesAddons\\Polices\\Cinzel.ttf",
+				chemin = "Interface\\AddOns\\GrimoireAddonManager\\Polices\\Cinzel.ttf",
 			},
 			gothique = {
 				chemin = "Fonts\\MORPHEUS.TTF",

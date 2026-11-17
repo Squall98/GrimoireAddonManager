@@ -1,6 +1,6 @@
 {
- "dossier_addon": "addon/MesAddons",
- "nom_addon": "MesAddons",
+ "dossier_addon": "addon/GrimoireAddonManager",
+ "nom_addon": "GrimoireAddonManager",
  "dossier_donnees": "donnees",
  "dossier_addons_jeu": "../../_forever_/Interface/AddOns",
  "dossier_archives_installation": "_archives/installations",

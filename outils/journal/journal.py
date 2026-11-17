@@ -1,5 +1,5 @@
 # Journal des erreurs de Mes Add-ons -> page HTML.
-# Lit le fichier de sauvegarde du jeu (WTF\Account\<compte>\SavedVariables\MesAddons.lua) SANS LE MODIFIER
+# Lit le fichier de sauvegarde du jeu (WTF\Account\<compte>\SavedVariables\GrimoireAddonManager.lua) SANS LE MODIFIER
 # (ouverture en lecture seule, empreinte SHA256 contrôlée avant/après) et fabrique une page HTML lisible.
 #
 #   python journal.py                    cherche le(s) fichier(s) de sauvegarde et fabrique la page

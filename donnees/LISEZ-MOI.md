@@ -9,5 +9,5 @@ Les données de départ de « Mes Add-ons » (réglages, textes français et ang
 | `options.json` | le schéma de la page d'options : groupes, réglages (type, choix, bornes, suite à appliquer) ; le panneau est généré d'après lui, et `outils/verifier.py` exige que chaque réglage y soit (ou soit exclu avec sa raison) |
 | `fiches/` | les 102 fiches, catégories, doublons et profils de départ (voir son `LISEZ-MOI.md`) ; `fiches/origine/` = copie des 33 fiches de départ de `Claude\Fiches-addons` (Fiches.lua, Textes.lua), gardée telle quelle |
 
-Après toute modification : `python -X utf8 outils\generer_donnees.py` (régénère `addon/MesAddons/Donnees/*.lua`), puis `outils\verifier.py`.
+Après toute modification : `python -X utf8 outils\generer_donnees.py` (régénère `addon/GrimoireAddonManager/Donnees/*.lua`), puis `outils\verifier.py`.
 Rien de propre à Nykaro ici (partage possible, S2.9) : ses notes, profils et réglages restent dans ses sauvegardes du jeu.

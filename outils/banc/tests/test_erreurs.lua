@@ -62,8 +62,8 @@ end)
 
 T.test("nos propres erreurs sont aussi attribuées à Grimoire Addon Manager", function(B)
 	local ns = B.demarrer()
-	B.erreur_jeu("Interface/AddOns/MesAddons/Liste/Vue.lua:9: oups")
-	T.eq(ns.Erreurs.liste()[1].addon, "MesAddons")
+	B.erreur_jeu("Interface/AddOns/GrimoireAddonManager/Liste/Vue.lua:9: oups")
+	T.eq(ns.Erreurs.liste()[1].addon, "GrimoireAddonManager")
 end)
 
 T.test("taille limitée : les plus anciennes partent, message et pile coupés", function(B)
@@ -255,7 +255,7 @@ end)
 
 T.test("mémoire : liste du plus gourmand au plus sobre, total, unités", function(B)
 	local ns = B.demarrer({ locale = "frFR" })
-	B.memoire.MesAddons = 800
+	B.memoire.GrimoireAddonManager = 800
 	B.memoire.Auctionator = 3.5 * 1024
 	B.memoire.Details = 12 * 1024
 	B.slash("/maa memoire")
@@ -263,7 +263,7 @@ T.test("mémoire : liste du plus gourmand au plus sobre, total, unités", functi
 	local texte = table.concat(lignes, "\n")
 	T.vrai(texte:find("1. Details : 12.0 Mo", 1, true), texte)
 	T.vrai(texte:find("2. Auctionator : 3.5 Mo", 1, true), texte)
-	T.vrai(texte:find("3. MesAddons : 800 Ko", 1, true), texte)
+	T.vrai(texte:find("3. GrimoireAddonManager : 800 Ko", 1, true), texte)
 	T.vrai(texte:find("16.3 Mo au total pour 3 add-ons", 1, true), texte)
 end)
 

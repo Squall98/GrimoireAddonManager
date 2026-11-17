@@ -7,8 +7,8 @@ Pêche, Minimal…) allument d'un coup tout un jeu d'add-ons.
 ## Installer
 
 1. Ferme le jeu.
-2. Copie le dossier `MesAddons` dans `World of Warcraft\_forever_\Interface\AddOns\`
-   (on doit trouver `…\AddOns\MesAddons\MesAddons.toc`, sans dossier en trop au milieu).
+2. Copie le dossier `GrimoireAddonManager` dans `World of Warcraft\_forever_\Interface\AddOns\`
+   (on doit trouver `…\AddOns\GrimoireAddonManager\GrimoireAddonManager.toc`, sans dossier en trop au milieu).
 3. Lance le jeu. Sur l'écran des personnages, bouton **AddOns** : vérifie que « Grimoire Addon Manager » est coché.
 
 Tes réglages, profils, notes et favoris ne sont pas dans ce dossier (le jeu les garde dans

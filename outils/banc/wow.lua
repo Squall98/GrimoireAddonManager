@@ -450,7 +450,7 @@ end
 local valeurs_defaut = {
 	locale = "frFR", royaume = "Royaume-Test", nom = "Testeur", guid = "Player-1-0000AAAA",
 	faction = "Horde", classe = "WARRIOR", classe_nom = "Guerrier",
-	addon = "MesAddons", dossier = "addon/MesAddons",
+	addon = "GrimoireAddonManager", dossier = "addon/GrimoireAddonManager",
 }
 
 -- Lance une session de jeu complète : API, add-on testé, ADDON_LOADED, PLAYER_LOGIN, PLAYER_ENTERING_WORLD.

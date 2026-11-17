@@ -1,7 +1,7 @@
 {
  "_aide": "Réglages de l'outil du journal (chemins relatifs à ce dossier).",
  "dossier_wtf": "../../../../_forever_/WTF",
- "fichier_sauvegarde": "MesAddons.lua",
+ "fichier_sauvegarde": "GrimoireAddonManager.lua",
  "variable": "MesAddonsDB",
  "cle_journal": "erreurs_journal",
  "dossier_sortie": "pages",

@@ -75,7 +75,7 @@ T.test("chaque add-on installé a une fiche (sauf le nôtre) : c'est la liste du
 	local sans = {}
 	for i = 1, C_AddOns.GetNumAddOns() do
 		local nom = C_AddOns.GetAddOnInfo(i)
-		if nom ~= "MesAddons" and not ns.Fiches.obtenir(nom) then sans[#sans + 1] = nom end
+		if nom ~= "GrimoireAddonManager" and not ns.Fiches.obtenir(nom) then sans[#sans + 1] = nom end
 	end
 	T.eq(#sans, 0, "sans fiche : " .. table.concat(sans, ", "))
 end)

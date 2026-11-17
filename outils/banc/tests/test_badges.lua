@@ -92,8 +92,8 @@ T.test("badge « erreur » : une erreur Lua dans un autre add-on est notée", fu
 	T.vrai(ligne(ns, "Questie").badges:GetText():find("Erreur", 1, true), "sur la ligne")
 	T.eq(ns.Vue.lignes[1].entree.nom == "Questie" or true, true)
 	-- les erreurs de ce gestionnaire ne comptent pas comme celles d'un autre
-	geterrorhandler()("Interface\\AddOns\\MesAddons\\Core\\x.lua:1: oups")
-	T.faux(a_badge(ns, "MesAddons", "erreur"))
+	geterrorhandler()("Interface\\AddOns\\GrimoireAddonManager\\Core\\x.lua:1: oups")
+	T.faux(a_badge(ns, "GrimoireAddonManager", "erreur"))
 	-- l'ancien gestionnaire reçoit toujours l'erreur
 	T.vrai(#B.erreurs_jeu >= 2)
 	B.erreurs_jeu = {}

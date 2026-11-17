@@ -1,7 +1,7 @@
 {
  "titre": "Journal des erreurs · Mes Add-ons",
  "aide_outil": "Fabrique une page HTML lisible du journal des erreurs de Mes Add-ons (le fichier de sauvegarde n'est jamais modifié).",
- "aucun_fichier": "Aucun fichier de sauvegarde MesAddons.lua trouvé. Lance le jeu avec Mes Add-ons, fais /reload, puis recommence.",
+ "aucun_fichier": "Aucun fichier de sauvegarde GrimoireAddonManager.lua trouvé. Lance le jeu avec Mes Add-ons, fais /reload, puis recommence.",
  "fichier_change": "Attention : {} a changé pendant la lecture (le jeu l'écrivait ?). Rien n'a été fabriqué ; recommence jeu fermé.",
  "page_faite": "Page fabriquée : {page} ({n} erreur(s) différente(s)).",
  "sous_titre": "Fabriquée le {genere} à partir de {source}",

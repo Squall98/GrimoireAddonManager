@@ -16,12 +16,12 @@ Tous tes add-ons dans une seule fenêtre façon grimoire, aux couleurs de ta fac
 
 ## Installer
 
-Copie le dossier `addon/MesAddons` dans `World of Warcraft\_forever_\Interface\AddOns\`, puis lance le jeu.
-Commandes : `/gam`, `/maa` ou `/mesaddons` (`/maa aide` pour la liste). Mode d'emploi complet : `addon/MesAddons/mode-d-emploi.html`.
+Copie le dossier `addon/GrimoireAddonManager` dans `World of Warcraft\_forever_\Interface\AddOns\`, puis lance le jeu.
+Commandes : `/gam`, `/maa` ou `/mesaddons` (`/maa aide` pour la liste). Mode d'emploi complet : `addon/GrimoireAddonManager/mode-d-emploi.html`.
 
 ## Le dépôt
 
-- `addon/MesAddons/` : l'add-on (Lua). Les fichiers `Donnees/*.lua` sont **générés** depuis `donnees/`.
+- `addon/GrimoireAddonManager/` : l'add-on (Lua). Les fichiers `Donnees/*.lua` sont **générés** depuis `donnees/`.
 - `donnees/` : fiches, catégories, profils, réglages et textes (JSON) : on modifie ici, puis
   `python -X utf8 outils/generer_donnees.py`.
 - `outils/` : `verifier.py` (vérification complète + banc d'essai hors jeu en Lua 5.1, dans `outils/banc/`),
