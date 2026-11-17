@@ -1,0 +1,171 @@
+<h1>🌐 English</h1>
+<p><strong>Grimoire Addon Manager (GAM)</strong> puts all your add-ons in one grimoire-style window, in your faction's colours. Turn them on and off in a click, switch whole sets with profiles, and never forget again what an add-on is for: every add-on has its own little sheet.</p>
+<p>Type <strong>/gam</strong> or click the minimap button to open it.</p>
+<h2>🌟 At a glance</h2>
+<ul>
+<li>📖 <strong>One window for everything</strong>: categories on the left, your add-ons in the middle, the sheet on the right.</li>
+<li>✅ <strong>On / off in one click</strong>, by category, or everything at once. <strong>Reload</strong> applies, <strong>Undo</strong> goes back.</li>
+<li>📜 <strong>A sheet for every add-on</strong> (102 included): what it does, its commands, what to know, and your own note.</li>
+<li>🎒 <strong>Profiles</strong>: Leveling, Dungeon, Fishing, Minimal… or your own, from the window, a macro or the minimap.</li>
+<li>🐞 <strong>Lua errors</strong> caught with all their details, plus memory and CPU per add-on.</li>
+<li>🌍 <strong>English and French</strong>, Horde or Alliance theme picked automatically.</li>
+</ul>
+<h2>✨ Features</h2>
+<h3>📖 The grimoire window</h3>
+<ul>
+<li>"All add-ons" grouped by category (folding sections), or as a single list.</li>
+<li>Fold the left column (categories) or the right one (sheet) with the arrows.</li>
+<li>Mini version (list only), resizable window, text size, Horde / Alliance / neutral theme.</li>
+</ul>
+<h3>🔎 Find and sort</h3>
+<ul>
+<li>Search that forgives typos, in names, sheets, notes, commands and tags.</li>
+<li>Filters: enabled, disabled, out of date, duplicates, no sheet, favourites, new…</li>
+<li>Sort by name, category, state, memory or usefulness. Favourite star and personal tags.</li>
+<li>Badges: new, updated, error, duplicate, out of date, trial, locked.</li>
+</ul>
+<h3>📜 Sheets and tooltips</h3>
+<ul>
+<li>Hover an add-on: a short summary in the tooltip.</li>
+<li>Click it: the full sheet on parchment, its commands, its dependencies, and <strong>your own note</strong>.</li>
+<li>Edit any sheet, links to its settings and to CurseForge.</li>
+</ul>
+<h3>🎒 Profiles</h3>
+<ul>
+<li>Ready-made profiles plus your own; "All" and "Nothing" always there.</li>
+<li>See what changes before applying (+x / −y), dependencies turned on with them.</li>
+<li>Lock an add-on so no profile ever turns it off.</li>
+<li>Copy a profile as text to share it, compare two profiles.</li>
+<li>Suggests the right profile when you enter a dungeon, a raid or a battleground.</li>
+</ul>
+<h3>⚡ Quick actions</h3>
+<ul>
+<li>Shift + click: turn an add-on on with its modules and dependencies.</li>
+<li>Trial mode (on for one session only) and safe mode (everything off except what you name, then back).</li>
+<li>Right-click menu, keybindings, the game's Esc menu "Add-ons" button opens GAM.</li>
+</ul>
+<h3>🐞 Errors and performance</h3>
+<ul>
+<li>Every Lua error kept with its full stack, grouped and counted; copy it in one click.</li>
+<li>Memory per add-on, CPU measuring mode, a warning if memory gets too high.</li>
+</ul>
+<h3>🧭 Help built in</h3>
+<ul>
+<li>A cheat sheet of <strong>every command</strong> (GAM's and your add-ons'), searchable, a click types it in the chat.</li>
+<li>A 5-bubble guided tour of the window.</li>
+</ul>
+<h3>⚙️ Options</h3>
+<ul>
+<li>Almost everything can be changed, in 5 tabs. Everyday settings first; tick <strong>"Show advanced settings"</strong> for the fine-tuning.</li>
+</ul>
+<h2>🎮 Supported game versions</h2>
+<table><thead><tr><th>Game</th><th>Supported</th></tr></thead><tbody><tr><td>WoW Forever (1.60.1)</td><td>✅</td></tr></tbody></table>
+<h2>⌨️ Slash commands</h2>
+<p><code>/gam</code>, <code>/maa</code> and <code>/mesaddons</code> all work (you can change them in the options).</p>
+<table><thead><tr><th>Command</th><th>What it does</th></tr></thead><tbody><tr><td><code>/gam</code></td><td>Open or close the window</td></tr><tr><td><code>/gam help</code></td><td>Show every command</td></tr><tr><td><code>/gam cheatsheet</code></td><td>Every command, searchable and clickable</td></tr><tr><td><code>/gam profile &lt;name&gt;</code></td><td>Apply a profile</td></tr><tr><td><code>/gam reload</code></td><td>Apply the pending changes</td></tr><tr><td><code>/gam undo</code></td><td>Undo the last change</td></tr><tr><td><code>/gam errors</code></td><td>Open the Lua error window</td></tr><tr><td><code>/gam safe</code> then <code>/gam back</code></td><td>Safe mode, then put everything back</td></tr><tr><td><code>/gam tour</code></td><td>Start the guided tour</td></tr><tr><td><code>/gam options</code></td><td>Open the options</td></tr></tbody></table>
+<h2>💡 Good to know</h2>
+<ul>
+<li>Ticking or unticking does nothing until you click <strong>Reload</strong> (the game only loads add-ons at that moment). The button lights up when something is waiting.</li>
+<li>GAM never turns itself off, and only touches the add-ons you ask it to.</li>
+<li>Your settings, profiles and notes are kept by the game: updating GAM doesn't erase them.</li>
+</ul>
+<h2>🌍 Languages</h2>
+<p>English and French, picked from your game language (or chosen in the options). Every text lives in a data file, so more languages can be added easily.</p>
+<h2>❓ FAQ</h2>
+<ul>
+<li><strong>I ticked an add-on and nothing happened.</strong> Click <strong>Reload</strong> at the bottom of the window: the game only loads add-ons when the interface reloads.</li>
+<li><strong>An add-on says "out of date".</strong> It was made for another game version. You can still load it with <code>/gam outdated on</code>, at your own risk.</li>
+<li><strong>My add-on has no sheet.</strong> It shows its own description instead; you can write the sheet yourself with <strong>Edit sheet</strong>.</li>
+</ul>
+<h2>💬 Support</h2>
+<p>Found a bug or have an idea? Leave a comment here. Please say which game version you play and, for an error, use the <strong>Copy</strong> button of the error window.</p>
+<p>Source code and bug reports: <a href="https://github.com/Squall98/GrimoireAddonManager">https://github.com/Squall98/GrimoireAddonManager</a></p>
+<p>Full guide (wiki, English and French): <a href="https://mahora.gitbook.io/grimoire-addon-manager-gam/">https://mahora.gitbook.io/grimoire-addon-manager-gam/</a></p>
+<h2>📄 Licence</h2>
+<p>MIT. Made by Nykaro, written with the help of Claude (Anthropic). Inspired by the way other managers work (SAM, ACP), without reusing their code.</p>
+<hr>
+<h1>🌐 Français</h1>
+<p><strong>Grimoire Addon Manager (GAM)</strong> range tous tes add-ons dans une seule fenêtre façon grimoire, aux couleurs de ta faction. Tu les allumes ou les éteins d'un clic, tu changes tout un jeu d'add-ons avec les profils, et tu n'oublies plus à quoi sert un add-on : chacun a sa petite fiche.</p>
+<p>Tape <strong>/gam</strong> ou clique le bouton de la minicarte pour l'ouvrir.</p>
+<h2>🌟 En un coup d'œil</h2>
+<ul>
+<li>📖 <strong>Une seule fenêtre</strong> : les catégories à gauche, tes add-ons au milieu, la fiche à droite.</li>
+<li>✅ <strong>Allumer / éteindre d'un clic</strong>, par catégorie, ou tout d'un coup. <strong>Recharger</strong> applique, <strong>Annuler</strong> revient en arrière.</li>
+<li>📜 <strong>Une fiche par add-on</strong> (102 fournies) : à quoi il sert, ses commandes, ce qu'il faut savoir, et ta note perso.</li>
+<li>🎒 <strong>Profils</strong> : Leveling, Donjon, Pêche, Minimal… ou les tiens, depuis la fenêtre, une macro ou la minicarte.</li>
+<li>🐞 <strong>Erreurs Lua</strong> gardées avec tout leur détail, et mémoire / processeur par add-on.</li>
+<li>🌍 <strong>Français et anglais</strong>, thème Horde ou Alliance choisi tout seul.</li>
+</ul>
+<h2>✨ Ce qu'il sait faire</h2>
+<h3>📖 La fenêtre grimoire</h3>
+<ul>
+<li>« Tous les add-ons » rangé par catégories (sections repliables), ou en une seule liste.</li>
+<li>Replie la colonne de gauche (catégories) ou de droite (fiche) avec les flèches.</li>
+<li>Version mini (la liste seule), fenêtre redimensionnable, taille du texte, thème Horde / Alliance / neutre.</li>
+</ul>
+<h3>🔎 Trouver et trier</h3>
+<ul>
+<li>Recherche qui pardonne les fautes, dans les noms, fiches, notes, commandes et étiquettes.</li>
+<li>Filtres : activés, désactivés, périmés, doublons, sans fiche, favoris, nouveaux…</li>
+<li>Tri par nom, catégorie, état, mémoire ou utilité. Étoile des favoris et étiquettes perso.</li>
+<li>Badges : nouveau, mis à jour, erreur, doublon, périmé, en essai, verrouillé.</li>
+</ul>
+<h3>📜 Fiches et infobulles</h3>
+<ul>
+<li>Survole un add-on : un résumé dans l'infobulle.</li>
+<li>Clique-le : la fiche complète sur parchemin, ses commandes, ses dépendances, et <strong>ta note perso</strong>.</li>
+<li>Chaque fiche se modifie ; liens vers ses réglages et vers CurseForge.</li>
+</ul>
+<h3>🎒 Profils</h3>
+<ul>
+<li>Des profils prêts et les tiens ; « Tout » et « Rien » toujours là.</li>
+<li>Tu vois ce qui change avant d'appliquer (+x / −y) ; les dépendances suivent.</li>
+<li>Verrouille un add-on : aucun profil ne l'éteindra.</li>
+<li>Copie un profil en texte pour le partager, compare deux profils.</li>
+<li>Propose le bon profil quand tu entres en donjon, en raid ou en champ de bataille.</li>
+</ul>
+<h3>⚡ Actions rapides</h3>
+<ul>
+<li>Maj + clic : allume un add-on avec ses modules et ses dépendances.</li>
+<li>Mode essai (allumé pour une session) et mode dépannage (tout éteint sauf ce que tu cites, puis retour).</li>
+<li>Menu clic droit, raccourcis clavier, et le bouton « Add-ons » du menu Échap ouvre GAM.</li>
+</ul>
+<h3>🐞 Erreurs et performances</h3>
+<ul>
+<li>Chaque erreur Lua gardée avec sa pile complète, regroupée et comptée ; copiable d'un clic.</li>
+<li>Mémoire par add-on, mode mesure du processeur, alerte si la mémoire grimpe trop.</li>
+</ul>
+<h3>🧭 L'aide intégrée</h3>
+<ul>
+<li>Une antisèche de <strong>toutes les commandes</strong> (celles de GAM et de tes add-ons), avec recherche ; un clic l'écrit dans le chat.</li>
+<li>Une visite guidée de la fenêtre en 5 bulles.</li>
+</ul>
+<h3>⚙️ Options</h3>
+<ul>
+<li>Presque tout se règle, en 5 onglets. L'essentiel d'abord ; coche <strong>« Montrer les réglages avancés »</strong> pour les réglages fins.</li>
+</ul>
+<h2>🎮 Versions du jeu</h2>
+<table><thead><tr><th>Jeu</th><th>Pris en charge</th></tr></thead><tbody><tr><td>WoW Forever (1.60.1)</td><td>✅</td></tr></tbody></table>
+<h2>⌨️ Commandes</h2>
+<p><code>/gam</code>, <code>/maa</code> et <code>/mesaddons</code> marchent pareil (modifiables dans les options).</p>
+<table><thead><tr><th>Commande</th><th>Ce qu'elle fait</th></tr></thead><tbody><tr><td><code>/gam</code></td><td>Ouvre ou ferme la fenêtre</td></tr><tr><td><code>/gam aide</code></td><td>Toutes les commandes</td></tr><tr><td><code>/gam antiseche</code></td><td>Toutes les commandes, avec recherche, cliquables</td></tr><tr><td><code>/gam profil &lt;nom&gt;</code></td><td>Applique un profil</td></tr><tr><td><code>/gam recharger</code></td><td>Applique les changements en attente</td></tr><tr><td><code>/gam annuler</code></td><td>Annule le dernier changement</td></tr><tr><td><code>/gam erreurs</code></td><td>La fenêtre des erreurs Lua</td></tr><tr><td><code>/gam depannage</code> puis <code>/gam retour</code></td><td>Mode dépannage, puis tout remettre</td></tr><tr><td><code>/gam visite</code></td><td>La visite guidée</td></tr><tr><td><code>/gam options</code></td><td>Les options</td></tr></tbody></table>
+<h2>💡 Bon à savoir</h2>
+<ul>
+<li>Cocher ou décocher ne change rien tant que tu n'as pas cliqué <strong>Recharger</strong> (le jeu ne charge les add-ons qu'à ce moment-là). Le bouton s'allume quand quelque chose attend.</li>
+<li>GAM ne s'éteint jamais lui-même et ne touche qu'aux add-ons que tu lui demandes.</li>
+<li>Tes réglages, profils et notes sont gardés par le jeu : mettre GAM à jour ne les efface pas.</li>
+</ul>
+<h2>🌍 Langues</h2>
+<p>Français et anglais, selon la langue du jeu (ou au choix dans les options). Tous les textes sont dans un fichier de données : d'autres langues s'ajoutent facilement.</p>
+<h2>❓ Questions fréquentes</h2>
+<ul>
+<li><strong>J'ai coché un add-on et rien ne change.</strong> Clique <strong>Recharger</strong> en bas de la fenêtre : le jeu ne charge les add-ons qu'au rechargement de l'interface.</li>
+<li><strong>Un add-on est marqué « périmé ».</strong> Il a été fait pour une autre version du jeu. Tu peux quand même le charger avec <code>/gam perimes on</code>, à tes risques.</li>
+<li><strong>Mon add-on n'a pas de fiche.</strong> Sa propre description s'affiche à la place ; tu peux écrire la fiche toi-même avec <strong>Modifier la fiche</strong>.</li>
+</ul>
+<h2>💬 Aide</h2>
+<p>Un bug ou une idée ? Laisse un commentaire ici, en disant ta version du jeu ; pour une erreur, utilise le bouton <strong>Copier</strong> de la fenêtre des erreurs.</p>
+<p>Code source et signalement des bugs : <a href="https://github.com/Squall98/GrimoireAddonManager">https://github.com/Squall98/GrimoireAddonManager</a></p>
+<p>Guide complet (wiki, anglais et français) : <a href="https://mahora.gitbook.io/grimoire-addon-manager-gam/">https://mahora.gitbook.io/grimoire-addon-manager-gam/</a></p>
+<h2>📄 Licence</h2>
+<p>MIT. Fait par Nykaro, écrit avec l'aide de Claude (Anthropic). Inspiré de la façon de faire d'autres gestionnaires (SAM, ACP), sans reprendre leur code.</p>

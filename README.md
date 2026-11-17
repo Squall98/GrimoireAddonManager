@@ -15,7 +15,7 @@
 <tr><td align="center"><img src="media/captures/gam-fr-4-erreurs.png" width="420"><br><sub>Lua errors with full details · <i>Les erreurs Lua en détail</i></sub></td><td align="center"><img src="media/captures/gam-fr-3-alliance.png" width="420"><br><sub>Horde or Alliance colours · <i>Couleurs Horde ou Alliance</i></sub></td></tr>
 </table>
 
-<p align="center"><a href="docs/wiki/Home.md">📚 Wiki (English · Français)</a></p>
+<p align="center"><a href="https://mahora.gitbook.io/grimoire-addon-manager-gam/">📚 Wiki (English · Français)</a></p>
 
 # 🌐 English
 **Grimoire Addon Manager (GAM)** puts all your add-ons in one grimoire-style window, in your faction's colours. Turn them on and off in a click, switch whole sets with profiles, and never forget again what an add-on is for: every add-on has its own little sheet.
