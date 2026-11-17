@@ -1,0 +1,14 @@
+$schema: https://api.gitbook.com/gitbook-docs.yaml
+
+site:
+  title: Grimoire Addon Manager (GAM)
+
+  structure:
+    - type: space
+      key: gam-wiki
+      title: Grimoire Addon Manager (GAM)
+      path: wiki
+      default: true
+
+      content:
+        directory: ./docs/wiki

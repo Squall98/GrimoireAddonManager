@@ -1,4 +1,4 @@
-root: ./docs/wiki/
+root: ./
 
 structure:
   readme: Home.md
