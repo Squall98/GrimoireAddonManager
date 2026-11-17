@@ -1,0 +1,79 @@
+{
+ "titre": {"enUS": "Changelog", "frFR": "Nouveautés"},
+ "intro": {
+  "enUS": "What changed in each version of Grimoire Addon Manager (GAM). Newest first.",
+  "frFR": "Ce qui change à chaque version de Grimoire Addon Manager (GAM). La plus récente en haut."
+ },
+ "rubriques": {
+  "ajout": {"enUS": "Added", "frFR": "Ajouts"},
+  "changement": {"enUS": "Changed", "frFR": "Changements"},
+  "correction": {"enUS": "Fixed", "frFR": "Corrections"},
+  "note": {"enUS": "Good to know", "frFR": "Bon à savoir"}
+ },
+ "versions": [
+  {
+   "version": "1.2.0",
+   "date": "2026-11-17",
+   "ajout": [
+    {"enUS": "FR / EN button in the window: switch the language in one click (the interface reloads).",
+     "frFR": "Bouton FR / EN dans la fenêtre : change la langue d'un clic (l'interface se recharge)."}
+   ],
+   "changement": [
+    {"enUS": "Mini version tidied up: narrower window, short « GAM » title, simpler top bar and footer.",
+     "frFR": "Version mini remise en ordre : fenêtre plus étroite, titre court « GAM », barre du haut et pied simplifiés."},
+    {"enUS": "/gam is now the main command everywhere (the cheat sheet shows it first). /maa and /mesaddons still work.",
+     "frFR": "/gam devient la commande principale partout (l'antisèche l'affiche en premier). /maa et /mesaddons marchent toujours."},
+    {"enUS": "Options that mentioned « chips » now point to the Filter list.",
+     "frFR": "Les options qui parlaient de « puces » renvoient maintenant à la liste Filtre."},
+    {"enUS": "Larger command box on the sheet.",
+     "frFR": "Case des commandes plus grande sur la fiche."}
+   ]
+  },
+  {
+   "version": "1.1.2",
+   "date": "2026-11-17",
+   "correction": [
+    {"enUS": "A few English texts still said « My Add-ons » instead of Grimoire Addon Manager.",
+     "frFR": "Quelques textes anglais disaient encore « My Add-ons » au lieu de Grimoire Addon Manager."}
+   ]
+  },
+  {
+   "version": "1.1.1",
+   "date": "2026-11-17",
+   "changement": [
+    {"enUS": "The add-on folder is now called GrimoireAddonManager.",
+     "frFR": "Le dossier de l'add-on s'appelle maintenant GrimoireAddonManager."}
+   ],
+   "note": [
+    {"enUS": "Your settings, profiles and notes are kept. If an old « MesAddons » folder is still in Interface\\AddOns, remove it.",
+     "frFR": "Tes réglages, profils et notes sont gardés. Si un ancien dossier « MesAddons » est encore dans Interface\\AddOns, retire-le."}
+   ]
+  },
+  {
+   "version": "1.1.0",
+   "date": "2026-11-17",
+   "changement": [
+    {"enUS": "New name: Grimoire Addon Manager (GAM).",
+     "frFR": "Nouveau nom : Grimoire Addon Manager (GAM)."}
+   ],
+   "ajout": [
+    {"enUS": "New /gam command, alongside /maa and /mesaddons.",
+     "frFR": "Nouvelle commande /gam, en plus de /maa et /mesaddons."}
+   ]
+  },
+  {
+   "version": "1.0.0",
+   "date": "2026-11-15",
+   "ajout": [
+    {"enUS": "First release: grimoire window (categories, list, sheet), on / off in one click with Reload and Undo.",
+     "frFR": "Première version : fenêtre grimoire (catégories, liste, fiche), allumer / éteindre d'un clic avec Recharger et Annuler."},
+    {"enUS": "102 add-on sheets, tooltips, personal notes, favourites and tags.",
+     "frFR": "102 fiches d'add-ons, infobulles, notes perso, favoris et étiquettes."},
+    {"enUS": "Profiles (ready-made and your own), lock, trial mode and safe mode.",
+     "frFR": "Profils (prêts et les tiens), verrou, mode essai et mode dépannage."},
+    {"enUS": "Lua error window, memory and CPU per add-on, cheat sheet of every command, guided tour, options in 5 tabs.",
+     "frFR": "Fenêtre des erreurs Lua, mémoire et processeur par add-on, antisèche de toutes les commandes, visite guidée, options en 5 onglets."}
+   ]
+  }
+ ]
+}

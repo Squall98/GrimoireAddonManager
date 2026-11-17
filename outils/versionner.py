@@ -57,7 +57,14 @@ def main():
         print(verif.stdout)
         print("Vérification en échec : aucune version enregistrée.")
         return 1
-    git("add", "--", *SUIVI)
+    changelog = os.path.join(RACINE, "outils", "fabriquer_changelog.py")
+    for etape in (["--verifier"], []):
+        r = subprocess.run([sys.executable, "-X", "utf8", changelog, *etape], capture_output=True, text=True, encoding="utf-8")
+        if r.returncode != 0:
+            print(r.stdout + r.stderr)
+            print("Ajoute la version dans donnees/changelog.json : aucune version enregistrée.")
+            return 1
+    git("add", "--", *SUIVI, "CHANGELOG.md")
     if not git("status", "--porcelain", "--", *SUIVI):
         print("rien à enregistrer.")
         return 0
